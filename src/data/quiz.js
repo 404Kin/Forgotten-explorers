@@ -1,0 +1,27 @@
+// Quiz bank. o[0] is ALWAYS the right answer (the game shuffles). t=topic: moon|mars|deep|any. m=optional mission nickname.
+export const QUIZ=[
+{t:'deep',m:'VOYAGER',q:'In which year did Voyager 1 launch?',o:['1977','1969','1990','2004'],e:'Voyager 1 launched on September 5, 1977.'},
+{t:'deep',m:'VOYAGER',q:'What does the Voyager golden record carry?',o:['Sounds and pictures of Earth','Moon rocks','A map of Mars','Seeds for plants'],e:'It is a message in a bottle for anyone who finds it.'},
+{t:'deep',m:'VOYAGER',q:'In 2012 Voyager 1 became the first spacecraft to enter…',o:['Interstellar space','The Moon’s shadow','Saturn’s rings','A black hole'],e:'It crossed the edge of the Sun’s bubble, the heliopause.'},
+{t:'deep',m:'WEBB',q:'How many hexagon mirror pieces does Webb have?',o:['18','7','36','100'],e:'18 gold-coated beryllium segments make one big mirror.'},
+{t:'deep',m:'WEBB',q:'Where does Webb sit in space?',o:['Sun-Earth L2, about 1.5 million km away','On the Moon','In low Earth orbit','Next to Mars'],e:'L2 keeps the Sun, Earth and Moon on one side of its sunshield.'},
+{t:'deep',m:'PARKER',q:'What does Parker Solar Probe study?',o:['The Sun’s corona','Saturn’s moons','Comets only','Black holes'],e:'It flies through the Sun’s outer atmosphere.'},
+{t:'moon',m:'EAGLE',q:'When did Apollo 11 land on the Moon?',o:['July 20, 1969','July 4, 1976','May 5, 1961','April 12, 1981'],e:'Neil Armstrong and Buzz Aldrin landed on July 20, 1969.'},
+{t:'moon',m:'EAGLE',q:'Where did Eagle land?',o:['Sea of Tranquility','Ocean of Storms','Gale Crater','Jezero Crater'],e:'Tranquility Base is in Mare Tranquillitatis.'},
+{t:'moon',m:'VIKRAM',q:'Which country built the Chandrayaan-3 lander Vikram?',o:['India','Japan','Brazil','Canada'],e:'ISRO landed near the Moon’s south pole on August 23, 2023.'},
+{t:'moon',q:'About how old is the Moon?',o:['4.5 billion years','4.5 million years','450 years','45 billion years'],e:'Apollo rocks helped scientists date it.'},
+{t:'moon',q:'Moon gravity is about how much of Earth’s?',o:['One sixth','Half','The same','Double'],e:'You could jump about six times higher!'},
+{t:'moon',q:'How many Moon Buggies were left on the Moon?',o:['3','1','7','0'],e:'Apollo 15, 16 and 17 each left one.'},
+{t:'mars',m:'CURIO',q:'Which Mars rover landed using a sky crane in 2012?',o:['Curiosity','Spirit','Sojourner','Phoenix'],e:'Perseverance used it too, in 2021.'},
+{t:'mars',m:'CURIO',q:'In which crater did Curiosity land?',o:['Gale Crater','Jezero Crater','Gusev Crater','Tycho Crater'],e:'It climbs Mount Sharp inside Gale.'},
+{t:'mars',m:'PERSY',q:'What did Ingenuity do first on another world?',o:['Powered, controlled flight','Dig a tunnel','Take a swim','Launch a rocket'],e:'Its first flight was April 19, 2021.'},
+{t:'mars',m:'PERSY',q:'Perseverance landed in which crater?',o:['Jezero','Gale','Gusev','Endeavour'],e:'Jezero once held a lake and a river delta.'},
+{t:'mars',m:'SPIRIT',q:'Which crater did Spirit explore?',o:['Gusev','Gale','Jezero','Eagle'],e:'Spirit landed in Gusev Crater in January 2004.'},
+{t:'mars',m:'OPPY',q:'What ended Opportunity’s mission?',o:['A giant dust storm','A rock fall','A Moon shadow','Running out of wheels'],e:'The 2018 storm blocked its sunlight.'},
+{t:'mars',m:'PHOENIX',q:'What did Phoenix find under the soil?',o:['Water ice','Gold','Fossils','A river'],e:'It dug near Mars’s north pole in 2008.'},
+{t:'mars',m:'INSIGHT',q:'What did InSight listen for?',o:['Marsquakes','Aliens','Wind music','Rocket noise'],e:'It recorded more than a thousand marsquakes.'},
+{t:'mars',q:'What is a “sol”?',o:['A Martian day','A Martian year','A Moon phase','A kind of rocket'],e:'A sol is about 24 hours 39 minutes.'},
+{t:'mars',q:'Why does Mars look red?',o:['Rusty iron dust','Red grass','Lava everywhere','Red oceans'],e:'Iron oxide, like rust, covers the ground.'},
+{t:'mars',q:'Olympus Mons, the tallest volcano in the solar system, is on…',o:['Mars','Earth','Venus','The Moon'],e:'It is about two and a half times taller than Everest.'},
+{t:'any',q:'About how long does a radio message take to reach Mars?',o:['Around 12 minutes (average)','1 second','2 days','1 hour'],e:'It changes between about 3 and 22 minutes.'}
+];

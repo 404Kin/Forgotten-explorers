@@ -1,0 +1,2 @@
+// Collectible robot card (reference-style: big name, tagline, flat art, glyph badge).
+export function cardHTML(m,{collected=false,tag='a'}={}){const href=tag==='a'?` href="#/mission/${m.id}"`:'';return `<${tag}${href} class="card" style="background:${m.c};color:${m.k}"><h3>${m.n}</h3><small>${m.t}</small><svg viewBox="0 0 200 200" aria-hidden="true">${m.ch()}</svg><div class="ft"><span class="lg"><i></i>NASA<br>kids</span><b class="gl">${m.g}</b></div><span class="st">${m.a?'Still awake':'Sleeping 💤'}</span>${collected?'<span class="stamp">⭐</span>':''}</${tag}>`}

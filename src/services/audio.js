@@ -1,0 +1,4 @@
+let AC;const tone=(f,t0,d,v=.14,type='sine')=>{try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.value=f;o.connect(g);g.connect(AC.destination);const t=AC.currentTime+t0;g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.001,t+d);o.start(t);o.stop(t+d)}catch{}};
+export const sfx={good:()=>[523,659,784].forEach((f,i)=>tone(f,i*.11,.3)),bad:()=>[220,165].forEach((f,i)=>tone(f,i*.14,.25,.12,'triangle')),tap:()=>tone(700,0,.07,.08),win:()=>[523,659,784,1047].forEach((f,i)=>tone(f,i*.12,.4))};
+export function speak(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.rate=.95;u.pitch=1.25;speechSynthesis.speak(u)}catch{}}
+export const stopSpeak=()=>{try{speechSynthesis.cancel()}catch{}};

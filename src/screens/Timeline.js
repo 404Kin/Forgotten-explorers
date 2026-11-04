@@ -1,0 +1,3 @@
+import {MISSIONS} from '../data/missions.js';
+export default{name:'timeline',mount(el){const L=[...MISSIONS].sort((a,b)=>new Date(a.real.arrivalDate)-new Date(b.real.arrivalDate));
+el.innerHTML=`<div class="wrap"><div class="hero"><span class="mono">1969 → today</span><h1>Timeline</h1><p>When each explorer arrived at its destination.</p></div><div class="tl" style="margin-top:24px">${L.map(m=>`<a class="ev" href="#/mission/${m.id}"><b>${m.real.arrivalDate.slice(-4)}</b> <span style="color:${m.c}">●</span> <strong>${m.n}</strong><div>${m.real.name}: ${m.real.arrivalEvent}</div><div class="mono">${m.real.location}</div></a>`).join('')}</div></div>`},unmount(){}};

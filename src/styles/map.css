@@ -1,0 +1,13 @@
+/* Explorer Map */
+.mapwrap{position:relative;height:calc(100dvh - 66px);min-height:420px;overflow:hidden}
+@media(max-width:760px){.mapwrap{height:calc(100dvh - 66px - 64px)}}
+#mapbox{position:absolute;inset:0;touch-action:none;cursor:grab}#mapbox:active{cursor:grabbing}#mc{width:100%;height:100%;display:block}
+.maptop{position:absolute;top:8px;left:0;right:0;text-align:center;pointer-events:none;text-shadow:0 2px 8px #000}.maptop h1{font-size:clamp(1.6rem,5vw,2.4rem)}.maptop p{margin:2px 0 0;font-size:.85rem}
+.pl{position:absolute;left:0;top:0;border:0;background:none;padding:0;transition:opacity .25s;white-space:nowrap}
+.pl span{display:inline-block;background:var(--cream);color:var(--k);border:3px solid var(--k);border-radius:999px;padding:2px 12px;font-family:var(--display);font-size:.8rem;box-shadow:0 3px 0 var(--k);animation:bob 3s ease-in-out infinite}
+.pl:hover span{background:var(--gold)}.pl.robot span{background:var(--gold);font-size:.7rem}
+.pl .bd{display:inline-grid;place-items:center;min-width:20px;height:20px;margin-left:6px;border-radius:50%;background:var(--nasa-red);color:#fff;font-size:.7rem;border:2px solid var(--k)}
+@keyframes bob{50%{transform:translateY(-4px)}}
+.jump{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:8px;overflow-x:auto;padding:4px 12px;scrollbar-width:none}.jump .chip{flex:0 0 auto;box-shadow:0 3px 0 var(--k)}
+.sheet2{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);width:min(460px,94%);z-index:2000;max-height:60%;overflow:auto}.sheet2[hidden]{display:none}
+.sheet2 h2{font-size:1.5rem}.sheet2 p{margin:6px 0;line-height:1.4}.sheet2 .x{position:absolute;right:10px;top:10px;border:3px solid var(--k);border-radius:50%;width:34px;height:34px;background:var(--gold)}

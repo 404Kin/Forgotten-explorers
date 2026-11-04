@@ -1,0 +1,1 @@
+export function toast(msg,kind=''){let box=document.getElementById('toasts');if(!box)return;const t=document.createElement('div');t.className='toast '+kind;t.textContent=msg;box.appendChild(t);setTimeout(()=>{t.classList.add('out');setTimeout(()=>t.remove(),400)},2600)}
