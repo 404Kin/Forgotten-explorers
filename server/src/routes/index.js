@@ -1,4 +1,5 @@
-// One place to plug in routes. Next step adds: images, live/distance, live/dsn.
+// One place to plug in routes.
 import {registerHealth} from './health.js';
+import {registerImages} from './images.js';
 import {registerRobots} from './robots.js';
-export function registerRoutes(router,deps){registerHealth(router,deps);registerRobots(router,deps)}
+export function registerRoutes(router,deps){registerHealth(router,deps);registerRobots(router,deps);registerImages(router,deps)}

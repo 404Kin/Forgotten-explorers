@@ -6,8 +6,8 @@ import {createRateLimiter} from './lib/rateLimit.js';
 import {AppError,notFound,methodNotAllowed,tooMany,internal,toBody} from './lib/errors.js';
 import {registerRoutes} from './routes/index.js';
 import {loadData} from './data/index.js';
-export function buildServer({config,logger,data}){
-  const router=createRouter(),limiter=createRateLimiter(config.rateLimit),deps={config,logger,data:data??loadData(config,logger)};
+export function buildServer({config,logger,data,fetchImpl=globalThis.fetch}){
+  const router=createRouter(),limiter=createRateLimiter(config.rateLimit),deps={config,logger,data:data??loadData(config,logger),fetchImpl};
   registerRoutes(router,deps);
   const clientIp=req=>config.trustProxy?(req.headers['x-forwarded-for']||'').split(',')[0].trim()||req.socket.remoteAddress:req.socket.remoteAddress;
   const server=http.createServer((req,res)=>{

@@ -2,10 +2,12 @@
 Small read-only API for Forgotten Explorers. **No dependencies**: only Node 18.17+ built-ins, so `npm install` is not needed.
 ```
 cd server
-npm test           # 26 tests
-npm run mock       # API on FAKE placeholder robots (for the frontend to start)
-npm start          # real data from ../data-pipeline/robots   ->  http://localhost:8787/api/v1/health
+npm test           # 31 tests
+npm run mock       # test-only fake robot fixtures; never real mission data
+npm start          # validated project data from ../data-pipeline/robots
 ```
+From the repository root, `npm test` runs the server test suite.
+
 Layout
 - `src/config.js` env settings · `src/server.js` request pipeline (id, headers, CORS, rate limit, routing, errors, log)
 - `src/lib/` router, errors, logger, rate limit, query validator
