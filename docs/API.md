@@ -1,7 +1,7 @@
 # API (owner: P2)  ·  base path `/api/v1`  ·  full contract: `docs/openapi.yaml`
-Live now: `health`, `robots`, `robots/:id`. Planned next: `images`, `live/distance`, `live/dsn`.
+Available: `health`, `robots`, `robots/:id`, `images`. `live/distance` and `live/dsn` are blocked on P1's Horizons target IDs, DSN name map, and snapshot data.
 
-**Frontend can start today:** `cd server && npm run mock` serves this exact API on FAKE placeholder robots (every text says TEST DATA). Real robots appear when P1's files are in `data-pipeline/robots/`.
+For local contract tests, `cd server && npm run mock` uses clearly fake test fixtures only; it refuses to run with `NODE_ENV=production`. `npm start` loads real robot files from `../data-pipeline/robots/`. In production, the server refuses to start if no valid robot records are present. That P1 folder is not in this checkout yet.
 
 ## Rules for every endpoint
 - JSON only, read-only (GET). `OPTIONS` is answered for CORS.
@@ -21,6 +21,7 @@ Live now: `health`, `robots`, `robots/:id`. Planned next: `images`, `live/distan
 | 404 | NOT_FOUND | unknown route or id |
 | 405 | METHOD_NOT_ALLOWED | not GET |
 | 429 | RATE_LIMITED | too many requests |
+| 503 | UPSTREAM_UNAVAILABLE | NASA Image and Video Library is unavailable and no cached result is available |
 | 500 | INTERNAL | our bug. Message is generic, details only in server logs |
 
 ## GET /api/v1/health
@@ -32,6 +33,11 @@ Returns summaries: `id, name, world, status, lat, lon, kidFact, i18nKey, lang`. 
 
 ## GET /api/v1/robots/:id?lang=
 The full record: dates, `endReason`, `story[]`, `quiz[]` (**first option is correct**), `sources[]`. Unknown id: 404.
+
+## GET /api/v1/images?robotId=
+Searches the real NASA Image and Video Library using the robot's name. Results include the NASA item ID, title, description, date, creator/center credit, NASA details link, and NASA-hosted thumbnail and medium image URLs. Results are cached in memory for 6 hours. If NASA is unavailable, an expired cached result is returned with `meta.stale: true`; without a cached result the API returns `503 UPSTREAM_UNAVAILABLE`. Search results are not pinned (`pinned: false`) until P1 provides its verified image IDs.
+
+The current frontend still calls NASA directly; P3 needs to switch its image loader to this endpoint and keep its local fallback for the UI to use the proxy.
 
 ## Data rules (the server enforces them, so bad data never reaches kids)
 A record is served only if: id/name/world/status valid, dates look like `YYYY[-MM[-DD]]`, moon and mars have `lat` and `lon`, story and quiz are well formed, and **at least one source URL is https on an allowed host** (`SOURCE_HOSTS`, default `nasa.gov,isro.gov.in`). Duplicate ids are rejected.

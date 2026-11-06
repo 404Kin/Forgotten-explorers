@@ -4,8 +4,8 @@ info:
   version: 0.2.0
   description: |
     Read-only API for the NASA Space Apps 2026 project. Owner: P2.
-    Live today: health, robots, robots/{id}. Planned next: images, live/distance, live/dsn (marked x-status: planned).
-    Run `npm run mock` in /server to get this API on FAKE placeholder robots.
+    Available: health, robots, robots/{id}, images. Live distance and DSN endpoints await P1 target-ID, name-map, and snapshot data.
+    `npm run mock` in /server is only for local tests and uses clearly fake fixture records.
 servers:
   - url: http://localhost:8787
     description: local
@@ -51,16 +51,17 @@ paths:
   /api/v1/images:
     get:
       tags: [images]
-      x-status: planned
-      summary: Pinned and searched NASA photos for a robot, with credit
+      summary: Search NASA Image and Video Library for a robot, with credit
       parameters:
         - {name: robotId, in: query, required: true, schema: {type: string, pattern: '^[a-z0-9-]{2,40}$'}}
       responses:
         '200':
-          description: Photos. Every item carries credit and a link to its NASA page.
-          content: {application/json: {schema: {type: object, properties: {data: {type: array, items: {$ref: '#/components/schemas/Image'}}}}}}
+          description: NASA search results with creator/center credit and NASA-hosted image links. Cached for six hours; expired results may be marked stale.
+          content: {application/json: {schema: {$ref: '#/components/schemas/ImageSearch'}}}
         '400': {$ref: '#/components/responses/InvalidParam'}
         '404': {$ref: '#/components/responses/NotFound'}
+        '429': {$ref: '#/components/responses/RateLimited'}
+        '503': {$ref: '#/components/responses/UpstreamUnavailable'}
   /api/v1/live/distance:
     get:
       tags: [live]
@@ -113,13 +114,15 @@ components:
         i18nKey: {type: string}
         lang: {type: string, description: Language actually returned}
     Health: {type: object, properties: {status: {type: string}, service: {type: string}, version: {type: string}, uptimeSeconds: {type: integer}, time: {type: string, format: date-time}, data: {type: object, properties: {robots: {type: integer}, rejected: {type: integer}}}}}
-    Image: {type: object, properties: {id: {type: string}, title: {type: string}, credit: {type: string}, link: {type: string, format: uri}, thumb: {type: string, format: uri}, medium: {type: string, format: uri}, pinned: {type: boolean}}}
+    Image: {type: object, properties: {id: {type: string}, title: {type: string}, desc: {type: string}, date: {type: string}, credit: {type: string}, link: {type: string, format: uri}, thumb: {type: string, format: uri}, medium: {type: string, format: uri}, pinned: {type: boolean}}}
+    ImageSearch: {type: object, required: [data, meta], properties: {data: {type: array, items: {$ref: '#/components/schemas/Image'}}, meta: {type: object, required: [robotId, count, source, asOf, stale], properties: {robotId: {type: string}, count: {type: integer}, source: {type: string}, asOf: {type: string, format: date-time}, stale: {type: boolean}}}}}
     Distance: {type: object, properties: {robotId: {type: string}, distanceKm: {type: number}, lightSeconds: {type: number}, source: {type: string, enum: [live, snapshot]}, asOf: {type: string, format: date-time}}}
     Error:
       type: object
       required: [error]
-      properties: {error: {type: object, required: [code, message, details], properties: {code: {type: string, enum: [INVALID_PARAM, NOT_FOUND, METHOD_NOT_ALLOWED, RATE_LIMITED, INTERNAL]}, message: {type: string}, details: {type: object}}}}
+      properties: {error: {type: object, required: [code, message, details], properties: {code: {type: string, enum: [INVALID_PARAM, NOT_FOUND, METHOD_NOT_ALLOWED, RATE_LIMITED, UPSTREAM_UNAVAILABLE, INTERNAL]}, message: {type: string}, details: {type: object}}}}
   responses:
     InvalidParam: {description: Bad or unknown query parameter, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
     NotFound: {description: Unknown id or route, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
     RateLimited: {description: Too many requests (see Retry-After), headers: {Retry-After: {schema: {type: integer}}}, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+    UpstreamUnavailable: {description: NASA Image and Video Library is unavailable and no cached result is available, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
