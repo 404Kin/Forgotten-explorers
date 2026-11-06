@@ -1,0 +1,125 @@
+openapi: 3.0.3
+info:
+  title: Forgotten Explorers API
+  version: 0.2.0
+  description: |
+    Read-only API for the NASA Space Apps 2026 project. Owner: P2.
+    Live today: health, robots, robots/{id}. Planned next: images, live/distance, live/dsn (marked x-status: planned).
+    Run `npm run mock` in /server to get this API on FAKE placeholder robots.
+servers:
+  - url: http://localhost:8787
+    description: local
+tags: [{name: system}, {name: robots}, {name: images}, {name: live}]
+paths:
+  /api/v1/health:
+    get:
+      tags: [system]
+      summary: Health check
+      responses:
+        '200': {description: Server is up, content: {application/json: {schema: {$ref: '#/components/schemas/Health'}}}}
+        '429': {$ref: '#/components/responses/RateLimited'}
+  /api/v1/robots:
+    get:
+      tags: [robots]
+      summary: List robots (summary fields, paginated)
+      parameters:
+        - {name: world, in: query, schema: {$ref: '#/components/schemas/World'}}
+        - {name: status, in: query, schema: {$ref: '#/components/schemas/Status'}}
+        - {name: page, in: query, schema: {type: integer, minimum: 1, maximum: 1000, default: 1}}
+        - {name: pageSize, in: query, schema: {type: integer, minimum: 1, maximum: 50, default: 12}}
+        - {$ref: '#/components/parameters/Lang'}
+      responses:
+        '200':
+          description: A page of robots. Each item says which language it really used.
+          content: {application/json: {schema: {type: object, required: [data, meta], properties: {data: {type: array, items: {$ref: '#/components/schemas/RobotSummary'}}, meta: {$ref: '#/components/schemas/PageMeta'}}}}}
+        '400': {$ref: '#/components/responses/InvalidParam'}
+        '429': {$ref: '#/components/responses/RateLimited'}
+  /api/v1/robots/{id}:
+    get:
+      tags: [robots]
+      summary: One robot with story, quiz and sources
+      parameters:
+        - {name: id, in: path, required: true, schema: {type: string, pattern: '^[a-z0-9-]{2,40}$'}}
+        - {$ref: '#/components/parameters/Lang'}
+      responses:
+        '200':
+          description: The robot. Falls back to English when the translation is missing (see `lang` and Content-Language).
+          content: {application/json: {schema: {type: object, required: [data], properties: {data: {$ref: '#/components/schemas/Robot'}}}}}
+        '400': {$ref: '#/components/responses/InvalidParam'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '429': {$ref: '#/components/responses/RateLimited'}
+  /api/v1/images:
+    get:
+      tags: [images]
+      x-status: planned
+      summary: Pinned and searched NASA photos for a robot, with credit
+      parameters:
+        - {name: robotId, in: query, required: true, schema: {type: string, pattern: '^[a-z0-9-]{2,40}$'}}
+      responses:
+        '200':
+          description: Photos. Every item carries credit and a link to its NASA page.
+          content: {application/json: {schema: {type: object, properties: {data: {type: array, items: {$ref: '#/components/schemas/Image'}}}}}}
+        '400': {$ref: '#/components/responses/InvalidParam'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /api/v1/live/distance:
+    get:
+      tags: [live]
+      x-status: planned
+      summary: Live distance from Earth and light-time (JPL Horizons, cached; falls back to a dated snapshot)
+      parameters:
+        - {name: ids, in: query, required: true, description: Comma separated robot ids (max 20), schema: {type: string}}
+      responses:
+        '200':
+          description: One entry per id. `source` says live or snapshot, and `asOf` says when.
+          content: {application/json: {schema: {type: object, properties: {data: {type: array, items: {$ref: '#/components/schemas/Distance'}}}}}}
+        '400': {$ref: '#/components/responses/InvalidParam'}
+  /api/v1/live/dsn:
+    get:
+      tags: [live]
+      x-status: planned
+      summary: Spacecraft talking to Earth right now (DSN Now, cached about 1 minute)
+      responses:
+        '200':
+          description: Robots that are currently in contact.
+          content: {application/json: {schema: {type: object, properties: {data: {type: array, items: {type: object, properties: {robotId: {type: string}, dish: {type: string}}}}, asOf: {type: string, format: date-time}}}}}
+components:
+  parameters:
+    Lang: {name: lang, in: query, schema: {type: string, enum: [en, bn, ar], default: en}}
+  schemas:
+    World: {type: string, enum: [moon, mars, deep]}
+    Status: {type: string, enum: [left_behind, silent, talking], description: Left Behind / Went Silent / Still Talking}
+    PageMeta: {type: object, properties: {page: {type: integer}, pageSize: {type: integer}, total: {type: integer}, totalPages: {type: integer}, lang: {type: string}}}
+    RobotSummary:
+      type: object
+      properties: {id: {type: string}, name: {type: string}, world: {$ref: '#/components/schemas/World'}, status: {$ref: '#/components/schemas/Status'}, lat: {type: number, nullable: true}, lon: {type: number, nullable: true}, kidFact: {type: string}, i18nKey: {type: string}, lang: {type: string}}
+    Robot:
+      type: object
+      required: [id, name, world, status, launchDate, arrivalDate, endReason, kidFact, story, quiz, sources, i18nKey]
+      properties:
+        id: {type: string}
+        name: {type: string}
+        world: {$ref: '#/components/schemas/World'}
+        status: {$ref: '#/components/schemas/Status'}
+        launchDate: {type: string, description: 'YYYY, YYYY-MM or YYYY-MM-DD'}
+        arrivalDate: {type: string}
+        endDate: {type: string, nullable: true}
+        lat: {type: number, nullable: true, description: Required for moon and mars}
+        lon: {type: number, nullable: true}
+        endReason: {type: string}
+        kidFact: {type: string}
+        story: {type: array, items: {type: object, properties: {title: {type: string}, text: {type: string}}}}
+        quiz: {type: array, items: {type: object, properties: {q: {type: string}, options: {type: array, items: {type: string}, description: The FIRST option is the correct one}}}}
+        sources: {type: array, minItems: 1, items: {type: string, format: uri}, description: https URLs on allowed hosts (nasa.gov, isro.gov.in)}
+        i18nKey: {type: string}
+        lang: {type: string, description: Language actually returned}
+    Health: {type: object, properties: {status: {type: string}, service: {type: string}, version: {type: string}, uptimeSeconds: {type: integer}, time: {type: string, format: date-time}, data: {type: object, properties: {robots: {type: integer}, rejected: {type: integer}}}}}
+    Image: {type: object, properties: {id: {type: string}, title: {type: string}, credit: {type: string}, link: {type: string, format: uri}, thumb: {type: string, format: uri}, medium: {type: string, format: uri}, pinned: {type: boolean}}}
+    Distance: {type: object, properties: {robotId: {type: string}, distanceKm: {type: number}, lightSeconds: {type: number}, source: {type: string, enum: [live, snapshot]}, asOf: {type: string, format: date-time}}}
+    Error:
+      type: object
+      required: [error]
+      properties: {error: {type: object, required: [code, message, details], properties: {code: {type: string, enum: [INVALID_PARAM, NOT_FOUND, METHOD_NOT_ALLOWED, RATE_LIMITED, INTERNAL]}, message: {type: string}, details: {type: object}}}}
+  responses:
+    InvalidParam: {description: Bad or unknown query parameter, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+    NotFound: {description: Unknown id or route, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+    RateLimited: {description: Too many requests (see Retry-After), headers: {Retry-After: {schema: {type: integer}}}, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}

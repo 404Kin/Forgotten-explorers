@@ -1,0 +1,37 @@
+{
+ "id": "test-moon",
+ "name": "TEST Moon Robot",
+ "world": "moon",
+ "status": "left_behind",
+ "launchDate": "2000-01-01",
+ "arrivalDate": "2000-06-01",
+ "endDate": "2001-01-01",
+ "lat": 1.0,
+ "lon": 2.0,
+ "endReason": "TEST DATA. Placeholder reason, not a real fact.",
+ "kidFact": "TEST DATA. Placeholder fact for the frontend.",
+ "story": [
+  {
+   "title": "Test page 1",
+   "text": "TEST DATA. Placeholder story text."
+  },
+  {
+   "title": "Test page 2",
+   "text": "TEST DATA. Another placeholder page."
+  }
+ ],
+ "quiz": [
+  {
+   "q": "TEST question?",
+   "options": [
+    "Correct answer (first)",
+    "Wrong A",
+    "Wrong B"
+   ]
+  }
+ ],
+ "sources": [
+  "https://science.nasa.gov/test-fixture-do-not-use"
+ ],
+ "i18nKey": "robots.test-moon"
+}

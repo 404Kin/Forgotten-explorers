@@ -1,0 +1,16 @@
+{
+ "robots.test-mars": {
+  "name": "[bn TEST] Mars Robot",
+  "kidFact": "[bn TEST] fact",
+  "story": [
+   {
+    "title": "[bn] p1",
+    "text": "[bn] t1"
+   },
+   {
+    "title": "[bn] p2",
+    "text": "[bn] t2"
+   }
+  ]
+ }
+}
