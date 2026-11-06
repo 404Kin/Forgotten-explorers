@@ -1,0 +1,15 @@
+# server/ (P2)
+Small read-only API for Forgotten Explorers. **No dependencies**: only Node 18.17+ built-ins, so `npm install` is not needed.
+```
+cd server
+npm test           # 26 tests
+npm run mock       # API on FAKE placeholder robots (for the frontend to start)
+npm start          # real data from ../data-pipeline/robots   ->  http://localhost:8787/api/v1/health
+```
+Layout
+- `src/config.js` env settings · `src/server.js` request pipeline (id, headers, CORS, rate limit, routing, errors, log)
+- `src/lib/` router, errors, logger, rate limit, query validator
+- `src/domain/` `robot.js` (the record contract, the ONLY place to change when P1's schema changes) and `repository.js` (generic filter + pagination)
+- `src/data/` loads and validates P1's JSON, optional translations
+- `src/routes/` one file per endpoint group · `test/` tests + clearly fake fixtures
+Add an endpoint: create `src/routes/<name>.js`, export `register<Name>(router,deps)`, call it in `src/routes/index.js`, validate input with `parseQuery`, throw `AppError`, add tests, update `docs/openapi.yaml` and `docs/API.md`.

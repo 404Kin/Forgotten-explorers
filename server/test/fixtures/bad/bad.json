@@ -1,0 +1,28 @@
+{
+ "id": "bad-one",
+ "name": "Bad",
+ "world": "pluto",
+ "status": "gone",
+ "launchDate": "2000-01-01",
+ "arrivalDate": "2000-06-01",
+ "endDate": null,
+ "lat": 200,
+ "lon": 0,
+ "endReason": "TEST DATA. Placeholder reason, not a real fact.",
+ "kidFact": "TEST DATA. Placeholder fact for the frontend.",
+ "story": [],
+ "quiz": [
+  {
+   "q": "TEST question?",
+   "options": [
+    "Correct answer (first)",
+    "Wrong A",
+    "Wrong B"
+   ]
+  }
+ ],
+ "sources": [
+  "https://example.com/not-nasa"
+ ],
+ "i18nKey": "robots.bad-one"
+}
