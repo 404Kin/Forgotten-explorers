@@ -8,6 +8,7 @@ import {get} from '../state/store.js';
 import {createFilters,applyFilters} from '../components/Filters/Filters.js';
 import {STATUSES,STATUS_IDS} from '../components/StatusBadge/StatusBadge.js';
 import {statusOf,ApiError} from '../services/api.js';
+import {creditFooterHTML} from '../components/CreditFooter/CreditFooter.js';
 import {renderState,loadInto} from '../components/StateView/StateView.js';
 import {t} from '../i18n/index.js';
 import {rankLabel} from '../i18n/format.js';
@@ -18,7 +19,7 @@ mount(el){const s=get();
 el.innerHTML=`<div class="wrap"><div class="hero"><span class="mono">${t('hub.kicker')}</span><h1>${t('hub.hello',{rank:rankLabel(s)})}</h1><p>${t('hub.sub')}</p><p><a class="btn sm" href="#/map">🗺 ${t('hub.openMap')}</a></p></div><div id="pw"></div>
 <div class="tiles"><a class="tile" href="#/quiz" style="background:var(--mint)"><span>🧠</span><b>${t('game.quiz')}</b>${t('hub.tile.quiz')}</a><a class="tile" href="#/play/lander" style="background:var(--gold)"><span>🛬</span><b>${t('game.lander')}</b>${t('hub.tile.lander')}</a><a class="tile" href="#/play/memory" style="background:var(--pink)"><span>🃏</span><b>${t('game.memory')}</b>${t('hub.tile.memory')}</a><a class="tile" href="#/timeline" style="background:var(--lav)"><span>🕰</span><b>${t('game.timeline')}</b>${t('hub.tile.timeline')}</a></div>
 <div class="sec"><h2>${t('hub.archive')}</h2><span class="mono">${t('hub.realPhotos')}</span></div><div class="photos" id="ph"></div>
-<div class="sec"><h2>${t('hub.allExplorers')}</h2></div><div id="fl"></div><p class="mono" id="cnt" role="status" aria-live="polite"></p><div class="grid" id="gr"></div></div>`;
+<div class="sec"><h2>${t('hub.allExplorers')}</h2></div><div id="fl"></div><p class="mono" id="cnt" role="status" aria-live="polite"></p><div class="grid" id="gr"></div>${creditFooterHTML()}</div>`;
 // World + status filters (shared Filters component). Status comes from statusOf(): PLACEHOLDER until P1 gives status.
 const GROUPS=[{id:'world',labelKey:'filter.world',options:Object.keys(WORLDS).map(k=>({value:k,labelKey:`world.${k}.short`,icon:WORLDS[k].emoji}))},
 {id:'status',labelKey:'filter.status',options:STATUS_IDS.map(id=>({value:id,labelKey:STATUSES[id].labelKey,icon:STATUSES[id].icon}))}];

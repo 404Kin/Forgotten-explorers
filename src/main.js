@@ -5,6 +5,7 @@ import {mountChrome} from './components/TopBar.js';
 import Landing from './screens/Landing.js';import Map from './screens/Map.js';import Hub from './screens/Hub.js';import World from './screens/World.js';import Mission from './screens/Mission.js';
 import Quiz from './screens/Quiz.js';import Play from './screens/Play.js';import Album from './screens/Album.js';import Timeline from './screens/Timeline.js';
 import Lander from './games/LunarLander.js';import Memory from './games/MemoryMatch.js';
+import DataSources from './screens/DataSources/DataSources.js';
 route('/',Landing);route('/map',Map);route('/hub',Hub);route('/world/:k',World);route('/mission/:id',Mission);route('/quiz',Quiz);
-route('/play',Play);route('/play/lander',Lander);route('/play/memory',Memory);route('/album',Album);route('/timeline',Timeline);
+route('/play',Play);route('/play/lander',Lander);route('/play/memory',Memory);route('/album',Album);route('/timeline',Timeline);route('/sources',DataSources);
 mountChrome();start(document.getElementById('view'));

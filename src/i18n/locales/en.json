@@ -527,5 +527,21 @@
  "tour.step.live.title": "Still Talking",
  "tour.step.live.text": "See which spacecraft are talking to Earth. Each number says if it is live or a saved snapshot.",
  "tour.step.language.title": "Pick your language",
- "tour.step.language.text": "Switch between English and Bangla any time. The whole app changes."
+ "tour.step.language.text": "Switch between English and Bangla any time. The whole app changes.",
+ "sources.kicker": "Data sources",
+ "sources.title": "Where our facts come from",
+ "sources.intro": "Everything in this app comes from open NASA data and our partners. Tap a name to open the original page.",
+ "sources.datasets": "Datasets",
+ "sources.usedFor": "Used for",
+ "sources.state.used": "In use",
+ "sources.state.planned": "Coming soon",
+ "sources.photoCredits": "Photo credits",
+ "sources.photoNote": "Every photo in the app shows its credit and links back to the NASA Image and Video Library.",
+ "sources.pinned": "Photo for {robot} ({id})",
+ "sources.credits": "Credits",
+ "sources.placeholderNote": "This is a draft list. The final list is coming from the data team.",
+ "sources.empty": "No data sources to show yet.",
+ "sources.disclaimerTitle": "Please note",
+ "credit.sources": "Data sources and credits",
+ "sources.pinnedIntro": "Photos we picked by hand for our robots:"
 }
