@@ -491,5 +491,16 @@
  "body.uranus.name": "Uranus",
  "body.uranus.fact": "It spins on its side, like a rolling ball.",
  "body.neptune.name": "Neptune",
- "body.neptune.fact": "The windiest planet, and one year here lasts 165 Earth years."
+ "body.neptune.fact": "The windiest planet, and one year here lasts 165 Earth years.",
+ "state.loading": "Loading…",
+ "state.error.title": "Oops! Something went wrong.",
+ "state.error.message": "We could not load this. Please try again.",
+ "state.error.network": "We could not reach the internet. Check your connection and try again.",
+ "state.error.rateLimited": "Too many tries. Wait a moment and try again.",
+ "state.empty.title": "Nothing here yet",
+ "state.empty.message": "There is nothing to show right now.",
+ "state.webgl": "Your device could not start the 3D view. Try again, or open the app in another browser.",
+ "state.notFound": "We could not find that page.",
+ "state.goExplore": "Go to Explore",
+ "quiz.noQuestions": "No questions for this topic yet. Try another one!"
 }
