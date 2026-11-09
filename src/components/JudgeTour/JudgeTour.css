@@ -1,0 +1,13 @@
+.tourbtn{display:inline-flex;align-items:center;gap:6px;min-height:44px;min-width:44px;justify-content:center}
+/* Non-modal card, above the mobile tab bar. */
+.tour-card{position:fixed;z-index:90;inset-inline:12px;inset-block-end:calc(env(safe-area-inset-bottom,0px) + 76px);max-width:440px;margin-inline:auto;padding:16px 18px;display:grid;gap:8px}
+@media(min-width:761px){.tour-card{inset-inline-start:auto;inset-inline-end:20px;inset-block-end:20px;margin:0}}
+.tour-card h2{font-size:1.25rem;outline:none}.tour-card h2:focus-visible{outline:3px solid var(--nasa-blue);outline-offset:3px}
+.tour-card p{margin:0}
+.tour-bar{height:6px;border-radius:9px;background:#14122b22;overflow:hidden}.tour-bar i{display:block;height:100%;background:var(--nasa-red)}
+.tour-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.tour-actions .btn{min-height:44px;min-width:44px}
+/* Highlight uses an outline + glow (not colour alone: it is also a thick dashed shape). */
+.tour-hl{outline:5px dashed var(--gold)!important;outline-offset:4px;box-shadow:0 0 0 9px #ffd34e55}
+@media(max-width:760px){.tourbtn.compact .tour-label{display:none}}
+.landing-tour{position:absolute;inset-block-start:calc(env(safe-area-inset-top,0px) + 10px);inset-inline-start:10px;z-index:5}
