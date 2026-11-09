@@ -1,0 +1,6 @@
+/* Dark ink on light fills (contrast > 7:1). Border style differs per status as a second non-colour cue. */
+.sb{display:inline-flex;align-items:center;gap:5px;min-height:24px;padding:2px 10px;border-radius:999px;border:2.5px solid var(--k);color:var(--k);font-size:.78rem;font-weight:800;line-height:1.2;white-space:nowrap}
+.sb-left_behind{background:var(--gold);border-style:solid}
+.sb-silent{background:var(--lav);border-style:dashed}
+.sb-talking{background:var(--mint);border-style:double;border-width:4px}
+.sb-card{position:absolute;inset-block-start:10px;inset-inline-end:10px;font-size:.72rem;padding:1px 8px}

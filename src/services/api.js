@@ -87,10 +87,12 @@ export async function withFallback(path,params,local,opts){
 
 // ---- local fallback adapters: same shapes as docs/openapi.yaml, built from src/data ----
 
-// PLACEHOLDER (task 4): relics.json has no status field. Until P1 adds one, "awake" robots count as still talking,
-// the rest as went silent, and Eagle (a lander with no working radio) as left behind.
+// PLACEHOLDER until P1 gives status: relics.json has no status field yet. Until P1 adds one (left_behind | silent | talking),
+// "awake" robots count as still talking, the rest as went silent, and Eagle (a lander with no working radio) as left behind.
+// The ONE place the app asks "what is this robot's status?" is statusOf(); a real field wins as soon as it exists.
 const PLACEHOLDER_STATUS_OVERRIDE={EAGLE:'left_behind'};
-const localStatus=m=>PLACEHOLDER_STATUS_OVERRIDE[m.n]||(m.a?'talking':'silent');
+export const statusOf=m=>m.status||m.real?.statusCode||PLACEHOLDER_STATUS_OVERRIDE[m.n]||(m.a?'talking':'silent');
+const localStatus=statusOf;
 
 const toSummary=m=>({id:m.id,name:m.n,world:m.w,status:localStatus(m),lat:m.real?.lat??null,lon:m.real?.lon??null,
   kidFact:m.t,i18nKey:`robot.${m.n}`,lang:'en'});

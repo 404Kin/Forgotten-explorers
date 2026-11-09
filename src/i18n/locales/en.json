@@ -177,8 +177,6 @@
  "credit.disclaimer": "This app is an independent educational project and is not affiliated with or endorsed by NASA.",
  "card.logo1": "NASA",
  "card.logo2": "kids",
- "card.awake": "Still awake",
- "card.asleep": "Sleeping",
  "card.collected": "Collected",
  "toast.badge": "Badge unlocked: {icon} {name}",
  "toast.xp": "+{n} XP {why}",
@@ -502,5 +500,14 @@
  "state.webgl": "Your device could not start the 3D view. Try again, or open the app in another browser.",
  "state.notFound": "We could not find that page.",
  "state.goExplore": "Go to Explore",
- "quiz.noQuestions": "No questions for this topic yet. Try another one!"
+ "quiz.noQuestions": "No questions for this topic yet. Try another one!",
+ "status.left_behind": "Left Behind",
+ "status.silent": "Went Silent",
+ "status.talking": "Still Talking",
+ "filter.label": "Filter explorers",
+ "filter.world": "World",
+ "filter.status": "Status",
+ "filter.count": "{n} explorers shown",
+ "filter.clear": "Clear filters",
+ "filter.noMatch": "No explorers match these filters."
 }

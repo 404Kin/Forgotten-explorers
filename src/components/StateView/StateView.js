@@ -10,10 +10,10 @@ export const errorMessageKey=err=>err?.code==='RATE_LIMITED'?'state.error.rateLi
 
 /**
  * kind: 'loading' | 'empty' | 'error'
- * opts: { messageKey, titleKey, onRetry, actionHref, actionKey, compact }
+ * opts: { messageKey, titleKey, onRetry, retryKey (button label, default "Try again"), actionHref, actionKey, compact }
  * Roles: loading = status (polite), error = alert (read right away), empty = status.
  */
-export function stateHTML(kind,{messageKey,titleKey,onRetry,actionHref,actionKey,compact=false}={}){
+export function stateHTML(kind,{messageKey,titleKey,onRetry,retryKey,actionHref,actionKey,compact=false}={}){
   const title=titleKey||(kind==='error'?'state.error.title':kind==='empty'?'state.empty.title':null);
   const message=messageKey||(kind==='error'?'state.error.message':kind==='empty'?'state.empty.message':'state.loading');
   const role=kind==='error'?'alert':'status';
@@ -21,7 +21,7 @@ export function stateHTML(kind,{messageKey,titleKey,onRetry,actionHref,actionKey
     `<span class="sv-icon${kind==='loading'?' spin':''}" aria-hidden="true">${ICON[kind]}</span>`+
     (title?`<h2 class="sv-title">${t(title)}</h2>`:'')+
     `<p class="sv-msg">${t(message)}</p>`+
-    (onRetry?`<button type="button" class="btn sv-retry" data-retry>${t('common.tryAgain')}</button>`:'')+
+    (onRetry?`<button type="button" class="btn sv-retry" data-retry>${t(retryKey||'common.tryAgain')}</button>`:'')+
     (actionHref?`<a class="btn alt sv-action" href="${actionHref}">${t(actionKey||'state.goExplore')}</a>`:'')+
   `</div>`;
 }
