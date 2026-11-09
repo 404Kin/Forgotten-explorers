@@ -543,5 +543,13 @@
  "sources.empty": "No data sources to show yet.",
  "sources.disclaimerTitle": "Please note",
  "credit.sources": "Data sources and credits",
- "sources.pinnedIntro": "Photos we picked by hand for our robots:"
+ "sources.pinnedIntro": "Photos we picked by hand for our robots:",
+ "cert.event": "◇  NASA SPACE APPS 2026  ◇",
+ "cert.title": "Space Explorer",
+ "cert.subtitle": "Certificate of Discovery",
+ "cert.awarded": "proudly awarded to",
+ "cert.defaultName": "A Curious Explorer",
+ "cert.reason": "for waking up all 11 forgotten robots and learning their stories",
+ "cert.line": "Rank: {rank}  ·  {xp} XP  ·  {date}",
+ "cert.fileName": "space-explorer-certificate.png"
 }
