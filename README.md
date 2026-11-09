@@ -10,6 +10,7 @@ npm run dev        # http://localhost:5173
 npm run build      # production site in /dist
 npm run check      # sanity-check imports
 ```
+Backend (optional): copy `.env.example` to `.env` and set `VITE_API_BASE_URL` (for example `http://localhost:8787`). With it empty, or if the API is down, the app uses the data in `src/data` instead. Client: `src/services/api.js`.
 Needs Node 18+ and an internet connection (NASA photos, fonts and the 3D library come from the web / npm).
 
 ## What the player does
