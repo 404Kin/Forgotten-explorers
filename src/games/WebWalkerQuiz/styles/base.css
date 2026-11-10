@@ -31,9 +31,9 @@
 .ws-root p {
   margin: 0;
 }
-.ws-root button,
-.ws-root select,
-.ws-root input {
+/* :where() keeps this reset at zero specificity, so classes like .ws-btn can set their own text colour (it used to win and made
+   white-on-green buttons with 1.6:1 contrast). */
+:where(.ws-root) :is(button, select, input) {
   font: inherit;
   color: inherit;
 }

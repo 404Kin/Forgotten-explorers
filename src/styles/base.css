@@ -15,3 +15,6 @@ h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.02em;margin
 @keyframes pop{from{transform:scale(.7);opacity:0}}
 .skel{background:linear-gradient(90deg,#ffffff10,#ffffff28,#ffffff10);background-size:200% 100%;animation:sh 1.4s infinite}@keyframes sh{to{background-position:-200% 0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* [hidden] must always win: classes like .btn set display and used to show hidden buttons (an empty, unlabeled one). */
+[hidden]{display:none!important}

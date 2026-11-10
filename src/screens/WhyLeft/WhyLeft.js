@@ -4,6 +4,7 @@ import './WhyLeft.css';
 import {t,tx} from '../../i18n/index.js';
 import {MISSIONS} from '../../data/missions.js';
 import {statusOf} from '../../services/api.js';
+import {inkFor} from '../../components/contrast.js';
 import {loadInto} from '../../components/StateView/StateView.js';
 import {creditFooterHTML} from '../../components/CreditFooter/CreditFooter.js';
 
@@ -24,7 +25,7 @@ function render(data,box){
       const robots=robotsFor(s);
       return `<section class="panel wl-sec" aria-labelledby="wl-${esc(s.id)}"><h2 id="wl-${esc(s.id)}"><span aria-hidden="true">${esc(s.icon||'🌌')}</span> ${esc(tx(`whyLeft.${s.id}.title`,s.title))}</h2>`+
         `<p>${esc(tx(`whyLeft.${s.id}.text`,s.text))}</p>`+
-        (robots.length?`<p class="mono">${t('whyLeft.robots')}</p><div class="chips">${robots.map(m=>`<a class="chip" href="#/mission/${m.id}" style="background:${m.c};color:${m.k}">${esc(m.n)}</a>`).join('')}</div>`:'')+
+        (robots.length?`<p class="mono">${t('whyLeft.robots')}</p><div class="chips">${robots.map(m=>`<a class="chip" href="#/mission/${m.id}" style="background:${m.c};color:${inkFor(m.c,m.k)}">${esc(m.n)}</a>`).join('')}</div>`:'')+
         `<p class="wl-src mono">${t('whyLeft.sources')}: `+((s.sources||[]).length?s.sources.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(new URL(u).hostname)}</a>`).join(' · '):t('whyLeft.noSources'))+`</p></section>`;
     }).join('');
 }

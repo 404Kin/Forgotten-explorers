@@ -42,8 +42,10 @@ up=e=>pts.delete(e.pointerId),
 move=e=>{if(!pts.has(e.pointerId))return;const p=pts.get(e.pointerId);if(pts.size===1){yaw-=(e.clientX-p[0])*.006;el=Math.max(.12,Math.min(1.3,el+(e.clientY-p[1])*.004))}pts.set(e.pointerId,[e.clientX,e.clientY]);if(pts.size===2){const[a,b]=[...pts.values()],d=Math.hypot(a[0]-b[0],a[1]-b[1]);td=Math.max(3,Math.min(60,td*pd/d));pd=d}},
 wheel=e=>{e.preventDefault();td=Math.max(3,Math.min(60,td*(1+e.deltaY*.001)))};
 box.addEventListener('pointerdown',down);addEventListener('pointerup',up);addEventListener('pointermove',move);box.addEventListener('wheel',wheel,{passive:false});addEventListener('resize',resize);resize();
+// Reduced motion: planets and stars hold still; the player can still drag and zoom.
+const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const v=new THREE.Vector3(),w3=new THREE.Vector3();
-(function loop(t){raf=requestAnimationFrame(loop);const dt=Math.min(.05,(t-last)/1000||0);last=t;
+(function loop(t){raf=requestAnimationFrame(loop);const dt=calm?0:Math.min(.05,(t-last)/1000||0);last=t;
 orb.forEach(g=>{g.userData.a+=g.userData.w*dt*3;g.position.set(Math.cos(g.userData.a)*g.userData.r,0,Math.sin(g.userData.a)*g.userData.r);g.userData.m.rotation.y+=dt*.4});
 pivot.rotation.y+=dt*.9;parker.userData.a+=dt*.7;parker.position.set(Math.cos(parker.userData.a)*3.4,0,Math.sin(parker.userData.a)*3.4);
 w3.copy(earth.position).normalize();webb.position.copy(w3.multiplyScalar(1.1));[webb,parker,voy].forEach((g,i)=>{g.scale.setScalar(1+Math.sin(t*.004+i)*.15)});

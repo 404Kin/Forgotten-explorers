@@ -872,5 +872,6 @@
  "map.creditLoading": "Loading the map picture…",
  "map.credit": "Map picture: {credit}",
  "map.creditLink": "Source",
- "map.creditFallback": "This globe is a drawing made by the app. Real NASA map pictures are coming soon."
+ "map.creditFallback": "This globe is a drawing made by the app. Real NASA map pictures are coming soon.",
+ "a11y.skip": "Skip to main content"
 }

@@ -21,8 +21,8 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-grad
 /* cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:14px}
 .card{position:relative;border-radius:22px;aspect-ratio:3/4.2;padding:14px 14px 12px;text-align:left;display:flex;flex-direction:column;overflow:hidden;transition:transform .15s;box-shadow:0 6px 0 #0007}.card:hover{transform:translateY(-4px) rotate(-1deg)}
-.card h3{font-size:clamp(1.5rem,5.5vw,2.1rem);letter-spacing:-.04em;line-height:.9}.card small{font-size:.72rem;font-weight:800;margin-top:3px}.card svg{flex:1;min-height:0;width:100%}
-.ft{display:flex;justify-content:space-between;align-items:center}.lg{font-size:.55rem;line-height:1;font-weight:800;display:flex;gap:5px;align-items:center}.lg i{width:20px;height:20px;border-radius:50%;border:2.5px solid currentColor;display:block}
+.card h3,.card h2{font-size:clamp(1.5rem,5.5vw,2.1rem);letter-spacing:-.04em;line-height:.9}.card small{font-size:.72rem;font-weight:800;margin-top:3px}.card svg{flex:1;min-height:0;width:100%}
+.ft{display:flex;justify-content:space-between;align-items:center}.lg{font-size:.72rem;line-height:1;font-weight:800;display:flex;gap:5px;align-items:center}.lg i{width:20px;height:20px;border-radius:50%;border:2.5px solid currentColor;display:block}
 .gl{width:32px;height:32px;border:2.5px solid currentColor;border-radius:50%;display:grid;place-items:center}.st{position:absolute;top:12px;right:12px;font-size:.62rem;font-weight:800;background:#fffc;color:var(--k);border-radius:999px;padding:2px 8px}.stamp{position:absolute;top:36px;right:8px;font-size:1.6rem;transform:rotate(14deg)}
 .card.lock{filter:grayscale(.9) brightness(.7)}
 /* hub */
@@ -68,3 +68,20 @@ input.in{font:inherit;font-weight:800;border:var(--line) solid var(--k);border-r
 footer.credit{margin:30px 0;font-size:.75rem;opacity:.7;text-align:center}
 
 
+
+/* ---- Accessibility + mobile pass ---- */
+/* 44px minimum tap targets everywhere. */
+.btn,.chip,.x,.opt,button.tile,a.tile{min-height:44px;min-width:44px}
+.chip{display:inline-flex;align-items:center;justify-content:center}
+.btn.sm{padding-block:10px}
+.pn{pointer-events:auto;cursor:pointer;min-height:44px;min-width:44px;font:inherit;font-family:var(--display);font-size:.9rem}
+/* Skip link: invisible until it gets keyboard focus. */
+.skip{position:fixed;inset-block-start:-100px;inset-inline-start:8px;z-index:100;min-height:44px;padding:0 16px;border:3px solid var(--k);border-radius:12px;background:var(--gold);color:var(--k);font-weight:800}
+.skip:focus{inset-block-start:8px}
+#view:focus{outline:none}
+/* Long words (Bangla compounds, robot names) must wrap instead of forcing sideways scroll on phones. */
+body{overflow-wrap:anywhere}
+img,canvas,svg{max-width:100%}
+/* Reserve room for content that loads after the first paint, so the page does not jump (layout shift). */
+#dsbox,#wlbox,#livebox,#lmbox{min-height:55vh}
+.rank small{font-size:.75rem}
