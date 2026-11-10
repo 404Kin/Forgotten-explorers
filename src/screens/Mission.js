@@ -17,7 +17,7 @@ let stop;
 export default{name:'mission',
 mount(el,{id}){const m0=MISSIONS.find(x=>x.id===id);if(!m0)return renderState(el,'empty',{messageKey:'state.notFound',actionHref:'#/hub'});const m=localRobot(m0),r=m.real;let imgs=[];
 el.innerHTML=`<div class="wrap"><a class="btn sm alt" href="#/world/${m.w}"><span aria-hidden="true">←</span> ${t('mission.back')}</a>
-<div class="mtitle"><h1>${m.n}</h1><div><div class="mono">${r.name} · ${r.status}</div><div>${m.t}</div><div style="margin-top:6px">${statusBadgeHTML(statusOf(m0))}</div></div></div>
+<div class="mtitle"><h1>${m.n}</h1><div><div class="mono">${r.name} · ${r.status}</div><div>${m.t}</div><div style="margin-top:6px">${statusBadgeHTML(statusOf(m0))} <a class="btn sm" href="#/last-message/${m.id}"><span aria-hidden="true">💌</span> ${t('game.lastMessage')}</a></div></div></div>
 <div class="mhero" id="mh"></div>
 <div class="mgrid" style="margin-top:18px"><div>${cardHTML(m,{tag:'div',collected:get().collected.includes(m.n)})}</div><div><div class="tabs"><button class="chip on" data-t="story">📖 ${t('mission.tab.story')}</button><button class="chip" data-t="data">📊 ${t('mission.tab.data')}</button><button class="chip" data-t="photos">📷 ${t('mission.tab.photos')}</button><button class="chip" data-t="quiz">🧠 ${t('mission.tab.quiz')}</button></div><div class="panel" id="tb"></div></div></div></div>`;
 const hero=el.querySelector('#mh');
