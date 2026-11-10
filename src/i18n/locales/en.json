@@ -847,5 +847,14 @@
  "buggy.winText": "Time {time} s · {stars} of {total} stars · +{xp} XP",
  "buggy.lostText": "{stars} stars collected · +{xp} XP. Try again!",
  "buggy.newBest": "New best time!",
- "buggy.xpReason": "for the buggy race"
+ "buggy.xpReason": "for the buggy race",
+ "whyLeft.kicker": "Big question",
+ "whyLeft.title": "Why did we leave it there?",
+ "whyLeft.intro": "NASA has robots on the Moon, on Mars and in deep space. Why are they still there? Here are the reasons.",
+ "whyLeft.robots": "Explorers like this",
+ "whyLeft.sources": "Sources",
+ "whyLeft.noSources": "sources coming soon",
+ "whyLeft.draftNote": "Draft text: this page is still being checked against NASA sources.",
+ "whyLeft.empty": "No answers to show yet.",
+ "hub.tile.why": "The big question"
 }

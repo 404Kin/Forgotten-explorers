@@ -8,6 +8,7 @@ import Lander from './games/LunarLander.js';import Memory from './games/MemoryMa
 import DataSources from './screens/DataSources/DataSources.js';
 import LastMessage from './screens/LastMessage/LastMessage.js';
 import MoonBuggy from './games/MoonBuggy/MoonBuggy.js';
+import WhyLeft from './screens/WhyLeft/WhyLeft.js';
 route('/',Landing);route('/map',Map);route('/hub',Hub);route('/world/:k',World);route('/mission/:id',Mission);route('/quiz',Quiz);
-route('/play',Play);route('/play/lander',Lander);route('/play/memory',Memory);route('/play/buggy',MoonBuggy);route('/album',Album);route('/timeline',Timeline);route('/sources',DataSources);route('/last-message',LastMessage);route('/last-message/:id',LastMessage);
+route('/play',Play);route('/play/lander',Lander);route('/play/memory',Memory);route('/play/buggy',MoonBuggy);route('/album',Album);route('/timeline',Timeline);route('/sources',DataSources);route('/why',WhyLeft);route('/last-message',LastMessage);route('/last-message/:id',LastMessage);
 mountChrome();start(document.getElementById('view'));
