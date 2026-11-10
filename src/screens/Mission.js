@@ -7,6 +7,8 @@ import {runQuiz} from '../games/QuizEngine.js';
 import {get,update,addXP,collect} from '../state/store.js';
 import {formatKm,formatTime,num} from '../i18n/format.js';
 import {t} from '../i18n/index.js';
+import {getDistances} from '../services/api.js';
+import {liveLabelHTML} from '../components/LiveLabel/LiveLabel.js';
 import {statusBadgeHTML} from '../components/StatusBadge/StatusBadge.js';
 import {statusOf} from '../services/api.js';
 import {renderState,loadInto} from '../components/StateView/StateView.js';
@@ -31,7 +33,12 @@ let tab='story';const tb=el.querySelector('#tb');loadPhotos();
 function show(tabName){tab=tabName;stopSpeak();stop?.();el.querySelectorAll('.tabs .chip').forEach(c=>c.classList.toggle('on',c.dataset.t===tabName));
 if(tabName==='story'){tb.innerHTML=m.p.map(([h,x])=>`<div class="pg"><h3>${h}</h3><p>${x}</p></div>`).join('')+`<button class="btn sm alt" id="rd">🔊 ${t('mission.readAloud')}</button> <button class="btn sm" id="rm">${get().read.includes(m.n)?'✓ '+t('mission.read'):t('mission.markRead')}</button>`;
 tb.querySelector('#rd').onclick=()=>speak(m.p.map(p=>p.join('. ')).join(' '));tb.querySelector('#rm').onclick=e=>{if(!get().read.includes(m.n)){update(S=>S.read.push(m.n));addXP(20,t('xp.reading'));e.target.textContent='✓ '+t('mission.read')}}}
-if(tabName==='data'){const L=[['launched',r.launchDate],['arrived',`${r.arrivalDate}. ${r.arrivalEvent}`],['where',r.location],['coordinates',r.coordinates],['distance',formatKm(r.distanceKm)],['message',formatTime(r.lightSeconds)],['speed',t('unit.kmPerSecond',{n:num(r.speedKmS,1)})],['status',r.status]];tb.innerHTML=`<p class="mono">${t('mission.dataSource')}</p><ul class="dl">${L.map(([a,b])=>`<li><b>${t('mission.data.'+a)}</b>${b}</li>`).join('')}</ul>`}
+if(tabName==='data'){const L=[['launched',r.launchDate],['arrived',`${r.arrivalDate}. ${r.arrivalEvent}`],['where',r.location],['coordinates',r.coordinates],['distance',formatKm(r.distanceKm)],['message',formatTime(r.lightSeconds)],['speed',t('unit.kmPerSecond',{n:num(r.speedKmS,1)})],['status',r.status]];tb.innerHTML=`<p class="mono">${t('mission.dataSource')}</p><ul class="dl">${L.map(([a,b])=>`<li data-k="${a}"><b>${t('mission.data.'+a)}</b><span class="val">${b}</span></li>`).join('')}</ul><p id="livelbl">${liveLabelHTML({source:'snapshot'})}</p>`;
+// Distance and message time change every day, so ask for today's values and label them live or snapshot.
+getDistances([m.id]).then(r=>{const d=r.data?.[0];if(!d||tab!=='data'||!tb.isConnected)return;
+const set=(k,v)=>{const s=tb.querySelector(`[data-k="${k}"] .val`);if(s&&v!=null)s.textContent=v};
+set('distance',d.distanceKm!=null?formatKm(d.distanceKm):null);set('message',d.lightSeconds!=null?formatTime(d.lightSeconds):null);
+tb.querySelector('#livelbl').innerHTML=liveLabelHTML({source:d.source,asOf:d.asOf})}).catch(()=>{})}
 if(tabName==='photos'){if(!loaded)renderState(tb,'loading',{compact:true});
 else if(!imgs.length)renderState(tb,'empty',{messageKey:'mission.noPhotos',compact:true,onRetry:()=>{renderState(tb,'loading',{compact:true});loadPhotos()}});
 else tb.innerHTML=`<div class="gal">${imgs.map((i,n)=>`<figure data-n="${n}" tabindex="0" role="button" aria-label="${i.title.replace(/"/g,'')}">${imgTag(i)}</figure>`).join('')}</div><p class="mono">${t('mission.photosHelp')}</p>`;

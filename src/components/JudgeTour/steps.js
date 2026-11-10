@@ -8,8 +8,7 @@ export const TOUR_STEPS=[
   {id:'map',route:'/map',target:'#mapbox',ready:true},
   {id:'robot',route:`/mission/${FIRST_ROBOT}`,target:'.mtitle',ready:true},
   {id:'lastMessage',route:`/last-message/${FIRST_ROBOT}`,target:'.lm-stage',ready:true},
-  // PLACEHOLDER until task 6 (Still Talking tracker) registers this route.
-  {id:'live',route:'/live',target:null,ready:false},
+  {id:'live',route:'/live',target:'#livebox',ready:true},
   {id:'language',route:'/hub',target:'.langsel',ready:true}
 ];
 export const TOUR_STORAGE_KEY='fe2.tour';

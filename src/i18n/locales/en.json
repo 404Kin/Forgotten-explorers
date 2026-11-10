@@ -856,5 +856,17 @@
  "whyLeft.noSources": "sources coming soon",
  "whyLeft.draftNote": "Draft text: this page is still being checked against NASA sources.",
  "whyLeft.empty": "No answers to show yet.",
- "hub.tile.why": "The big question"
+ "hub.tile.why": "The big question",
+ "live.live": "Live",
+ "live.updated": "updated {time}",
+ "live.snapshot": "Saved snapshot",
+ "live.snapshotOn": "Snapshot on {date}",
+ "live.kicker": "Right now",
+ "live.title": "Still Talking",
+ "live.intro": "These spacecraft are still sending messages to Earth. Each number says if it is live or a saved snapshot.",
+ "live.dish": "Heard by antenna {dish}",
+ "live.distance": "Distance from Earth",
+ "live.lightTime": "A message takes",
+ "live.empty": "No spacecraft are talking to Earth right now. Check back soon!",
+ "hub.tile.live": "Who is talking to Earth?"
 }
