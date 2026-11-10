@@ -868,5 +868,9 @@
  "live.distance": "Distance from Earth",
  "live.lightTime": "A message takes",
  "live.empty": "No spacecraft are talking to Earth right now. Check back soon!",
- "hub.tile.live": "Who is talking to Earth?"
+ "hub.tile.live": "Who is talking to Earth?",
+ "map.creditLoading": "Loading the map picture…",
+ "map.credit": "Map picture: {credit}",
+ "map.creditLink": "Source",
+ "map.creditFallback": "This globe is a drawing made by the app. Real NASA map pictures are coming soon."
 }

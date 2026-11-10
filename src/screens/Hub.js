@@ -1,7 +1,6 @@
 import {MISSIONS,WORLDS} from '../data/missions.js';
 import {FEATURED_QUERIES} from '../data/nasaQueries.js';
 import {cardHTML} from '../components/Card.js';
-import {createPlanetPicker} from '../three/PlanetPicker.js';
 import {searchImages,imgTag} from '../services/nasaImages.js';
 import {lightbox} from '../components/Modal.js';
 import {get} from '../state/store.js';
@@ -30,8 +29,8 @@ if(!list.length)renderState(gr,'empty',{messageKey:'filter.noMatch',retryKey:'fi
 else gr.innerHTML=list.map(m=>cardHTML(m,{collected:get().collected.includes(m.n)})).join('')};
 const filters=createFilters(el.querySelector('#fl'),GROUPS,draw);draw(filters.get());
 // WebGL can be missing or blocked: show the shared error state (with Retry) instead of an empty box.
-const pw=el.querySelector('#pw');const boot3d=()=>{pw.innerHTML='<canvas id="pl" role="img" aria-label="'+t('hub.sub')+'"></canvas><span class="pn"></span><span class="pn"></span><span class="pn"></span>';
-try{pk=createPlanetPicker(pw.querySelector('#pl'),[...pw.querySelectorAll('.pn')],k=>go('/world/'+k))}catch{pk=null;renderState(pw,'error',{messageKey:'state.webgl',onRetry:boot3d})}};boot3d();
+const pw=el.querySelector('#pw');const boot3d=async()=>{pw.innerHTML='<canvas id="pl" role="img" aria-label="'+t('hub.sub')+'"></canvas><span class="pn"></span><span class="pn"></span><span class="pn"></span>';
+try{const {createPlanetPicker}=await import('../three/PlanetPicker.js');if(!pw.isConnected)return;pk=createPlanetPicker(pw.querySelector('#pl'),[...pw.querySelectorAll('.pn')],k=>go('/world/'+k))}catch{pk=null;renderState(pw,'error',{messageKey:'state.webgl',onRetry:boot3d})}};boot3d();
 const q=FEATURED_QUERIES[Math.random()*FEATURED_QUERIES.length|0];
 // searchImages() answers [] when the network fails, so an empty list means "could not load" here, not "no photos exist".
 loadInto(el.querySelector('#ph'),async()=>{const list=await searchImages(q,8);if(!list.length)throw new ApiError('NETWORK','no photos');return list},{
