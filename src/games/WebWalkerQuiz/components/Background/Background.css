@@ -1,0 +1,105 @@
+.ws-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.ws-bg-nebula {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 45% at 15% 20%, rgb(120 80 255 / 0.28), transparent 70%),
+    radial-gradient(ellipse 55% 50% at 85% 75%, rgb(255 90 160 / 0.2), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 60% 10%, rgb(74 163 255 / 0.18), transparent 70%);
+}
+.ws-bg-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+}
+.ws-bg-planet {
+  position: absolute;
+  inset-inline-end: -6rem;
+  top: 12%;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, rgb(255 255 255 / 0.25), transparent 45%),
+    radial-gradient(circle at 35% 35%, #e0793f, #8c2f1f 70%);
+  box-shadow:
+    inset -2rem -1rem 3rem rgb(0 0 0 / 0.55),
+    0 0 4rem rgb(224 121 63 / 0.25);
+  opacity: 0.85;
+}
+.ws-bg-rover-wrap {
+  position: absolute;
+  inset-inline-start: -8rem;
+  bottom: 8%;
+  width: 6rem;
+  opacity: 0.55;
+}
+.ws-bg-rover {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 640px) {
+  .ws-bg-planet {
+    width: 9rem;
+    height: 9rem;
+    inset-inline-end: -3rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ws-bg-stars:nth-of-type(2) {
+    animation: ws-twinkle 5s ease-in-out infinite;
+  }
+  .ws-bg-stars:nth-of-type(3) {
+    animation: ws-twinkle 7s ease-in-out -2s infinite;
+  }
+  .ws-bg-planet {
+    animation: ws-float 14s ease-in-out infinite;
+  }
+  .ws-bg-rover-wrap {
+    animation: ws-rover-drift 70s linear infinite;
+  }
+}
+@keyframes ws-twinkle {
+  50% {
+    opacity: 0.55;
+  }
+}
+@keyframes ws-float {
+  50% {
+    transform: translateY(-14px) rotate(3deg);
+  }
+}
+@keyframes ws-rover-drift {
+  from {
+    transform: translateX(0) rotate(-6deg);
+  }
+  50% {
+    transform: translateX(60vw) translateY(-30px) rotate(6deg);
+  }
+  to {
+    transform: translateX(120vw) rotate(-6deg);
+  }
+}
+[dir='rtl'] .ws-bg-rover-wrap {
+  animation-name: ws-rover-drift-rtl;
+}
+@keyframes ws-rover-drift-rtl {
+  from {
+    transform: translateX(0) rotate(6deg) scaleX(-1);
+  }
+  50% {
+    transform: translateX(-60vw) translateY(-30px) rotate(-6deg) scaleX(-1);
+  }
+  to {
+    transform: translateX(-120vw) rotate(6deg) scaleX(-1);
+  }
+}
