@@ -1,0 +1,20 @@
+.lm-list{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.lm-pick{display:grid;gap:6px;min-height:44px;text-decoration:none}.lm-pick b{font-family:var(--display);font-weight:400;font-size:1.3rem}
+#lmbox{display:grid;gap:16px;margin-top:12px}
+.lm-stage{min-height:200px;display:grid;align-content:center;gap:12px;padding:24px}
+.lm-stage:focus-visible{outline:4px solid var(--nasa-blue);outline-offset:3px}
+.lm-line{margin:0;font-size:clamp(1.25rem,4.5vw,1.9rem);line-height:1.45;font-weight:800}
+.lm-count{margin:0}
+.lm-tags{margin:0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+/* Poetic label: words + dashed outline, so it never relies on colour alone. */
+.lm-poetic{display:inline-block;padding:2px 10px;border:2.5px dashed var(--k);border-radius:999px;background:var(--lav);color:var(--k);font-size:.8rem;font-weight:800}
+.lm-source{text-decoration:underline;font-weight:800;min-height:44px;display:inline-flex;align-items:center}
+.lm-controls{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.lm-controls .btn{min-height:44px;min-width:44px}
+.lm-controls .btn:disabled{opacity:.55;cursor:not-allowed}
+.lm-audio-note,.lm-note{margin:0;text-align:center}
+.lm-note{font-weight:800}
+.lm-h2{font-size:1.2rem}
+.lm-transcript{margin:0;padding-inline-start:1.4rem;display:grid;gap:8px}
+.lm-transcript li{cursor:pointer;padding:6px 8px;border-radius:12px;min-height:44px}
+.lm-transcript li[aria-current=true]{background:#ffffff22;outline:2px solid var(--gold)}

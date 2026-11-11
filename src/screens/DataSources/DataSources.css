@@ -1,0 +1,7 @@
+.ds-list,.ds-plain{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ds-plain{gap:6px}.ds-plain a{text-decoration:underline}
+.ds-item h3{font-size:1.15rem}.ds-item p{margin:6px 0 0}.ds-item a{text-decoration:underline}
+.ds-state{margin-inline-start:8px;padding:2px 8px;border:2px solid currentColor;border-radius:999px}
+#dsbox{display:grid;gap:24px;margin-top:20px}
+.ds-note{font-weight:800}
+.ds-disclaimer h2{font-size:1.2rem}.ds-disclaimer p{margin:8px 0 0}

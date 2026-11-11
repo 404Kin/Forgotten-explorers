@@ -1,0 +1,387 @@
+[
+  {
+    "id": "perseverance-ingenuity-ride",
+    "difficulty": "easy",
+    "question": "Which NASA rover carried the Ingenuity helicopter to Mars?",
+    "options": ["Perseverance", "Sojourner", "Spirit", "Opportunity"],
+    "correct": 0,
+    "fact": "Ingenuity travelled to Mars attached to the underside of the Perseverance rover, then was set down on the surface.",
+    "source": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "first-flight-other-planet",
+    "difficulty": "easy",
+    "question": "Which machine made the first powered, controlled flight on another planet?",
+    "options": ["Lunar Roving Vehicle", "Ingenuity helicopter", "Sojourner rover", "Voyager 1"],
+    "correct": 1,
+    "fact": "Ingenuity took off on April 19, 2021, in the thin air of Mars.",
+    "source": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "curiosity-wheels",
+    "difficulty": "easy",
+    "question": "How many wheels does the Curiosity rover have?",
+    "options": ["4", "8", "6", "10"],
+    "correct": 2,
+    "fact": "Curiosity rolls on six aluminum wheels, each with its own motor.",
+    "source": "https://science.nasa.gov/mission/msl-curiosity/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "apollo-moon-buggy",
+    "difficulty": "easy",
+    "question": "What did the Apollo 15, 16 and 17 astronauts drive on the Moon?",
+    "options": ["A snowmobile", "A lunar rover (moon buggy)", "A hovercraft", "A bicycle"],
+    "correct": 1,
+    "fact": "The rover folded up to fit on the lander, and it was left behind on the Moon when the astronauts went home.",
+    "source": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_lrv.html",
+    "needsFactCheck": true
+  },
+  {
+    "id": "curiosity-landing-year",
+    "difficulty": "easy",
+    "question": "Which NASA Mars rover landed in 2012?",
+    "options": ["Perseverance", "Spirit", "Sojourner", "Curiosity"],
+    "correct": 3,
+    "fact": "Curiosity landed on Mars in August 2012 and has been exploring Mars ever since.",
+    "source": "https://science.nasa.gov/mission/msl-curiosity/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "golden-record",
+    "difficulty": "easy",
+    "question": "What is stored on the Golden Records carried by the Voyager spacecraft?",
+    "options": [
+      "Moon rocks",
+      "Sounds and pictures from Earth",
+      "Spare rover wheels",
+      "Fuel for the trip"
+    ],
+    "correct": 1,
+    "fact": "Each Voyager carries a gold-plated disk of sounds and images from Earth, in case anyone out there finds it someday.",
+    "source": "https://science.nasa.gov/mission/voyager/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "sojourner-first",
+    "difficulty": "easy",
+    "question": "Which small rover rolled out onto Mars in 1997 with Mars Pathfinder?",
+    "options": ["Curiosity", "Opportunity", "Sojourner", "Perseverance"],
+    "correct": 2,
+    "fact": "Sojourner was about the size of a microwave oven. It was the first rover to drive on Mars.",
+    "source": "https://science.nasa.gov/mission/mars-pathfinder/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "spirit-opp-power",
+    "difficulty": "easy",
+    "question": "How did the rovers Spirit and Opportunity make electricity?",
+    "options": ["Solar panels", "Gasoline", "Wind turbines", "Pedal power"],
+    "correct": 0,
+    "fact": "Dust could build up on their solar panels, but sometimes a gust of Martian wind blew the panels clean.",
+    "source": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "spirit-opp-planet",
+    "difficulty": "easy",
+    "question": "Which planet did Spirit and Opportunity explore?",
+    "options": ["Venus", "Mars", "Jupiter", "Mercury"],
+    "correct": 1,
+    "fact": "Both twin rovers landed on Mars in January 2004, at two different spots on the planet.",
+    "source": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "apollo-11-plaque",
+    "difficulty": "easy",
+    "question": "What did Apollo 11 leave on the Moon that says \"We came in peace for all mankind\"?",
+    "options": ["A metal plaque", "A pizza box", "A snow globe", "A road sign"],
+    "correct": 0,
+    "fact": "The plaque is fixed to the lander that stayed behind on the Moon in July 1969.",
+    "source": "https://www.nasa.gov/mission/apollo-11/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "perseverance-samples",
+    "difficulty": "easy",
+    "question": "What does Perseverance seal in metal tubes?",
+    "options": ["Moon dust", "Alien pets", "Rock and soil samples from Mars", "Star light"],
+    "correct": 2,
+    "fact": "The tubes hold pieces of Mars that scientists hope to study in labs on Earth someday.",
+    "source": "https://science.nasa.gov/mission/mars-2020-perseverance/mars-rock-samples/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "voyager-1-farthest",
+    "difficulty": "easy",
+    "question": "Which spacecraft is the farthest human-made object from Earth?",
+    "options": ["Curiosity", "Ingenuity", "Apollo 11", "Voyager 1"],
+    "correct": 3,
+    "fact": "Voyager 1 launched in 1977 and entered the space between the stars in 2012.",
+    "source": "https://science.nasa.gov/mission/voyager/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "jezero-landing",
+    "difficulty": "medium",
+    "question": "Which crater did Perseverance land in?",
+    "options": ["Jezero Crater", "Gale Crater", "Gusev Crater", "Tycho Crater"],
+    "correct": 0,
+    "fact": "Scientists think Jezero Crater once held a lake and a river delta, a great place to look for signs of ancient life.",
+    "source": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "gale-landing",
+    "difficulty": "medium",
+    "question": "Where did Curiosity land on Mars?",
+    "options": ["Jezero Crater", "Gale Crater", "Meridiani Planum", "Olympus Mons"],
+    "correct": 1,
+    "fact": "Gale Crater has a tall mountain inside it, called Mount Sharp, which Curiosity has been climbing.",
+    "source": "https://science.nasa.gov/mission/msl-curiosity/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "opportunity-lifetime",
+    "difficulty": "medium",
+    "question": "Opportunity was built for a mission of about 90 Martian days. About how long did it really work?",
+    "options": ["About 3 months", "About 1 year", "About 14 years", "About 40 years"],
+    "correct": 2,
+    "fact": "Opportunity landed in January 2004 and last contacted Earth in June 2018, during a giant dust storm.",
+    "source": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "pathfinder-airbags",
+    "difficulty": "medium",
+    "question": "How did Mars Pathfinder cushion its landing in 1997?",
+    "options": [
+      "It landed on giant springs",
+      "It bounced inside huge airbags",
+      "It floated down on balloons",
+      "It landed in a pool"
+    ],
+    "correct": 1,
+    "fact": "After bouncing to a stop, the airbags deflated and the lander opened so Sojourner could drive out.",
+    "source": "https://science.nasa.gov/mission/mars-pathfinder/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "sojourner-name",
+    "difficulty": "medium",
+    "question": "The Sojourner rover was named after which person?",
+    "options": ["Amelia Earhart", "Sally Ride", "Sojourner Truth", "Marie Curie"],
+    "correct": 2,
+    "fact": "Sojourner Truth travelled around the United States speaking out for equal rights.",
+    "source": "https://science.nasa.gov/mission/mars-pathfinder/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "lunokhod-country",
+    "difficulty": "medium",
+    "question": "Which country sent the Lunokhod rovers to drive on the Moon in the early 1970s?",
+    "options": ["Soviet Union", "Japan", "India", "Canada"],
+    "correct": 0,
+    "fact": "Lunokhod 1 landed on the Moon in November 1970 and was driven by a team back on Earth.",
+    "source": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1970-095A",
+    "needsFactCheck": true
+  },
+  {
+    "id": "lrv-power",
+    "difficulty": "medium",
+    "question": "What powered the Apollo Lunar Roving Vehicles?",
+    "options": ["A gasoline engine", "Steam", "Batteries", "Pedals"],
+    "correct": 2,
+    "fact": "Batteries ran an electric motor in each of the rover's four wheels.",
+    "source": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_lrv.html",
+    "needsFactCheck": true
+  },
+  {
+    "id": "pioneer-10-belt",
+    "difficulty": "medium",
+    "question": "Pioneer 10 was the first spacecraft to travel through which region?",
+    "options": [
+      "The asteroid belt",
+      "The rings of Saturn",
+      "The tail of a comet",
+      "The edge of the Sun"
+    ],
+    "correct": 0,
+    "fact": "Pioneer 10 also made the first flyby of Jupiter, in December 1973.",
+    "source": "https://science.nasa.gov/mission/pioneer-10/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "pioneer-plaque",
+    "difficulty": "medium",
+    "question": "What is shown on the plaques attached to Pioneer 10 and 11?",
+    "options": [
+      "A recipe for pizza",
+      "A map of the Moon",
+      "A cartoon rover",
+      "A man and a woman, and where Earth is"
+    ],
+    "correct": 3,
+    "fact": "The plaques are a greeting from Earth, in case another civilization ever finds the spacecraft.",
+    "source": "https://science.nasa.gov/mission/pioneer-10/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "voyager-2-planets",
+    "difficulty": "medium",
+    "question": "Voyager 2 is the only spacecraft to have visited which two planets?",
+    "options": ["Venus and Mars", "Mercury and Pluto", "Uranus and Neptune", "Jupiter and Mars"],
+    "correct": 2,
+    "fact": "Voyager 2 flew past Uranus in 1986 and Neptune in 1989.",
+    "source": "https://science.nasa.gov/mission/voyager/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "surveyor-3-parts",
+    "difficulty": "medium",
+    "question": "What did Apollo 12 astronauts bring back from the Surveyor 3 spacecraft that landed before them?",
+    "options": ["Its flag", "Its camera and other parts", "Its wheels", "Its crew"],
+    "correct": 1,
+    "fact": "Scientists studied the parts to see how the materials held up after about two and a half years on the Moon.",
+    "source": "https://www.nasa.gov/mission/apollo-12/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "moxie",
+    "difficulty": "medium",
+    "question": "What does the MOXIE tool on Perseverance do?",
+    "options": [
+      "Plays music",
+      "Digs deep holes",
+      "Makes oxygen from the air of Mars",
+      "Takes selfies"
+    ],
+    "correct": 2,
+    "fact": "The air on Mars is mostly carbon dioxide, and MOXIE showed oxygen can be made from it.",
+    "source": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "chemcam",
+    "difficulty": "hard",
+    "question": "Which Curiosity tool zaps rocks with a laser to find out what they are made of?",
+    "options": ["Mastcam", "ChemCam", "MARDI", "Wheels"],
+    "correct": 1,
+    "fact": "ChemCam studies the flash of light from the zapped rock to learn what it contains.",
+    "source": "https://science.nasa.gov/mission/msl-curiosity/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "wright-flyer-fabric",
+    "difficulty": "hard",
+    "question": "Ingenuity carried a tiny piece of what famous Earth aircraft?",
+    "options": [
+      "Apollo 11 lander",
+      "Voyager 1",
+      "The Space Shuttle",
+      "The Wright brothers' 1903 Flyer"
+    ],
+    "correct": 3,
+    "fact": "A small piece of wing fabric from the first airplane sat under Ingenuity's solar panel on its trip to Mars.",
+    "source": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "voyager-1-interstellar-year",
+    "difficulty": "hard",
+    "question": "In which year did Voyager 1 enter interstellar space?",
+    "options": ["2004", "1989", "2012", "2021"],
+    "correct": 2,
+    "fact": "It was the first human-made object to travel into the space between the stars.",
+    "source": "https://science.nasa.gov/mission/voyager/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "golden-record-languages",
+    "difficulty": "hard",
+    "question": "The Voyager Golden Record has spoken greetings in how many languages?",
+    "options": ["12", "55", "100", "7"],
+    "correct": 1,
+    "fact": "People recorded short hellos in 55 languages for anyone who might find the record.",
+    "source": "https://science.nasa.gov/mission/voyager/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "spirit-stuck",
+    "difficulty": "hard",
+    "question": "What happened to the Spirit rover in 2009?",
+    "options": [
+      "It got stuck in soft sand",
+      "It flew away",
+      "It fell into a river",
+      "It lost its camera"
+    ],
+    "correct": 0,
+    "fact": "Spirit kept working as a still science station until NASA lost contact with it in 2010.",
+    "source": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "opportunity-site",
+    "difficulty": "hard",
+    "question": "Where did the Opportunity rover land on Mars?",
+    "options": ["Jezero Crater", "Gale Crater", "Utopia Planitia", "Meridiani Planum"],
+    "correct": 3,
+    "fact": "Opportunity found signs that liquid water once soaked the rocks of this region.",
+    "source": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "ingenuity-flights",
+    "difficulty": "hard",
+    "question": "How many flights did Ingenuity make before its mission ended in January 2024?",
+    "options": ["5", "25", "72", "200"],
+    "correct": 2,
+    "fact": "Ingenuity was only planned to fly up to five times, so it beat the plan by a lot.",
+    "source": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "last-apollo",
+    "difficulty": "hard",
+    "question": "Which Apollo mission was the last to land people on the Moon?",
+    "options": ["Apollo 13", "Apollo 15", "Apollo 16", "Apollo 17"],
+    "correct": 3,
+    "fact": "Apollo 17 landed in December 1972 and the crew drove a lunar rover too.",
+    "source": "https://www.nasa.gov/mission/apollo-17/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "shepard-golf",
+    "difficulty": "hard",
+    "question": "What sport did Apollo 14 astronaut Alan Shepard play on the Moon?",
+    "options": ["Golf", "Soccer", "Tennis", "Basketball"],
+    "correct": 0,
+    "fact": "Shepard hit two golf balls with a club head attached to a tool handle.",
+    "source": "https://www.nasa.gov/mission/apollo-14/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "lro-photos",
+    "difficulty": "hard",
+    "question": "Which NASA spacecraft has photographed Apollo landing sites from lunar orbit?",
+    "options": ["Voyager 2", "Lunar Reconnaissance Orbiter", "Pioneer 10", "Sojourner"],
+    "correct": 1,
+    "fact": "Its pictures show the landers' bases and tracks left by astronauts and rovers.",
+    "source": "https://science.nasa.gov/mission/lro/",
+    "needsFactCheck": true
+  },
+  {
+    "id": "perseverance-name",
+    "difficulty": "hard",
+    "question": "Who chose the name Perseverance for the Mars 2020 rover?",
+    "options": ["A seventh-grade student", "A robot vote", "An astronaut", "The Moon base crew"],
+    "correct": 0,
+    "fact": "NASA ran a naming contest for students across the United States, and a middle school student's essay won.",
+    "source": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+    "needsFactCheck": true
+  }
+]

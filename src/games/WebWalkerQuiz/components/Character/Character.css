@@ -1,0 +1,219 @@
+.ws-zip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--ws-zip-size);
+  height: calc(var(--ws-zip-size) * 1.2);
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 0 8px rgb(125 249 255 / 0.45));
+}
+.ws-zip-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform-origin: 50% 5%;
+}
+.ws-zip .z-face {
+  display: none;
+}
+.ws-zip[data-pose='hanging'] .z-face-calm,
+.ws-zip[data-pose='swinging'] .z-face-calm,
+.ws-zip[data-pose='landing'] .z-face-calm,
+.ws-zip[data-pose='winning'] .z-face-happy,
+.ws-zip[data-pose='falling'] .z-face-oops {
+  display: inline;
+}
+
+/* Pose: limb angles (CSS rotate is clockwise). */
+.ws-zip[data-pose='hanging'] .z-arm-l {
+  transform: rotate(150deg);
+}
+.ws-zip[data-pose='hanging'] .z-arm-r {
+  transform: rotate(-150deg);
+}
+.ws-zip[data-pose='hanging'] .z-leg-l {
+  transform: rotate(4deg);
+}
+.ws-zip[data-pose='hanging'] .z-leg-r {
+  transform: rotate(-4deg);
+}
+
+.ws-zip[data-pose='swinging'] .z-arm-l {
+  transform: rotate(25deg);
+}
+.ws-zip[data-pose='swinging'] .z-arm-r {
+  transform: rotate(-160deg);
+}
+.ws-zip[data-pose='swinging'] .z-leg-l {
+  transform: rotate(-14deg);
+}
+.ws-zip[data-pose='swinging'] .z-leg-r {
+  transform: rotate(22deg);
+}
+
+.ws-zip[data-pose='landing'] .z-arm-l {
+  transform: rotate(70deg);
+}
+.ws-zip[data-pose='landing'] .z-arm-r {
+  transform: rotate(-70deg);
+}
+.ws-zip[data-pose='landing'] .z-leg-l {
+  transform: rotate(10deg);
+}
+.ws-zip[data-pose='landing'] .z-leg-r {
+  transform: rotate(-10deg);
+}
+
+.ws-zip[data-pose='winning'] .z-arm-l {
+  transform: rotate(170deg);
+}
+.ws-zip[data-pose='winning'] .z-arm-r {
+  transform: rotate(-170deg);
+}
+.ws-zip[data-pose='winning'] .z-leg-l {
+  transform: rotate(-8deg);
+}
+.ws-zip[data-pose='winning'] .z-leg-r {
+  transform: rotate(35deg);
+}
+
+.ws-zip[data-pose='falling'] .z-arm-l {
+  transform: rotate(120deg);
+}
+.ws-zip[data-pose='falling'] .z-arm-r {
+  transform: rotate(-110deg);
+}
+.ws-zip[data-pose='falling'] .z-leg-l {
+  transform: rotate(-30deg);
+}
+.ws-zip[data-pose='falling'] .z-leg-r {
+  transform: rotate(40deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ws-zip .z-arm-l,
+  .ws-zip .z-arm-r,
+  .ws-zip .z-leg-l,
+  .ws-zip .z-leg-r {
+    transition: transform 0.25s ease-out;
+  }
+  .ws-zip[data-pose='hanging'] .ws-zip-svg {
+    animation: ws-sway 3.2s ease-in-out infinite;
+  }
+  .ws-zip[data-pose='hanging'] .z-leg-l {
+    animation: ws-dangle 2.4s ease-in-out infinite;
+  }
+  .ws-zip[data-pose='hanging'] .z-leg-r {
+    animation: ws-dangle 2.4s ease-in-out -1.2s infinite;
+  }
+  .ws-zip[data-pose='winning'] .ws-zip-svg {
+    animation: ws-hop 0.6s ease-in-out infinite;
+  }
+  .ws-zip[data-pose='winning'] .z-arm-l {
+    animation: ws-cheer-l 0.6s ease-in-out infinite;
+  }
+  .ws-zip[data-pose='winning'] .z-arm-r {
+    animation: ws-cheer-r 0.6s ease-in-out infinite;
+  }
+  .ws-zip[data-pose='falling'] .z-arm-l,
+  .ws-zip[data-pose='falling'] .z-leg-r {
+    animation: ws-flail 0.35s ease-in-out infinite alternate;
+  }
+  .ws-zip[data-pose='falling'] .z-arm-r,
+  .ws-zip[data-pose='falling'] .z-leg-l {
+    animation: ws-flail 0.35s ease-in-out -0.17s infinite alternate-reverse;
+  }
+}
+@keyframes ws-sway {
+  50% {
+    transform: rotate(4deg);
+  }
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+@keyframes ws-dangle {
+  50% {
+    transform: rotate(10deg);
+  }
+  0%,
+  100% {
+    transform: rotate(-6deg);
+  }
+}
+@keyframes ws-hop {
+  50% {
+    transform: translateY(-9%);
+  }
+}
+@keyframes ws-cheer-l {
+  50% {
+    transform: rotate(145deg);
+  }
+}
+@keyframes ws-cheer-r {
+  50% {
+    transform: rotate(-145deg);
+  }
+}
+@keyframes ws-flail {
+  from {
+    transform: rotate(-35deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+/* Layer that carries tether + character above the board. */
+.ws-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 6;
+}
+.ws-tether {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.ws-tether path {
+  fill: none;
+  stroke-linecap: round;
+}
+.ws-tether-glow {
+  stroke: var(--ws-blue);
+  stroke-width: 9;
+  opacity: 0.35;
+  filter: blur(3px);
+}
+.ws-tether-core {
+  stroke: #bff6ff;
+  stroke-width: 3;
+}
+.ws-tether-cut {
+  stroke: #bff6ff;
+  stroke-width: 3;
+  opacity: 0;
+  filter: drop-shadow(0 0 4px var(--ws-blue));
+}
+.ws-fade-in {
+  animation: ws-fade-in 0.3s ease-out both;
+}
+.ws-fade-out {
+  animation: ws-fade-out 0.45s ease-in both;
+}
+@keyframes ws-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes ws-fade-out {
+  to {
+    opacity: 0;
+  }
+}

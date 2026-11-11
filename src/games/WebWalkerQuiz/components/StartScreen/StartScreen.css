@@ -1,0 +1,119 @@
+.ws-start {
+  justify-content: center;
+}
+.ws-start-tools {
+  display: flex;
+  justify-content: flex-end;
+}
+.ws-start-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.5rem 1.25rem 1.75rem;
+  text-align: center;
+}
+.ws-start-zip {
+  position: relative;
+  width: var(--ws-zip-size);
+  height: calc(var(--ws-zip-size) * 1.2);
+  margin-top: 0.25rem;
+}
+.ws-start-zip .ws-zip {
+  position: relative;
+}
+.ws-start-title {
+  font-size: clamp(1.9rem, 1.3rem + 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow: 0 0 22px var(--ws-blue);
+  text-wrap: balance;
+}
+.ws-start-title:focus {
+  outline: none;
+}
+.ws-start-tagline {
+  max-width: 34rem;
+  font-size: 1.1rem;
+}
+.ws-fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.ws-fieldset legend {
+  width: 100%;
+  margin-bottom: 0.4rem;
+  padding: 0;
+  font-weight: 800;
+  color: var(--ws-yellow);
+  text-align: center;
+}
+.ws-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.ws-pill {
+  position: relative;
+}
+.ws-pill-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.ws-pill-face {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  padding: 0.4rem 1.2rem;
+  border: 3px solid var(--ws-panelEdge);
+  border-radius: 999px;
+  background: var(--ws-panel);
+  font-weight: 800;
+}
+.ws-pill-input:checked + .ws-pill-face {
+  background: var(--ws-blue);
+  color: var(--ws-space);
+}
+.ws-pill-input:checked + .ws-pill-face::before {
+  content: '✓';
+}
+.ws-pill-input:focus-visible + .ws-pill-face {
+  outline: 4px solid var(--ws-yellow);
+  outline-offset: 3px;
+}
+.ws-lang {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+}
+.ws-select {
+  min-height: 2.75rem;
+  padding: 0.3rem 0.8rem;
+  border: 3px solid var(--ws-panelEdge);
+  border-radius: 0.9rem;
+  background: var(--ws-panel);
+  color: var(--ws-text);
+}
+.ws-start-best {
+  font-weight: 800;
+  color: var(--ws-yellow);
+}
+.ws-start-play {
+  min-width: 14rem;
+  font-size: 1.35rem;
+}
+.ws-start-howto {
+  max-width: 32rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}

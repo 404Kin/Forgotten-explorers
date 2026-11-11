@@ -1,3 +1,10 @@
 /* Design tokens: change colors/fonts here. */
 :root{--k:#14122b;--navy:#0b1030;--indigo:#241a5c;--lav:#d9dcf2;--cream:#fdf3e2;--gold:#ffd34e;--pink:#ff8fa3;--mint:#8fd8b3;--nasa-red:#fc3d21;--nasa-blue:#0b3d91;--r:22px;--line:3.5px;
 --display:'Archivo Black','Arial Black',sans-serif;--body:'Nunito','Trebuchet MS',sans-serif;--mono:'Space Mono',ui-monospace,monospace;--brush:'Caveat Brush',cursive;--chunk:'Lilita One',sans-serif}
+/* Bangla/Arabic: Archivo/Nunito/Space Mono have no such glyphs, so the browser falls back per character.
+   We name the Noto fonts (loaded lazily by src/i18n) first-after so the fallback is predictable, not the system default. */
+html[lang=bn]{--display:'Archivo Black','Noto Sans Bengali','Arial Black',sans-serif;--body:'Nunito','Noto Sans Bengali','Trebuchet MS',sans-serif;--mono:'Space Mono','Noto Sans Bengali',ui-monospace,monospace;--brush:'Caveat Brush','Noto Sans Bengali',cursive;--chunk:'Lilita One','Noto Sans Bengali',sans-serif}
+html[lang=ar]{--display:'Archivo Black','Noto Sans Arabic','Arial Black',sans-serif;--body:'Nunito','Noto Sans Arabic','Trebuchet MS',sans-serif;--mono:'Space Mono','Noto Sans Arabic',ui-monospace,monospace;--brush:'Caveat Brush','Noto Sans Arabic',cursive;--chunk:'Lilita One','Noto Sans Arabic',sans-serif}
+/* Tight letter-spacing and uppercase break joined scripts; Bangla marks also need more line height. */
+html[lang=bn] *,html[lang=ar] *{letter-spacing:0!important;text-transform:none!important}
+html[lang=bn] body{line-height:1.6}html[lang=bn] h1,html[lang=bn] h2,html[lang=bn] h3{line-height:1.4}

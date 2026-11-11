@@ -1,0 +1,37 @@
+.ws-q {
+  padding: 1rem 1.25rem 1.25rem;
+  text-align: center;
+  z-index: 2;
+}
+.ws-q-label {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  padding: 0.1rem 0.8rem;
+  border-radius: 999px;
+  background: var(--ws-yellow);
+  color: var(--ws-space);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+.ws-q-text {
+  font-size: clamp(1.15rem, 1rem + 1.6vw, 1.7rem);
+  font-weight: 800;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+.ws-q-text:focus,
+.ws-q-text:focus-visible {
+  outline: none; /* programmatic focus only, so screen readers land on the question */
+}
+.ws-q-hook {
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin-inline-start: -9px;
+  border: 3px solid var(--ws-panelEdge);
+  border-radius: 50%;
+  background: #bff6ff;
+  box-shadow: 0 0 12px var(--ws-blue);
+}

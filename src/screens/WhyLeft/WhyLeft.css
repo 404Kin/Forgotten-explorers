@@ -1,0 +1,5 @@
+#wlbox{display:grid;gap:16px;margin-top:20px}
+.wl-sec h2{font-size:1.35rem}.wl-sec p{margin:10px 0 0}
+.wl-sec .chip{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.wl-src a{text-decoration:underline;display:inline-flex;align-items:center;min-height:44px}
+.wl-note{font-weight:800}

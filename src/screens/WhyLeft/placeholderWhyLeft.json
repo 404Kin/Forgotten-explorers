@@ -1,0 +1,9 @@
+{
+  "_placeholder": "PLACEHOLDER until P1 adds src/data/whyLeft.json (same shape). General reasons only, no numbers or dates. Every section needs NASA source URLs and a fact-check before the final version.",
+  "sections": [
+    {"id": "coming-home-is-hard", "icon": "⛽", "title": "Coming home is very hard", "text": "To bring a robot back, a rocket needs a lot of extra fuel. That makes a mission much bigger and costs much more money.", "needsFactCheck": true, "sources": []},
+    {"id": "one-way-jobs", "icon": "🚀", "title": "Some jobs are one-way", "text": "Some robots were built to stay where they landed, or to fly away forever. Their job was to explore and send news home, not to come back.", "needsFactCheck": true, "sources": [], "robotIds": ["voyager-1"]},
+    {"id": "went-quiet", "icon": "🔇", "title": "Some robots went quiet", "text": "Dust, cold nights or getting stuck can stop a robot. When it does not answer any more, the team cannot fix it from far away.", "needsFactCheck": true, "sources": [], "robotStatus": "silent"},
+    {"id": "still-talking", "icon": "📡", "title": "Some are still talking", "text": "A few explorers are still sending messages to Earth right now. They are left out there on purpose, to keep learning.", "needsFactCheck": true, "sources": [], "robotStatus": "talking"}
+  ]
+}
