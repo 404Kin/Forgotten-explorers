@@ -1,0 +1,15 @@
+{
+  "asOf": "2026-11-11T00:00:00 TDB",
+  "targets": {
+    "301": {
+      "targetName": "Moon",
+      "distanceKm": 402248.20630195324,
+      "sourceUrl": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27301%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=VECTORS&CENTER=%27500%40399%27&START_TIME=%272026-11-11%27&STOP_TIME=%272026-11-12%27&STEP_SIZE=%271d%27&VEC_TABLE=2&VEC_CORR=NONE"
+    },
+    "499": {
+      "targetName": "Mars",
+      "distanceKm": 201930387.96254149,
+      "sourceUrl": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27499%27&OBJ_DATA=NO&MAKE_EPHEM=YES&EPHEM_TYPE=VECTORS&CENTER=%27500%40399%27&START_TIME=%272026-11-11%27&STOP_TIME=%272026-11-12%27&STEP_SIZE=%271d%27&VEC_TABLE=2&VEC_CORR=NONE"
+    }
+  }
+}
