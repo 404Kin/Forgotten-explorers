@@ -1,0 +1,22 @@
+{
+  "id": "apollo-11-lrrr",
+  "name": "Apollo 11 lunar module descent stage and reflector",
+  "agency": "NASA",
+  "world": "moon",
+  "status": "left_behind",
+  "launchDate": "1969-07-16",
+  "arrivalDate": "1969-07-20",
+  "endDate": null,
+  "lat": null,
+  "lon": null,
+  "endReason": "The descent stage and laser reflector were left at the landing site.",
+  "kidFact": "Astronauts left a small mirror array on the Moon. Scientists still use it to bounce laser light back to Earth.",
+  "story": [{"title": "A mirror on the Moon", "text": "Apollo 11 landed in Mare Tranquillitatis on July 20, 1969. The astronauts left a laser reflector there."}],
+  "lastMessage": [],
+  "whyLeft": "The lander descent stage stayed on the Moon after the astronauts returned home.",
+  "quiz": [{"q": "What can the Apollo 11 reflector do?", "options": ["Bounce laser light back to Earth", "Send radio songs", "Make sunlight"], "explanation": "Scientists use laser pulses and the reflector to measure the Moon's distance."}],
+  "sources": ["https://science.nasa.gov/resource/apollo-11-landing-site-from-dawn-to-dusk/", "https://science.nasa.gov/wp-content/uploads/2023/09/Apollo11AnniversaryLitho_updated.pdf"],
+  "photo": {"nasaId": "as11-40-5868", "credit": "NASA", "pageUrl": "https://images.nasa.gov/details/as11-40-5868", "alt": "Buzz Aldrin climbs down the Apollo 11 lunar module ladder onto the Moon."},
+  "needsReview": false,
+  "i18nKey": "apollo11"
+}

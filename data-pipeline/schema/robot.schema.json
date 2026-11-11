@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://forgotten-explorers.example/schema/robot.schema.json",
+  "title": "Forgotten Explorers robot record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "agency", "world", "status", "launchDate", "arrivalDate", "endDate", "lat", "lon", "endReason", "kidFact", "story", "lastMessage", "whyLeft", "quiz", "sources", "photo", "needsReview", "i18nKey"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "name": {"type": "string", "minLength": 1},
+    "agency": {"type": "string", "default": "NASA", "minLength": 1},
+    "world": {"enum": ["moon", "mars", "deep_space"]},
+    "status": {"enum": ["left_behind", "silent", "still_talking"]},
+    "launchDate": {"type": "string", "format": "date"},
+    "arrivalDate": {"type": "string", "format": "date"},
+    "endDate": {"type": ["string", "null"], "format": "date"},
+    "lat": {"type": ["number", "null"], "minimum": -90, "maximum": 90},
+    "lon": {"type": ["number", "null"], "minimum": -180, "maximum": 180},
+    "endReason": {"type": "string", "minLength": 1},
+    "kidFact": {"type": "string", "minLength": 1},
+    "story": {"type": "array", "items": {"$ref": "#/$defs/storyPage"}},
+    "lastMessage": {"type": "array", "items": {"$ref": "#/$defs/message"}},
+    "whyLeft": {"type": "string", "minLength": 1},
+    "quiz": {"type": "array", "items": {"$ref": "#/$defs/quiz"}},
+    "sources": {"type": "array", "minItems": 1, "items": {"type": "string", "format": "uri", "pattern": "^https://"}},
+    "photo": {"$ref": "#/$defs/photo"},
+    "horizons": {"type": "object", "additionalProperties": false, "required": ["target", "kind"], "properties": {"target": {"type": "string", "minLength": 1}, "kind": {"type": "string", "minLength": 1}}},
+    "dsnName": {"type": "string", "minLength": 1},
+    "needsReview": {"type": "boolean"},
+    "i18nKey": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"}
+  },
+  "$defs": {
+    "storyPage": {"type": "object", "additionalProperties": false, "required": ["title", "text"], "properties": {"title": {"type": "string", "minLength": 1}, "text": {"type": "string", "minLength": 1}, "poetic": {"type": "boolean"}}},
+    "message": {"type": "object", "additionalProperties": false, "required": ["text"], "properties": {"text": {"type": "string", "minLength": 1}, "poetic": {"type": "boolean"}}},
+    "quiz": {"type": "object", "additionalProperties": false, "required": ["q", "options"], "properties": {"q": {"type": "string", "minLength": 1}, "options": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}}, "explanation": {"type": "string"}}},
+    "photo": {"type": "object", "additionalProperties": false, "required": ["nasaId", "credit", "pageUrl", "alt"], "properties": {"nasaId": {"type": "string", "minLength": 1}, "credit": {"type": "string", "minLength": 1}, "pageUrl": {"type": "string", "format": "uri", "pattern": "^https://([a-z0-9-]+\\.)*nasa\\.gov/"}, "alt": {"type": "string", "minLength": 1}}}
+  }
+}

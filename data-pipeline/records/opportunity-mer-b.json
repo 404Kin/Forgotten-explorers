@@ -1,0 +1,22 @@
+{
+  "id": "opportunity-mer-b",
+  "name": "Opportunity Mars Exploration Rover",
+  "agency": "NASA",
+  "world": "mars",
+  "status": "silent",
+  "launchDate": "2003-07-07",
+  "arrivalDate": "2004-01-25",
+  "endDate": "2018-06-10",
+  "lat": null,
+  "lon": null,
+  "endReason": "A planet-wide dust storm blocked sunlight from its solar panels, and the rover stopped communicating.",
+  "kidFact": "Opportunity worked for almost 15 years, far longer than its planned 90 days.",
+  "story": [{"title": "A long Mars adventure", "text": "Opportunity explored Mars for almost 15 years. A huge dust storm blocked sunlight, and its last signal came on June 10, 2018."}],
+  "lastMessage": [],
+  "whyLeft": "The rover used solar power. Dust blocked its sunlight, and it could not send another signal.",
+  "quiz": [{"q": "What stopped Opportunity from recharging?", "options": ["A huge dust storm", "A broken parachute", "A lost wheel"], "explanation": "Dust in the storm blocked sunlight from reaching its solar panels."}],
+  "sources": ["https://science.nasa.gov/mission/mer-opportunity/", "https://astrobiology.nasa.gov/news/opportunity-rover-mission-comes-to-an-end/"],
+  "photo": {"nasaId": "PIA06917", "credit": "NASA/JPL/Cornell", "pageUrl": "https://images.nasa.gov/details/PIA06917", "alt": "A wide panorama taken by a Mars Exploration Rover on Mars."},
+  "needsReview": false,
+  "i18nKey": "opportunity"
+}
