@@ -4,7 +4,8 @@ info:
   version: 0.2.0
   description: |
     Read-only API for the NASA Space Apps 2026 project. Owner: P2.
-    Available: health, robots, robots/{id}, images. Live distance and DSN endpoints await P1 target-ID, name-map, and snapshot data.
+    Available: health, robots, robots/{id}, images, live/distance, and live/dsn.
+    Live routes require P1-verified robot mappings in HORIZONS_TARGETS and DSN_ROBOT_MAP.
     `npm run mock` in /server is only for local tests and uses clearly fake fixture records.
 servers:
   - url: http://localhost:8787
@@ -65,24 +66,27 @@ paths:
   /api/v1/live/distance:
     get:
       tags: [live]
-      x-status: planned
-      summary: Live distance from Earth and light-time (JPL Horizons, cached; falls back to a dated snapshot)
+      summary: Earth distance for configured JPL Horizons targets
       parameters:
-        - {name: ids, in: query, required: true, description: Comma separated robot ids (max 20), schema: {type: string}}
+        - {name: ids, in: query, required: true, description: Comma separated robot IDs (max 20), schema: {type: string, pattern: '^[a-z0-9-]+(,[a-z0-9-]+){0,19}$'}}
       responses:
         '200':
-          description: One entry per id. `source` says live or snapshot, and `asOf` says when.
+          description: Measurements are cached for six hours and fall back to dated JPL snapshots. The epoch retains its UTC or TDB time scale.
           content: {application/json: {schema: {type: object, properties: {data: {type: array, items: {$ref: '#/components/schemas/Distance'}}}}}}
         '400': {$ref: '#/components/responses/InvalidParam'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '429': {$ref: '#/components/responses/RateLimited'}
+        '503': {$ref: '#/components/responses/UpstreamUnavailable'}
   /api/v1/live/dsn:
     get:
       tags: [live]
-      x-status: planned
-      summary: Spacecraft talking to Earth right now (DSN Now, cached about 1 minute)
+      summary: Spacecraft with active signals in NASA DSN Now
       responses:
         '200':
-          description: Robots that are currently in contact.
-          content: {application/json: {schema: {type: object, properties: {data: {type: array, items: {type: object, properties: {robotId: {type: string}, dish: {type: string}}}}, asOf: {type: string, format: date-time}}}}}
+          description: Cached for about one minute; previous data is marked stale if the upstream feed fails.
+          content: {application/json: {schema: {type: object, properties: {data: {type: array, items: {$ref: '#/components/schemas/DsnLink'}}, meta: {$ref: '#/components/schemas/DsnMeta'}}}}}
+        '429': {$ref: '#/components/responses/RateLimited'}
+        '503': {$ref: '#/components/responses/UpstreamUnavailable'}
 components:
   parameters:
     Lang: {name: lang, in: query, schema: {type: string, enum: [en, bn, ar], default: en}}
@@ -116,7 +120,9 @@ components:
     Health: {type: object, properties: {status: {type: string}, service: {type: string}, version: {type: string}, uptimeSeconds: {type: integer}, time: {type: string, format: date-time}, data: {type: object, properties: {robots: {type: integer}, rejected: {type: integer}}}}}
     Image: {type: object, properties: {id: {type: string}, title: {type: string}, desc: {type: string}, date: {type: string}, credit: {type: string}, link: {type: string, format: uri}, thumb: {type: string, format: uri}, medium: {type: string, format: uri}, pinned: {type: boolean}}}
     ImageSearch: {type: object, required: [data, meta], properties: {data: {type: array, items: {$ref: '#/components/schemas/Image'}}, meta: {type: object, required: [robotId, count, source, asOf, stale], properties: {robotId: {type: string}, count: {type: integer}, source: {type: string}, asOf: {type: string, format: date-time}, stale: {type: boolean}}}}}
-    Distance: {type: object, properties: {robotId: {type: string}, distanceKm: {type: number}, lightSeconds: {type: number}, source: {type: string, enum: [live, snapshot]}, asOf: {type: string, format: date-time}}}
+    Distance: {type: object, required: [robotId, targetId, distanceKm, lightSeconds, source, asOf], properties: {robotId: {type: string}, targetId: {type: string}, targetName: {type: string, nullable: true}, distanceKm: {type: number}, lightSeconds: {type: number}, source: {type: string, enum: [live, snapshot]}, asOf: {type: string, description: UTC timestamp for live data, TDB epoch for dated snapshots}}}
+    DsnLink: {type: object, properties: {robotId: {type: string}, dish: {type: string}, dsnCode: {type: string}}}
+    DsnMeta: {type: object, properties: {source: {type: string}, asOf: {type: string, format: date-time}, stale: {type: boolean}, unmappedTargets: {type: integer}}}
     Error:
       type: object
       required: [error]
@@ -125,4 +131,4 @@ components:
     InvalidParam: {description: Bad or unknown query parameter, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
     NotFound: {description: Unknown id or route, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
     RateLimited: {description: Too many requests (see Retry-After), headers: {Retry-After: {schema: {type: integer}}}, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
-    UpstreamUnavailable: {description: NASA Image and Video Library is unavailable and no cached result is available, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}
+    UpstreamUnavailable: {description: A NASA upstream is unavailable and no cached result or dated snapshot is available, content: {application/json: {schema: {$ref: '#/components/schemas/Error'}}}}

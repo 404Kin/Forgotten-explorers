@@ -3,6 +3,8 @@ import {XP_PER_LEVEL,RANKS} from '../config.js';
 import {MISSIONS} from '../data/missions.js';
 import {badges} from '../data/badges.js';
 import {toast} from '../components/Toast.js';
+import {t} from '../i18n/index.js';
+import {localBadge} from '../i18n/content.js';
 const KEY='fe2.save';
 const def={name:'',xp:0,collected:[],read:[],badges:[],streak:0,lastDay:'',stats:{correct:0,answered:0,bestQuiz:0,lander:0,memory:0}};
 let S=load();const subs=new Set();
@@ -13,9 +15,9 @@ export const subscribe=f=>(subs.add(f),()=>subs.delete(f));
 export const level=s=>Math.floor(s.xp/XP_PER_LEVEL);
 export const rank=s=>RANKS[Math.min(level(s),RANKS.length-1)];
 export const levelProgress=s=>(s.xp%XP_PER_LEVEL)/XP_PER_LEVEL;
-function commit(){const B=badges(MISSIONS);B.forEach(b=>{if(!S.badges.includes(b.id)&&b.test(S)){S.badges.push(b.id);toast(`Badge unlocked: ${b.icon} ${b.name}`,'badge')}});save();subs.forEach(f=>f(S))}
+function commit(){const B=badges(MISSIONS);B.forEach(b=>{if(!S.badges.includes(b.id)&&b.test(S)){S.badges.push(b.id);toast(t('toast.badge',{icon:b.icon,name:localBadge(b).name}),'badge')}});save();subs.forEach(f=>f(S))}
 export function update(fn){fn(S);commit()}
-export function addXP(n,why=''){const before=level(S);S.xp+=n;toast(`+${n} XP ${why}`);if(level(S)>before)toast(`Level up! You are now a ${rank(S)} 🎉`,'badge');commit()}
+export function addXP(n,why=''){const before=level(S);S.xp+=n;toast(t('toast.xp',{n,why}));if(level(S)>before)toast(t('toast.levelUp',{rank:t('rank.'+Math.min(level(S),RANKS.length-1))}),'badge');commit()}
 export function collect(nick){if(S.collected.includes(nick))return false;S.collected.push(nick);commit();return true}
 export function reset(){S={...def,stats:{...def.stats}};commit()}
 commit();

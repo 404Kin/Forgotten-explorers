@@ -1,0 +1,14 @@
+{
+  "moon": {
+    "file": "moon-2048.webp",
+    "credit": "NASA/GSFC/Arizona State University (LROC WAC via NASA Moon Trek)",
+    "url": "https://trek.nasa.gov/moon/",
+    "lonOffset": 0
+  },
+  "mars": {
+    "file": "mars-2048.webp",
+    "credit": "NASA/JPL/USGS (Viking VIS via NASA Mars Trek)",
+    "url": "https://trek.nasa.gov/mars/",
+    "lonOffset": 0
+  }
+}

@@ -1,0 +1,968 @@
+{
+  "apollo-11-descent-stage": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on July 16, 1969.",
+        "poetic": true,
+        "source": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached the Moon on July 20, 1969.",
+        "poetic": true,
+        "source": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html"
+      },
+      {
+        "id": "work",
+        "text": "Eagle’s lower stage became a launchpad for the astronauts’ ride home.",
+        "poetic": true,
+        "source": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html"
+      },
+      {
+        "id": "ending",
+        "text": "The astronauts left Eagle’s lower landing stage on the Moon when its upper stage lifted off. It was built to stay there.",
+        "poetic": true,
+        "source": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html"
+      },
+      {
+        "id": "left",
+        "text": "The lower stage was not designed to return to Earth. It helped the astronauts launch from the Moon.",
+        "poetic": true,
+        "source": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "apollo-12-descent-stage": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on November 14, 1969.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-12-the-pinpoint-mission/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached the Moon on November 19, 1969.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-12-the-pinpoint-mission/"
+      },
+      {
+        "id": "work",
+        "text": "Intrepid landed about 535 feet from Surveyor 3, a robot that had arrived two years earlier.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-12-the-pinpoint-mission/"
+      },
+      {
+        "id": "ending",
+        "text": "The astronauts left Intrepid’s lower stage behind when the upper stage lifted off. The lower stage was made to stay on the Moon.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-12-the-pinpoint-mission/"
+      },
+      {
+        "id": "left",
+        "text": "The lower stage served as the astronauts’ launchpad and was not built to fly back to Earth.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-12-the-pinpoint-mission/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "apollo-14-descent-stage": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on January 31, 1971.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-14-mission-details/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached the Moon on February 5, 1971.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-14-mission-details/"
+      },
+      {
+        "id": "work",
+        "text": "Antares landed in the Fra Mauro highlands, a hilly area of the Moon.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-14-mission-details/"
+      },
+      {
+        "id": "ending",
+        "text": "The astronauts left Antares’s lower stage behind when the upper stage lifted off. The landing stage was built to remain on the Moon.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-14-mission-details/"
+      },
+      {
+        "id": "left",
+        "text": "The lower stage was the landing platform and launchpad. It was not built to return to Earth.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-14-mission-details/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "apollo-15-descent-stage": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on July 26, 1971.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-15-mission-details/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached the Moon on July 30, 1971.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-15-mission-details/"
+      },
+      {
+        "id": "work",
+        "text": "Apollo 15 was the first Moon mission to use a lunar rover.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-15-mission-details/"
+      },
+      {
+        "id": "ending",
+        "text": "The crew left Falcon’s lower stage at Hadley Rille when its upper stage lifted off. The lower stage was intended to stay on the Moon.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-15-mission-details/"
+      },
+      {
+        "id": "left",
+        "text": "The lower stage helped the astronauts land and launch. It was not designed to return to Earth.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-15-mission-details/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "apollo-16-descent-stage": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on April 16, 1972.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached the Moon on April 20, 1972.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/"
+      },
+      {
+        "id": "work",
+        "text": "Apollo 16 landed in the Descartes highlands, not on a flat lunar plain.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/"
+      },
+      {
+        "id": "ending",
+        "text": "The astronauts left Orion’s lower stage on the Moon after its upper stage lifted off. The lower stage was designed to remain there.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/"
+      },
+      {
+        "id": "left",
+        "text": "The lower stage was a landing platform and launchpad. It was not built to return to Earth.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "apollo-17-descent-stage": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on December 7, 1972.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached the Moon on December 11, 1972.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/"
+      },
+      {
+        "id": "work",
+        "text": "Apollo 17 was the last crewed mission to land on the Moon.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/"
+      },
+      {
+        "id": "ending",
+        "text": "The crew left Challenger’s lower stage in Taurus-Littrow when its upper stage lifted off. The lower stage was built to stay on the Moon.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/"
+      },
+      {
+        "id": "left",
+        "text": "The lower stage helped the crew land and launch. It was not made to return to Earth.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "apollo-15-lunar-rover": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on July 26, 1971.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4029.pdf"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached the Moon on July 30, 1971.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4029.pdf"
+      },
+      {
+        "id": "work",
+        "text": "Apollo 15’s rover helped astronauts travel about 28 kilometers across the Moon.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4029.pdf"
+      },
+      {
+        "id": "ending",
+        "text": "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4029.pdf"
+      },
+      {
+        "id": "left",
+        "text": "The rover was built for one lunar mission. The crew parked it on purpose before flying home.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4029.pdf"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "apollo-16-lunar-rover": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on April 16, 1972.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached the Moon on April 20, 1972.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/"
+      },
+      {
+        "id": "work",
+        "text": "The Apollo 16 rover carried astronauts across the Descartes highlands.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/"
+      },
+      {
+        "id": "ending",
+        "text": "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/"
+      },
+      {
+        "id": "left",
+        "text": "The rover was made for one Moon mission. The astronauts parked it before returning home.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "apollo-17-lunar-rover": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on December 7, 1972.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached the Moon on December 11, 1972.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/"
+      },
+      {
+        "id": "work",
+        "text": "Apollo 17’s rover covered about 35 kilometers, the longest lunar rover trip of Apollo.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/"
+      },
+      {
+        "id": "ending",
+        "text": "The astronauts deliberately parked the rover before leaving the Moon. This was planned, not a rover failure.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/"
+      },
+      {
+        "id": "left",
+        "text": "The rover was designed for one lunar mission. The crew parked it before flying home.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "surveyor-3": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on April 17, 1967.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/surveyor-3/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached the Moon on April 20, 1967.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/surveyor-3/"
+      },
+      {
+        "id": "work",
+        "text": "Apollo 12 astronauts later walked up to Surveyor 3 and brought some parts back to Earth.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/surveyor-3/"
+      },
+      {
+        "id": "ending",
+        "text": "Surveyor 3 used solar power. It stopped sending signals after lunar night began, when its panels could not get sunlight.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/surveyor-3/"
+      },
+      {
+        "id": "left",
+        "text": "Surveyor 3 completed its tests, then lost power during lunar night. It was never designed to fly home.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/surveyor-3/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "sojourner": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on December 4, 1996.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/image-article/july-4-1997-sojourner-arrives-red-planet/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached Mars on July 4, 1997.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/image-article/july-4-1997-sojourner-arrives-red-planet/"
+      },
+      {
+        "id": "work",
+        "text": "Sojourner worked for 83 days, much longer than its planned seven days.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/image-article/july-4-1997-sojourner-arrives-red-planet/"
+      },
+      {
+        "id": "ending",
+        "text": "Sojourner depended on its Pathfinder lander to relay messages. Pathfinder’s last data reached Earth on September 27, 1997, and the rover fell silent with it.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/image-article/july-4-1997-sojourner-arrives-red-planet/"
+      },
+      {
+        "id": "left",
+        "text": "Sojourner was a small test rover. It stayed on Mars after its Pathfinder lander could no longer relay messages.",
+        "poetic": true,
+        "source": "https://www.nasa.gov/image-article/july-4-1997-sojourner-arrives-red-planet/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "viking-1-lander": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on August 20, 1975.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/viking-1/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached Mars on July 20, 1976.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/viking-1/"
+      },
+      {
+        "id": "work",
+        "text": "Viking 1 sent the first clear pictures from the surface of Mars.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/viking-1/"
+      },
+      {
+        "id": "ending",
+        "text": "Viking 1 operated for more than six years. A faulty command sent from Earth interrupted communication on November 11, 1982, and contact could not be restored.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/viking-1/"
+      },
+      {
+        "id": "left",
+        "text": "The lander stopped communicating and was not designed to return to Earth.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/viking-1/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "viking-2-lander": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on September 9, 1975.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/viking/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached Mars on September 3, 1976.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/viking/"
+      },
+      {
+        "id": "work",
+        "text": "Viking 2 landed on a broad plain called Utopia Planitia.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/viking/"
+      },
+      {
+        "id": "ending",
+        "text": "Viking 2’s batteries lost power after nearly four years on Mars. Its final data reached Earth on April 11, 1980.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/viking/"
+      },
+      {
+        "id": "left",
+        "text": "Its battery problem stopped communications, and the lander could not return to Earth.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/viking/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "spirit-mer-a": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on June 10, 2003.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mer-spirit/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached Mars on January 4, 2004.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mer-spirit/"
+      },
+      {
+        "id": "work",
+        "text": "Spirit worked for more than six years, far beyond its planned 90 days.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mer-spirit/"
+      },
+      {
+        "id": "ending",
+        "text": "Spirit became stuck in soft ground and could not tilt its solar panels toward the winter Sun. Its last signal reached Earth on March 22, 2010; NASA ended recovery efforts in 2011.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mer-spirit/"
+      },
+      {
+        "id": "left",
+        "text": "Spirit could not move out of soft ground or get enough sunlight for warmth and power.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mer-spirit/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "opportunity-mer-b": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on July 7, 2003.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mer-opportunity/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached Mars on January 24, 2004.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mer-opportunity/"
+      },
+      {
+        "id": "work",
+        "text": "Opportunity worked for almost 15 years, far longer than its planned 90 days.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mer-opportunity/"
+      },
+      {
+        "id": "ending",
+        "text": "A planet-wide dust storm blocked sunlight from Opportunity’s solar panels. Its last contact was June 10, 2018; NASA declared the mission over in 2019.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mer-opportunity/"
+      },
+      {
+        "id": "left",
+        "text": "The solar-powered rover could not recharge during the huge dust storm and stopped communicating.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mer-opportunity/"
+      },
+      {
+        "id": "battery-human-interpretation",
+        "text": "My battery is low, and it is getting dark.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mer-opportunity/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "phoenix-lander": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on August 4, 2007.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mars-phoenix/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached Mars on May 25, 2008.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mars-phoenix/"
+      },
+      {
+        "id": "work",
+        "text": "Phoenix used a robotic arm to uncover water ice beneath the Martian soil.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mars-phoenix/"
+      },
+      {
+        "id": "ending",
+        "text": "Phoenix’s solar panels stopped working in the dark Martian winter. The lander could no longer send messages.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mars-phoenix/"
+      },
+      {
+        "id": "left",
+        "text": "Winter darkness kept sunlight from Phoenix’s solar panels, and the lander was not built to return home.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mars-phoenix/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "insight-lander": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on May 5, 2018.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/insight/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached Mars on November 26, 2018.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/insight/"
+      },
+      {
+        "id": "work",
+        "text": "InSight listened for marsquakes to learn about the inside of Mars.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/insight/"
+      },
+      {
+        "id": "ending",
+        "text": "Dust covered InSight’s solar panels until the lander could not make enough power. Its last message reached Earth on December 15, 2022.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/insight/"
+      },
+      {
+        "id": "left",
+        "text": "Dust reduced the light reaching InSight’s solar panels, so the lander ran out of power.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/insight/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "ingenuity": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on July 30, 2020.",
+        "poetic": true,
+        "source": "https://www.jpl.nasa.gov/videos/thanksingenuity-nasas-mars-helicopter-team-says-goodbye/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached Mars on February 18, 2021.",
+        "poetic": true,
+        "source": "https://www.jpl.nasa.gov/videos/thanksingenuity-nasas-mars-helicopter-team-says-goodbye/"
+      },
+      {
+        "id": "work",
+        "text": "Ingenuity made 72 flights on Mars, even though it was planned for just five.",
+        "poetic": true,
+        "source": "https://www.jpl.nasa.gov/videos/thanksingenuity-nasas-mars-helicopter-team-says-goodbye/"
+      },
+      {
+        "id": "ending",
+        "text": "During its 72nd flight, Ingenuity lost contact while descending and hit the ground hard. The landing damaged its rotor blades, so it could not fly again; it continued sending some data through Perseverance afterward.",
+        "poetic": true,
+        "source": "https://www.jpl.nasa.gov/videos/thanksingenuity-nasas-mars-helicopter-team-says-goodbye/"
+      },
+      {
+        "id": "left",
+        "text": "A hard landing damaged Ingenuity’s rotor blades. The helicopter can no longer fly, though NASA reported that it continued sending some data through Perseverance.",
+        "poetic": true,
+        "source": "https://www.jpl.nasa.gov/videos/thanksingenuity-nasas-mars-helicopter-team-says-goodbye/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "chandrayaan-3-vikram": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on July 14, 2023.",
+        "poetic": true,
+        "source": "https://www.isro.gov.in/ISRO_EN/Chandrayaan3.html"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached the Moon on August 23, 2023.",
+        "poetic": true,
+        "source": "https://www.isro.gov.in/ISRO_EN/Chandrayaan3.html"
+      },
+      {
+        "id": "work",
+        "text": "Vikram landed at Shiv Shakti Point near the Moon’s south pole.",
+        "poetic": true,
+        "source": "https://www.isro.gov.in/ISRO_EN/Chandrayaan3.html"
+      },
+      {
+        "id": "ending",
+        "text": "Vikram and its rover went to sleep as the lunar night began. ISRO tried to contact them after sunrise, but no connection was reported.",
+        "poetic": true,
+        "source": "https://www.isro.gov.in/ISRO_EN/Chandrayaan3.html"
+      },
+      {
+        "id": "left",
+        "text": "Vikram was built for a short surface mission. It went to sleep during lunar night and did not answer later contact attempts.",
+        "poetic": true,
+        "source": "https://www.isro.gov.in/ISRO_EN/Chandrayaan3.html"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "curiosity-msl": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on November 26, 2011.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/msl-curiosity/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached Mars on August 6, 2012.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/msl-curiosity/"
+      },
+      {
+        "id": "work",
+        "text": "Curiosity is about the size of a car and explores Mount Sharp.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/msl-curiosity/"
+      },
+      {
+        "id": "ending",
+        "text": "Curiosity is still operating and exploring Mars. Its mission has not ended.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/msl-curiosity/"
+      },
+      {
+        "id": "left",
+        "text": "Curiosity is still working on Mars, so it has not been left behind after its mission.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/msl-curiosity/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "perseverance-mars-2020": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on July 30, 2020.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached Mars on February 18, 2021.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+      },
+      {
+        "id": "work",
+        "text": "Perseverance collects rock samples that future missions may bring back to Earth.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+      },
+      {
+        "id": "ending",
+        "text": "Perseverance is still working in Jezero Crater. Its mission has not ended.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+      },
+      {
+        "id": "left",
+        "text": "Perseverance is still working on Mars and has not been left after its mission.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "jwst-telescope": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on December 25, 2021.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/webb/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached deep space on January 24, 2022.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/webb/"
+      },
+      {
+        "id": "work",
+        "text": "Webb’s main mirror has 18 gold-coated segments.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/webb/"
+      },
+      {
+        "id": "ending",
+        "text": "Webb is still operating near the Sun-Earth L2 point. Its mission has not ended.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/webb/"
+      },
+      {
+        "id": "left",
+        "text": "Webb is still working in space and has not been abandoned after its mission.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/webb/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "parker-solar-probe": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on August 12, 2018.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/parker-solar-probe/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached deep space on April 28, 2021.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/parker-solar-probe/"
+      },
+      {
+        "id": "work",
+        "text": "Parker flies through the Sun’s outer atmosphere, protected by a heat shield.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/parker-solar-probe/"
+      },
+      {
+        "id": "ending",
+        "text": "Parker Solar Probe is still making close passes by the Sun and sending science data to Earth. Its mission has not ended.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/parker-solar-probe/"
+      },
+      {
+        "id": "left",
+        "text": "Parker is still operating in orbit around the Sun, so it has not been left behind.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/parker-solar-probe/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  },
+  "voyager-1": {
+    "lines": [
+      {
+        "id": "launch",
+        "text": "I began my journey on September 5, 1977.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/voyager/voyager-1/"
+      },
+      {
+        "id": "arrival",
+        "text": "I reached deep space on August 25, 2012.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/voyager/voyager-1/"
+      },
+      {
+        "id": "work",
+        "text": "Voyager 1 carries a golden record with sounds and pictures from Earth.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/voyager/voyager-1/"
+      },
+      {
+        "id": "ending",
+        "text": "Voyager 1 crossed into interstellar space and still sends data to Earth. Its mission has not ended.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/voyager/voyager-1/"
+      },
+      {
+        "id": "left",
+        "text": "Voyager 1 travels too far away to return, but NASA still communicates with it.",
+        "poetic": true,
+        "source": "https://science.nasa.gov/mission/voyager/voyager-1/"
+      }
+    ],
+    "audio": {
+      "en": null,
+      "bn": null
+    },
+    "credit": "AI-drafted first-person retelling of cited mission facts; not a real transmission.",
+    "draftBy": "ai"
+  }
+}

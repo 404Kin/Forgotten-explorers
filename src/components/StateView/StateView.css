@@ -1,0 +1,12 @@
+.stateview{display:grid;justify-items:center;gap:10px;text-align:center;padding:28px 16px;margin:12px auto;max-width:460px;color:var(--cream)}
+.stateview.compact{padding:12px 8px;margin:4px auto}
+.stateview .sv-icon{font-size:2.4rem;line-height:1}
+.stateview .sv-title{font-size:1.3rem}
+.stateview .sv-msg{margin:0}
+.stateview .btn{min-height:44px;min-width:44px}
+/* The spinner is a bobbing emoji; with reduced motion the global rule in base.css stops it, and the text still says "Loading". */
+.stateview .spin{animation:svbob 1.2s ease-in-out infinite}
+@keyframes svbob{50%{transform:translateY(-8px) rotate(8deg)}}
+/* Inside a light panel the text must stay readable. */
+.panel .stateview,.stateview.on-light{color:var(--k)}
+.stateview{grid-column:1/-1}

@@ -1,51 +1,83 @@
-# Forgotten Explorers  🚀
-NASA Space Apps Challenge 2026: **Abandoned but not Forgotten**.
-A kid-friendly story, quiz and game app about the robots NASA left on the Moon, Mars and deep space.
-Uses **real NASA photos** (NASA Image and Video Library API) and **real mission data** (dates, coordinates, distances).
+# Forgotten Explorers
 
-## Run it
-```
+Forgotten Explorers is a kid-friendly, story-driven guide to spacecraft and equipment left on the Moon, Mars, and in deep space. It combines short stories, quizzes, games, maps, and sourced mission facts for school-age kids and casual space fans.
+
+This independent NASA Space Apps project is not affiliated with or endorsed by NASA. It does not use the NASA logo.
+
+## Run locally
+
+Requirements: Node.js 18.17 or newer.
+
+```sh
 npm install
-npm run dev        # http://localhost:5173
-npm run build      # production site in /dist
-npm run check      # sanity-check imports
+npm run dev
 ```
-Needs Node 18+ and an internet connection (NASA photos, fonts and the 3D library come from the web / npm).
 
-## What the player does
-Cover and dreamy intro → 3D planet hub → storybook chapter cover → 3D map with real landing sites → robot dossier (story, real data, NASA photos, quiz) → XP, ranks, mission patches, certificate. Games: Mission Quiz, Soft Landing, Memory Match.
+The Vite app runs at `http://localhost:5173`. To run the checks:
 
-## Folder tree (where to put things)
+```sh
+npm run check
+npm test
+npm run build
 ```
-index.html                page shell
-public/                   static files copied as-is
-  images/  audio/  models/   (empty, ready for your own files)
-src/
-  main.js                 bootstrap + routes
-  config.js               app constants (API url, XP per level, rank names)
-  router/router.js        tiny hash router
-  state/store.js          XP, rank, collection, badges, streak (saved in localStorage)
-  data/                   ALL content lives here
-    missions.js           stories + quiz + art per robot, merged with relics.json
-    relics.json           REAL mission data (dates, coordinates, distance, light-time)
-    quiz.js               quiz question bank (right answer first)
-    badges.js             mission patch rules
-    nasaQueries.js        NASA search words + PINNED image IDs
-  services/
-    nasaImages.js         NASA Image Library fetch + cache
-    audio.js              sound effects + read aloud
-  screens/                one file per page (Landing, Hub, World, Mission, Quiz, Play, Album, Timeline)
-  games/                  QuizEngine, LunarLander, MemoryMatch  (add new games here)
-  three/                  PlanetPicker (hub), WorldMap (globes + solar map)
-  components/             Card, TopBar, Toast, Modal
-  art/                    robots.js (SVG robots), cover.js (landing scene), chapters.js (world covers)
-  utils/                  dom helpers, certificate, textureGenerator (procedural planet textures)
-  styles/                 tokens.css (colors/fonts), base.css, app.css
-docs/                     TEAM_GUIDE, DESIGN_SYSTEM, DATA_SOURCES, ROADMAP
-scripts/                  check-project.mjs
-.github/workflows/        auto-deploy to GitHub Pages
-```
-See `docs/TEAM_GUIDE.md` for "how do I add a robot / question / game / badge".
 
-## Credits
-Photos and data: NASA and mission partners (JPL-Caltech, ISRO, ESA, etc.) via images.nasa.gov. Independent educational project, not affiliated with or endorsed by NASA.
+The backend uses only Node.js built-ins and adds no NPM dependencies:
+
+```sh
+cd server
+npm test
+npm run mock
+```
+
+The mock server serves clearly fake test fixtures on port 8787. To run the real API, `data-pipeline/robots/` and `data-pipeline/translations/` must be supplied; production startup refuses to run without valid robot records. Check the pipeline before starting it:
+
+```sh
+npm run data:validate
+cd server
+npm start
+```
+
+Set `CORS_ORIGINS` to the frontend origin. See [server/.env.example](./server/.env.example) and [docs/DEPLOY.md](./docs/DEPLOY.md) for deployment settings.
+
+## Architecture
+
+- **Frontend:** Vite, vanilla JavaScript, and Three.js. `src/` contains screens, games, reusable components, styles, localization, and frontend fallback data.
+- **Backend:** A read-only Node.js HTTP API in `server/`, with shared validation, pagination, rate limiting, CORS allow-listing, request IDs, and structured logging.
+- **Mission data:** P1-owned JSON records under `data-pipeline/robots/` and translations under `data-pipeline/translations/`. The API validates records before serving them. Data files are not included in this checkout yet.
+- **NASA services:** The API proxies NASA Image and Video Library searches, JPL Horizons distance calculations, and NASA Eyes DSN Now status. Live responses are cached; distance has a dated JPL fallback snapshot.
+
+API contract: [docs/API.md](./docs/API.md) and [docs/openapi.yaml](./docs/openapi.yaml). Team ownership and contribution guidance: [docs/TEAM_GUIDE.md](./docs/TEAM_GUIDE.md).
+
+## Data sources and credits
+
+- Images: [NASA Image and Video Library](https://images.nasa.gov/)
+- Solar-system distances: [JPL Horizons API](https://ssd-api.jpl.nasa.gov/doc/horizons.html)
+- Deep Space Network status: [NASA Eyes DSN Now](https://eyes.nasa.gov/apps/dsn-now/)
+- Mission facts: every served record must include a source URL from NASA or an approved partner agency. See [docs/DATA_SOURCES.md](./docs/DATA_SOURCES.md).
+
+NASA images and mission data remain credited to NASA and the relevant mission partners (including JPL-Caltech, ISRO, and ESA where applicable). Credits should be shown beside media and sourced facts. The project is educational and independent.
+
+## NASA Data Sources for Mission Details
+
+All spacecraft hardware specifications, instrument details, science findings, and mission narratives are sourced from the following official NASA and partner agency websites:
+
+| Source | URL | Used For |
+|--------|-----|----------|
+| NASA Mars Exploration Program | https://mars.nasa.gov/ | Mars rover/lander specs, instruments, science results |
+| NASA Science Missions | https://science.nasa.gov/missions/ | Mission overviews, status updates |
+| JPL Mission Pages | https://www.jpl.nasa.gov/missions/ | Technical specifications, construction details |
+| NASA Apollo 11 | https://www.nasa.gov/mission/apollo-11/ | Apollo hardware, LRRR, EASEP data |
+| NASA Parker Solar Probe | https://science.nasa.gov/mission/parker-solar-probe/ | Thermal shield, instruments, corona science |
+| NASA James Webb Space Telescope | https://science.nasa.gov/mission/webb/ | Mirror specs, infrared instruments, discoveries |
+| NASA Voyager | https://voyager.jpl.nasa.gov/ | Interstellar science, Golden Record, instruments |
+| ISRO Chandrayaan-3 | https://www.isro.gov.in/Chandrayaan3.html | Vikram/Pragyan specs, LIBS/APXS findings |
+| NASA 3D Resources | https://science.nasa.gov/3d-resources/ | 3D GLB models of spacecraft |
+| NASA Image and Video Library | https://images.nasa.gov/ | Mission photographs |
+| JPL Horizons API | https://ssd-api.jpl.nasa.gov/doc/horizons.html | Real-time distances |
+| NASA Eyes DSN Now | https://eyes.nasa.gov/apps/dsn-now/ | Deep Space Network status |
+
+## Current integration notes
+
+The API reads any valid robot JSON files in `data-pipeline/robots/`; this repository checkout does not yet contain that P1 folder, so the 15-record integration and the production ID maps cannot be verified here. P1 must provide the canonical slug IDs and the verified Horizons/DSN mappings. The frontend `spirit-mer-a` versus API `spirit` mismatch is in P3-owned files and still needs P3 coordination.
+
+The Render free web service spins down after idle time. The first request after a spin-down may take about a minute; keep the frontend's local fallback available.

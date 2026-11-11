@@ -2,11 +2,14 @@
 Small read-only API for Forgotten Explorers. **No dependencies**: only Node 18.17+ built-ins, so `npm install` is not needed.
 ```
 cd server
-npm test           # 31 tests
+npm test           # 37 tests
 npm run mock       # test-only fake robot fixtures; never real mission data
 npm start          # validated project data from ../data-pipeline/robots
+npm run load-test  # bounded local/staging load test
 ```
 From the repository root, `npm test` runs the server test suite.
+
+The live endpoints are `/api/v1/live/distance` (JPL Horizons; six-hour cache and dated snapshot fallback) and `/api/v1/live/dsn` (NASA Eyes DSN Now; one-minute cache). Set `HORIZONS_TARGETS` and `DSN_ROBOT_MAP` using P1-verified IDs; do not guess mappings. The distance snapshot cites its NASA/JPL request URLs in `src/data/distance-snapshot.json`.
 
 Layout
 - `src/config.js` env settings · `src/server.js` request pipeline (id, headers, CORS, rate limit, routing, errors, log)

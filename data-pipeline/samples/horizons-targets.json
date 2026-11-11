@@ -1,0 +1,51 @@
+{
+  "source": "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+  "lookupSource": "https://ssd-api.jpl.nasa.gov/doc/horizons_lookup.html",
+  "observer": {
+    "center": "500@399",
+    "centerName": "Earth geocenter",
+    "quantities": ["20", "21"],
+    "quantityMeaning": {
+      "20": "distance from target center to observer (delta), in AU",
+      "21": "one-way down-leg light time, in minutes"
+    }
+  },
+  "targets": {
+    "moon": {"targetId": "301", "targetName": "Moon", "robots": ["apollo-11-descent-stage", "apollo-12-descent-stage", "apollo-14-descent-stage", "apollo-15-descent-stage", "apollo-16-descent-stage", "apollo-17-descent-stage", "apollo-15-lunar-rover", "apollo-16-lunar-rover", "apollo-17-lunar-rover", "surveyor-3", "chandrayaan-3-vikram"], "distanceLabel": "distance to Moon (not to an individual lander or rover)"},
+    "mars": {"targetId": "499", "targetName": "Mars", "robots": ["sojourner", "viking-1-lander", "viking-2-lander", "spirit-mer-a", "opportunity-mer-b", "phoenix-lander", "insight-lander", "ingenuity", "curiosity-msl", "perseverance-mars-2020"], "distanceLabel": "distance to Mars (not to an individual lander or rover)"},
+    "voyager-1": {"targetId": "-31", "targetName": "Voyager 1 (spacecraft)", "targetType": "spacecraft", "lookupEvidence": "horizons-lookups/voyager-1.json", "robots": ["voyager-1"], "distanceLabel": "distance to Voyager 1"},
+    "parker-solar-probe": {"targetId": "-96", "targetName": "Parker Solar Probe (spacecraft)", "targetType": "spacecraft", "lookupEvidence": "horizons-lookups/parker-solar-probe.json", "robots": ["parker-solar-probe"], "distanceLabel": "distance to Parker Solar Probe"},
+    "jwst-telescope": {"targetId": "-170", "targetName": "James Webb Space Telescope (spacecraft)", "targetType": "spacecraft", "lookupEvidence": "horizons-lookups/jwst.json", "robots": ["jwst-telescope"], "distanceLabel": "distance to James Webb Space Telescope"}
+  },
+  "queryTemplate": {
+    "format": "json",
+    "OBJ_DATA": "NO",
+    "MAKE_EPHEM": "YES",
+    "EPHEM_TYPE": "OBSERVER",
+    "CENTER": "500@399",
+    "QUANTITIES": "20,21",
+    "requiredPerRequest": ["COMMAND", "START_TIME", "STOP_TIME", "STEP_SIZE"]
+  },
+  "noIndividualHorizonsTarget": [
+    {"robotId": "apollo-11-descent-stage", "reason": "Uses Moon target 301; Horizons ephemeris is body-center distance, not distance to the descent stage."},
+    {"robotId": "apollo-12-descent-stage", "reason": "Uses Moon target 301; Horizons ephemeris is body-center distance, not distance to the descent stage."},
+    {"robotId": "apollo-14-descent-stage", "reason": "Uses Moon target 301; Horizons ephemeris is body-center distance, not distance to the descent stage."},
+    {"robotId": "apollo-15-descent-stage", "reason": "Uses Moon target 301; Horizons ephemeris is body-center distance, not distance to the descent stage."},
+    {"robotId": "apollo-16-descent-stage", "reason": "Uses Moon target 301; Horizons ephemeris is body-center distance, not distance to the descent stage."},
+    {"robotId": "apollo-17-descent-stage", "reason": "Uses Moon target 301; Horizons ephemeris is body-center distance, not distance to the descent stage."},
+    {"robotId": "apollo-15-lunar-rover", "reason": "Uses Moon target 301; Horizons ephemeris is body-center distance, not distance to the rover."},
+    {"robotId": "apollo-16-lunar-rover", "reason": "Uses Moon target 301; Horizons ephemeris is body-center distance, not distance to the rover."},
+    {"robotId": "apollo-17-lunar-rover", "reason": "Uses Moon target 301; Horizons ephemeris is body-center distance, not distance to the rover."},
+    {"robotId": "surveyor-3", "reason": "Uses Moon target 301; Horizons has no separate lander surface-coordinate target."},
+    {"robotId": "sojourner", "reason": "Uses Mars target 499; Horizons has no separate rover surface-coordinate target."},
+    {"robotId": "viking-1-lander", "reason": "Uses Mars target 499; Horizons has no separate lander surface-coordinate target."},
+    {"robotId": "viking-2-lander", "reason": "Uses Mars target 499; Horizons has no separate lander surface-coordinate target."},
+    {"robotId": "spirit-mer-a", "reason": "Uses Mars target 499; Horizons has no separate rover surface-coordinate target."},
+    {"robotId": "opportunity-mer-b", "reason": "Uses Mars target 499; Horizons has no separate rover surface-coordinate target."},
+    {"robotId": "phoenix-lander", "reason": "Uses Mars target 499; Horizons has no separate lander surface-coordinate target."},
+    {"robotId": "insight-lander", "reason": "Uses Mars target 499; Horizons has no separate lander surface-coordinate target."},
+    {"robotId": "ingenuity", "reason": "Uses Mars target 499; Horizons has no separate helicopter surface-coordinate target."},
+    {"robotId": "curiosity-msl", "reason": "Uses Mars target 499; Horizons has no separate rover surface-coordinate target."},
+    {"robotId": "perseverance-mars-2020", "reason": "Uses Mars target 499; Horizons has no separate rover surface-coordinate target."}
+  ]
+}

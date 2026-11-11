@@ -32,7 +32,7 @@
   "$defs": {
     "storyPage": {"type": "object", "additionalProperties": false, "required": ["title", "text"], "properties": {"title": {"type": "string", "minLength": 1}, "text": {"type": "string", "minLength": 1}, "poetic": {"type": "boolean"}}},
     "message": {"type": "object", "additionalProperties": false, "required": ["text"], "properties": {"text": {"type": "string", "minLength": 1}, "poetic": {"type": "boolean"}}},
-    "quiz": {"type": "object", "additionalProperties": false, "required": ["q", "options"], "properties": {"q": {"type": "string", "minLength": 1}, "options": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}}, "explanation": {"type": "string"}}},
+    "quiz": {"type": "object", "additionalProperties": false, "required": ["q", "options"], "properties": {"q": {"type": "string", "minLength": 1}, "options": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}}, "explanation": {"type": "string"}, "draftBy": {"type": "string", "enum": ["ai", "P4"]}}},
     "photo": {"type": "object", "additionalProperties": false, "required": ["nasaId", "credit", "pageUrl", "alt"], "properties": {"nasaId": {"type": "string", "minLength": 1}, "credit": {"type": "string", "minLength": 1}, "pageUrl": {"type": "string", "format": "uri", "pattern": "^https://([a-z0-9-]+\\.)*nasa\\.gov/"}, "alt": {"type": "string", "minLength": 1}}}
   }
 }
