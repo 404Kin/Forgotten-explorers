@@ -1,6 +1,5 @@
 import {t,getLang} from '../i18n/index.js';
-// Bangla/Arabic fall back to Noto when the page has loaded it; Georgia/sans-serif have no such glyphs.
-const SERIF="Georgia,'Noto Sans Bengali','Noto Sans Arabic',serif",SANS="sans-serif,'Noto Sans Bengali','Noto Sans Arabic'";
+const SERIF='Georgia,serif',SANS='sans-serif';
 export function certificate(name,rankName,xp){const c=document.createElement('canvas');c.width=1200;c.height=850;const x=c.getContext('2d');
 const g=x.createLinearGradient(0,0,0,850);g.addColorStop(0,'#0b1030');g.addColorStop(1,'#2b1d6b');x.fillStyle=g;x.fillRect(0,0,1200,850);
 x.strokeStyle='#ffd34e';x.lineWidth=8;x.strokeRect(40,40,1120,770);x.lineWidth=2;x.strokeRect(60,60,1080,730);

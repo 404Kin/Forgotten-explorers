@@ -2,7 +2,9 @@
 import './LanguageSwitcher.css';
 import {t,languages,getLang,setLang} from '../../i18n/index.js';
 
+/** Returns null when only one language is enabled: a picker with one choice would only confuse people. */
 export function createLanguageSwitcher(){
+  if(languages().length<2)return null;
   const wrap=document.createElement('label');wrap.className='langsel';
   // Visible globe is decoration; the name for screen readers comes from the translated aria-label.
   wrap.innerHTML=`<span aria-hidden="true">🌐</span><select aria-label="${t('language.label')}">${languages().map(l=>`<option value="${l.code}" lang="${l.code}"${l.code===getLang()?' selected':''}>${l.label}</option>`).join('')}</select>`;
