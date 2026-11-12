@@ -187,3 +187,13 @@
 .ws-embedded .ws-app {
   min-height: calc(100dvh - 190px);
 }
+
+/* Inside the app's GameShell the shell draws the frame, so the game drops its own border/rounding. */
+.gs-body .ws-root.ws-embedded {
+  border: 0;
+  border-radius: 0;
+  min-height: calc(100dvh - 250px);
+}
+.gs-body .ws-embedded .ws-app {
+  min-height: calc(100dvh - 250px);
+}
