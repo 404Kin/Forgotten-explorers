@@ -28,3 +28,5 @@
 .ll-controls{padding:8px 12px}
 @media(max-width:760px){.ll-keys{display:none}.ll-controls .btn{min-height:60px}}
 .ll-keys{margin:0 0 12px;font-size:.8rem;opacity:.9;text-align:center;color:var(--cream)}
+.ll-wind{position:absolute;inset-inline-end:10px;inset-block-end:10px;margin:0;padding:4px 10px;border-radius:999px;border:3px solid var(--k);background:var(--cream);color:var(--k);font-weight:800;font-size:.85rem}
+.ll-menu{max-width:none}

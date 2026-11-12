@@ -8,29 +8,39 @@ import {sfx} from '../../services/audio.js';
 import {t} from '../../i18n/index.js';
 import {inkFor} from '../../components/contrast.js';
 import {createGameShell} from '../../components/GameShell/GameShell.js';
+import {renderLevelMenu} from '../../components/LevelMenu/LevelMenu.js';
+import {createGameProgress} from '../GameProgress/progress.js';
+import {LEVELS,PEEK_MS,MISMATCH_MS,STORAGE_KEY,STAR_MOVES_PER_PAIR} from './config.js';
 
-const PAIRS=6,PEEK_MS=2200,MISMATCH_MS=900;
-/** Stars for a finished game: fewer moves = more stars. Pure, easy to test. */
-export const starsFor=moves=>moves<=10?3:moves<=16?2:1;
-export const xpFor=moves=>Math.max(10,70-moves*3);
+const progress=createGameProgress(STORAGE_KEY);
+/** Stars for a finished game: fewer moves per pair = more stars. Pure, easy to test. */
+export const starsFor=(moves,pairs)=>moves<=pairs*STAR_MOVES_PER_PAIR.three?3:moves<=pairs*STAR_MOVES_PER_PAIR.two?2:1;
+export const xpFor=(moves,pairs)=>Math.max(10,pairs*10+10-moves*3);
 
 let timers=[],shell=null;
 const later=(fn,ms)=>{const id=setTimeout(fn,ms);timers.push(id);return id};
 const stop=()=>{timers.forEach(clearTimeout);timers=[];shell?.destroy();shell=null};
 
 export default{name:'memory',
-mount(el){start(el)},
+mount(el){menu(el)},
 unmount(){stop()}};
 
-function start(el){
+function menu(el){
   stop();
+  renderLevelMenu(el,{title:t('game.memory'),icon:'🃏',intro:t('memory.sub'),levels:LEVELS,difficulties:[],progress,locks:false,
+    formatBest:b=>t('memory.bestMoves',{n:b.value}),onStart:id=>start(el,id)});
+}
+
+function start(el,levelId){
+  stop();
+  const level=LEVELS.find(l=>l.id===levelId)||LEVELS[0],PAIRS=Math.min(level.pairs,MISSIONS.length);
   const pick=shuffle(MISSIONS).slice(0,PAIRS),tiles=shuffle(pick.flatMap(m=>[{m,kind:'art'},{m,kind:'name'}]));
   let open=[],matched=0,moves=0,lock=true;
-  shell=createGameShell(el,{title:t('game.memory'),icon:'🃏',accent:'#ff8fa3',onRestart:()=>start(el)});
+  shell=createGameShell(el,{title:`${t('game.memory')} · ${t(level.labelKey)}`,icon:level.icon,accent:level.color,onRestart:()=>start(el,level.id)});
   const sh=shell;
-  shell.hud.innerHTML=`<span class="gs-pill" id="mmmoves" aria-live="polite">👣 ${t('memory.moves',{n:0})}</span><span class="gs-pill" id="mmpairs">⭐ ${t('memory.pairs',{n:0,total:PAIRS})}</span>`;
+  shell.hud.innerHTML=`<span class="gs-pill" id="mmmoves" aria-live="polite">👣 ${t('memory.moves',{n:0})}</span><span class="gs-pill" id="mmpairs">⭐ ${t('memory.pairs',{n:0,total:PAIRS})}</span>${progress.get().best[`${level.id}:null`]?`<span class="gs-pill">🏅 ${t('memory.bestMoves',{n:progress.get().best[`${level.id}:null`].value})}</span>`:''}`;
   shell.body.className='gs-body mm-body';
-  shell.body.innerHTML=`<p class="mm-msg" id="mmmsg" role="status">${t('memory.peek')}</p><div class="mm-grid" id="mmgrid"></div>`;
+  shell.body.innerHTML=`<p class="mm-msg" id="mmmsg" role="status">${t('memory.peek')}</p><div class="mm-grid" id="mmgrid" style="--cols:${level.cols}"></div>`;
   const grid=shell.body.querySelector('#mmgrid'),msg=shell.body.querySelector('#mmmsg');
 
   const face=tl=>tl.kind==='art'
@@ -61,8 +71,9 @@ function start(el){
     }
   }
   function win(){
-    const xp=xpFor(moves);sfx.win();update(S=>{S.stats.memory++});addXP(xp,t('memory.xpReason'));
-    later(()=>shell?.showResult({icon:'🎉',title:t('memory.won'),stars:starsFor(moves),text:t('memory.result',{moves,xp})}),700);
+    const xp=xpFor(moves,PAIRS),stars=starsFor(moves,PAIRS);sfx.win();update(S=>{S.stats.memory++});addXP(xp,t('memory.xpReason'));
+    const r=progress.record(LEVELS,{levelId:level.id,difficulty:null,value:moves,stars,won:true,better:'min'});
+    later(()=>shell?.showResult({icon:'🎉',title:t('memory.won'),stars,text:t('memory.result',{moves,xp}),extra:r.newBest?`<p><b>${t('memory.newBest')}</b></p>`:''}),700);
   }
 
   // Peek: show everything for a moment, then hide and let the player start.

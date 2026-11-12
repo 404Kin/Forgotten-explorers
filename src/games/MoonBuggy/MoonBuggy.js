@@ -6,14 +6,14 @@ import {num} from '../../i18n/format.js';
 import {addXP,update} from '../../state/store.js';
 import {sfx} from '../../services/audio.js';
 import {createGameShell} from '../../components/GameShell/GameShell.js';
-import {TRACKS,TRACK_IDS,VIEW} from './tracks.js';
+import {renderLevelMenu} from '../../components/LevelMenu/LevelMenu.js';
+import {createGameProgress} from '../GameProgress/progress.js';
+import {LEVELS,DIFFICULTIES,STORAGE_KEY,VIEW,buildTrack} from './tracks.js';
 import {createRng,generateWorld,createState,step,xpFor} from './physics.js';
 import {draw,makeBackdrop} from './render.js';
 
-const BEST_KEY='fe2.buggy';
+const progress=createGameProgress(STORAGE_KEY);
 const reducedMotion=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
-const loadBest=()=>{try{return JSON.parse(localStorage.getItem(BEST_KEY)||'{}')}catch{return{}}};
-const saveBest=b=>{try{localStorage.setItem(BEST_KEY,JSON.stringify(b))}catch{}};
 const seconds=s=>num(s,1);
 
 let raf=0,cleanup=[];
@@ -24,23 +24,21 @@ mount(el){
   let relaxed=reducedMotion(); // slower by default for people who asked for less motion
 
   const menu=()=>{
-    stop();const best=loadBest();
-    el.innerHTML=`<div class="wrap"><a class="btn sm alt" href="#/play"><span aria-hidden="true">←</span> ${t('game.back')}</a>`+
-      `<div class="hero"><h1>🚙 ${t('game.buggy')}</h1><p>${t('buggy.sub')}</p></div>`+
-      `<div class="tiles bg-tiles">${TRACK_IDS.map(k=>`<button type="button" class="tile bg-track" data-k="${k}" style="background:${k==='moon'?'#d5d5e6':'#f0b79c'}"><span aria-hidden="true">${k==='moon'?'🌙':'🔴'}</span><b>${t('world.'+k+'.short')}</b>${t('buggy.desc.'+k)}<small>${best[k]?t('buggy.best',{time:seconds(best[k])}):t('buggy.noBest')}</small><em>▶ ${t('lander.start')}</em></button>`).join('')}</div>`+
-      `<label class="bg-opt"><input type="checkbox" id="bgrelax"${relaxed?' checked':''}> ${t('buggy.relaxed')}</label>`+
-      `<div class="panel bg-how"><h2>${t('buggy.howTitle')}</h2><ul><li>${t('buggy.how1')}</li><li>${t('buggy.how2')}</li><li>${t('buggy.how3')}</li></ul></div></div>`;
-    el.querySelector('#bgrelax').onchange=e=>{relaxed=e.target.checked};
-    el.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>play(b.dataset.k));
+    stop();
+    renderLevelMenu(el,{title:t('game.buggy'),icon:'🚙',intro:t('buggy.sub'),levels:LEVELS,difficulties:DIFFICULTIES,progress,locks:false,
+      formatBest:b=>t('buggy.best',{time:seconds(b.value)}),onStart:play,
+      extraHTML:`<label class="bg-opt"><input type="checkbox" id="bgrelax"${relaxed?' checked':''}> ${t('buggy.relaxed')}</label>`+
+        `<div class="panel bg-how"><h2>${t('buggy.howTitle')}</h2><ul><li>${t('buggy.how1')}</li><li>${t('buggy.how2')}</li><li>${t('buggy.how3')}</li></ul></div>`,
+      onDraw:root=>{root.querySelector('#bgrelax').onchange=e=>{relaxed=e.target.checked}}});
   };
 
-  function play(key){
+  function play(levelId,difficultyId){
     stop();
-    const track=TRACKS[key],world=generateWorld(track,createRng((Math.random()*2**31)|0)),state=createState(),backdrop=makeBackdrop(7);
+    const track=buildTrack(levelId,difficultyId),world=generateWorld(track,createRng((Math.random()*2**31)|0)),state=createState(track),backdrop=makeBackdrop(7);
     state.relaxed=relaxed;
     const reduced=reducedMotion(),dust=[],totalStars=world.stars.length;
     let last=0,t0=0,finished=false,jump=false;
-    const shell=createGameShell(el,{title:t('game.buggy'),icon:'🚙',accent:'#d9dcf2',onRestart:()=>play(key),onResume:()=>{last=0}});
+    const shell=createGameShell(el,{title:`${t('game.buggy')} · ${t(track.labelKey)}`,icon:track.icon,accent:track.color,onRestart:()=>play(levelId,difficultyId),onResume:()=>{last=0}});
     cleanup.push(()=>shell.destroy());
     shell.hud.innerHTML=`<span class="gs-pill" id="bglives"></span><span class="gs-pill" id="bgstars"></span><span class="gs-pill" id="bgtime"></span>`;
     shell.body.className='gs-body bg-play';
@@ -65,12 +63,13 @@ mount(el){
 
     function finish(){
       finished=true;
-      const xp=xpFor(state),won=state.status==='won',best=loadBest();let newBest=false;
-      if(won){if(!best[key]||state.time<best[key]){best[key]=state.time;saveBest(best);newBest=true}sfx.win()}else sfx.bad();
+      const xp=xpFor(state),won=state.status==='won';let newBest=false;
+      const stars=won?(state.lives>=track.lives?3:state.lives>=Math.ceil(track.lives/2)?2:1):0;
+      if(won){newBest=progress.record(LEVELS,{levelId,difficulty:difficultyId,value:state.time,stars,won:true,better:'min'}).newBest;sfx.win()}else sfx.bad();
       update(S=>{S.stats.buggy=(S.stats.buggy||0)+1});addXP(xp,t('buggy.xpReason'));
       say(won?t('buggy.won'):t('buggy.lost'));
       shell.showResult({icon:won?'🏁':'🛠',title:won?t('buggy.won'):t('buggy.lost'),
-        stars:won?(state.lives>=3?3:state.lives===2?2:1):0,
+        stars,
         text:won?t('buggy.winText',{time:seconds(state.time),stars:state.stars,total:totalStars,xp}):t('buggy.lostText',{stars:state.stars,xp}),
         extra:newBest?`<p><b>${t('buggy.newBest')}</b></p>`:''});
     }

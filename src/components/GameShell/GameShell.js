@@ -51,14 +51,16 @@ export function createGameShell(root,{title,icon,backHref='#/play',accent='#ffd3
     get paused(){return paused},
     pause,resume,toggle,
     /** {icon,title,text,stars?,primary?:{label,onClick}} : shows the result card with Play again + Back to games. */
-    showResult({icon:ic='🎉',title:ti,text='',stars=null,extra=''}){
+    showResult({icon:ic='🎉',title:ti,text='',stars=null,extra='',actions=[]}){
       over=true;paused=false;pauseBox.hidden=true;btn.disabled=true;
       resultBox.querySelector('.gs-card').innerHTML=
         `<div class="gs-big" aria-hidden="true">${ic}</div><h2 id="gs-rh">${ti}</h2>`+
         (stars!==null?`<div class="gs-stars" role="img" aria-label="${t('shell.stars',{n:stars})}">${'⭐'.repeat(stars)}${'☆'.repeat(Math.max(0,3-stars))}</div>`:'')+
         `<p>${text}</p>${extra}`+
-        `<div class="gs-actions"><button type="button" class="btn gs-again">↻ ${t('common.playAgain')}</button><a class="btn alt" href="${backHref}">${t('game.back')}</a></div>`;
-      resultBox.hidden=false;resultBox.querySelector('.gs-again').onclick=onRestart;resultBox.querySelector('.gs-again').focus({preventScroll:true});
+        `<div class="gs-actions">${actions.map((a,i)=>`<button type="button" class="btn gs-act" data-i="${i}">${a.label}</button>`).join('')}<button type="button" class="btn ${actions.length?'alt ':''}gs-again">↻ ${t('common.playAgain')}</button><a class="btn alt" href="${backHref}">${t('game.back')}</a></div>`;
+      resultBox.hidden=false;resultBox.querySelector('.gs-again').onclick=onRestart;
+      resultBox.querySelectorAll('.gs-act').forEach(b=>b.onclick=actions[+b.dataset.i].onClick);
+      (resultBox.querySelector('.gs-act')||resultBox.querySelector('.gs-again')).focus({preventScroll:true});
     },
     destroy(){removeEventListener('keydown',onKey);document.removeEventListener('visibilitychange',onVis)}
   };

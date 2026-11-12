@@ -5,11 +5,14 @@ import {t} from '../../i18n/index.js';
 import {addXP,update} from '../../state/store.js';
 import {sfx} from '../../services/audio.js';
 import {createGameShell} from '../../components/GameShell/GameShell.js';
-import {VIEW,WORLDS,WORLD_IDS,rng,createTerrain,createLander,step,speedState,tiltState,xpFor} from './physics.js';
+import {renderLevelMenu} from '../../components/LevelMenu/LevelMenu.js';
+import {createGameProgress} from '../GameProgress/progress.js';
+import {VIEW,DIFFICULTIES,LEVELS,buildWorld,windAt,rng,createTerrain,createLander,step,speedState,tiltState,xpFor} from './physics.js';
+import {STORAGE_KEY} from './config.js';
 import {draw,makeBackdrop} from './render.js';
 
 const reducedMotion=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
-const ICON={moon:'🌙',mars:'🔴'};
+const progress=createGameProgress(STORAGE_KEY);
 let raf=0,cleanup=[];
 const stop=()=>{cancelAnimationFrame(raf);cleanup.forEach(f=>f());cleanup=[]};
 
@@ -17,21 +20,19 @@ export default{name:'lander',
 mount(el){
   const menu=()=>{
     stop();
-    el.innerHTML=`<div class="wrap ll-menu"><a class="btn sm alt" href="#/play"><span aria-hidden="true">←</span> ${t('game.back')}</a>`+
-      `<div class="hero"><h1>🛬 ${t('game.lander')}</h1><p>${t('lander.sub')}</p></div>`+
-      `<div class="tiles">${WORLD_IDS.map(k=>`<button type="button" class="tile ll-worldtile" data-k="${k}" style="background:${k==='moon'?'#d5d5e6':'#f0b79c'}"><span aria-hidden="true">${ICON[k]}</span><b>${t('world.'+k+'.short')}</b>${t('lander.'+k+'Desc')}<em>▶ ${t('lander.start')}</em></button>`).join('')}</div>`+
-      `<section class="panel ll-how" aria-labelledby="llh"><h2 id="llh">${t('lander.how.title')}</h2><ol class="ll-steps">`+
+    renderLevelMenu(el,{title:t('game.lander'),icon:'🛬',intro:t('lander.sub'),levels:LEVELS,difficulties:DIFFICULTIES,progress,locks:true,
+      formatBest:b=>t('lander.bestStars',{n:b.stars}),onStart:play,
+      extraHTML:`<section class="panel ll-how" aria-labelledby="llh"><h2 id="llh">${t('lander.how.title')}</h2><ol class="ll-steps">`+
         [['🔥','1'],['↔️','2'],['🟡','3']].map(([ic,n])=>`<li><span class="ico" aria-hidden="true">${ic}</span><span><b>${t('lander.how.'+n+'.title')}</b>${t('lander.how.'+n+'.text')}</span></li>`).join('')+
-      `</ol><p class="mono" style="margin:12px 0 0;text-align:center">${t('lander.how.keys')}</p></section></div>`;
-    el.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>play(b.dataset.k));
+      `</ol><p class="mono" style="margin:12px 0 0;text-align:center">${t('lander.how.keys')}</p></section>`});
   };
 
-  function play(key){
+  function play(levelId,difficultyId){
     stop();
-    const world=WORLDS[key],reduced=reducedMotion(),random=rng((Math.random()*2**31)|0);
-    const terrain=createTerrain(random),s=createLander(random),bg=makeBackdrop(),particles=[];
+    const world=buildWorld(levelId,difficultyId),level=world.level,reduced=reducedMotion(),random=rng((Math.random()*2**31)|0);
+    const terrain=createTerrain(random,world),s=createLander(random,world),bg=makeBackdrop(),particles=[];
     const input={left:false,right:false,thrust:false};
-    const shell=createGameShell(el,{title:t('game.lander'),icon:ICON[key],accent:key==='moon'?'#d5d5e6':'#f0b79c',onRestart:()=>play(key),onResume:()=>{last=0}});
+    const shell=createGameShell(el,{title:`${t('game.lander')} · ${t(level.labelKey)}`,icon:level.icon,accent:level.color,onRestart:()=>play(levelId,difficultyId),onResume:()=>{last=0}});
     cleanup.push(()=>shell.destroy());
     shell.hud.innerHTML='';
     shell.body.className='gs-body ll-play';
@@ -40,7 +41,7 @@ mount(el){
         `<div class="ll-meter" id="mfuel" role="meter" aria-label="${t('lander.fuel')}" aria-valuemin="0" aria-valuemax="100"><span>⛽ ${t('lander.fuel')}</span><div class="bar"><i></i></div><span class="word"></span></div>`+
         `<div class="ll-meter" id="mspeed" role="status" aria-label="${t('lander.speed')}"><span>🚀 ${t('lander.speed')}</span><div class="bar"><i></i></div><span class="word"></span></div>`+
         `<div class="ll-meter" id="mtilt" role="status" aria-label="${t('lander.tilt')}"><span>📐 ${t('lander.tilt')}</span><div class="bar"><i></i></div><span class="word"></span></div></div>`+
-      `<div class="ll-canvaswrap"><canvas width="${VIEW.w}" height="${VIEW.h}" role="img" aria-label="${t('lander.canvas')}"></canvas><p class="ll-hint" id="hint">${t('lander.hintStart')}</p></div>`+
+      `<div class="ll-canvaswrap"><canvas width="${VIEW.w}" height="${VIEW.h}" role="img" aria-label="${t('lander.canvas')}"></canvas><p class="ll-hint" id="hint">${t('lander.hintStart')}</p>${world.wind?`<p class="ll-wind" id="wind" role="status"></p>`:''}</div>`+
       `<div class="ll-controls"><button type="button" class="btn alt" data-c="left" aria-label="${t('lander.left')}"><span aria-hidden="true">⬅️</span><small>${t('lander.left')}</small></button>`+
         `<button type="button" class="btn" data-c="thrust" aria-label="${t('lander.thrust')}"><span aria-hidden="true">🔥</span><small>${t('lander.thrust')}</small></button>`+
         `<button type="button" class="btn alt" data-c="right" aria-label="${t('lander.right')}"><span aria-hidden="true">➡️</span><small>${t('lander.right')}</small></button></div>`+
@@ -64,8 +65,9 @@ mount(el){
 
     function hud(){
       const sp=speedState(s,world),tilt=tiltState(s,world);
-      const fuel=$('#mfuel');fuel.setAttribute('aria-valuenow',Math.round(s.fuel));fuel.querySelector('i').style.width=s.fuel+'%';
-      fuel.dataset.state=s.fuel>25?'ok':'careful';fuel.querySelector('.word').textContent=s.fuel>0?`${Math.round(s.fuel)}%`:t('lander.state.empty');
+      const pct=s.fuel/world.startFuel*100;const fuel=$('#mfuel');fuel.setAttribute('aria-valuenow',Math.round(pct));fuel.querySelector('i').style.width=pct+'%';
+      fuel.dataset.state=pct>25?'ok':'careful';fuel.querySelector('.word').textContent=s.fuel>0?`${Math.round(pct)}%`:t('lander.state.empty');
+      const wd=$('#wind');if(wd){const w=windAt(world,s.time);wd.textContent=`💨 ${t('lander.wind')} ${Math.abs(w)<2?'·':w<0?'←':'→'}`}
       const ms=$('#mspeed');ms.dataset.state=sp.state;ms.querySelector('i').style.width=Math.min(100,sp.ratio*100)+'%';
       ms.querySelector('.word').textContent=(sp.state==='slow'?'✓ ':sp.state==='fast'?'⚠ ':'')+t('lander.state.'+sp.state);
       const mt=$('#mtilt');mt.dataset.state=tilt;mt.querySelector('i').style.width=Math.min(100,Math.abs(s.angle)/world.safeAngle*50)+'%';
@@ -81,12 +83,15 @@ mount(el){
 
     function finish(outcome){
       done=true;const r=s.result,xp=xpFor(r);
-      if(outcome==='landed'){sfx.win();update(S=>{S.stats.lander++})}else{sfx.bad();puff(s.x,s.y,36,'#ffd34e',260)}
+      let unlocked=false;
+      if(outcome==='landed'){sfx.win();update(S=>{S.stats.lander++});unlocked=progress.record(LEVELS,{levelId,difficulty:difficultyId,value:r.stars,stars:r.stars,won:true,better:'max'}).unlockedNext}else{sfx.bad();puff(s.x,s.y,36,'#ffd34e',260)}
       addXP(xp,t('xp.landing'));
       hint.classList.add('off');
+      const idx=LEVELS.findIndex(l=>l.id===levelId),next=LEVELS[idx+1];
       // The crash explosion plays for a moment before the result card appears.
       setTimeout(()=>{if(!shell)return;shell.showResult(outcome==='landed'
-        ?{icon:'🎉',title:t('lander.perfect'),stars:r.stars,text:t('lander.fuelLeft',{fuel:r.fuel,xp})}
+        ?{icon:'🎉',title:t('lander.perfect'),stars:r.stars,text:t('lander.fuelLeft',{fuel:Math.round(r.fuel/world.startFuel*100),xp})+(unlocked?` ${t('lander.unlocked')}`:''),
+          actions:next?[{label:`▶ ${t('lander.nextLevel',{name:t(next.labelKey)})}`,onClick:()=>play(next.id,difficultyId)}]:[]}
         :{icon:'💥',title:t('lander.bumpy'),stars:0,text:`${t('lander.tip.'+r.reason)} +${xp} XP`})},outcome==='landed'?350:900);
     }
 

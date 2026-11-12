@@ -1,0 +1,16 @@
+.lm-menu .hero{margin-bottom:12px}
+.lvm-diff{display:grid;gap:8px;justify-items:center;margin:14px 0}
+.lvm-diff .chip{min-height:44px;min-width:76px}
+.lvm-ddesc{margin:0;text-align:center}
+.lvm-h2{font-size:1.2rem;text-align:center;margin:10px 0}
+.lvm-levels{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;max-width:760px}
+.lvm-tile{width:100%;min-height:150px;text-align:center;justify-items:center;cursor:pointer}
+.lvm-tile:disabled{cursor:not-allowed;filter:grayscale(.6) brightness(.85)}
+.lvm-ico{font-size:2.4rem;line-height:1}.lvm-num{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.lvm-tile small{font-family:var(--mono);font-size:.75rem}
+/* The global .tile span rule makes every span 2rem; inside level tiles only the icon is big. */
+.lvm-tile span{font-size:.95rem}
+.lvm-tile .lvm-ico{font-size:2.4rem}
+.lvm-tile .lvm-num{font-size:.72rem}
+.lvm-tile b{font-size:1.2rem}
+@media(max-width:520px){.lvm-levels{grid-template-columns:repeat(2,1fr)}.lvm-tile{min-height:170px;padding:12px 8px}}

@@ -1,5 +1,5 @@
 // Pure game rules (no DOM, no canvas), so they are easy to unit-test: terrain, track generation, one physics step.
-import {VIEW,LIVES,RELAXED_FACTOR} from './tracks.js';
+import {VIEW,RELAXED_FACTOR} from './tracks.js';
 
 /** Small seeded random numbers so a track is the same for a given seed. */
 export function createRng(seed){let a=seed>>>0;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
@@ -15,7 +15,10 @@ export function generateWorld(track,rng){
     else if(roll<.82){const w=between(rng,track.crater.w);craters.push({x:x+w/2,w,depth:track.crater.depth});
       for(let i=0;i<3;i++)stars.push({x:x-0+i*(w/2),h:60+Math.sin(i/2*Math.PI)*38,taken:false})}
     else stars.push({x,h:20,taken:false},{x:x+46,h:20,taken:false});
-    x+=between(rng,track.obstacleGap)+track.rock.w[1];
+    // Fairness: a jump must be able to finish (and the player to react) before the next obstacle, however fast the race has become.
+    // So the gap is never smaller than the distance travelled during one jump plus 0.45 s of reaction time at the speed reached here.
+    const p=Math.min(1,x/track.length),v=track.speed.start+(track.speed.end-track.speed.start)*p,airTime=2*track.jump/track.gravity;
+    x+=Math.max(between(rng,track.obstacleGap),v*(airTime+.45)-track.rock.w[1])+track.rock.w[1];
   }
   return{rocks,craters,stars};
 }
@@ -29,8 +32,8 @@ export function craterDip(craters,x){
 export const hillY=(track,x)=>VIEW.groundY+track.hills*(Math.sin(x/110)+.5*Math.sin(x/47));
 export const terrainY=(track,world,x)=>hillY(track,x)+craterDip(world.craters,x);
 
-export function createState(){
-  return{status:'ready',x:0,y:VIEW.groundY,vy:0,grounded:true,lives:LIVES,stars:0,time:0,invuln:0,jumpBuffer:0,angle:0,relaxed:false};
+export function createState(track){
+  return{status:'ready',x:0,y:VIEW.groundY,vy:0,grounded:true,lives:track.lives,stars:0,time:0,invuln:0,jumpBuffer:0,angle:0,relaxed:false};
 }
 
 // Relaxed mode slows time, not the jump shape: gravity scales with k^2 and jump speed with k, so the jump covers the SAME ground
@@ -53,9 +56,16 @@ export function step(s,dt,jump,track,world){
   s.x+=speedAt(track,s)*dt;
 
   const k=timeScale(s);
-  if(s.jumpBuffer>0&&s.grounded){s.vy=-track.jump*k;s.grounded=false;s.jumpBuffer=0;events.push('jump')}
+  // Coyote time: for 0.1 s after the ground falls away (downhill) a jump still works. Without it the rover counted as
+  // "in the air" on every downhill slope and the Jump button did nothing there.
+  s.coyote=s.grounded?.1:Math.max(0,(s.coyote||0)-dt);
+  let jumped=false;
+  if(s.jumpBuffer>0&&(s.grounded||s.coyote>0)){s.vy=-track.jump*k;s.grounded=false;s.coyote=0;s.jumpBuffer=0;jumped=true;events.push('jump')}
+  const wasGrounded=s.grounded;
   s.vy+=track.gravity*k*k*dt;s.y+=s.vy*dt;
   const gy=terrainY(track,world,s.x);
+  // Stick to the ground on slopes: a small gap below the wheels is just the ground sloping away, not a jump.
+  if(wasGrounded&&!jumped&&s.y<gy&&gy-s.y<16){s.y=gy;s.vy=0}
   if(s.y>=gy){s.y=gy;s.vy=0;s.grounded=true}else s.grounded=false;
   s.angle=Math.atan2(terrainY(track,world,s.x+18)-terrainY(track,world,s.x-18),36);
 
