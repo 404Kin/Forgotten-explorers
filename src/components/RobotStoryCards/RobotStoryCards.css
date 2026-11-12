@@ -1,0 +1,7 @@
+.rsc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+.rsc-card h2{font-size:1.3rem}
+.rsc-card p{margin:10px 0 0}
+/* DRAFT label: words + dashed outline, never colour alone. */
+.rsc-draft{display:inline-block;margin-inline-start:6px;padding:2px 10px;border:2.5px dashed var(--k);border-radius:999px;background:var(--lav);color:var(--k);font-family:var(--body);font-size:.75rem;font-weight:800;vertical-align:middle}
+.rsc-note{opacity:.9}
+.rsc-src a{text-decoration:underline;display:inline-flex;align-items:center;min-height:44px}

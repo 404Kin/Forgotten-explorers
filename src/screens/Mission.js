@@ -4,6 +4,7 @@ import {cardHTML} from '../components/Card.js';
 import {missionImages,imgTag} from '../services/nasaImages.js';
 import {lightbox} from '../components/Modal.js';
 import {runQuiz} from '../games/QuizEngine.js';
+import {mountRobotStoryCards} from '../components/RobotStoryCards/RobotStoryCards.js';
 import {createProgressStore,counts,allMastered} from '../games/SmartQuiz/progress.js';
 import {pickRound} from '../games/SmartQuiz/round.js';
 import {questionId} from '../games/SmartQuiz/ids.js';
@@ -164,6 +165,7 @@ export default {
           </div>
         </div>
         <div class="mhero" id="mh"></div>
+        <div id="rscards"></div>
         <div class="mgrid" style="margin-top:18px">
           <div class="mcard-col">
             ${cardHTML(m, {tag: 'div', heading: 'h2', collected: get().collected.includes(m.n)})}
@@ -183,6 +185,7 @@ export default {
     `;
 
     const hero = el.querySelector('#mh');
+    mountRobotStoryCards(el.querySelector('#rscards'), m0.id);
     let loaded = false;
 
     const loadPhotos = () => loadInto(hero, () => missionImages(m), {

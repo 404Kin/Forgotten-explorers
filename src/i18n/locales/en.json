@@ -1028,5 +1028,11 @@
  "buggy.diff.hard": "Only 2 lives, faster and busier!",
  "buggy.speed": "Speed",
  "buggy.fact.moonNight": "A Moon day is very long: about two weeks of daylight, then about two weeks of night.",
- "buggy.fact.marsNight": "A day on Mars is called a sol. It lasts about 24 hours and 39 minutes."
+ "buggy.fact.marsNight": "A day on Mars is called a sol. It lasts about 24 hours and 39 minutes.",
+ "robotStory.how": "How I worked",
+ "robotStory.discovered": "What I discovered",
+ "robotStory.draft": "Draft",
+ "robotStory.draftNote": "Draft text. It is being checked against NASA sources.",
+ "robotStory.sources": "Sources",
+ "robotStory.missing": "This text is coming soon."
 }
