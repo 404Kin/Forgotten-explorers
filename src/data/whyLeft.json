@@ -1,0 +1,33 @@
+{
+  "sections": [
+    {
+      "id": "cost-of-return",
+      "icon": "🚀",
+      "title": "Bringing things home takes another mission",
+      "text": "A return trip needs more spacecraft, fuel, and careful planning. NASA’s Mars Sample Return plans show that bringing even small samples home takes a separate mission with many steps. That work can add cost and complexity.",
+      "sources": [
+        "https://www.nasa.gov/news-release/nasa-sets-path-to-return-mars-samples-seeks-innovative-designs/"
+      ]
+    },
+    {
+      "id": "protect-heritage",
+      "icon": "🪨",
+      "title": "Some places are historic science sites",
+      "text": "Apollo hardware and footprints help tell the story of exploration. NASA recommends protecting historic lunar artifacts so future visitors do not disturb their scientific and historic value.",
+      "sources": [
+        "https://www.nasa.gov/wp-content/uploads/2017/10/617743main_nasa-usg_lunar_historic_sites_reva-508.pdf",
+        "https://www.nasa.gov/wp-content/uploads/static/history/humanartifacts.html"
+      ]
+    },
+    {
+      "id": "space-preservation",
+      "icon": "🌌",
+      "title": "Spacecraft need a safe end-of-mission plan",
+      "text": "Spacecraft do not all end in the same way. NASA plans how to move spacecraft out of busy Earth orbits or into safe paths, helping protect future space missions. A Moon lander or a craft far beyond Earth has a different situation.",
+      "sources": [
+        "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_8715_006E_&page_name=Chapter1",
+        "https://www.nasa.gov/reference/3-9-project-phase-f-closeout/"
+      ]
+    }
+  ]
+}
