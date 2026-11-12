@@ -973,5 +973,17 @@
  "mission.quiz.tryHelp": "You need at least {need} right answers. Read the story and try again!",
  "mission.quiz.toAlbum": "Go to my Album",
  "hub.welcome": "Welcome, explorer!",
- "name.add": "Add my name"
+ "name.add": "Add my name",
+ "ww.difficulty.mixed": "Mixed",
+ "ww.start.mastery": "{mastered} of {total} questions mastered",
+ "ww.gameOver.mastery": "{mastered} of {total} mastered",
+ "ww.gameOver.reviewNote": "Missed questions come back in your next round until you get them right.",
+ "ww.mastered.title": "You know them all!",
+ "ww.mastered.body": "You answered all {total} questions right. You are a real space expert!",
+ "ww.mastered.score": "Score in the last round: {score}",
+ "ww.mastered.reset": "Start again from zero",
+ "mission.quiz.mastery": "{mastered} of {total} questions mastered",
+ "mission.quiz.knowAll": "You know every question about {name}!",
+ "mission.quiz.reset": "Reset this quiz",
+ "mission.quiz.review": "Questions to review (they come back next time):"
 }

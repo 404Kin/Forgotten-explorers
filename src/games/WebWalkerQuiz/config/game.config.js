@@ -9,8 +9,10 @@ export const gameConfig = {
 
   hearts: 3,
   questionCount: 10,
-  defaultDifficulty: 'easy',
+  defaultDifficulty: 'mixed',
+  // What the player can choose before a round. 'mixed' is not a question difficulty, so `difficulties` stays the real three.
   difficulties: ['easy', 'medium', 'hard'],
+  choices: ['easy', 'medium', 'hard', 'mixed'],
   defaultLocale: 'en',
   fallbackLocale: 'en',
 

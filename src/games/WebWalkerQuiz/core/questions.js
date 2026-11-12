@@ -1,4 +1,5 @@
 import { shuffle } from './random.js';
+import { pickRound } from '../../SmartQuiz/round.js';
 
 /** Order used to top up a game when a difficulty has too few questions. */
 const NEAREST = {
@@ -63,5 +64,9 @@ export function prepareQuestion(q, rng) {
   };
 }
 
-export const prepareGame = (bank, { difficulty, count, rng }) =>
-  selectQuestions(bank, { difficulty, count, rng }).map((q) => prepareQuestion(q, rng));
+/**
+ * One round. `state` is the saved per-question progress (see SmartQuiz): missed questions first, then unseen ones,
+ * mastered ones only when nothing else is left. Options are shuffled here; the data always keeps the right answer first.
+ */
+export const prepareGame = (bank, { difficulty, count, rng, state = {} }) =>
+  pickRound(bank, state, { difficulty, count, rng }).map((q) => prepareQuestion(q, rng));
