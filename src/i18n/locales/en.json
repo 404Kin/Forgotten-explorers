@@ -814,8 +814,6 @@
  "game.lastMessage": "Last Message",
  "play.buggy": "Race a rover over rocks and craters. Jump and grab the stars!",
  "buggy.sub": "Jump over rocks and craters, grab the stars and reach the flag!",
- "buggy.desc.moon": "Floaty jumps · easy start",
- "buggy.desc.mars": "Faster · more craters",
  "buggy.best": "Best time: {time} s",
  "buggy.noBest": "No time yet",
  "buggy.relaxed": "Relaxed speed (slower and easier)",
@@ -1027,5 +1025,8 @@
  "buggy.level.canyonDesc": "The longest and fastest race.",
  "buggy.diff.easy": "5 lives, slower, fewer obstacles.",
  "buggy.diff.normal": "3 lives and a normal speed.",
- "buggy.diff.hard": "Only 2 lives, faster and busier!"
+ "buggy.diff.hard": "Only 2 lives, faster and busier!",
+ "buggy.speed": "Speed",
+ "buggy.fact.moonNight": "A Moon day is very long: about two weeks of daylight, then about two weeks of night.",
+ "buggy.fact.marsNight": "A day on Mars is called a sol. It lasts about 24 hours and 39 minutes."
 }

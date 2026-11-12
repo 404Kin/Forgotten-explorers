@@ -1,5 +1,5 @@
 // Pure game rules (no DOM, no canvas), so they are easy to unit-test: terrain, track generation, one physics step.
-import {VIEW,RELAXED_FACTOR} from './tracks.js';
+import {VIEW,RELAXED_FACTOR,DAY_TO_NIGHT_SECONDS} from './tracks.js';
 
 /** Small seeded random numbers so a track is the same for a given seed. */
 export function createRng(seed){let a=seed>>>0;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
@@ -33,13 +33,18 @@ export const hillY=(track,x)=>VIEW.groundY+track.hills*(Math.sin(x/110)+.5*Math.
 export const terrainY=(track,world,x)=>hillY(track,x)+craterDip(world.craters,x);
 
 export function createState(track){
-  return{status:'ready',x:0,y:VIEW.groundY,vy:0,grounded:true,lives:track.lives,stars:0,time:0,invuln:0,jumpBuffer:0,angle:0,relaxed:false};
+  return{status:'ready',x:0,y:VIEW.groundY,vy:0,grounded:true,lives:track.lives,nightAt:null,stars:0,time:0,invuln:0,jumpBuffer:0,angle:0,relaxed:false};
 }
 
 // Relaxed mode slows time, not the jump shape: gravity scales with k^2 and jump speed with k, so the jump covers the SAME ground
 // distance at any speed. (Slowing only the speed would make wide rocks almost impossible to clear.)
 const timeScale=s=>s.relaxed?RELAXED_FACTOR:1;
 const speedAt=(track,s)=>{const p=Math.min(1,s.x/track.length);return(track.speed.start+(track.speed.end-track.speed.start)*p)*(s.relaxed?RELAXED_FACTOR:1)};
+/** Current speed in px/s and as a multiple of the starting speed (what the speed meter shows). */
+export const speedNow=(track,s)=>speedAt(track,s);
+export const speedRatio=(track,s)=>speedAt(track,s)/(track.speed.start*(s.relaxed?RELAXED_FACTOR:1));
+/** 0 = full day, 1 = full night. Smooth over DAY_TO_NIGHT_SECONDS of game time (so Pause freezes it); one single step when `instant` (reduced motion). */
+export const nightFactor=(s,instant=false)=>s.nightAt==null?0:instant?1:Math.max(0,Math.min(1,(s.time-s.nightAt)/DAY_TO_NIGHT_SECONDS));
 
 /**
  * Advance the race by dt seconds. `jump` = player pressed jump this frame. Mutates and returns the events
@@ -84,6 +89,8 @@ export function step(s,dt,jump,track,world){
     if(st.taken)continue;
     if(Math.abs(s.x-st.x)<30&&Math.abs((s.y-18)-(terrainY(track,world,st.x)-st.h))<36){st.taken=true;s.stars++;events.push('star')}
   }
+  // Halfway (or wherever the level says) the sun goes down. It happens once.
+  if(s.nightAt==null&&track.night&&s.x>=track.length*track.night.at){s.nightAt=s.time;events.push('night')}
   if(s.lives<=0){s.status='lost';events.push('lost')}
   else if(s.x>=track.length){s.status='won';events.push('won')}
   return events;

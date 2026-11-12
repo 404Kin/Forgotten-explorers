@@ -12,3 +12,10 @@
 /* The jump button is the main control, so it is big and easy to hit with a thumb. */
 .bg-jump{width:min(320px,90%);min-height:68px;font-size:1.5rem}
 .bg-live{min-height:1.2em;text-align:center;margin:0 0 6px;font-size:.9rem;color:var(--cream)}
+
+.bg-speed{gap:8px}
+.bg-meter{display:inline-block;width:64px;height:12px;border:2px solid var(--k);border-radius:99px;background:#fff;overflow:hidden}
+.bg-meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--gold),var(--nasa-red))}
+/* The night fact sits at the top of the screen, readable on any sky. */
+.bg-fact{position:absolute;inset-inline:16px;inset-block-start:54px;margin:0;text-align:center;font-weight:800;z-index:3}
+.bg-fact[hidden]{display:none}

@@ -9,7 +9,7 @@ import {createGameShell} from '../../components/GameShell/GameShell.js';
 import {renderLevelMenu} from '../../components/LevelMenu/LevelMenu.js';
 import {createGameProgress} from '../GameProgress/progress.js';
 import {LEVELS,DIFFICULTIES,STORAGE_KEY,VIEW,buildTrack} from './tracks.js';
-import {createRng,generateWorld,createState,step,xpFor} from './physics.js';
+import {createRng,generateWorld,createState,step,xpFor,nightFactor,speedRatio} from './physics.js';
 import {draw,makeBackdrop} from './render.js';
 
 const progress=createGameProgress(STORAGE_KEY);
@@ -34,18 +34,21 @@ mount(el){
 
   function play(levelId,difficultyId){
     stop();
-    const track=buildTrack(levelId,difficultyId),world=generateWorld(track,createRng((Math.random()*2**31)|0)),state=createState(track),backdrop=makeBackdrop(7);
+    // Reduced motion also means a gentler speed ramp (see buildTrack).
+    const track=buildTrack(levelId,difficultyId,{gentle:reducedMotion()}),world=generateWorld(track,createRng((Math.random()*2**31)|0)),state=createState(track),backdrop=makeBackdrop(7);
     state.relaxed=relaxed;
     const reduced=reducedMotion(),dust=[],totalStars=world.stars.length;
-    let last=0,t0=0,finished=false,jump=false;
+    let last=0,t0=0,finished=false,jump=false,factUntil=0;
     const shell=createGameShell(el,{title:`${t('game.buggy')} · ${t(track.labelKey)}`,icon:track.icon,accent:track.color,onRestart:()=>play(levelId,difficultyId),onResume:()=>{last=0}});
     cleanup.push(()=>shell.destroy());
-    shell.hud.innerHTML=`<span class="gs-pill" id="bglives"></span><span class="gs-pill" id="bgstars"></span><span class="gs-pill" id="bgtime"></span>`;
+    shell.hud.innerHTML=`<span class="gs-pill" id="bglives"></span><span class="gs-pill" id="bgstars"></span><span class="gs-pill" id="bgtime"></span>`+
+      `<span class="gs-pill bg-speed" id="bgspeed" role="meter" aria-label="${t('buggy.speed')}" aria-valuemin="1" aria-valuemax="2"><span aria-hidden="true">🚀</span><span class="bg-meter" aria-hidden="true"><i></i></span><b></b></span>`;
     shell.body.className='gs-body bg-play';
     shell.body.innerHTML=
       `<div class="bg-prog" role="progressbar" aria-label="${t('buggy.progress')}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>`+
       `<canvas width="${VIEW.w}" height="${VIEW.h}" role="img" aria-label="${t('buggy.canvas')}"></canvas>`+
       `<p class="bg-overlay panel" id="bgmsg">${t('buggy.ready')}</p>`+
+      `<p class="bg-fact panel" id="bgfact" role="status" hidden></p>`+
       `<div class="bg-ctl"><button type="button" class="btn bg-jump" id="bgjump"><span aria-hidden="true">⬆️</span> ${t('buggy.jump')}</button></div>`+
       `<p class="bg-live" id="bglive" role="status" aria-live="polite"></p>`;
     const $=s=>shell.body.querySelector(s),cv=$('canvas'),ctx=cv.getContext('2d'),dpr=Math.min(devicePixelRatio||1,2);
@@ -57,6 +60,10 @@ mount(el){
       L.textContent='❤️'.repeat(Math.max(0,state.lives));L.setAttribute('aria-label',t('buggy.lives',{n:state.lives}));
       S.textContent=`⭐ ${state.stars}`;S.setAttribute('aria-label',t('buggy.stars',{n:state.stars}));
       T.textContent=`⏱ ${seconds(state.time)}`;
+      // Speed meter: how many times faster than the start. The bar fills towards the level's top speed.
+      const ratio=speedRatio(track,state),top=track.speed.end/track.speed.start,sp=shell.hud.querySelector('#bgspeed');
+      sp.setAttribute('aria-valuenow',ratio.toFixed(1));sp.setAttribute('aria-valuemax',top.toFixed(1));
+      sp.querySelector('i').style.width=Math.min(100,(ratio-1)/Math.max(.01,top-1)*100)+'%';sp.querySelector('b').textContent=`×${ratio.toFixed(1)}`;
       const p=Math.min(100,Math.round(state.x/track.length*100));$('.bg-prog').setAttribute('aria-valuenow',p);$('.bg-prog i').style.width=p+'%';
     };
     const say=text=>{live.textContent=text};
@@ -84,13 +91,16 @@ mount(el){
           if(e==='jump')sfx.tap();
           if(e==='star'){sfx.good();say(t('buggy.star'))}
           if(e==='crash'){sfx.bad();say(t('buggy.crash',{n:state.lives}))}
+          if(e==='night'){const f=$('#bgfact');f.textContent=`🌙 ${t(track.night.factKey)}`;f.hidden=false;factUntil=state.time+7;say(t(track.night.factKey))}
         }
         if(state.status==='run')msg.hidden=true;
         if(state.grounded&&state.status==='run'&&!reduced&&Math.random()<.5)dust.push({x:state.x-24,y:state.y,life:1});
         for(const d of dust)d.life-=dt*2.2;while(dust.length&&dust[0].life<=0)dust.shift();
+        // The fact hides itself after a few seconds of GAME time (so pausing does not use it up).
+        if(factUntil&&state.time>=factUntil){$('#bgfact').hidden=true;factUntil=0}
         hud();
       }
-      draw(ctx,{track,world,state,backdrop,dust,reduced,t:(now-t0)/1000});
+      draw(ctx,{track,world,state,backdrop,dust,reduced,t:(now-t0)/1000,night:nightFactor(state,reduced)});
       if(!finished&&(state.status==='won'||state.status==='lost'))finish();
     }
 
