@@ -57,6 +57,25 @@ API contract: [docs/API.md](./docs/API.md) and [docs/openapi.yaml](./docs/openap
 
 NASA images and mission data remain credited to NASA and the relevant mission partners (including JPL-Caltech, ISRO, and ESA where applicable). Credits should be shown beside media and sourced facts. The project is educational and independent.
 
+## NASA Data Sources for Mission Details
+
+All spacecraft hardware specifications, instrument details, science findings, and mission narratives are sourced from the following official NASA and partner agency websites:
+
+| Source | URL | Used For |
+|--------|-----|----------|
+| NASA Mars Exploration Program | https://mars.nasa.gov/ | Mars rover/lander specs, instruments, science results |
+| NASA Science Missions | https://science.nasa.gov/missions/ | Mission overviews, status updates |
+| JPL Mission Pages | https://www.jpl.nasa.gov/missions/ | Technical specifications, construction details |
+| NASA Apollo 11 | https://www.nasa.gov/mission/apollo-11/ | Apollo hardware, LRRR, EASEP data |
+| NASA Parker Solar Probe | https://science.nasa.gov/mission/parker-solar-probe/ | Thermal shield, instruments, corona science |
+| NASA James Webb Space Telescope | https://science.nasa.gov/mission/webb/ | Mirror specs, infrared instruments, discoveries |
+| NASA Voyager | https://voyager.jpl.nasa.gov/ | Interstellar science, Golden Record, instruments |
+| ISRO Chandrayaan-3 | https://www.isro.gov.in/Chandrayaan3.html | Vikram/Pragyan specs, LIBS/APXS findings |
+| NASA 3D Resources | https://science.nasa.gov/3d-resources/ | 3D GLB models of spacecraft |
+| NASA Image and Video Library | https://images.nasa.gov/ | Mission photographs |
+| JPL Horizons API | https://ssd-api.jpl.nasa.gov/doc/horizons.html | Real-time distances |
+| NASA Eyes DSN Now | https://eyes.nasa.gov/apps/dsn-now/ | Deep Space Network status |
+
 ## Current integration notes
 
 The API reads any valid robot JSON files in `data-pipeline/robots/`; this repository checkout does not yet contain that P1 folder, so the 15-record integration and the production ID maps cannot be verified here. P1 must provide the canonical slug IDs and the verified Horizons/DSN mappings. The frontend `spirit-mer-a` versus API `spirit` mismatch is in P3-owned files and still needs P3 coordination.

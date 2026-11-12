@@ -1,0 +1,20 @@
+{
+  "source": "https://eyes.nasa.gov/dsn/data/dsn.xml",
+  "sampleFile": "dsn-sample.xml",
+  "verifiedAt": "2026-11-11T00:00:00Z",
+  "verifiedCodes": {
+    "SPP": {"robotId": "parker-solar-probe", "spacecraftID": "-96", "verification": "Exact code and Horizons SPK ID match Parker lookup. Present on DSS35 in saved feed."}
+  },
+  "unmappedCodesInSample": [
+    {"code":"ESCB","spacecraftID":"-9","reason":"No matching robot record."},
+    {"code":"MRO","spacecraftID":"-74","reason":"Mars Reconnaissance Orbiter is outside this record list."},
+    {"code":"ESCG","spacecraftID":"-10","reason":"No matching robot record."},
+    {"code":"JNO","spacecraftID":"-61","reason":"Juno is outside this record list."},
+    {"code":"STA","spacecraftID":"-234","reason":"STEREO-A is outside this record list."},
+    {"code":"SOHO","spacecraftID":"-21","reason":"SOHO is outside this record list."},
+    {"code":"NHPC","spacecraftID":"-98","reason":"New Horizons is outside this record list."},
+    {"code":"EURC","spacecraftID":"-159","reason":"ESA JUICE is outside this NASA/ISRO robot list."}
+  ],
+  "notObservedInThisSample": ["voyager-1", "curiosity-msl", "perseverance-mars-2020", "jwst-telescope"],
+  "note": "DSN Now is a point-in-time feed. Absence from this saved snapshot does not mean a spacecraft cannot use the DSN. Do not create mappings for robots that are not observed with an exact verified code and spacecraft ID."
+}

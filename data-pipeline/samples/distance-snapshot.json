@@ -1,0 +1,19 @@
+{
+  "snapshotDate": "2026-11-11",
+  "source": "NASA/JPL Horizons API observer ephemerides from Earth geocenter 500@399; raw response files are in horizons-sample-responses/.",
+  "displayLabel": "Snapshot on 2026-11-11",
+  "units": {"distanceKm": "km", "distanceAu": "AU", "oneWayLightTimeMinutes": "minutes"},
+  "targets": {
+    "301": {"name": "Moon", "distanceAu": 0.00268895992174, "distanceKm": 402262.67868994264, "oneWayLightTimeMinutes": 0.0223634, "sourceFile": "horizons-sample-responses/moon.json"},
+    "499": {"name": "Mars", "distanceAu": 1.34974516595411, "distanceKm": 201919002.81435296, "oneWayLightTimeMinutes": 11.22548825, "sourceFile": "horizons-sample-responses/mars.json"},
+    "-31": {"name": "Voyager 1", "distanceAu": 173.019654814518, "distanceKm": 25883371949.500893, "oneWayLightTimeMinutes": 1438.96059084, "sourceFile": "horizons-sample-responses/voyager-1.json"},
+    "-96": {"name": "Parker Solar Probe", "distanceAu": 0.01101107742687, "distanceKm": 1647233.7371725868, "oneWayLightTimeMinutes": 0.09157634, "sourceFile": "horizons-sample-responses/parker-solar-probe.json"},
+    "-170": {"name": "James Webb Space Telescope", "distanceAu": 0.01101107742687, "distanceKm": 1647233.7371725868, "oneWayLightTimeMinutes": 0.09157634, "sourceFile": "horizons-sample-responses/jwst.json"}
+  },
+  "robotTargets": {
+    "apollo-11-descent-stage": "301", "apollo-12-descent-stage": "301", "apollo-14-descent-stage": "301", "apollo-15-descent-stage": "301", "apollo-16-descent-stage": "301", "apollo-17-descent-stage": "301", "apollo-15-lunar-rover": "301", "apollo-16-lunar-rover": "301", "apollo-17-lunar-rover": "301", "surveyor-3": "301", "chandrayaan-3-vikram": "301",
+    "sojourner": "499", "viking-1-lander": "499", "viking-2-lander": "499", "spirit-mer-a": "499", "opportunity-mer-b": "499", "phoenix-lander": "499", "insight-lander": "499", "ingenuity": "499", "curiosity-msl": "499", "perseverance-mars-2020": "499",
+    "voyager-1": "-31", "parker-solar-probe": "-96", "jwst-telescope": "-170"
+  },
+  "note": "Moon and Mars values are parent-body distances and must be displayed as distance to Moon or distance to Mars, never as per-robot distances."
+}

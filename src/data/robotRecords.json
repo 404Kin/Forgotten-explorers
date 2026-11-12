@@ -1,0 +1,3648 @@
+[
+  {
+    "id": "apollo-11-descent-stage",
+    "name": "Apollo 11 Lunar Module Eagle descent stage",
+    "agency": "NASA",
+    "world": "moon",
+    "status": "left_behind",
+    "launchDate": "1969-07-16",
+    "arrivalDate": "1969-07-20",
+    "endDate": null,
+    "lat": 0.67416,
+    "lon": 23.47314,
+    "endReason": "The astronauts left Eagle’s lower landing stage on the Moon when its upper stage lifted off. It was built to stay there.",
+    "kidFact": "Eagle’s lower stage became a launchpad for the astronauts’ ride home.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Apollo 11 Lunar Module Eagle descent stage launched on July 16, 1969. It reached the Moon on July 20, 1969."
+      },
+      {
+        "title": "A job to do",
+        "text": "Eagle’s lower stage became a launchpad for the astronauts’ ride home. This was part of the mission's work in the Moon."
+      },
+      {
+        "title": "Left Behind",
+        "text": "The astronauts left Eagle’s lower landing stage on the Moon when its upper stage lifted off. It was built to stay there. The lower stage was not designed to return to Earth. It helped the astronauts launch from the Moon."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on July 16, 1969.",
+        "poetic": true
+      },
+      {
+        "text": "I reached the Moon on July 20, 1969.",
+        "poetic": true
+      },
+      {
+        "text": "Eagle’s lower stage became a launchpad for the astronauts’ ride home.",
+        "poetic": true
+      },
+      {
+        "text": "The astronauts left Eagle’s lower landing stage on the Moon when its upper stage lifted off. It was built to stay there.",
+        "poetic": true
+      },
+      {
+        "text": "The lower stage was not designed to return to Earth. It helped the astronauts launch from the Moon.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "The lower stage was not designed to return to Earth. It helped the astronauts launch from the Moon.",
+    "quiz": [
+      {
+        "q": "When did Apollo 11 Lunar Module Eagle descent stage launch?",
+        "options": [
+          "July 16, 1969",
+          "July 20, 1969",
+          "No end date is recorded"
+        ],
+        "explanation": "The record's launch date is July 16, 1969.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Apollo 11 Lunar Module Eagle descent stage reach the Moon?",
+        "options": [
+          "July 20, 1969",
+          "July 16, 1969",
+          "No end date is recorded"
+        ],
+        "explanation": "The record's arrival date is July 20, 1969.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Apollo 11 Lunar Module Eagle descent stage explore or travel?",
+        "options": [
+          "the Moon",
+          "Mars",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Apollo 11 Lunar Module Eagle descent stage is true?",
+        "options": [
+          "Eagle’s lower stage became a launchpad for the astronauts’ ride home.",
+          "It explored Mars.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Eagle’s lower stage became a launchpad for the astronauts’ ride home.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Apollo 11 Lunar Module Eagle descent stage?",
+        "options": [
+          "The astronauts left Eagle’s lower landing stage on the Moon when its upper stage lifted off. It was built to stay there.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "The astronauts left Eagle’s lower landing stage on the Moon when its upper stage lifted off. It was built to stay there.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Apollo 11 Lunar Module Eagle descent stage still there or still travelling?",
+        "options": [
+          "The lower stage was not designed to return to Earth. It helped the astronauts launch from the Moon.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "The lower stage was not designed to return to Earth. It helped the astronauts launch from the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Apollo 11 Lunar Module Eagle descent stage?",
+        "options": [
+          "Left Behind",
+          "Went Silent",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as left_behind.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Apollo 11 Lunar Module Eagle descent stage?",
+        "options": [
+          "Eagle’s lower stage became a launchpad for the astronauts’ ride home.",
+          "Apollo 11 Lunar Module Eagle descent stage has an end date of No end date is recorded.",
+          "Apollo 11 Lunar Module Eagle descent stage travelled to Mars.",
+          "Apollo 11 Lunar Module Eagle descent stage returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Eagle’s lower stage became a launchpad for the astronauts’ ride home.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+      "https://www.nasa.gov/history/apollo-11-mission-overview/"
+    ],
+    "photo": {
+      "nasaId": "as11-40-5927",
+      "credit": "NASA/JSC",
+      "pageUrl": "https://images.nasa.gov/details/as11-40-5927",
+      "alt": "Apollo 11 Lunar Module Eagle rests on the Moon."
+    },
+    "needsReview": true,
+    "i18nKey": "apollo11descent"
+  },
+  {
+    "id": "apollo-12-descent-stage",
+    "name": "Apollo 12 Lunar Module Intrepid descent stage",
+    "agency": "NASA",
+    "world": "moon",
+    "status": "left_behind",
+    "launchDate": "1969-11-14",
+    "arrivalDate": "1969-11-19",
+    "endDate": null,
+    "lat": -3.0128,
+    "lon": -23.4219,
+    "endReason": "The astronauts left Intrepid’s lower stage behind when the upper stage lifted off. The lower stage was made to stay on the Moon.",
+    "kidFact": "Intrepid landed about 535 feet from Surveyor 3, a robot that had arrived two years earlier.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Apollo 12 Lunar Module Intrepid descent stage launched on November 14, 1969. It reached the Moon on November 19, 1969."
+      },
+      {
+        "title": "A job to do",
+        "text": "Intrepid landed about 535 feet from Surveyor 3, a robot that had arrived two years earlier. This was part of the mission's work in the Moon."
+      },
+      {
+        "title": "Left Behind",
+        "text": "The astronauts left Intrepid’s lower stage behind when the upper stage lifted off. The lower stage was made to stay on the Moon. The lower stage served as the astronauts’ launchpad and was not built to fly back to Earth."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on November 14, 1969.",
+        "poetic": true
+      },
+      {
+        "text": "I reached the Moon on November 19, 1969.",
+        "poetic": true
+      },
+      {
+        "text": "Intrepid landed about 535 feet from Surveyor 3, a robot that had arrived two years earlier.",
+        "poetic": true
+      },
+      {
+        "text": "The astronauts left Intrepid’s lower stage behind when the upper stage lifted off. The lower stage was made to stay on the Moon.",
+        "poetic": true
+      },
+      {
+        "text": "The lower stage served as the astronauts’ launchpad and was not built to fly back to Earth.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "The lower stage served as the astronauts’ launchpad and was not built to fly back to Earth.",
+    "quiz": [
+      {
+        "q": "When did Apollo 12 Lunar Module Intrepid descent stage launch?",
+        "options": [
+          "November 14, 1969",
+          "November 19, 1969",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is November 14, 1969.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Apollo 12 Lunar Module Intrepid descent stage reach the Moon?",
+        "options": [
+          "November 19, 1969",
+          "November 14, 1969",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is November 19, 1969.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Apollo 12 Lunar Module Intrepid descent stage explore or travel?",
+        "options": [
+          "the Moon",
+          "Mars",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Apollo 12 Lunar Module Intrepid descent stage is true?",
+        "options": [
+          "Intrepid landed about 535 feet from Surveyor 3, a robot that had arrived two years earlier.",
+          "It explored Mars.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Intrepid landed about 535 feet from Surveyor 3, a robot that had arrived two years earlier.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Apollo 12 Lunar Module Intrepid descent stage?",
+        "options": [
+          "The astronauts left Intrepid’s lower stage behind when the upper stage lifted off. The lower stage was made to stay on the Moon.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "The astronauts left Intrepid’s lower stage behind when the upper stage lifted off. The lower stage was made to stay on the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Apollo 12 Lunar Module Intrepid descent stage still there or still travelling?",
+        "options": [
+          "The lower stage served as the astronauts’ launchpad and was not built to fly back to Earth.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "The lower stage served as the astronauts’ launchpad and was not built to fly back to Earth.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Apollo 12 Lunar Module Intrepid descent stage?",
+        "options": [
+          "Left Behind",
+          "Went Silent",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as left_behind.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Apollo 12 Lunar Module Intrepid descent stage?",
+        "options": [
+          "Intrepid landed about 535 feet from Surveyor 3, a robot that had arrived two years earlier.",
+          "Apollo 12 Lunar Module Intrepid descent stage has an end date of No end date is recorded.",
+          "Apollo 12 Lunar Module Intrepid descent stage travelled to Mars.",
+          "Apollo 12 Lunar Module Intrepid descent stage returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Intrepid landed about 535 feet from Surveyor 3, a robot that had arrived two years earlier.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://www.nasa.gov/missions/apollo/apollo-12-the-pinpoint-mission/",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo12info.html"
+    ],
+    "photo": {
+      "nasaId": "PIA12922",
+      "credit": "NASA/GSFC/Arizona State University",
+      "pageUrl": "https://images.nasa.gov/details/PIA12922",
+      "alt": "NASA LRO view of the Apollo 12 landing area in Oceanus Procellarum."
+    },
+    "needsReview": true,
+    "i18nKey": "apollo12descent"
+  },
+  {
+    "id": "apollo-14-descent-stage",
+    "name": "Apollo 14 Lunar Module Antares descent stage",
+    "agency": "NASA",
+    "world": "moon",
+    "status": "left_behind",
+    "launchDate": "1971-01-31",
+    "arrivalDate": "1971-02-05",
+    "endDate": null,
+    "lat": -3.64589,
+    "lon": -17.47194,
+    "endReason": "The astronauts left Antares’s lower stage behind when the upper stage lifted off. The landing stage was built to remain on the Moon.",
+    "kidFact": "Antares landed in the Fra Mauro highlands, a hilly area of the Moon.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Apollo 14 Lunar Module Antares descent stage launched on January 31, 1971. It reached the Moon on February 5, 1971."
+      },
+      {
+        "title": "A job to do",
+        "text": "Antares landed in the Fra Mauro highlands, a hilly area of the Moon. This was part of the mission's work in the Moon."
+      },
+      {
+        "title": "Left Behind",
+        "text": "The astronauts left Antares’s lower stage behind when the upper stage lifted off. The landing stage was built to remain on the Moon. The lower stage was the landing platform and launchpad. It was not built to return to Earth."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on January 31, 1971.",
+        "poetic": true
+      },
+      {
+        "text": "I reached the Moon on February 5, 1971.",
+        "poetic": true
+      },
+      {
+        "text": "Antares landed in the Fra Mauro highlands, a hilly area of the Moon.",
+        "poetic": true
+      },
+      {
+        "text": "The astronauts left Antares’s lower stage behind when the upper stage lifted off. The landing stage was built to remain on the Moon.",
+        "poetic": true
+      },
+      {
+        "text": "The lower stage was the landing platform and launchpad. It was not built to return to Earth.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "The lower stage was the landing platform and launchpad. It was not built to return to Earth.",
+    "quiz": [
+      {
+        "q": "When did Apollo 14 Lunar Module Antares descent stage launch?",
+        "options": [
+          "January 31, 1971",
+          "February 5, 1971",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is January 31, 1971.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Apollo 14 Lunar Module Antares descent stage reach the Moon?",
+        "options": [
+          "February 5, 1971",
+          "January 31, 1971",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is February 5, 1971.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Apollo 14 Lunar Module Antares descent stage explore or travel?",
+        "options": [
+          "the Moon",
+          "Mars",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Apollo 14 Lunar Module Antares descent stage is true?",
+        "options": [
+          "Antares landed in the Fra Mauro highlands, a hilly area of the Moon.",
+          "It explored Mars.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Antares landed in the Fra Mauro highlands, a hilly area of the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Apollo 14 Lunar Module Antares descent stage?",
+        "options": [
+          "The astronauts left Antares’s lower stage behind when the upper stage lifted off. The landing stage was built to remain on the Moon.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "The astronauts left Antares’s lower stage behind when the upper stage lifted off. The landing stage was built to remain on the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Apollo 14 Lunar Module Antares descent stage still there or still travelling?",
+        "options": [
+          "The lower stage was the landing platform and launchpad. It was not built to return to Earth.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "The lower stage was the landing platform and launchpad. It was not built to return to Earth.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Apollo 14 Lunar Module Antares descent stage?",
+        "options": [
+          "Left Behind",
+          "Went Silent",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as left_behind.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Apollo 14 Lunar Module Antares descent stage?",
+        "options": [
+          "Antares landed in the Fra Mauro highlands, a hilly area of the Moon.",
+          "Apollo 14 Lunar Module Antares descent stage has an end date of No end date is recorded.",
+          "Apollo 14 Lunar Module Antares descent stage travelled to Mars.",
+          "Apollo 14 Lunar Module Antares descent stage returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Antares landed in the Fra Mauro highlands, a hilly area of the Moon.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://www.nasa.gov/missions/apollo/apollo-14-mission-details/",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo14info.html"
+    ],
+    "photo": {
+      "nasaId": "as14-66-09277",
+      "credit": "NASA/JSC",
+      "pageUrl": "https://images.nasa.gov/details/as14-66-09277",
+      "alt": "Apollo 14 Lunar Module Antares on the Moon during a crewed surface walk."
+    },
+    "needsReview": true,
+    "i18nKey": "apollo14descent"
+  },
+  {
+    "id": "apollo-15-descent-stage",
+    "name": "Apollo 15 Lunar Module Falcon descent stage",
+    "agency": "NASA",
+    "world": "moon",
+    "status": "left_behind",
+    "launchDate": "1971-07-26",
+    "arrivalDate": "1971-07-30",
+    "endDate": null,
+    "lat": 26.13239,
+    "lon": 3.6333,
+    "endReason": "The crew left Falcon’s lower stage at Hadley Rille when its upper stage lifted off. The lower stage was intended to stay on the Moon.",
+    "kidFact": "Apollo 15 was the first Moon mission to use a lunar rover.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Apollo 15 Lunar Module Falcon descent stage launched on July 26, 1971. It reached the Moon on July 30, 1971."
+      },
+      {
+        "title": "A job to do",
+        "text": "Apollo 15 was the first Moon mission to use a lunar rover. This was part of the mission's work in the Moon."
+      },
+      {
+        "title": "Left Behind",
+        "text": "The crew left Falcon’s lower stage at Hadley Rille when its upper stage lifted off. The lower stage was intended to stay on the Moon. The lower stage helped the astronauts land and launch. It was not designed to return to Earth."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on July 26, 1971.",
+        "poetic": true
+      },
+      {
+        "text": "I reached the Moon on July 30, 1971.",
+        "poetic": true
+      },
+      {
+        "text": "Apollo 15 was the first Moon mission to use a lunar rover.",
+        "poetic": true
+      },
+      {
+        "text": "The crew left Falcon’s lower stage at Hadley Rille when its upper stage lifted off. The lower stage was intended to stay on the Moon.",
+        "poetic": true
+      },
+      {
+        "text": "The lower stage helped the astronauts land and launch. It was not designed to return to Earth.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "The lower stage helped the astronauts land and launch. It was not designed to return to Earth.",
+    "quiz": [
+      {
+        "q": "When did Apollo 15 Lunar Module Falcon descent stage launch?",
+        "options": [
+          "July 26, 1971",
+          "July 30, 1971",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is July 26, 1971.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Apollo 15 Lunar Module Falcon descent stage reach the Moon?",
+        "options": [
+          "July 30, 1971",
+          "July 26, 1971",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is July 30, 1971.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Apollo 15 Lunar Module Falcon descent stage explore or travel?",
+        "options": [
+          "the Moon",
+          "Mars",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Apollo 15 Lunar Module Falcon descent stage is true?",
+        "options": [
+          "Apollo 15 was the first Moon mission to use a lunar rover.",
+          "It explored Mars.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Apollo 15 was the first Moon mission to use a lunar rover.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Apollo 15 Lunar Module Falcon descent stage?",
+        "options": [
+          "The crew left Falcon’s lower stage at Hadley Rille when its upper stage lifted off. The lower stage was intended to stay on the Moon.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "The crew left Falcon’s lower stage at Hadley Rille when its upper stage lifted off. The lower stage was intended to stay on the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Apollo 15 Lunar Module Falcon descent stage still there or still travelling?",
+        "options": [
+          "The lower stage helped the astronauts land and launch. It was not designed to return to Earth.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "The lower stage helped the astronauts land and launch. It was not designed to return to Earth.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Apollo 15 Lunar Module Falcon descent stage?",
+        "options": [
+          "Left Behind",
+          "Went Silent",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as left_behind.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Apollo 15 Lunar Module Falcon descent stage?",
+        "options": [
+          "Apollo 15 was the first Moon mission to use a lunar rover.",
+          "Apollo 15 Lunar Module Falcon descent stage has an end date of No end date is recorded.",
+          "Apollo 15 Lunar Module Falcon descent stage travelled to Mars.",
+          "Apollo 15 Lunar Module Falcon descent stage returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Apollo 15 was the first Moon mission to use a lunar rover.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://www.nasa.gov/missions/apollo/apollo-15-mission-details/",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo15info.html"
+    ],
+    "photo": {
+      "nasaId": "S71-43942",
+      "credit": "NASA/JSC",
+      "pageUrl": "https://images.nasa.gov/details/S71-43942",
+      "alt": "A lunar surface panorama from Apollo 15 at Hadley-Apennine."
+    },
+    "needsReview": true,
+    "i18nKey": "apollo15descent"
+  },
+  {
+    "id": "apollo-16-descent-stage",
+    "name": "Apollo 16 Lunar Module Orion descent stage",
+    "agency": "NASA",
+    "world": "moon",
+    "status": "left_behind",
+    "launchDate": "1972-04-16",
+    "arrivalDate": "1972-04-20",
+    "endDate": null,
+    "lat": -8.9734,
+    "lon": 15.5011,
+    "endReason": "The astronauts left Orion’s lower stage on the Moon after its upper stage lifted off. The lower stage was designed to remain there.",
+    "kidFact": "Apollo 16 landed in the Descartes highlands, not on a flat lunar plain.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Apollo 16 Lunar Module Orion descent stage launched on April 16, 1972. It reached the Moon on April 20, 1972."
+      },
+      {
+        "title": "A job to do",
+        "text": "Apollo 16 landed in the Descartes highlands, not on a flat lunar plain. This was part of the mission's work in the Moon."
+      },
+      {
+        "title": "Left Behind",
+        "text": "The astronauts left Orion’s lower stage on the Moon after its upper stage lifted off. The lower stage was designed to remain there. The lower stage was a landing platform and launchpad. It was not built to return to Earth."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on April 16, 1972.",
+        "poetic": true
+      },
+      {
+        "text": "I reached the Moon on April 20, 1972.",
+        "poetic": true
+      },
+      {
+        "text": "Apollo 16 landed in the Descartes highlands, not on a flat lunar plain.",
+        "poetic": true
+      },
+      {
+        "text": "The astronauts left Orion’s lower stage on the Moon after its upper stage lifted off. The lower stage was designed to remain there.",
+        "poetic": true
+      },
+      {
+        "text": "The lower stage was a landing platform and launchpad. It was not built to return to Earth.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "The lower stage was a landing platform and launchpad. It was not built to return to Earth.",
+    "quiz": [
+      {
+        "q": "When did Apollo 16 Lunar Module Orion descent stage launch?",
+        "options": [
+          "April 16, 1972",
+          "April 20, 1972",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is April 16, 1972.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Apollo 16 Lunar Module Orion descent stage reach the Moon?",
+        "options": [
+          "April 20, 1972",
+          "April 16, 1972",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is April 20, 1972.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Apollo 16 Lunar Module Orion descent stage explore or travel?",
+        "options": [
+          "the Moon",
+          "Mars",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Apollo 16 Lunar Module Orion descent stage is true?",
+        "options": [
+          "Apollo 16 landed in the Descartes highlands, not on a flat lunar plain.",
+          "It explored Mars.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Apollo 16 landed in the Descartes highlands, not on a flat lunar plain.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Apollo 16 Lunar Module Orion descent stage?",
+        "options": [
+          "The astronauts left Orion’s lower stage on the Moon after its upper stage lifted off. The lower stage was designed to remain there.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "The astronauts left Orion’s lower stage on the Moon after its upper stage lifted off. The lower stage was designed to remain there.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Apollo 16 Lunar Module Orion descent stage still there or still travelling?",
+        "options": [
+          "The lower stage was a landing platform and launchpad. It was not built to return to Earth.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "The lower stage was a landing platform and launchpad. It was not built to return to Earth.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Apollo 16 Lunar Module Orion descent stage?",
+        "options": [
+          "Left Behind",
+          "Went Silent",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as left_behind.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Apollo 16 Lunar Module Orion descent stage?",
+        "options": [
+          "Apollo 16 landed in the Descartes highlands, not on a flat lunar plain.",
+          "Apollo 16 Lunar Module Orion descent stage has an end date of No end date is recorded.",
+          "Apollo 16 Lunar Module Orion descent stage travelled to Mars.",
+          "Apollo 16 Lunar Module Orion descent stage returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Apollo 16 landed in the Descartes highlands, not on a flat lunar plain.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo16info.html"
+    ],
+    "photo": {
+      "nasaId": "as16-113-18334",
+      "credit": "NASA/JSC",
+      "pageUrl": "https://images.nasa.gov/details/as16-113-18334",
+      "alt": "Apollo 16 Lunar Module Orion parked on the lunar surface."
+    },
+    "needsReview": true,
+    "i18nKey": "apollo16descent"
+  },
+  {
+    "id": "apollo-17-descent-stage",
+    "name": "Apollo 17 Lunar Module Challenger descent stage",
+    "agency": "NASA",
+    "world": "moon",
+    "status": "left_behind",
+    "launchDate": "1972-12-07",
+    "arrivalDate": "1972-12-11",
+    "endDate": null,
+    "lat": 20.1911,
+    "lon": 30.7723,
+    "endReason": "The crew left Challenger’s lower stage in Taurus-Littrow when its upper stage lifted off. The lower stage was built to stay on the Moon.",
+    "kidFact": "Apollo 17 was the last crewed mission to land on the Moon.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Apollo 17 Lunar Module Challenger descent stage launched on December 7, 1972. It reached the Moon on December 11, 1972."
+      },
+      {
+        "title": "A job to do",
+        "text": "Apollo 17 was the last crewed mission to land on the Moon. This was part of the mission's work in the Moon."
+      },
+      {
+        "title": "Left Behind",
+        "text": "The crew left Challenger’s lower stage in Taurus-Littrow when its upper stage lifted off. The lower stage was built to stay on the Moon. The lower stage helped the crew land and launch. It was not made to return to Earth."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on December 7, 1972.",
+        "poetic": true
+      },
+      {
+        "text": "I reached the Moon on December 11, 1972.",
+        "poetic": true
+      },
+      {
+        "text": "Apollo 17 was the last crewed mission to land on the Moon.",
+        "poetic": true
+      },
+      {
+        "text": "The crew left Challenger’s lower stage in Taurus-Littrow when its upper stage lifted off. The lower stage was built to stay on the Moon.",
+        "poetic": true
+      },
+      {
+        "text": "The lower stage helped the crew land and launch. It was not made to return to Earth.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "The lower stage helped the crew land and launch. It was not made to return to Earth.",
+    "quiz": [
+      {
+        "q": "When did Apollo 17 Lunar Module Challenger descent stage launch?",
+        "options": [
+          "December 7, 1972",
+          "December 11, 1972",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is December 7, 1972.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Apollo 17 Lunar Module Challenger descent stage reach the Moon?",
+        "options": [
+          "December 11, 1972",
+          "December 7, 1972",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is December 11, 1972.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Apollo 17 Lunar Module Challenger descent stage explore or travel?",
+        "options": [
+          "the Moon",
+          "Mars",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Apollo 17 Lunar Module Challenger descent stage is true?",
+        "options": [
+          "Apollo 17 was the last crewed mission to land on the Moon.",
+          "It explored Mars.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Apollo 17 was the last crewed mission to land on the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Apollo 17 Lunar Module Challenger descent stage?",
+        "options": [
+          "The crew left Challenger’s lower stage in Taurus-Littrow when its upper stage lifted off. The lower stage was built to stay on the Moon.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "The crew left Challenger’s lower stage in Taurus-Littrow when its upper stage lifted off. The lower stage was built to stay on the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Apollo 17 Lunar Module Challenger descent stage still there or still travelling?",
+        "options": [
+          "The lower stage helped the crew land and launch. It was not made to return to Earth.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "The lower stage helped the crew land and launch. It was not made to return to Earth.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Apollo 17 Lunar Module Challenger descent stage?",
+        "options": [
+          "Left Behind",
+          "Went Silent",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as left_behind.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Apollo 17 Lunar Module Challenger descent stage?",
+        "options": [
+          "Apollo 17 was the last crewed mission to land on the Moon.",
+          "Apollo 17 Lunar Module Challenger descent stage has an end date of No end date is recorded.",
+          "Apollo 17 Lunar Module Challenger descent stage travelled to Mars.",
+          "Apollo 17 Lunar Module Challenger descent stage returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Apollo 17 was the last crewed mission to land on the Moon.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo17info.html"
+    ],
+    "photo": {
+      "nasaId": "jsc2004e52772",
+      "credit": "NASA/JSC",
+      "pageUrl": "https://images.nasa.gov/details/jsc2004e52772",
+      "alt": "Panorama of the Apollo 17 lunar landing area."
+    },
+    "needsReview": true,
+    "i18nKey": "apollo17descent"
+  },
+  {
+    "id": "apollo-15-lunar-rover",
+    "name": "Apollo 15 Lunar Roving Vehicle",
+    "agency": "NASA",
+    "world": "moon",
+    "status": "left_behind",
+    "launchDate": "1971-07-26",
+    "arrivalDate": "1971-07-30",
+    "endDate": "1971-08-02",
+    "lat": null,
+    "lon": null,
+    "endReason": "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure.",
+    "kidFact": "Apollo 15’s rover helped astronauts travel about 28 kilometers across the Moon.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Apollo 15 Lunar Roving Vehicle launched on July 26, 1971. It reached the Moon on July 30, 1971."
+      },
+      {
+        "title": "A job to do",
+        "text": "Apollo 15’s rover helped astronauts travel about 28 kilometers across the Moon. This was part of the mission's work in the Moon."
+      },
+      {
+        "title": "Left Behind",
+        "text": "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure. The rover was built for one lunar mission. The crew parked it on purpose before flying home."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on July 26, 1971.",
+        "poetic": true
+      },
+      {
+        "text": "I reached the Moon on July 30, 1971.",
+        "poetic": true
+      },
+      {
+        "text": "Apollo 15’s rover helped astronauts travel about 28 kilometers across the Moon.",
+        "poetic": true
+      },
+      {
+        "text": "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure.",
+        "poetic": true
+      },
+      {
+        "text": "The rover was built for one lunar mission. The crew parked it on purpose before flying home.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "The rover was built for one lunar mission. The crew parked it on purpose before flying home.",
+    "quiz": [
+      {
+        "q": "When did Apollo 15 Lunar Roving Vehicle launch?",
+        "options": [
+          "July 26, 1971",
+          "July 30, 1971",
+          "August 2, 1971",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is July 26, 1971.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Apollo 15 Lunar Roving Vehicle reach the Moon?",
+        "options": [
+          "July 30, 1971",
+          "July 26, 1971",
+          "August 2, 1971",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is July 30, 1971.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Apollo 15 Lunar Roving Vehicle explore or travel?",
+        "options": [
+          "the Moon",
+          "Mars",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Apollo 15 Lunar Roving Vehicle is true?",
+        "options": [
+          "Apollo 15’s rover helped astronauts travel about 28 kilometers across the Moon.",
+          "It explored Mars.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Apollo 15’s rover helped astronauts travel about 28 kilometers across the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Apollo 15 Lunar Roving Vehicle?",
+        "options": [
+          "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Apollo 15 Lunar Roving Vehicle still there or still travelling?",
+        "options": [
+          "The rover was built for one lunar mission. The crew parked it on purpose before flying home.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "The rover was built for one lunar mission. The crew parked it on purpose before flying home.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Apollo 15 Lunar Roving Vehicle?",
+        "options": [
+          "Left Behind",
+          "Went Silent",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as left_behind.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Apollo 15 Lunar Roving Vehicle?",
+        "options": [
+          "Apollo 15’s rover helped astronauts travel about 28 kilometers across the Moon.",
+          "Apollo 15 Lunar Roving Vehicle has an end date of August 2, 1971.",
+          "Apollo 15 Lunar Roving Vehicle travelled to Mars.",
+          "Apollo 15 Lunar Roving Vehicle returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Apollo 15’s rover helped astronauts travel about 28 kilometers across the Moon.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4029.pdf",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html",
+      "https://www.nasa.gov/missions/apollo/apollo-15-mission-details/"
+    ],
+    "photo": {
+      "nasaId": "as15-88-11901",
+      "credit": "NASA/JSC",
+      "pageUrl": "https://images.nasa.gov/details/as15-88-11901",
+      "alt": "Apollo 15 lunar rover parked for a view of the lunar module’s liftoff."
+    },
+    "needsReview": true,
+    "i18nKey": "apollo15rover"
+  },
+  {
+    "id": "apollo-16-lunar-rover",
+    "name": "Apollo 16 Lunar Roving Vehicle",
+    "agency": "NASA",
+    "world": "moon",
+    "status": "left_behind",
+    "launchDate": "1972-04-16",
+    "arrivalDate": "1972-04-20",
+    "endDate": "1972-04-24",
+    "lat": null,
+    "lon": null,
+    "endReason": "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure.",
+    "kidFact": "The Apollo 16 rover carried astronauts across the Descartes highlands.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Apollo 16 Lunar Roving Vehicle launched on April 16, 1972. It reached the Moon on April 20, 1972."
+      },
+      {
+        "title": "A job to do",
+        "text": "The Apollo 16 rover carried astronauts across the Descartes highlands. This was part of the mission's work in the Moon."
+      },
+      {
+        "title": "Left Behind",
+        "text": "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure. The rover was made for one Moon mission. The astronauts parked it before returning home."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on April 16, 1972.",
+        "poetic": true
+      },
+      {
+        "text": "I reached the Moon on April 20, 1972.",
+        "poetic": true
+      },
+      {
+        "text": "The Apollo 16 rover carried astronauts across the Descartes highlands.",
+        "poetic": true
+      },
+      {
+        "text": "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure.",
+        "poetic": true
+      },
+      {
+        "text": "The rover was made for one Moon mission. The astronauts parked it before returning home.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "The rover was made for one Moon mission. The astronauts parked it before returning home.",
+    "quiz": [
+      {
+        "q": "When did Apollo 16 Lunar Roving Vehicle launch?",
+        "options": [
+          "April 16, 1972",
+          "April 20, 1972",
+          "April 24, 1972",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is April 16, 1972.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Apollo 16 Lunar Roving Vehicle reach the Moon?",
+        "options": [
+          "April 20, 1972",
+          "April 16, 1972",
+          "April 24, 1972",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is April 20, 1972.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Apollo 16 Lunar Roving Vehicle explore or travel?",
+        "options": [
+          "the Moon",
+          "Mars",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Apollo 16 Lunar Roving Vehicle is true?",
+        "options": [
+          "The Apollo 16 rover carried astronauts across the Descartes highlands.",
+          "It explored Mars.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "The Apollo 16 rover carried astronauts across the Descartes highlands.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Apollo 16 Lunar Roving Vehicle?",
+        "options": [
+          "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "The astronauts deliberately parked the rover before leaving the Moon. This was the planned end of its job, not a failure.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Apollo 16 Lunar Roving Vehicle still there or still travelling?",
+        "options": [
+          "The rover was made for one Moon mission. The astronauts parked it before returning home.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "The rover was made for one Moon mission. The astronauts parked it before returning home.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Apollo 16 Lunar Roving Vehicle?",
+        "options": [
+          "Left Behind",
+          "Went Silent",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as left_behind.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Apollo 16 Lunar Roving Vehicle?",
+        "options": [
+          "The Apollo 16 rover carried astronauts across the Descartes highlands.",
+          "Apollo 16 Lunar Roving Vehicle has an end date of April 24, 1972.",
+          "Apollo 16 Lunar Roving Vehicle travelled to Mars.",
+          "Apollo 16 Lunar Roving Vehicle returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: The Apollo 16 rover carried astronauts across the Descartes highlands.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html",
+      "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4029.pdf"
+    ],
+    "photo": {
+      "nasaId": "as16-115-18559",
+      "credit": "NASA/JSC",
+      "pageUrl": "https://images.nasa.gov/details/as16-115-18559",
+      "alt": "Astronaut John Young drives the Apollo 16 rover to its final parking place."
+    },
+    "needsReview": true,
+    "i18nKey": "apollo16rover"
+  },
+  {
+    "id": "apollo-17-lunar-rover",
+    "name": "Apollo 17 Lunar Roving Vehicle",
+    "agency": "NASA",
+    "world": "moon",
+    "status": "left_behind",
+    "launchDate": "1972-12-07",
+    "arrivalDate": "1972-12-11",
+    "endDate": "1972-12-14",
+    "lat": null,
+    "lon": null,
+    "endReason": "The astronauts deliberately parked the rover before leaving the Moon. This was planned, not a rover failure.",
+    "kidFact": "Apollo 17’s rover covered about 35 kilometers, the longest lunar rover trip of Apollo.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Apollo 17 Lunar Roving Vehicle launched on December 7, 1972. It reached the Moon on December 11, 1972."
+      },
+      {
+        "title": "A job to do",
+        "text": "Apollo 17’s rover covered about 35 kilometers, the longest lunar rover trip of Apollo. This was part of the mission's work in the Moon."
+      },
+      {
+        "title": "Left Behind",
+        "text": "The astronauts deliberately parked the rover before leaving the Moon. This was planned, not a rover failure. The rover was designed for one lunar mission. The crew parked it before flying home."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on December 7, 1972.",
+        "poetic": true
+      },
+      {
+        "text": "I reached the Moon on December 11, 1972.",
+        "poetic": true
+      },
+      {
+        "text": "Apollo 17’s rover covered about 35 kilometers, the longest lunar rover trip of Apollo.",
+        "poetic": true
+      },
+      {
+        "text": "The astronauts deliberately parked the rover before leaving the Moon. This was planned, not a rover failure.",
+        "poetic": true
+      },
+      {
+        "text": "The rover was designed for one lunar mission. The crew parked it before flying home.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "The rover was designed for one lunar mission. The crew parked it before flying home.",
+    "quiz": [
+      {
+        "q": "When did Apollo 17 Lunar Roving Vehicle launch?",
+        "options": [
+          "December 7, 1972",
+          "December 11, 1972",
+          "December 14, 1972",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is December 7, 1972.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Apollo 17 Lunar Roving Vehicle reach the Moon?",
+        "options": [
+          "December 11, 1972",
+          "December 7, 1972",
+          "December 14, 1972",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is December 11, 1972.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Apollo 17 Lunar Roving Vehicle explore or travel?",
+        "options": [
+          "the Moon",
+          "Mars",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Apollo 17 Lunar Roving Vehicle is true?",
+        "options": [
+          "Apollo 17’s rover covered about 35 kilometers, the longest lunar rover trip of Apollo.",
+          "It explored Mars.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Apollo 17’s rover covered about 35 kilometers, the longest lunar rover trip of Apollo.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Apollo 17 Lunar Roving Vehicle?",
+        "options": [
+          "The astronauts deliberately parked the rover before leaving the Moon. This was planned, not a rover failure.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "The astronauts deliberately parked the rover before leaving the Moon. This was planned, not a rover failure.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Apollo 17 Lunar Roving Vehicle still there or still travelling?",
+        "options": [
+          "The rover was designed for one lunar mission. The crew parked it before flying home.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "The rover was designed for one lunar mission. The crew parked it before flying home.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Apollo 17 Lunar Roving Vehicle?",
+        "options": [
+          "Left Behind",
+          "Went Silent",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as left_behind.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Apollo 17 Lunar Roving Vehicle?",
+        "options": [
+          "Apollo 17’s rover covered about 35 kilometers, the longest lunar rover trip of Apollo.",
+          "Apollo 17 Lunar Roving Vehicle has an end date of December 14, 1972.",
+          "Apollo 17 Lunar Roving Vehicle travelled to Mars.",
+          "Apollo 17 Lunar Roving Vehicle returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Apollo 17’s rover covered about 35 kilometers, the longest lunar rover trip of Apollo.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html",
+      "https://images.nasa.gov/details/as17-145-22162"
+    ],
+    "photo": {
+      "nasaId": "as17-145-22162",
+      "credit": "NASA/JSC",
+      "pageUrl": "https://images.nasa.gov/details/as17-145-22162",
+      "alt": "Apollo 17 Lunar Roving Vehicle visible during a lunar surface excursion."
+    },
+    "needsReview": true,
+    "i18nKey": "apollo17rover"
+  },
+  {
+    "id": "surveyor-3",
+    "name": "Surveyor 3 lunar lander",
+    "agency": "NASA",
+    "world": "moon",
+    "status": "silent",
+    "launchDate": "1967-04-17",
+    "arrivalDate": "1967-04-20",
+    "endDate": "1967-05-04",
+    "lat": -3.0162,
+    "lon": -23.418,
+    "endReason": "Surveyor 3 used solar power. It stopped sending signals after lunar night began, when its panels could not get sunlight.",
+    "kidFact": "Apollo 12 astronauts later walked up to Surveyor 3 and brought some parts back to Earth.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Surveyor 3 lunar lander launched on April 17, 1967. It reached the Moon on April 20, 1967."
+      },
+      {
+        "title": "A job to do",
+        "text": "Apollo 12 astronauts later walked up to Surveyor 3 and brought some parts back to Earth. This was part of the mission's work in the Moon."
+      },
+      {
+        "title": "Went Silent",
+        "text": "Surveyor 3 used solar power. It stopped sending signals after lunar night began, when its panels could not get sunlight. Surveyor 3 completed its tests, then lost power during lunar night. It was never designed to fly home."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on April 17, 1967.",
+        "poetic": true
+      },
+      {
+        "text": "I reached the Moon on April 20, 1967.",
+        "poetic": true
+      },
+      {
+        "text": "Apollo 12 astronauts later walked up to Surveyor 3 and brought some parts back to Earth.",
+        "poetic": true
+      },
+      {
+        "text": "Surveyor 3 used solar power. It stopped sending signals after lunar night began, when its panels could not get sunlight.",
+        "poetic": true
+      },
+      {
+        "text": "Surveyor 3 completed its tests, then lost power during lunar night. It was never designed to fly home.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Surveyor 3 completed its tests, then lost power during lunar night. It was never designed to fly home.",
+    "quiz": [
+      {
+        "q": "When did Surveyor 3 lunar lander launch?",
+        "options": [
+          "April 17, 1967",
+          "April 20, 1967",
+          "May 4, 1967",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is April 17, 1967.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Surveyor 3 lunar lander reach the Moon?",
+        "options": [
+          "April 20, 1967",
+          "April 17, 1967",
+          "May 4, 1967",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is April 20, 1967.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Surveyor 3 lunar lander explore or travel?",
+        "options": [
+          "the Moon",
+          "Mars",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Surveyor 3 lunar lander is true?",
+        "options": [
+          "Apollo 12 astronauts later walked up to Surveyor 3 and brought some parts back to Earth.",
+          "It explored Mars.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Apollo 12 astronauts later walked up to Surveyor 3 and brought some parts back to Earth.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Surveyor 3 lunar lander?",
+        "options": [
+          "Surveyor 3 used solar power. It stopped sending signals after lunar night began, when its panels could not get sunlight.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Surveyor 3 used solar power. It stopped sending signals after lunar night began, when its panels could not get sunlight.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Surveyor 3 lunar lander still there or still travelling?",
+        "options": [
+          "Surveyor 3 completed its tests, then lost power during lunar night. It was never designed to fly home.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Surveyor 3 completed its tests, then lost power during lunar night. It was never designed to fly home.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Surveyor 3 lunar lander?",
+        "options": [
+          "Went Silent",
+          "Left Behind",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as silent.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Surveyor 3 lunar lander?",
+        "options": [
+          "Apollo 12 astronauts later walked up to Surveyor 3 and brought some parts back to Earth.",
+          "Surveyor 3 lunar lander has an end date of May 4, 1967.",
+          "Surveyor 3 lunar lander travelled to Mars.",
+          "Surveyor 3 lunar lander returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Apollo 12 astronauts later walked up to Surveyor 3 and brought some parts back to Earth.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/surveyor-3/",
+      "https://science.nasa.gov/solar-system/moon/footpads-and-footprints-humans-and-machine-meet-on-the-moon/",
+      "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html"
+    ],
+    "photo": {
+      "nasaId": "KSC-2011-7762",
+      "credit": "NASA/Kennedy Space Center",
+      "pageUrl": "https://images.nasa.gov/details/KSC-2011-7762",
+      "alt": "A returned piece of Surveyor 3 examined by NASA researchers on Earth."
+    },
+    "needsReview": false,
+    "i18nKey": "surveyor3"
+  },
+  {
+    "id": "sojourner",
+    "name": "Sojourner Mars rover",
+    "agency": "NASA",
+    "world": "mars",
+    "status": "silent",
+    "launchDate": "1996-12-04",
+    "arrivalDate": "1997-07-04",
+    "endDate": "1997-09-27",
+    "lat": 19.3,
+    "lon": -33.52,
+    "endReason": "Sojourner depended on its Pathfinder lander to relay messages. Pathfinder’s last data reached Earth on September 27, 1997, and the rover fell silent with it.",
+    "kidFact": "Sojourner worked for 83 days, much longer than its planned seven days.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Sojourner Mars rover launched on December 4, 1996. It reached Mars on July 4, 1997."
+      },
+      {
+        "title": "A job to do",
+        "text": "Sojourner worked for 83 days, much longer than its planned seven days. This was part of the mission's work in Mars."
+      },
+      {
+        "title": "Went Silent",
+        "text": "Sojourner depended on its Pathfinder lander to relay messages. Pathfinder’s last data reached Earth on September 27, 1997, and the rover fell silent with it. Sojourner was a small test rover. It stayed on Mars after its Pathfinder lander could no longer relay messages."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on December 4, 1996.",
+        "poetic": true
+      },
+      {
+        "text": "I reached Mars on July 4, 1997.",
+        "poetic": true
+      },
+      {
+        "text": "Sojourner worked for 83 days, much longer than its planned seven days.",
+        "poetic": true
+      },
+      {
+        "text": "Sojourner depended on its Pathfinder lander to relay messages. Pathfinder’s last data reached Earth on September 27, 1997, and the rover fell silent with it.",
+        "poetic": true
+      },
+      {
+        "text": "Sojourner was a small test rover. It stayed on Mars after its Pathfinder lander could no longer relay messages.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Sojourner was a small test rover. It stayed on Mars after its Pathfinder lander could no longer relay messages.",
+    "quiz": [
+      {
+        "q": "When did Sojourner Mars rover launch?",
+        "options": [
+          "December 4, 1996",
+          "July 4, 1997",
+          "September 27, 1997",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is December 4, 1996.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Sojourner Mars rover reach Mars?",
+        "options": [
+          "July 4, 1997",
+          "December 4, 1996",
+          "September 27, 1997",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is July 4, 1997.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Sojourner Mars rover explore or travel?",
+        "options": [
+          "Mars",
+          "the Moon",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Sojourner Mars rover is true?",
+        "options": [
+          "Sojourner worked for 83 days, much longer than its planned seven days.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Sojourner worked for 83 days, much longer than its planned seven days.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Sojourner Mars rover?",
+        "options": [
+          "Sojourner depended on its Pathfinder lander to relay messages. Pathfinder’s last data reached Earth on September 27, 1997, and the rover fell silent with it.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Sojourner depended on its Pathfinder lander to relay messages. Pathfinder’s last data reached Earth on September 27, 1997, and the rover fell silent with it.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Sojourner Mars rover still there or still travelling?",
+        "options": [
+          "Sojourner was a small test rover. It stayed on Mars after its Pathfinder lander could no longer relay messages.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Sojourner was a small test rover. It stayed on Mars after its Pathfinder lander could no longer relay messages.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Sojourner Mars rover?",
+        "options": [
+          "Went Silent",
+          "Left Behind",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as silent.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Sojourner Mars rover?",
+        "options": [
+          "Sojourner worked for 83 days, much longer than its planned seven days.",
+          "Sojourner Mars rover has an end date of September 27, 1997.",
+          "Sojourner Mars rover travelled to the Moon.",
+          "Sojourner Mars rover returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Sojourner worked for 83 days, much longer than its planned seven days.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://www.nasa.gov/image-article/july-4-1997-sojourner-arrives-red-planet/",
+      "https://science.nasa.gov/solar-system/mars-pathfinder-lands-on-mars/",
+      "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4524.pdf"
+    ],
+    "photo": {
+      "nasaId": "PIA00626",
+      "credit": "NASA/JPL",
+      "pageUrl": "https://images.nasa.gov/details/PIA00626",
+      "alt": "A rock photographed by Sojourner on the Martian surface."
+    },
+    "needsReview": true,
+    "i18nKey": "sojourner"
+  },
+  {
+    "id": "viking-1-lander",
+    "name": "Viking 1 Mars lander",
+    "agency": "NASA",
+    "world": "mars",
+    "status": "silent",
+    "launchDate": "1975-08-20",
+    "arrivalDate": "1976-07-20",
+    "endDate": "1982-11-11",
+    "lat": 22.483,
+    "lon": -47.94,
+    "endReason": "Viking 1 operated for more than six years. A faulty command sent from Earth interrupted communication on November 11, 1982, and contact could not be restored.",
+    "kidFact": "Viking 1 sent the first clear pictures from the surface of Mars.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Viking 1 Mars lander launched on August 20, 1975. It reached Mars on July 20, 1976."
+      },
+      {
+        "title": "A job to do",
+        "text": "Viking 1 sent the first clear pictures from the surface of Mars. This was part of the mission's work in Mars."
+      },
+      {
+        "title": "Went Silent",
+        "text": "Viking 1 operated for more than six years. A faulty command sent from Earth interrupted communication on November 11, 1982, and contact could not be restored. The lander stopped communicating and was not designed to return to Earth."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on August 20, 1975.",
+        "poetic": true
+      },
+      {
+        "text": "I reached Mars on July 20, 1976.",
+        "poetic": true
+      },
+      {
+        "text": "Viking 1 sent the first clear pictures from the surface of Mars.",
+        "poetic": true
+      },
+      {
+        "text": "Viking 1 operated for more than six years. A faulty command sent from Earth interrupted communication on November 11, 1982, and contact could not be restored.",
+        "poetic": true
+      },
+      {
+        "text": "The lander stopped communicating and was not designed to return to Earth.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "The lander stopped communicating and was not designed to return to Earth.",
+    "quiz": [
+      {
+        "q": "When did Viking 1 Mars lander launch?",
+        "options": [
+          "August 20, 1975",
+          "July 20, 1976",
+          "November 11, 1982",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is August 20, 1975.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Viking 1 Mars lander reach Mars?",
+        "options": [
+          "July 20, 1976",
+          "August 20, 1975",
+          "November 11, 1982",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is July 20, 1976.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Viking 1 Mars lander explore or travel?",
+        "options": [
+          "Mars",
+          "the Moon",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Viking 1 Mars lander is true?",
+        "options": [
+          "Viking 1 sent the first clear pictures from the surface of Mars.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Viking 1 sent the first clear pictures from the surface of Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Viking 1 Mars lander?",
+        "options": [
+          "Viking 1 operated for more than six years. A faulty command sent from Earth interrupted communication on November 11, 1982, and contact could not be restored.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Viking 1 operated for more than six years. A faulty command sent from Earth interrupted communication on November 11, 1982, and contact could not be restored.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Viking 1 Mars lander still there or still travelling?",
+        "options": [
+          "The lander stopped communicating and was not designed to return to Earth.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "The lander stopped communicating and was not designed to return to Earth.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Viking 1 Mars lander?",
+        "options": [
+          "Went Silent",
+          "Left Behind",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as silent.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Viking 1 Mars lander?",
+        "options": [
+          "Viking 1 sent the first clear pictures from the surface of Mars.",
+          "Viking 1 Mars lander has an end date of November 11, 1982.",
+          "Viking 1 Mars lander travelled to the Moon.",
+          "Viking 1 Mars lander returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Viking 1 sent the first clear pictures from the surface of Mars.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/viking-1/",
+      "https://science.nasa.gov/mission/viking/",
+      "https://nssdc.gsfc.nasa.gov/planetary/viking.html"
+    ],
+    "photo": {
+      "nasaId": "PIA00383",
+      "credit": "NASA/JPL",
+      "pageUrl": "https://images.nasa.gov/details/PIA00383",
+      "alt": "Part of the first panoramic view returned by Viking 1 from Mars."
+    },
+    "needsReview": true,
+    "i18nKey": "viking1"
+  },
+  {
+    "id": "viking-2-lander",
+    "name": "Viking 2 Mars lander",
+    "agency": "NASA",
+    "world": "mars",
+    "status": "silent",
+    "launchDate": "1975-09-09",
+    "arrivalDate": "1976-09-03",
+    "endDate": "1980-04-11",
+    "lat": 47.64,
+    "lon": 134.29,
+    "endReason": "Viking 2’s batteries lost power after nearly four years on Mars. Its final data reached Earth on April 11, 1980.",
+    "kidFact": "Viking 2 landed on a broad plain called Utopia Planitia.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Viking 2 Mars lander launched on September 9, 1975. It reached Mars on September 3, 1976."
+      },
+      {
+        "title": "A job to do",
+        "text": "Viking 2 landed on a broad plain called Utopia Planitia. This was part of the mission's work in Mars."
+      },
+      {
+        "title": "Went Silent",
+        "text": "Viking 2’s batteries lost power after nearly four years on Mars. Its final data reached Earth on April 11, 1980. Its battery problem stopped communications, and the lander could not return to Earth."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on September 9, 1975.",
+        "poetic": true
+      },
+      {
+        "text": "I reached Mars on September 3, 1976.",
+        "poetic": true
+      },
+      {
+        "text": "Viking 2 landed on a broad plain called Utopia Planitia.",
+        "poetic": true
+      },
+      {
+        "text": "Viking 2’s batteries lost power after nearly four years on Mars. Its final data reached Earth on April 11, 1980.",
+        "poetic": true
+      },
+      {
+        "text": "Its battery problem stopped communications, and the lander could not return to Earth.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Its battery problem stopped communications, and the lander could not return to Earth.",
+    "quiz": [
+      {
+        "q": "When did Viking 2 Mars lander launch?",
+        "options": [
+          "September 9, 1975",
+          "September 3, 1976",
+          "April 11, 1980",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is September 9, 1975.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Viking 2 Mars lander reach Mars?",
+        "options": [
+          "September 3, 1976",
+          "September 9, 1975",
+          "April 11, 1980",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is September 3, 1976.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Viking 2 Mars lander explore or travel?",
+        "options": [
+          "Mars",
+          "the Moon",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Viking 2 Mars lander is true?",
+        "options": [
+          "Viking 2 landed on a broad plain called Utopia Planitia.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Viking 2 landed on a broad plain called Utopia Planitia.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Viking 2 Mars lander?",
+        "options": [
+          "Viking 2’s batteries lost power after nearly four years on Mars. Its final data reached Earth on April 11, 1980.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Viking 2’s batteries lost power after nearly four years on Mars. Its final data reached Earth on April 11, 1980.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Viking 2 Mars lander still there or still travelling?",
+        "options": [
+          "Its battery problem stopped communications, and the lander could not return to Earth.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Its battery problem stopped communications, and the lander could not return to Earth.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Viking 2 Mars lander?",
+        "options": [
+          "Went Silent",
+          "Left Behind",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as silent.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Viking 2 Mars lander?",
+        "options": [
+          "Viking 2 landed on a broad plain called Utopia Planitia.",
+          "Viking 2 Mars lander has an end date of April 11, 1980.",
+          "Viking 2 Mars lander travelled to the Moon.",
+          "Viking 2 Mars lander returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Viking 2 landed on a broad plain called Utopia Planitia.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/viking/",
+      "https://nssdc.gsfc.nasa.gov/planetary/viking.html",
+      "https://images.nasa.gov/details/PIA04023"
+    ],
+    "photo": {
+      "nasaId": "PIA04023",
+      "credit": "NASA/JPL/University of Arizona",
+      "pageUrl": "https://images.nasa.gov/details/PIA04023",
+      "alt": "Mars Odyssey view marking the Viking 2 landing site."
+    },
+    "needsReview": false,
+    "i18nKey": "viking2"
+  },
+  {
+    "id": "spirit-mer-a",
+    "name": "Spirit Mars Exploration Rover",
+    "agency": "NASA",
+    "world": "mars",
+    "status": "silent",
+    "launchDate": "2003-06-10",
+    "arrivalDate": "2004-01-04",
+    "endDate": "2011-05-25",
+    "lat": -14.5692,
+    "lon": 175.4729,
+    "endReason": "Spirit became stuck in soft ground and could not tilt its solar panels toward the winter Sun. Its last signal reached Earth on March 22, 2010; NASA ended recovery efforts in 2011.",
+    "kidFact": "Spirit worked for more than six years, far beyond its planned 90 days.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Spirit Mars Exploration Rover launched on June 10, 2003. It reached Mars on January 4, 2004."
+      },
+      {
+        "title": "A job to do",
+        "text": "Spirit worked for more than six years, far beyond its planned 90 days. This was part of the mission's work in Mars."
+      },
+      {
+        "title": "Went Silent",
+        "text": "Spirit became stuck in soft ground and could not tilt its solar panels toward the winter Sun. Its last signal reached Earth on March 22, 2010; NASA ended recovery efforts in 2011. Spirit could not move out of soft ground or get enough sunlight for warmth and power."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on June 10, 2003.",
+        "poetic": true
+      },
+      {
+        "text": "I reached Mars on January 4, 2004.",
+        "poetic": true
+      },
+      {
+        "text": "Spirit worked for more than six years, far beyond its planned 90 days.",
+        "poetic": true
+      },
+      {
+        "text": "Spirit became stuck in soft ground and could not tilt its solar panels toward the winter Sun. Its last signal reached Earth on March 22, 2010; NASA ended recovery efforts in 2011.",
+        "poetic": true
+      },
+      {
+        "text": "Spirit could not move out of soft ground or get enough sunlight for warmth and power.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Spirit could not move out of soft ground or get enough sunlight for warmth and power.",
+    "quiz": [
+      {
+        "q": "When did Spirit Mars Exploration Rover launch?",
+        "options": [
+          "June 10, 2003",
+          "January 4, 2004",
+          "May 25, 2011",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is June 10, 2003.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Spirit Mars Exploration Rover reach Mars?",
+        "options": [
+          "January 4, 2004",
+          "June 10, 2003",
+          "May 25, 2011",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is January 4, 2004.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Spirit Mars Exploration Rover explore or travel?",
+        "options": [
+          "Mars",
+          "the Moon",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Spirit Mars Exploration Rover is true?",
+        "options": [
+          "Spirit worked for more than six years, far beyond its planned 90 days.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Spirit worked for more than six years, far beyond its planned 90 days.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Spirit Mars Exploration Rover?",
+        "options": [
+          "Spirit became stuck in soft ground and could not tilt its solar panels toward the winter Sun. Its last signal reached Earth on March 22, 2010; NASA ended recovery efforts in 2011.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Spirit became stuck in soft ground and could not tilt its solar panels toward the winter Sun. Its last signal reached Earth on March 22, 2010; NASA ended recovery efforts in 2011.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Spirit Mars Exploration Rover still there or still travelling?",
+        "options": [
+          "Spirit could not move out of soft ground or get enough sunlight for warmth and power.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Spirit could not move out of soft ground or get enough sunlight for warmth and power.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Spirit Mars Exploration Rover?",
+        "options": [
+          "Went Silent",
+          "Left Behind",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as silent.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Spirit Mars Exploration Rover?",
+        "options": [
+          "Spirit worked for more than six years, far beyond its planned 90 days.",
+          "Spirit Mars Exploration Rover has an end date of May 25, 2011.",
+          "Spirit Mars Exploration Rover travelled to the Moon.",
+          "Spirit Mars Exploration Rover returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Spirit worked for more than six years, far beyond its planned 90 days.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/mer-spirit/",
+      "https://www.jpl.nasa.gov/news/nasa-concludes-attempts-to-contact-mars-rover-spirit/",
+      "https://ntrs.nasa.gov/citations/20160001767"
+    ],
+    "photo": {
+      "nasaId": "PIA12354",
+      "credit": "NASA/JPL-Caltech",
+      "pageUrl": "https://images.nasa.gov/details/PIA12354",
+      "alt": "The site where NASA’s Spirit rover became embedded in Martian soil."
+    },
+    "needsReview": false,
+    "i18nKey": "spirit"
+  },
+  {
+    "id": "opportunity-mer-b",
+    "name": "Opportunity Mars Exploration Rover",
+    "agency": "NASA",
+    "world": "mars",
+    "status": "silent",
+    "launchDate": "2003-07-07",
+    "arrivalDate": "2004-01-24",
+    "endDate": "2019-02-13",
+    "lat": -1.95,
+    "lon": -5.53,
+    "endReason": "A planet-wide dust storm blocked sunlight from Opportunity’s solar panels. Its last contact was June 10, 2018; NASA declared the mission over in 2019.",
+    "kidFact": "Opportunity worked for almost 15 years, far longer than its planned 90 days.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Opportunity Mars Exploration Rover launched on July 7, 2003. It reached Mars on January 24, 2004."
+      },
+      {
+        "title": "A job to do",
+        "text": "Opportunity worked for almost 15 years, far longer than its planned 90 days. This was part of the mission's work in Mars."
+      },
+      {
+        "title": "Went Silent",
+        "text": "A planet-wide dust storm blocked sunlight from Opportunity’s solar panels. Its last contact was June 10, 2018; NASA declared the mission over in 2019. The solar-powered rover could not recharge during the huge dust storm and stopped communicating."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on July 7, 2003.",
+        "poetic": true
+      },
+      {
+        "text": "I reached Mars on January 24, 2004.",
+        "poetic": true
+      },
+      {
+        "text": "Opportunity worked for almost 15 years, far longer than its planned 90 days.",
+        "poetic": true
+      },
+      {
+        "text": "A planet-wide dust storm blocked sunlight from Opportunity’s solar panels. Its last contact was June 10, 2018; NASA declared the mission over in 2019.",
+        "poetic": true
+      },
+      {
+        "text": "The solar-powered rover could not recharge during the huge dust storm and stopped communicating.",
+        "poetic": true
+      },
+      {
+        "text": "My battery is low, and it is getting dark.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "The solar-powered rover could not recharge during the huge dust storm and stopped communicating.",
+    "quiz": [
+      {
+        "q": "When did Opportunity Mars Exploration Rover launch?",
+        "options": [
+          "July 7, 2003",
+          "January 24, 2004",
+          "February 13, 2019",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is July 7, 2003.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Opportunity Mars Exploration Rover reach Mars?",
+        "options": [
+          "January 24, 2004",
+          "July 7, 2003",
+          "February 13, 2019",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is January 24, 2004.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Opportunity Mars Exploration Rover explore or travel?",
+        "options": [
+          "Mars",
+          "the Moon",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Opportunity Mars Exploration Rover is true?",
+        "options": [
+          "Opportunity worked for almost 15 years, far longer than its planned 90 days.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Opportunity worked for almost 15 years, far longer than its planned 90 days.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Opportunity Mars Exploration Rover?",
+        "options": [
+          "A planet-wide dust storm blocked sunlight from Opportunity’s solar panels. Its last contact was June 10, 2018; NASA declared the mission over in 2019.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "A planet-wide dust storm blocked sunlight from Opportunity’s solar panels. Its last contact was June 10, 2018; NASA declared the mission over in 2019.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Opportunity Mars Exploration Rover still there or still travelling?",
+        "options": [
+          "The solar-powered rover could not recharge during the huge dust storm and stopped communicating.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "The solar-powered rover could not recharge during the huge dust storm and stopped communicating.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Opportunity Mars Exploration Rover?",
+        "options": [
+          "Went Silent",
+          "Left Behind",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as silent.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Opportunity Mars Exploration Rover?",
+        "options": [
+          "Opportunity worked for almost 15 years, far longer than its planned 90 days.",
+          "Opportunity Mars Exploration Rover has an end date of February 13, 2019.",
+          "Opportunity Mars Exploration Rover travelled to the Moon.",
+          "Opportunity Mars Exploration Rover returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Opportunity worked for almost 15 years, far longer than its planned 90 days.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/mer-opportunity/",
+      "https://astrobiology.nasa.gov/news/opportunity-rover-mission-comes-to-an-end/",
+      "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+    ],
+    "photo": {
+      "nasaId": "PIA17941",
+      "credit": "NASA/JPL-Caltech/University of Arizona",
+      "pageUrl": "https://images.nasa.gov/details/PIA17941",
+      "alt": "Opportunity seen from orbit on Murray Ridge, Mars."
+    },
+    "needsReview": false,
+    "i18nKey": "opportunity"
+  },
+  {
+    "id": "phoenix-lander",
+    "name": "Phoenix Mars lander",
+    "agency": "NASA",
+    "world": "mars",
+    "status": "silent",
+    "launchDate": "2007-08-04",
+    "arrivalDate": "2008-05-25",
+    "endDate": "2008-11-02",
+    "lat": 68.22,
+    "lon": -125.75,
+    "endReason": "Phoenix’s solar panels stopped working in the dark Martian winter. The lander could no longer send messages.",
+    "kidFact": "Phoenix used a robotic arm to uncover water ice beneath the Martian soil.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Phoenix Mars lander launched on August 4, 2007. It reached Mars on May 25, 2008."
+      },
+      {
+        "title": "A job to do",
+        "text": "Phoenix used a robotic arm to uncover water ice beneath the Martian soil. This was part of the mission's work in Mars."
+      },
+      {
+        "title": "Went Silent",
+        "text": "Phoenix’s solar panels stopped working in the dark Martian winter. The lander could no longer send messages. Winter darkness kept sunlight from Phoenix’s solar panels, and the lander was not built to return home."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on August 4, 2007.",
+        "poetic": true
+      },
+      {
+        "text": "I reached Mars on May 25, 2008.",
+        "poetic": true
+      },
+      {
+        "text": "Phoenix used a robotic arm to uncover water ice beneath the Martian soil.",
+        "poetic": true
+      },
+      {
+        "text": "Phoenix’s solar panels stopped working in the dark Martian winter. The lander could no longer send messages.",
+        "poetic": true
+      },
+      {
+        "text": "Winter darkness kept sunlight from Phoenix’s solar panels, and the lander was not built to return home.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Winter darkness kept sunlight from Phoenix’s solar panels, and the lander was not built to return home.",
+    "quiz": [
+      {
+        "q": "When did Phoenix Mars lander launch?",
+        "options": [
+          "August 4, 2007",
+          "May 25, 2008",
+          "November 2, 2008",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is August 4, 2007.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Phoenix Mars lander reach Mars?",
+        "options": [
+          "May 25, 2008",
+          "August 4, 2007",
+          "November 2, 2008",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is May 25, 2008.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Phoenix Mars lander explore or travel?",
+        "options": [
+          "Mars",
+          "the Moon",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Phoenix Mars lander is true?",
+        "options": [
+          "Phoenix used a robotic arm to uncover water ice beneath the Martian soil.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Phoenix used a robotic arm to uncover water ice beneath the Martian soil.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Phoenix Mars lander?",
+        "options": [
+          "Phoenix’s solar panels stopped working in the dark Martian winter. The lander could no longer send messages.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Phoenix’s solar panels stopped working in the dark Martian winter. The lander could no longer send messages.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Phoenix Mars lander still there or still travelling?",
+        "options": [
+          "Winter darkness kept sunlight from Phoenix’s solar panels, and the lander was not built to return home.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Winter darkness kept sunlight from Phoenix’s solar panels, and the lander was not built to return home.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Phoenix Mars lander?",
+        "options": [
+          "Went Silent",
+          "Left Behind",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as silent.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Phoenix Mars lander?",
+        "options": [
+          "Phoenix used a robotic arm to uncover water ice beneath the Martian soil.",
+          "Phoenix Mars lander has an end date of November 2, 2008.",
+          "Phoenix Mars lander travelled to the Moon.",
+          "Phoenix Mars lander returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Phoenix used a robotic arm to uncover water ice beneath the Martian soil.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/mars-phoenix/",
+      "https://science.nasa.gov/photojournal/phoenix-opens-its-eyes/",
+      "https://www.jpl.nasa.gov/missions/phoenix/"
+    ],
+    "photo": {
+      "nasaId": "PIA22223",
+      "credit": "NASA/JPL-Caltech/University of Arizona",
+      "pageUrl": "https://images.nasa.gov/details/PIA22223",
+      "alt": "NASA’s Phoenix lander and related hardware at its Martian landing site."
+    },
+    "needsReview": false,
+    "i18nKey": "phoenix"
+  },
+  {
+    "id": "insight-lander",
+    "name": "InSight Mars lander",
+    "agency": "NASA",
+    "world": "mars",
+    "status": "silent",
+    "launchDate": "2018-05-05",
+    "arrivalDate": "2018-11-26",
+    "endDate": "2022-12-21",
+    "lat": 4.5,
+    "lon": 135.9,
+    "endReason": "Dust covered InSight’s solar panels until the lander could not make enough power. Its last message reached Earth on December 15, 2022.",
+    "kidFact": "InSight listened for marsquakes to learn about the inside of Mars.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "InSight Mars lander launched on May 5, 2018. It reached Mars on November 26, 2018."
+      },
+      {
+        "title": "A job to do",
+        "text": "InSight listened for marsquakes to learn about the inside of Mars. This was part of the mission's work in Mars."
+      },
+      {
+        "title": "Went Silent",
+        "text": "Dust covered InSight’s solar panels until the lander could not make enough power. Its last message reached Earth on December 15, 2022. Dust reduced the light reaching InSight’s solar panels, so the lander ran out of power."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on May 5, 2018.",
+        "poetic": true
+      },
+      {
+        "text": "I reached Mars on November 26, 2018.",
+        "poetic": true
+      },
+      {
+        "text": "InSight listened for marsquakes to learn about the inside of Mars.",
+        "poetic": true
+      },
+      {
+        "text": "Dust covered InSight’s solar panels until the lander could not make enough power. Its last message reached Earth on December 15, 2022.",
+        "poetic": true
+      },
+      {
+        "text": "Dust reduced the light reaching InSight’s solar panels, so the lander ran out of power.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Dust reduced the light reaching InSight’s solar panels, so the lander ran out of power.",
+    "quiz": [
+      {
+        "q": "When did InSight Mars lander launch?",
+        "options": [
+          "May 5, 2018",
+          "November 26, 2018",
+          "December 21, 2022",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is May 5, 2018.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did InSight Mars lander reach Mars?",
+        "options": [
+          "November 26, 2018",
+          "May 5, 2018",
+          "December 21, 2022",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is November 26, 2018.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did InSight Mars lander explore or travel?",
+        "options": [
+          "Mars",
+          "the Moon",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about InSight Mars lander is true?",
+        "options": [
+          "InSight listened for marsquakes to learn about the inside of Mars.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "InSight listened for marsquakes to learn about the inside of Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to InSight Mars lander?",
+        "options": [
+          "Dust covered InSight’s solar panels until the lander could not make enough power. Its last message reached Earth on December 15, 2022.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Dust covered InSight’s solar panels until the lander could not make enough power. Its last message reached Earth on December 15, 2022.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is InSight Mars lander still there or still travelling?",
+        "options": [
+          "Dust reduced the light reaching InSight’s solar panels, so the lander ran out of power.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Dust reduced the light reaching InSight’s solar panels, so the lander ran out of power.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits InSight Mars lander?",
+        "options": [
+          "Went Silent",
+          "Left Behind",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as silent.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for InSight Mars lander?",
+        "options": [
+          "InSight listened for marsquakes to learn about the inside of Mars.",
+          "InSight Mars lander has an end date of December 21, 2022.",
+          "InSight Mars lander travelled to the Moon.",
+          "InSight Mars lander returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: InSight listened for marsquakes to learn about the inside of Mars.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/insight/",
+      "https://science.nasa.gov/mission/insight/?IM_ID=8302&Page=3",
+      "https://www.nasa.gov/news-release/nasa-retires-insight-mars-lander-mission-after-years-of-science/"
+    ],
+    "photo": {
+      "nasaId": "PIA22571",
+      "credit": "NASA/JPL-Caltech",
+      "pageUrl": "https://images.nasa.gov/details/PIA22571",
+      "alt": "NASA InSight lander on Mars with its solar panels deployed."
+    },
+    "needsReview": false,
+    "i18nKey": "insight"
+  },
+  {
+    "id": "ingenuity",
+    "name": "Ingenuity Mars Helicopter",
+    "agency": "NASA",
+    "world": "mars",
+    "status": "still_talking",
+    "launchDate": "2020-07-30",
+    "arrivalDate": "2021-02-18",
+    "endDate": "2024-01-25",
+    "lat": null,
+    "lon": null,
+    "endReason": "During its 72nd flight, Ingenuity lost contact while descending and hit the ground hard. The landing damaged its rotor blades, so it could not fly again; it continued sending some data through Perseverance afterward.",
+    "kidFact": "Ingenuity made 72 flights on Mars, even though it was planned for just five.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Ingenuity Mars Helicopter launched on July 30, 2020. It reached Mars on February 18, 2021."
+      },
+      {
+        "title": "A job to do",
+        "text": "Ingenuity made 72 flights on Mars, even though it was planned for just five. This was part of the mission's work in Mars."
+      },
+      {
+        "title": "Still Talking",
+        "text": "During its 72nd flight, Ingenuity lost contact while descending and hit the ground hard. The landing damaged its rotor blades, so it could not fly again; it continued sending some data through Perseverance afterward. A hard landing damaged Ingenuity’s rotor blades. The helicopter can no longer fly, though NASA reported that it continued sending some data through Perseverance."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on July 30, 2020.",
+        "poetic": true
+      },
+      {
+        "text": "I reached Mars on February 18, 2021.",
+        "poetic": true
+      },
+      {
+        "text": "Ingenuity made 72 flights on Mars, even though it was planned for just five.",
+        "poetic": true
+      },
+      {
+        "text": "During its 72nd flight, Ingenuity lost contact while descending and hit the ground hard. The landing damaged its rotor blades, so it could not fly again; it continued sending some data through Perseverance afterward.",
+        "poetic": true
+      },
+      {
+        "text": "A hard landing damaged Ingenuity’s rotor blades. The helicopter can no longer fly, though NASA reported that it continued sending some data through Perseverance.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "A hard landing damaged Ingenuity’s rotor blades. The helicopter can no longer fly, though NASA reported that it continued sending some data through Perseverance.",
+    "quiz": [
+      {
+        "q": "When did Ingenuity Mars Helicopter launch?",
+        "options": [
+          "July 30, 2020",
+          "February 18, 2021",
+          "January 25, 2024",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is July 30, 2020.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Ingenuity Mars Helicopter reach Mars?",
+        "options": [
+          "February 18, 2021",
+          "July 30, 2020",
+          "January 25, 2024",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is February 18, 2021.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Ingenuity Mars Helicopter explore or travel?",
+        "options": [
+          "Mars",
+          "the Moon",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Ingenuity Mars Helicopter is true?",
+        "options": [
+          "Ingenuity made 72 flights on Mars, even though it was planned for just five.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Ingenuity made 72 flights on Mars, even though it was planned for just five.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Ingenuity Mars Helicopter?",
+        "options": [
+          "During its 72nd flight, Ingenuity lost contact while descending and hit the ground hard. The landing damaged its rotor blades, so it could not fly again; it continued sending some data through Perseverance afterward.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "During its 72nd flight, Ingenuity lost contact while descending and hit the ground hard. The landing damaged its rotor blades, so it could not fly again; it continued sending some data through Perseverance afterward.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Ingenuity Mars Helicopter still there or still travelling?",
+        "options": [
+          "A hard landing damaged Ingenuity’s rotor blades. The helicopter can no longer fly, though NASA reported that it continued sending some data through Perseverance.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "A hard landing damaged Ingenuity’s rotor blades. The helicopter can no longer fly, though NASA reported that it continued sending some data through Perseverance.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Ingenuity Mars Helicopter?",
+        "options": [
+          "Still Talking",
+          "Left Behind",
+          "Went Silent"
+        ],
+        "explanation": "The record marks this explorer as still_talking.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Ingenuity Mars Helicopter?",
+        "options": [
+          "Ingenuity made 72 flights on Mars, even though it was planned for just five.",
+          "Ingenuity Mars Helicopter has an end date of January 25, 2024.",
+          "Ingenuity Mars Helicopter travelled to the Moon.",
+          "Ingenuity Mars Helicopter returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Ingenuity made 72 flights on Mars, even though it was planned for just five.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://www.jpl.nasa.gov/videos/thanksingenuity-nasas-mars-helicopter-team-says-goodbye/",
+      "https://www.jpl.nasa.gov/news/nasa-performs-first-aircraft-accident-investigation-on-another-world/",
+      "https://science.nasa.gov/blog/ingenuity-reestablishes-communications/"
+    ],
+    "photo": {
+      "nasaId": "PIA26236",
+      "credit": "NASA/JPL-Caltech/ASU/MSSS",
+      "pageUrl": "https://images.nasa.gov/details/PIA26236",
+      "alt": "Perseverance captured Ingenuity at its final airfield on Mars."
+    },
+    "needsReview": true,
+    "i18nKey": "ingenuity"
+  },
+  {
+    "id": "chandrayaan-3-vikram",
+    "name": "Chandrayaan-3 Vikram lunar lander",
+    "agency": "ISRO",
+    "world": "moon",
+    "status": "silent",
+    "launchDate": "2023-07-14",
+    "arrivalDate": "2023-08-23",
+    "endDate": null,
+    "lat": -69.37,
+    "lon": 32.35,
+    "endReason": "Vikram and its rover went to sleep as the lunar night began. ISRO tried to contact them after sunrise, but no connection was reported.",
+    "kidFact": "Vikram landed at Shiv Shakti Point near the Moon’s south pole.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Chandrayaan-3 Vikram lunar lander launched on July 14, 2023. It reached the Moon on August 23, 2023."
+      },
+      {
+        "title": "A job to do",
+        "text": "Vikram landed at Shiv Shakti Point near the Moon’s south pole. This was part of the mission's work in the Moon."
+      },
+      {
+        "title": "Went Silent",
+        "text": "Vikram and its rover went to sleep as the lunar night began. ISRO tried to contact them after sunrise, but no connection was reported. Vikram was built for a short surface mission. It went to sleep during lunar night and did not answer later contact attempts."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on July 14, 2023.",
+        "poetic": true
+      },
+      {
+        "text": "I reached the Moon on August 23, 2023.",
+        "poetic": true
+      },
+      {
+        "text": "Vikram landed at Shiv Shakti Point near the Moon’s south pole.",
+        "poetic": true
+      },
+      {
+        "text": "Vikram and its rover went to sleep as the lunar night began. ISRO tried to contact them after sunrise, but no connection was reported.",
+        "poetic": true
+      },
+      {
+        "text": "Vikram was built for a short surface mission. It went to sleep during lunar night and did not answer later contact attempts.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Vikram was built for a short surface mission. It went to sleep during lunar night and did not answer later contact attempts.",
+    "quiz": [
+      {
+        "q": "When did Chandrayaan-3 Vikram lunar lander launch?",
+        "options": [
+          "July 14, 2023",
+          "August 23, 2023",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is July 14, 2023.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Chandrayaan-3 Vikram lunar lander reach the Moon?",
+        "options": [
+          "August 23, 2023",
+          "July 14, 2023",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is August 23, 2023.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Chandrayaan-3 Vikram lunar lander explore or travel?",
+        "options": [
+          "the Moon",
+          "Mars",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in the Moon.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Chandrayaan-3 Vikram lunar lander is true?",
+        "options": [
+          "Vikram landed at Shiv Shakti Point near the Moon’s south pole.",
+          "It explored Mars.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Vikram landed at Shiv Shakti Point near the Moon’s south pole.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Chandrayaan-3 Vikram lunar lander?",
+        "options": [
+          "Vikram and its rover went to sleep as the lunar night began. ISRO tried to contact them after sunrise, but no connection was reported.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Vikram and its rover went to sleep as the lunar night began. ISRO tried to contact them after sunrise, but no connection was reported.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Chandrayaan-3 Vikram lunar lander still there or still travelling?",
+        "options": [
+          "Vikram was built for a short surface mission. It went to sleep during lunar night and did not answer later contact attempts.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Vikram was built for a short surface mission. It went to sleep during lunar night and did not answer later contact attempts.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Chandrayaan-3 Vikram lunar lander?",
+        "options": [
+          "Went Silent",
+          "Left Behind",
+          "Still Talking"
+        ],
+        "explanation": "The record marks this explorer as silent.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Chandrayaan-3 Vikram lunar lander?",
+        "options": [
+          "Vikram landed at Shiv Shakti Point near the Moon’s south pole.",
+          "Chandrayaan-3 Vikram lunar lander has an end date of No end date is recorded.",
+          "Chandrayaan-3 Vikram lunar lander travelled to Mars.",
+          "Chandrayaan-3 Vikram lunar lander returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Vikram landed at Shiv Shakti Point near the Moon’s south pole.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://www.isro.gov.in/ISRO_EN/Chandrayaan3.html",
+      "https://www.isro.gov.in/media_isro/pdf/APXS_CH3.pdf",
+      "https://www.nasa.gov/image-article/nasas-lro-observes-chandrayaan-3-landing-site/"
+    ],
+    "photo": {
+      "nasaId": "M1447750764LR",
+      "credit": "NASA’s Goddard Space Flight Center/Arizona State University",
+      "pageUrl": "https://www.nasa.gov/image-article/nasas-lro-observes-chandrayaan-3-landing-site/",
+      "alt": "NASA LRO image shows Vikram as a dark spot inside a bright halo on the Moon."
+    },
+    "needsReview": true,
+    "i18nKey": "chandrayaan3vikram"
+  },
+  {
+    "id": "curiosity-msl",
+    "name": "Curiosity Mars Science Laboratory rover",
+    "agency": "NASA",
+    "world": "mars",
+    "status": "still_talking",
+    "launchDate": "2011-11-26",
+    "arrivalDate": "2012-08-06",
+    "endDate": null,
+    "lat": -4.5895,
+    "lon": 137.4417,
+    "endReason": "Curiosity is still operating and exploring Mars. Its mission has not ended.",
+    "kidFact": "Curiosity is about the size of a car and explores Mount Sharp.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Curiosity Mars Science Laboratory rover launched on November 26, 2011. It reached Mars on August 6, 2012."
+      },
+      {
+        "title": "A job to do",
+        "text": "Curiosity is about the size of a car and explores Mount Sharp. This was part of the mission's work in Mars."
+      },
+      {
+        "title": "Still Talking",
+        "text": "Curiosity is still operating and exploring Mars. Its mission has not ended. Curiosity is still working on Mars, so it has not been left behind after its mission."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on November 26, 2011.",
+        "poetic": true
+      },
+      {
+        "text": "I reached Mars on August 6, 2012.",
+        "poetic": true
+      },
+      {
+        "text": "Curiosity is about the size of a car and explores Mount Sharp.",
+        "poetic": true
+      },
+      {
+        "text": "Curiosity is still operating and exploring Mars. Its mission has not ended.",
+        "poetic": true
+      },
+      {
+        "text": "Curiosity is still working on Mars, so it has not been left behind after its mission.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Curiosity is still working on Mars, so it has not been left behind after its mission.",
+    "quiz": [
+      {
+        "q": "When did Curiosity Mars Science Laboratory rover launch?",
+        "options": [
+          "November 26, 2011",
+          "August 6, 2012",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is November 26, 2011.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Curiosity Mars Science Laboratory rover reach Mars?",
+        "options": [
+          "August 6, 2012",
+          "November 26, 2011",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is August 6, 2012.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Curiosity Mars Science Laboratory rover explore or travel?",
+        "options": [
+          "Mars",
+          "the Moon",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Curiosity Mars Science Laboratory rover is true?",
+        "options": [
+          "Curiosity is about the size of a car and explores Mount Sharp.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Curiosity is about the size of a car and explores Mount Sharp.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Curiosity Mars Science Laboratory rover?",
+        "options": [
+          "Curiosity is still operating and exploring Mars. Its mission has not ended.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Curiosity is still operating and exploring Mars. Its mission has not ended.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Curiosity Mars Science Laboratory rover still there or still travelling?",
+        "options": [
+          "Curiosity is still working on Mars, so it has not been left behind after its mission.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Curiosity is still working on Mars, so it has not been left behind after its mission.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Curiosity Mars Science Laboratory rover?",
+        "options": [
+          "Still Talking",
+          "Left Behind",
+          "Went Silent"
+        ],
+        "explanation": "The record marks this explorer as still_talking.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Curiosity Mars Science Laboratory rover?",
+        "options": [
+          "Curiosity is about the size of a car and explores Mount Sharp.",
+          "Curiosity Mars Science Laboratory rover has an end date of No end date is recorded.",
+          "Curiosity Mars Science Laboratory rover travelled to the Moon.",
+          "Curiosity Mars Science Laboratory rover returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Curiosity is about the size of a car and explores Mount Sharp.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/msl-curiosity/",
+      "https://science.nasa.gov/mission/msl-curiosity/"
+    ],
+    "photo": {
+      "nasaId": "PIA23041",
+      "credit": "NASA/JPL-Caltech/MSSS",
+      "pageUrl": "https://images.nasa.gov/details/PIA23041",
+      "alt": "Side-by-side images show NASA’s Curiosity rover on Mars and an Apollo 16 Moon buggy."
+    },
+    "needsReview": false,
+    "i18nKey": "curiosity"
+  },
+  {
+    "id": "perseverance-mars-2020",
+    "name": "Perseverance Mars 2020 rover",
+    "agency": "NASA",
+    "world": "mars",
+    "status": "still_talking",
+    "launchDate": "2020-07-30",
+    "arrivalDate": "2021-02-18",
+    "endDate": null,
+    "lat": 18.4447,
+    "lon": 77.4508,
+    "endReason": "Perseverance is still working in Jezero Crater. Its mission has not ended.",
+    "kidFact": "Perseverance collects rock samples that future missions may bring back to Earth.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Perseverance Mars 2020 rover launched on July 30, 2020. It reached Mars on February 18, 2021."
+      },
+      {
+        "title": "A job to do",
+        "text": "Perseverance collects rock samples that future missions may bring back to Earth. This was part of the mission's work in Mars."
+      },
+      {
+        "title": "Still Talking",
+        "text": "Perseverance is still working in Jezero Crater. Its mission has not ended. Perseverance is still working on Mars and has not been left after its mission."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on July 30, 2020.",
+        "poetic": true
+      },
+      {
+        "text": "I reached Mars on February 18, 2021.",
+        "poetic": true
+      },
+      {
+        "text": "Perseverance collects rock samples that future missions may bring back to Earth.",
+        "poetic": true
+      },
+      {
+        "text": "Perseverance is still working in Jezero Crater. Its mission has not ended.",
+        "poetic": true
+      },
+      {
+        "text": "Perseverance is still working on Mars and has not been left after its mission.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Perseverance is still working on Mars and has not been left after its mission.",
+    "quiz": [
+      {
+        "q": "When did Perseverance Mars 2020 rover launch?",
+        "options": [
+          "July 30, 2020",
+          "February 18, 2021",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is July 30, 2020.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Perseverance Mars 2020 rover reach Mars?",
+        "options": [
+          "February 18, 2021",
+          "July 30, 2020",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is February 18, 2021.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Perseverance Mars 2020 rover explore or travel?",
+        "options": [
+          "Mars",
+          "the Moon",
+          "deep space"
+        ],
+        "explanation": "The record places this explorer in Mars.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Perseverance Mars 2020 rover is true?",
+        "options": [
+          "Perseverance collects rock samples that future missions may bring back to Earth.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Perseverance collects rock samples that future missions may bring back to Earth.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Perseverance Mars 2020 rover?",
+        "options": [
+          "Perseverance is still working in Jezero Crater. Its mission has not ended.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Perseverance is still working in Jezero Crater. Its mission has not ended.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Perseverance Mars 2020 rover still there or still travelling?",
+        "options": [
+          "Perseverance is still working on Mars and has not been left after its mission.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Perseverance is still working on Mars and has not been left after its mission.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Perseverance Mars 2020 rover?",
+        "options": [
+          "Still Talking",
+          "Left Behind",
+          "Went Silent"
+        ],
+        "explanation": "The record marks this explorer as still_talking.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Perseverance Mars 2020 rover?",
+        "options": [
+          "Perseverance collects rock samples that future missions may bring back to Earth.",
+          "Perseverance Mars 2020 rover has an end date of No end date is recorded.",
+          "Perseverance Mars 2020 rover travelled to the Moon.",
+          "Perseverance Mars 2020 rover returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Perseverance collects rock samples that future missions may bring back to Earth.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/mars-2020-perseverance/",
+      "https://images.nasa.gov/details/PIA24485"
+    ],
+    "photo": {
+      "nasaId": "PIA24485",
+      "credit": "NASA/JPL-Caltech/ASU/MSSS",
+      "pageUrl": "https://images.nasa.gov/details/PIA24485",
+      "alt": "The Perseverance rover’s view of a remnant river delta in Jezero Crater."
+    },
+    "needsReview": false,
+    "i18nKey": "perseverance"
+  },
+  {
+    "id": "jwst-telescope",
+    "name": "James Webb Space Telescope",
+    "agency": "NASA",
+    "world": "deep_space",
+    "status": "still_talking",
+    "launchDate": "2021-12-25",
+    "arrivalDate": "2022-01-24",
+    "endDate": null,
+    "lat": null,
+    "lon": null,
+    "endReason": "Webb is still operating near the Sun-Earth L2 point. Its mission has not ended.",
+    "kidFact": "Webb’s main mirror has 18 gold-coated segments.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "James Webb Space Telescope launched on December 25, 2021. It reached deep space on January 24, 2022."
+      },
+      {
+        "title": "A job to do",
+        "text": "Webb’s main mirror has 18 gold-coated segments. This was part of the mission's work in deep space."
+      },
+      {
+        "title": "Still Talking",
+        "text": "Webb is still operating near the Sun-Earth L2 point. Its mission has not ended. Webb is still working in space and has not been abandoned after its mission."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on December 25, 2021.",
+        "poetic": true
+      },
+      {
+        "text": "I reached deep space on January 24, 2022.",
+        "poetic": true
+      },
+      {
+        "text": "Webb’s main mirror has 18 gold-coated segments.",
+        "poetic": true
+      },
+      {
+        "text": "Webb is still operating near the Sun-Earth L2 point. Its mission has not ended.",
+        "poetic": true
+      },
+      {
+        "text": "Webb is still working in space and has not been abandoned after its mission.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Webb is still working in space and has not been abandoned after its mission.",
+    "quiz": [
+      {
+        "q": "When did James Webb Space Telescope launch?",
+        "options": [
+          "December 25, 2021",
+          "January 24, 2022",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is December 25, 2021.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did James Webb Space Telescope reach deep space?",
+        "options": [
+          "January 24, 2022",
+          "December 25, 2021",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is January 24, 2022.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did James Webb Space Telescope explore or travel?",
+        "options": [
+          "deep space",
+          "the Moon",
+          "Mars"
+        ],
+        "explanation": "The record places this explorer in deep space.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about James Webb Space Telescope is true?",
+        "options": [
+          "Webb’s main mirror has 18 gold-coated segments.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Webb’s main mirror has 18 gold-coated segments.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to James Webb Space Telescope?",
+        "options": [
+          "Webb is still operating near the Sun-Earth L2 point. Its mission has not ended.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Webb is still operating near the Sun-Earth L2 point. Its mission has not ended.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is James Webb Space Telescope still there or still travelling?",
+        "options": [
+          "Webb is still working in space and has not been abandoned after its mission.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Webb is still working in space and has not been abandoned after its mission.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits James Webb Space Telescope?",
+        "options": [
+          "Still Talking",
+          "Left Behind",
+          "Went Silent"
+        ],
+        "explanation": "The record marks this explorer as still_talking.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for James Webb Space Telescope?",
+        "options": [
+          "Webb’s main mirror has 18 gold-coated segments.",
+          "James Webb Space Telescope has an end date of No end date is recorded.",
+          "James Webb Space Telescope travelled to the Moon.",
+          "James Webb Space Telescope returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Webb’s main mirror has 18 gold-coated segments.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/webb/",
+      "https://science.nasa.gov/mission/webb/webbs-orbit-at-l2/"
+    ],
+    "photo": {
+      "nasaId": "GSFC_20171208_Archive_e000398",
+      "credit": "NASA/Chris Gunn",
+      "pageUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000398",
+      "alt": "Technicians install the James Webb Space Telescope’s secondary mirror."
+    },
+    "needsReview": false,
+    "i18nKey": "jwst"
+  },
+  {
+    "id": "parker-solar-probe",
+    "name": "Parker Solar Probe",
+    "agency": "NASA",
+    "world": "deep_space",
+    "status": "still_talking",
+    "launchDate": "2018-08-12",
+    "arrivalDate": "2021-04-28",
+    "endDate": null,
+    "lat": null,
+    "lon": null,
+    "endReason": "Parker Solar Probe is still making close passes by the Sun and sending science data to Earth. Its mission has not ended.",
+    "kidFact": "Parker flies through the Sun’s outer atmosphere, protected by a heat shield.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Parker Solar Probe launched on August 12, 2018. It reached deep space on April 28, 2021."
+      },
+      {
+        "title": "A job to do",
+        "text": "Parker flies through the Sun’s outer atmosphere, protected by a heat shield. This was part of the mission's work in deep space."
+      },
+      {
+        "title": "Still Talking",
+        "text": "Parker Solar Probe is still making close passes by the Sun and sending science data to Earth. Its mission has not ended. Parker is still operating in orbit around the Sun, so it has not been left behind."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on August 12, 2018.",
+        "poetic": true
+      },
+      {
+        "text": "I reached deep space on April 28, 2021.",
+        "poetic": true
+      },
+      {
+        "text": "Parker flies through the Sun’s outer atmosphere, protected by a heat shield.",
+        "poetic": true
+      },
+      {
+        "text": "Parker Solar Probe is still making close passes by the Sun and sending science data to Earth. Its mission has not ended.",
+        "poetic": true
+      },
+      {
+        "text": "Parker is still operating in orbit around the Sun, so it has not been left behind.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Parker is still operating in orbit around the Sun, so it has not been left behind.",
+    "quiz": [
+      {
+        "q": "When did Parker Solar Probe launch?",
+        "options": [
+          "August 12, 2018",
+          "April 28, 2021",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is August 12, 2018.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Parker Solar Probe reach deep space?",
+        "options": [
+          "April 28, 2021",
+          "August 12, 2018",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is April 28, 2021.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Parker Solar Probe explore or travel?",
+        "options": [
+          "deep space",
+          "the Moon",
+          "Mars"
+        ],
+        "explanation": "The record places this explorer in deep space.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Parker Solar Probe is true?",
+        "options": [
+          "Parker flies through the Sun’s outer atmosphere, protected by a heat shield.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Parker flies through the Sun’s outer atmosphere, protected by a heat shield.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Parker Solar Probe?",
+        "options": [
+          "Parker Solar Probe is still making close passes by the Sun and sending science data to Earth. Its mission has not ended.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Parker Solar Probe is still making close passes by the Sun and sending science data to Earth. Its mission has not ended.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Parker Solar Probe still there or still travelling?",
+        "options": [
+          "Parker is still operating in orbit around the Sun, so it has not been left behind.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Parker is still operating in orbit around the Sun, so it has not been left behind.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Parker Solar Probe?",
+        "options": [
+          "Still Talking",
+          "Left Behind",
+          "Went Silent"
+        ],
+        "explanation": "The record marks this explorer as still_talking.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Parker Solar Probe?",
+        "options": [
+          "Parker flies through the Sun’s outer atmosphere, protected by a heat shield.",
+          "Parker Solar Probe has an end date of No end date is recorded.",
+          "Parker Solar Probe travelled to the Moon.",
+          "Parker Solar Probe returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Parker flies through the Sun’s outer atmosphere, protected by a heat shield.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/parker-solar-probe/",
+      "https://science.nasa.gov/blogs/parker-solar-probe/2026/09/10/after-latest-swing-past-sun-nasas-parker-solar-probe-checks-in/"
+    ],
+    "photo": {
+      "nasaId": "KSC-20180419-PH_KLS01_0009",
+      "credit": "NASA/Kennedy Space Center",
+      "pageUrl": "https://images.nasa.gov/details/KSC-20180419-PH_KLS01_0009",
+      "alt": "NASA’s Parker Solar Probe undergoing antenna deployment before launch."
+    },
+    "needsReview": false,
+    "dsnName": "SPP",
+    "i18nKey": "parker"
+  },
+  {
+    "id": "voyager-1",
+    "name": "Voyager 1",
+    "agency": "NASA",
+    "world": "deep_space",
+    "status": "still_talking",
+    "launchDate": "1977-09-05",
+    "arrivalDate": "2012-08-25",
+    "endDate": null,
+    "lat": null,
+    "lon": null,
+    "endReason": "Voyager 1 crossed into interstellar space and still sends data to Earth. Its mission has not ended.",
+    "kidFact": "Voyager 1 carries a golden record with sounds and pictures from Earth.",
+    "story": [
+      {
+        "title": "A journey begins",
+        "text": "Voyager 1 launched on September 5, 1977. It reached deep space on August 25, 2012."
+      },
+      {
+        "title": "A job to do",
+        "text": "Voyager 1 carries a golden record with sounds and pictures from Earth. This was part of the mission's work in deep space."
+      },
+      {
+        "title": "Still Talking",
+        "text": "Voyager 1 crossed into interstellar space and still sends data to Earth. Its mission has not ended. Voyager 1 travels too far away to return, but NASA still communicates with it."
+      }
+    ],
+    "lastMessage": [
+      {
+        "text": "I began my journey on September 5, 1977.",
+        "poetic": true
+      },
+      {
+        "text": "I reached deep space on August 25, 2012.",
+        "poetic": true
+      },
+      {
+        "text": "Voyager 1 carries a golden record with sounds and pictures from Earth.",
+        "poetic": true
+      },
+      {
+        "text": "Voyager 1 crossed into interstellar space and still sends data to Earth. Its mission has not ended.",
+        "poetic": true
+      },
+      {
+        "text": "Voyager 1 travels too far away to return, but NASA still communicates with it.",
+        "poetic": true
+      }
+    ],
+    "whyLeft": "Voyager 1 travels too far away to return, but NASA still communicates with it.",
+    "quiz": [
+      {
+        "q": "When did Voyager 1 launch?",
+        "options": [
+          "September 5, 1977",
+          "August 25, 2012",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's launch date is September 5, 1977.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "When did Voyager 1 reach deep space?",
+        "options": [
+          "August 25, 2012",
+          "September 5, 1977",
+          "No end date is recorded",
+          "July 20, 1969"
+        ],
+        "explanation": "The record's arrival date is August 25, 2012.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Where did Voyager 1 explore or travel?",
+        "options": [
+          "deep space",
+          "the Moon",
+          "Mars"
+        ],
+        "explanation": "The record places this explorer in deep space.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which fact about Voyager 1 is true?",
+        "options": [
+          "Voyager 1 carries a golden record with sounds and pictures from Earth.",
+          "It explored the Moon.",
+          "It returned to Earth after its mission.",
+          "It carried people on every trip."
+        ],
+        "explanation": "Voyager 1 carries a golden record with sounds and pictures from Earth.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "What happened to Voyager 1?",
+        "options": [
+          "Voyager 1 crossed into interstellar space and still sends data to Earth. Its mission has not ended.",
+          "It landed safely back on Earth.",
+          "It was brought home for repairs.",
+          "It never reached its destination."
+        ],
+        "explanation": "Voyager 1 crossed into interstellar space and still sends data to Earth. Its mission has not ended.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Why is Voyager 1 still there or still travelling?",
+        "options": [
+          "Voyager 1 travels too far away to return, but NASA still communicates with it.",
+          "A crew planned to pick it up on the next flight.",
+          "It was sent back to Earth in a cargo ship.",
+          "It was built to drive all the way home."
+        ],
+        "explanation": "Voyager 1 travels too far away to return, but NASA still communicates with it.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which status label fits Voyager 1?",
+        "options": [
+          "Still Talking",
+          "Left Behind",
+          "Went Silent"
+        ],
+        "explanation": "The record marks this explorer as still_talking.",
+        "draftBy": "ai"
+      },
+      {
+        "q": "Which sentence matches the record for Voyager 1?",
+        "options": [
+          "Voyager 1 carries a golden record with sounds and pictures from Earth.",
+          "Voyager 1 has an end date of No end date is recorded.",
+          "Voyager 1 travelled to the Moon.",
+          "Voyager 1 returned to Earth after exploring."
+        ],
+        "explanation": "NASA's cited mission information supports this fact: Voyager 1 carries a golden record with sounds and pictures from Earth.",
+        "draftBy": "ai"
+      }
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/voyager/voyager-1/",
+      "https://www.jpl.nasa.gov/missions/voyager-1/"
+    ],
+    "photo": {
+      "nasaId": "PIA14111",
+      "credit": "NASA/JPL-Caltech",
+      "pageUrl": "https://images.nasa.gov/details/PIA14111",
+      "alt": "Artist’s concept of a NASA Voyager spacecraft."
+    },
+    "needsReview": false,
+    "i18nKey": "voyager1"
+  }
+]
