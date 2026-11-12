@@ -431,22 +431,34 @@ export default {
 
       if (tabName === 'quiz') {
         const qs = [...localQuiz(QUIZ).filter(q => q.m === m.n), {q: m.q[0], o: m.q.slice(1), e: ''}].slice(0, 4);
+        const awake = get().collected.includes(m.n), need = Math.ceil(qs.length / 2);
+        // Explain the rules BEFORE the quiz starts: this is how an explorer gets woken up, and players did not know.
+        tb.innerHTML = `<div class="wake-intro"><div class="wake-ico" aria-hidden="true">${awake ? '🌟' : '😴'}</div>`
+          + `<h2>${awake ? t('mission.quiz.awakeTitle', {name: m.n}) : t('mission.quiz.sleepTitle', {name: m.n})}</h2>`
+          + `<p>${awake ? t('mission.quiz.awakeText') : t('mission.quiz.sleepText', {name: m.n, n: qs.length, need})}</p>`
+          + `<button type="button" class="btn" id="startq">${awake ? t('mission.quiz.again') : t('mission.quiz.start', {name: m.n})}</button></div>`;
+        tb.querySelector('#startq').onclick = () => {
         stop = runQuiz(tb, qs, {
           lives: 2,
           time: 20,
           onEnd: res => {
-            tb.innerHTML = `<div class="stars">${'⭐'.repeat(res.stars) || '🙂'}</div><h2 style="text-align:center">${res.passed ? t('mission.woke', {name: m.n}) : t('mission.almost')}</h2><p style="text-align:center">${t('quiz.score', {correct: res.correct, total: res.total, xp: res.xp})}</p><div style="text-align:center"><button class="btn" id="rt">${t('common.tryAgain')}</button></div>`;
+            tb.innerHTML = `<div class="stars">${'⭐'.repeat(res.stars) || '🙂'}</div><h2 style="text-align:center">${res.passed ? t('mission.woke', {name: m.n}) : t('mission.almost')}</h2><p style="text-align:center">${t('quiz.score', {correct: res.correct, total: res.total, xp: res.xp})}</p>${res.passed ? `<p style="text-align:center">${t('mission.quiz.wokeHelp')}</p>` : `<p style="text-align:center">${t('mission.quiz.tryHelp', {need})}</p>`}<div style="text-align:center"><button class="btn" id="rt">${t('common.tryAgain')}</button> <a class="btn alt" href="#/album">${t('mission.quiz.toAlbum')}</a></div>`;
             update(S => { S.stats.correct += res.correct; S.stats.answered += res.total; });
             if (res.xp) addXP(res.xp, t('xp.quiz'));
             if (res.passed && collect(m.n)) { sfx.win(); addXP(30, t('xp.waking', {name: m.n})); }
             tb.querySelector('#rt').onclick = () => show('quiz');
           }
         });
+        };
       }
     }
 
     el.querySelectorAll('.tabs .chip').forEach(c => c.onclick = () => show(c.dataset.t));
-    show('story');
+    // The Album's "Wake up" button opens this page straight on the quiz tab.
+    const firstTab = sessionStorage.getItem('fe2.openTab') || 'story'; sessionStorage.removeItem('fe2.openTab');
+    show(firstTab);
+    // Coming from the Album's Wake up button: bring the quiz into view instead of leaving it far below the photo.
+    if (firstTab === 'quiz') setTimeout(() => el.querySelector('.tabs')?.scrollIntoView({block: 'start'}), 50);
 
     // Video theater mode controller (centers at 60% width and height when played or expanded)
     const vbox = el.querySelector('#mvbox');

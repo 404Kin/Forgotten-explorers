@@ -200,3 +200,44 @@ img,canvas,svg{max-width:100%}
 /* Reserve room for content that loads after the first paint, so the page does not jump (layout shift). */
 #dsbox,#wlbox,#livebox,#lmbox{min-height:55vh}
 .rank small{font-size:.75rem}
+/* ---- Phone layout for the top bar and map controls ---- */
+.brand{flex:none}.brand span{white-space:nowrap}
+#topbar>*{min-width:0}
+@media(max-width:760px){
+  #topbar{gap:8px;padding-inline:10px}
+  .rank{flex:1 1 auto;min-width:0;margin-inline-start:0}
+  .rank small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .langsel select{max-width:120px}
+  .langsel>span{display:none}
+}
+@media(max-width:520px){.brand span{display:none}.langsel select{max-width:104px}}
+
+/* Name step on the cover: same spot as Pip's speech bubble. */
+#nbox{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 4vh);transform:translateX(-50%);width:min(430px,92%);color:var(--k);display:grid;gap:10px}
+#nbox h2{font-size:1.4rem;text-align:center}
+
+/* Dashboard greeting card */
+.hub-me{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;text-align:start;max-width:560px;margin:10px auto}
+.hub-me h1{font-size:clamp(1.4rem,5vw,2rem)}.hub-rank{margin:4px 0 8px;font-weight:800}
+.hub-av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-size:1.8rem;background:var(--gold);border:3px solid var(--k);color:var(--k)}
+.hub-me .bar{background:#14122b22}
+@media(max-width:520px){.hub-me{grid-template-columns:auto 1fr}.hub-me .btn{grid-column:1/-1;justify-self:start}}
+/* ---- Album: guide, collection buttons, certificate ---- */
+.al-guide h2{font-size:1.4rem}.al-guide p{margin:8px 0 0}
+.al-steps{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.al-steps li{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;padding:10px;border:3px solid var(--k);border-radius:18px;background:#fff}
+.al-steps b{display:block}
+.al-n{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:1.6rem;background:var(--gold);border:3px solid var(--k)}
+.al-done{text-align:center;font-weight:800}
+.al-grid{margin-bottom:8px}
+.al-item{display:grid;gap:8px;align-content:start}.al-item .btn{width:100%}
+.patch .pst{font-weight:800;font-size:.72rem}
+.al-why{display:block;margin-top:8px;font-size:.85rem}
+.wake-intro{display:grid;gap:10px;justify-items:center;text-align:center;padding:8px}
+.wake-ico{font-size:3rem;line-height:1}.wake-intro h2{font-size:1.4rem}.wake-intro p{margin:0}
+
+#chp{text-shadow:0 2px 8px #000,0 0 3px #000}
+.hub-form{grid-template-columns:1fr}
+/* Tap targets: map name buttons and the video size button were under 44px. Padding on the (transparent) button grows the hit area only. */
+.pl{padding:9px 6px}
+.video-btn{min-height:44px;min-width:44px}
