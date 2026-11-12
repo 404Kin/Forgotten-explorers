@@ -17,6 +17,8 @@ import {speak,stopSpeak,sfx} from '../services/audio.js';
 import {go} from '../router/router.js';
 import {MISSION_DETAILS} from '../data/missionDetails.js';
 import {modelViewerHTML,createModelViewer} from '../components/ModelViewer.js';
+// GLB files must be imported through Vite: a hard-coded /src/image/... path only works in the dev server, not in the built site.
+const GLB_URLS=import.meta.glob('../image/*.glb',{query:'?url',import:'default',eager:true});
 import missionVideos from '../data/missionVideos.json';
 
 let stop;
@@ -253,12 +255,13 @@ export default {
         // Mount model viewer
         const mvContainer = tb.querySelector(`#mv-${m.id}`);
         if (mvContainer) {
-          modelViewerInstance = createModelViewer(
-            mvContainer,
-            `/src/image/${glbFile}`,
-            svgMarkup,
-            m.c
-          );
+          // No WebGL (old phone, blocked GPU) must not break the whole robot page: keep the story, show the drawing instead.
+          try {
+            modelViewerInstance = createModelViewer(mvContainer, GLB_URLS[`../image/${glbFile}`] || '', svgMarkup, m.c);
+          } catch {
+            modelViewerInstance = null;
+            mvContainer.innerHTML = `<div style="background:${m.c};padding:12px">${svgMarkup}</div>`;
+          }
         }
 
         // Read aloud & mark read handlers
