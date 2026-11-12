@@ -5,7 +5,13 @@ import {LANGUAGES,DEFAULT_LANG,STORAGE_KEY} from './languages.js';
 import {translate,pickLanguage} from './translate.js';
 
 // Lazy glob: a language file that does not exist yet is simply not in this map (no build error).
-const loaders=import.meta.glob(['./locales/*.json','!./locales/en.json']);
+// A language can come in several files that are merged: locales/<code>.json (the main file), ./<code>.json (the team put one
+// here too, which used to be ignored so Bangla never loaded), locales/<code>.<part>.json (extra parts) and the game's own
+// i18n/<code>.<part>.json. The plain <code>.json files are merged last, so the translators' text always wins.
+const files=import.meta.glob(['./locales/*.json','./*.json','../games/**/i18n/*.json','!./locales/en.json','!./**/en.json']);
+const partsFor=code=>Object.keys(files)
+  .filter(p=>{const f=p.split('/').pop();return f===`${code}.json`||f.startsWith(`${code}.`)})
+  .sort((a,b)=>(a.split('/').pop()===`${code}.json`)-(b.split('/').pop()===`${code}.json`));
 const dicts={en};const subs=new Set();let lang=DEFAULT_LANG;const warned=new Set();
 const enabled=()=>LANGUAGES.filter(l=>l.enabled);
 
@@ -30,7 +36,12 @@ function apply(){const L=LANGUAGES.find(l=>l.code===lang);const r=document.docum
 /** Switch language. Returns the language actually used (English if the file failed to load). */
 export async function setLang(code){
   const L=enabled().find(l=>l.code===code)||enabled()[0];
-  if(!dicts[L.code]&&loaders[`./locales/${L.code}.json`]){try{dicts[L.code]=(await loaders[`./locales/${L.code}.json`]()).default}catch{/* offline or bad file: keep English */}}
+  if(!dicts[L.code]){
+    const parts=partsFor(L.code);
+    try{dicts[L.code]=Object.assign({},...(await Promise.all(parts.map(async p=>(await files[p]()).default))))}
+    catch{/* offline or bad file: keep English */}
+    if(!parts.length)delete dicts[L.code];
+  }
   lang=dicts[L.code]?L.code:DEFAULT_LANG;
   try{localStorage.setItem(STORAGE_KEY,L.code)}catch{}
   apply();subs.forEach(f=>f(lang));return lang;

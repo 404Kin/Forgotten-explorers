@@ -8,3 +8,4 @@ html[lang=ar]{--display:'Archivo Black','Noto Sans Arabic','Arial Black',sans-se
 /* Tight letter-spacing and uppercase break joined scripts; Bangla marks also need more line height. */
 html[lang=bn] *,html[lang=ar] *{letter-spacing:0!important;text-transform:none!important}
 html[lang=bn] body{line-height:1.6}html[lang=bn] h1,html[lang=bn] h2,html[lang=bn] h3{line-height:1.4}
+html[lang=bn] h1,html[lang=bn] h2,html[lang=bn] h3{font-weight:700}
