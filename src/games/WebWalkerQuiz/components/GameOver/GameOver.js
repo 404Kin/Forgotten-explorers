@@ -7,7 +7,7 @@ export function createGameOver({ t }) {
 
   return {
     el,
-    show({ outcome, score, best, newBest, bestStreak, missed, onPlayAgain, onMenu }) {
+    show({ outcome, score, best, newBest, bestStreak, missed, mastery, onPlayAgain, onMenu }) {
       const playAgain = h(
         'button',
         { class: 'ws-btn ws-btn--green', type: 'button', onClick: onPlayAgain },
@@ -31,6 +31,7 @@ export function createGameOver({ t }) {
             outcome === 'won' ? t('gameOver.won') : t('gameOver.lost'),
           ),
           newBest && h('p', { class: 'ws-over-newbest' }, `★ ${t('gameOver.newBest')}`),
+          h('p', { class: 'ws-over-mastery' }, `🎓 ${t('gameOver.mastery', { mastered: mastery.mastered, total: mastery.total })}`),
           h(
             'dl',
             { class: 'ws-over-stats' },
@@ -42,6 +43,7 @@ export function createGameOver({ t }) {
             'section',
             { class: 'ws-over-review', 'aria-labelledby': 'ws-over-review-title' },
             h('h3', { id: 'ws-over-review-title' }, t('gameOver.review')),
+            missed.length > 0 && h('p', {}, t('gameOver.reviewNote')),
             missed.length === 0
               ? h('p', {}, t('gameOver.noneMissed'))
               : h(

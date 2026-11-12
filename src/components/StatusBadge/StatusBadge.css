@@ -3,4 +3,4 @@
 .sb-left_behind{background:var(--gold);border-style:solid}
 .sb-silent{background:var(--lav);border-style:dashed}
 .sb-talking{background:var(--mint);border-style:double;border-width:4px}
-.sb-card{position:absolute;inset-block-start:10px;inset-inline-end:10px;font-size:.72rem;padding:1px 8px}
+.sb-card{align-self:flex-start;margin-top:6px;font-size:.72rem;padding:1px 8px}

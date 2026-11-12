@@ -15,6 +15,8 @@ import { createAnswerGrid } from '../components/AnswerBox/AnswerGrid.js';
 import { createCharacterLayer } from '../components/Character/CharacterLayer.js';
 import { createFactCard } from '../components/FactCard/FactCard.js';
 import { createGameOver } from '../components/GameOver/GameOver.js';
+import { createMastered } from '../components/Mastered/Mastered.js';
+import { createProgressStore, counts, allMastered } from '../../SmartQuiz/progress.js';
 import { createSoundToggle } from '../components/SoundToggle/SoundToggle.js';
 import { sparkleBurst } from '../components/Effects/sparkles.js';
 import '../components/Effects/Effects.css';
@@ -35,6 +37,8 @@ export function createGame({
   loadQuestions = defaultLoader,
   rng = createRng(),
   onGameEnd = null,
+  // Per-question progress (unseen / mastered / missed). One generic store shared with the other quizzes.
+  smart = createProgressStore({ key: 'fe2.sq.webwalker' }),
 }) {
   const t = (key, params) => i18n.t(key, params);
   const app = h('main', { class: 'ws-app' });
@@ -43,7 +47,7 @@ export function createGame({
 
   const saved = progress.getSettings();
   const settings = {
-    difficulty: config.difficulties.includes(saved.difficulty)
+    difficulty: config.choices.includes(saved.difficulty)
       ? saved.difficulty
       : config.defaultDifficulty,
   };
@@ -124,6 +128,7 @@ export function createGame({
       locale: i18n.getLocale(),
       difficulty: settings.difficulty,
       best: progress.getBest(settings.difficulty),
+      mastery: counts(bank, smart.get()),
       soundToggle: makeSoundToggle(),
       onPlay: () => {
         sound.play('click');
@@ -148,10 +153,13 @@ export function createGame({
   // ---------- playing ----------
 
   function startGame() {
+    // Every question mastered: nothing new to ask. Show the "you know them all" screen (with Reset) instead of an empty round.
+    if (allMastered(bank, smart.get())) return showMastered();
     const questions = prepareGame(bank, {
       difficulty: settings.difficulty,
       count: config.questionCount,
       rng,
+      state: smart.get(),
     });
     teardown();
     if (questions.length === 0) {
@@ -256,6 +264,7 @@ export function createGame({
     machine.dispatch({ type: 'ANSWER', choice });
     const s = machine.getState();
     const result = s.lastResult;
+    smart.record(q.id, result.correct);
     const box = grid.box(choice);
     const answerText = q.options[q.correctIndex];
 
@@ -330,6 +339,11 @@ export function createGame({
     // Lets the host app give XP. At OVER the index still points at the last answered question.
     const answered = s.index + 1;
     onGameEnd?.({ score: s.score, won: s.outcome === 'won', total: answered, correct: answered - s.missed.length, bestStreak: s.bestStreak });
+    // The round that masters the last question ends on the celebration screen (with the round's score), not the normal results.
+    if (allMastered(bank, smart.get())) {
+      teardown();
+      return showMastered(s.score);
+    }
     const over = createGameOver({ t });
     teardown();
     mountScreen(over.el);
@@ -340,6 +354,7 @@ export function createGame({
       newBest,
       bestStreak: s.bestStreak,
       missed: s.missed,
+      mastery: counts(bank, smart.get()),
       onPlayAgain: () => {
         sound.play('click');
         guarded(startGame, 'start');
@@ -347,6 +362,23 @@ export function createGame({
       onMenu: showStart,
     });
     sound.play(s.outcome === 'won' ? 'chime' : 'oops');
+  }
+
+  function showMastered(score = null) {
+    teardown();
+    const screen = createMastered({ t });
+    mountScreen(screen.el);
+    screen.show({
+      total: bank.length,
+      score,
+      onReset: () => {
+        sound.play('click');
+        smart.reset();
+        showStart();
+      },
+      onMenu: showStart,
+    });
+    sound.play('chime');
   }
 
   return {

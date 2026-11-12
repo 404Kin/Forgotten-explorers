@@ -20,7 +20,8 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 const link=(url,text)=>url?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`:esc(text);
 
 /** Pinned NASA photos are listed straight from nasaQueries.js, so the credit list can never drift from what we show. */
-const pinnedCredits=()=>Object.entries(PINNED).flatMap(([robot,ids])=>ids.map(id=>({robot,id,url:`https://images.nasa.gov/details/${encodeURIComponent(id)}`})));
+// PINNED maps a robot to one id or a list of ids (the data file changed shape once), so accept both.
+const pinnedCredits=()=>Object.entries(PINNED).flatMap(([robot,ids])=>[].concat(ids).filter(Boolean).map(id=>({robot,id,url:`https://images.nasa.gov/details/${encodeURIComponent(id)}`})));
 
 function render(data,box){
   const stateLabel=s=>s?`<span class="mono ds-state">${t('sources.state.'+s)}</span>`:'';

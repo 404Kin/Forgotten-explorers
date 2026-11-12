@@ -1,0 +1,15 @@
+.mm-body{padding:14px;background:linear-gradient(160deg,#241a5c,#0b1030)}
+.mm-msg{margin:0 0 12px;text-align:center;font-weight:800;color:var(--cream)}
+.mm-grid{display:grid;grid-template-columns:repeat(var(--cols,4),1fr);gap:10px;max-width:440px;margin:0 auto}
+@media(min-width:600px){.mm-grid{max-width:520px}}
+.mm-card{aspect-ratio:3/4;padding:0;border:0;background:none;perspective:700px;cursor:pointer;min-height:44px}
+.mm-in{position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;transition:transform .35s}
+.mm-card.open .mm-in{transform:rotateY(180deg)}
+.mm-back,.mm-front{position:absolute;inset:0;display:grid;place-items:center;border:3px solid var(--k);border-radius:16px;backface-visibility:hidden;overflow:hidden}
+.mm-back{background:repeating-linear-gradient(45deg,#3a2a86,#3a2a86 8px,#4a38a8 8px,#4a38a8 16px);color:var(--gold);font-size:1.8rem;box-shadow:0 4px 0 #0007}
+.mm-front{transform:rotateY(180deg);padding:4px;text-align:center;font-family:var(--display);gap:0;align-content:center}
+.mm-front svg{width:100%;height:auto;max-height:78%}
+.mm-front b{font-size:clamp(.62rem,3.3vw,.9rem);font-weight:400;line-height:1.1;overflow-wrap:normal;word-break:normal;hyphens:none}.mm-front small{font-family:var(--mono);font-size:.75rem}
+.mm-card.done .mm-front{box-shadow:0 0 0 4px var(--gold),0 0 18px var(--gold)}
+.mm-card:focus-visible{outline:4px solid #fff;outline-offset:3px;border-radius:16px}
+@media(prefers-reduced-motion:reduce){.mm-in{transition:none}}

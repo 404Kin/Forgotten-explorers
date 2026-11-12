@@ -1,6 +1,7 @@
 // 3D map of a world. Moon/Mars = globes with pins at REAL landing coordinates (relics.json).
 // Deep space = a (not to scale) solar-system map. Names are HTML buttons that follow the pins.
 import * as THREE from 'three';
+import {asTexture} from './asTexture.js';
 import {inkFor} from '../components/contrast.js';
 import {loadMapTexture} from './mapTextures.js';
 import {createMoonTexture,createMarsTexture,createSunTexture,createEarthTexture} from '../utils/textureGenerator.js';
@@ -11,7 +12,7 @@ const R=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true}),S=new THREE.
 S.add(new THREE.AmbientLight(0xffffff,.85));const L=new THREE.DirectionalLight(0xffffff,.7);L.position.set(3,4,6);S.add(L);
 const sp=[];for(let i=0;i<500;i++){const v=new THREE.Vector3().randomDirection().multiplyScalar(40+Math.random()*10);sp.push(v.x,v.y,v.z)}const sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.Float32BufferAttribute(sp,3));S.add(new THREE.Points(sg,new THREE.PointsMaterial({color:0xffffff,size:.25})));
 const G=new THREE.Group();S.add(G);const marks=[];let rotX=0,rotY=0,drag=false,lx=0,ly=0,raf;const globe=world!=='deep';
-const ball=(r,tex,basic)=>new THREE.Mesh(new THREE.SphereGeometry(r,48,36),basic?new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(tex)}):new THREE.MeshLambertMaterial({map:new THREE.CanvasTexture(tex)}));
+const ball=(r,tex,basic)=>new THREE.Mesh(new THREE.SphereGeometry(r,48,36),basic?new THREE.MeshBasicMaterial({map:asTexture(tex)}):new THREE.MeshLambertMaterial({map:asTexture(tex)}));
 function mark(m,pos,pole){const g=new THREE.Group();g.position.copy(pos);const head=new THREE.Mesh(new THREE.SphereGeometry(.13,16,16),new THREE.MeshBasicMaterial({color:new THREE.Color(m.c)})),ring=new THREE.Mesh(new THREE.TorusGeometry(.22,.035,8,24),new THREE.MeshBasicMaterial({color:0xffffff}));
 if(pole){const n=pos.clone().normalize();head.position.copy(n.clone().multiplyScalar(.4));ring.position.copy(head.position);ring.lookAt(pos.clone().multiplyScalar(3));const st=new THREE.Mesh(new THREE.CylinderGeometry(.025,.025,.4,6),new THREE.MeshBasicMaterial({color:0xffffff}));st.position.copy(n.clone().multiplyScalar(.2));st.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),n);g.add(st)}
 g.add(head,ring);G.add(g);const el=document.createElement('button');el.className='ml';el.textContent=m.n;el.style.background=m.c;el.style.color=inkFor(m.c,m.k);el.onclick=()=>onOpen(m);box.appendChild(el);marks.push({g,head,el})}

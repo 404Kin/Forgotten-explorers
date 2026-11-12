@@ -16,6 +16,8 @@ export default{name:'map',
 mount(el){const BODIES=RAW_BODIES.map(localBody),jumpLabel=k=>k==='voyager'?t('jump.voyager'):BODIES.find(b=>b.id===k).name;
 el.innerHTML=`<div class="mapwrap"><div id="mapbox"></div><div class="maptop"><span class="mono">${t('map.kicker')}</span><h1>${t('map.title')}</h1><p>${t('map.help')}</p></div><div class="jump" id="jump">${JUMP.map(([k,e])=>`<button class="chip" data-k="${k}">${e} ${jumpLabel(k)}</button>`).join('')}</div><div id="sheet" class="sheet2 panel" hidden></div></div>`;
 const sheet=el.querySelector('#sheet');
+// One place reacts to the sheet opening or closing (it is toggled from several handlers).
+new MutationObserver(()=>map?.setSheetOpen(!sheet.hidden)).observe(sheet,{attributes:true,attributeFilter:['hidden']});
 const open=id=>{const b=BODIES.find(x=>x.id===id);if(!b)return;const col=get().collected;const ms=b.missions.map(n=>MISSIONS.find(m=>m.n===n)).filter(Boolean);
 const dist=b.km||(b.au?t('map.fromSun',{au:num(b.au,2)}):t('map.center'));
 sheet.hidden=false;sheet.innerHTML=`<button class="x" aria-label="${t('common.close')}">✖</button><h2>${b.emoji} ${b.name}</h2><p class="mono">${dist} · ${t('map.notToScale')}</p><p>${b.fact}</p>${ms.length?`<p class="mono">${t('map.explorersHere')}</p><div class="chips">${ms.map(m=>`<button class="chip" data-m="${m.id}" style="background:${m.c};color:${inkFor(m.c,m.k)}">${m.n}${col.includes(m.n)?' ⭐':''}</button>`).join('')}</div>`:`<p class="mono">${t('map.noRobots')}</p>`}${b.world?`<p style="margin:12px 0 0"><a class="btn sm" href="#/world/${b.world}">${t('map.open3d')}</a></p>`:''}`;

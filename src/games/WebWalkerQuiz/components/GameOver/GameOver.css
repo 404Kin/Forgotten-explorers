@@ -89,3 +89,8 @@
   justify-content: center;
   gap: 0.75rem;
 }
+
+.ws-over-mastery {
+  font-weight: 800;
+  color: var(--ws-yellow);
+}

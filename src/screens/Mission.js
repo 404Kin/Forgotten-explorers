@@ -4,6 +4,12 @@ import {cardHTML} from '../components/Card.js';
 import {missionImages,imgTag} from '../services/nasaImages.js';
 import {lightbox} from '../components/Modal.js';
 import {runQuiz} from '../games/QuizEngine.js';
+import {mountRobotStoryCards} from '../components/RobotStoryCards/RobotStoryCards.js';
+import {createProgressStore,counts,allMastered} from '../games/SmartQuiz/progress.js';
+import {pickRound} from '../games/SmartQuiz/round.js';
+import {questionId} from '../games/SmartQuiz/ids.js';
+// Same smart-quiz rules as the Web Walker quiz: missed first, then unseen, mastered only when nothing else is left.
+const robotQuiz = createProgressStore({key: 'fe2.sq.robot'});
 import {get,update,addXP,collect} from '../state/store.js';
 import {formatKm,formatTime,num} from '../i18n/format.js';
 import {t} from '../i18n/index.js';
@@ -17,6 +23,8 @@ import {speak,stopSpeak,sfx} from '../services/audio.js';
 import {go} from '../router/router.js';
 import {MISSION_DETAILS} from '../data/missionDetails.js';
 import {modelViewerHTML,createModelViewer} from '../components/ModelViewer.js';
+// GLB files must be imported through Vite: a hard-coded /src/image/... path only works in the dev server, not in the built site.
+const GLB_URLS=import.meta.glob('../image/*.glb',{query:'?url',import:'default',eager:true});
 import missionVideos from '../data/missionVideos.json';
 
 let stop;
@@ -157,6 +165,7 @@ export default {
           </div>
         </div>
         <div class="mhero" id="mh"></div>
+        <div id="rscards"></div>
         <div class="mgrid" style="margin-top:18px">
           <div class="mcard-col">
             ${cardHTML(m, {tag: 'div', heading: 'h2', collected: get().collected.includes(m.n)})}
@@ -176,6 +185,7 @@ export default {
     `;
 
     const hero = el.querySelector('#mh');
+    mountRobotStoryCards(el.querySelector('#rscards'), m0.id);
     let loaded = false;
 
     const loadPhotos = () => loadInto(hero, () => missionImages(m), {
@@ -253,12 +263,13 @@ export default {
         // Mount model viewer
         const mvContainer = tb.querySelector(`#mv-${m.id}`);
         if (mvContainer) {
-          modelViewerInstance = createModelViewer(
-            mvContainer,
-            `/src/image/${glbFile}`,
-            svgMarkup,
-            m.c
-          );
+          // No WebGL (old phone, blocked GPU) must not break the whole robot page: keep the story, show the drawing instead.
+          try {
+            modelViewerInstance = createModelViewer(mvContainer, GLB_URLS[`../image/${glbFile}`] || '', svgMarkup, m.c);
+          } catch {
+            modelViewerInstance = null;
+            mvContainer.innerHTML = `<div style="background:${m.c};padding:12px">${svgMarkup}</div>`;
+          }
         }
 
         // Read aloud & mark read handlers
@@ -427,23 +438,44 @@ export default {
       }
 
       if (tabName === 'quiz') {
-        const qs = [...localQuiz(QUIZ).filter(q => q.m === m.n), {q: m.q[0], o: m.q.slice(1), e: ''}].slice(0, 4);
+        // The robot's own question has no id in the data, so it gets one from its (English) text.
+        const pool = [...localQuiz(QUIZ).filter(q => q.m === m.n), {id: questionId({q: m0.q[0]}), q: m.q[0], o: m.q.slice(1), e: ''}];
+        const poolIds = pool.map(q => q.id), mastery = () => counts(pool, robotQuiz.get());
+        const qs = pickRound(pool, robotQuiz.get(), {difficulty: 'mixed', count: 4});
+        const awake = get().collected.includes(m.n), need = Math.ceil(qs.length / 2), everything = allMastered(pool, robotQuiz.get());
+        // Explain the rules BEFORE the quiz starts: this is how an explorer gets woken up, and players did not know.
+        tb.innerHTML = `<div class="wake-intro"><div class="wake-ico" aria-hidden="true">${awake ? '🌟' : '😴'}</div>`
+          + `<h2>${awake ? t('mission.quiz.awakeTitle', {name: m.n}) : t('mission.quiz.sleepTitle', {name: m.n})}</h2>`
+          + `<p>${awake ? t('mission.quiz.awakeText') : t('mission.quiz.sleepText', {name: m.n, n: qs.length, need})}</p>`
+          + `<p class="mono">🎓 ${t('mission.quiz.mastery', {mastered: mastery().mastered, total: pool.length})}</p>`
+          + (everything ? `<p><b>${t('mission.quiz.knowAll', {name: m.n})}</b></p><button type="button" class="btn alt" id="resetq">${t('mission.quiz.reset')}</button> ` : '')
+          + `<button type="button" class="btn" id="startq">${awake ? t('mission.quiz.again') : t('mission.quiz.start', {name: m.n})}</button></div>`;
+        const resetBtn = tb.querySelector('#resetq'); if (resetBtn) resetBtn.onclick = () => { robotQuiz.forget(poolIds); show('quiz'); };
+        const missedNow = [];
+        tb.querySelector('#startq').onclick = () => {
         stop = runQuiz(tb, qs, {
           lives: 2,
           time: 20,
+          // Save every answer by question id: right = mastered, wrong = missed (and it comes back next time).
+          onAnswer: (Q, ok) => { robotQuiz.record(Q.id, ok); if (!ok) missedNow.push(Q); },
           onEnd: res => {
-            tb.innerHTML = `<div class="stars">${'⭐'.repeat(res.stars) || '🙂'}</div><h2 style="text-align:center">${res.passed ? t('mission.woke', {name: m.n}) : t('mission.almost')}</h2><p style="text-align:center">${t('quiz.score', {correct: res.correct, total: res.total, xp: res.xp})}</p><div style="text-align:center"><button class="btn" id="rt">${t('common.tryAgain')}</button></div>`;
+            tb.innerHTML = `<div class="stars">${'⭐'.repeat(res.stars) || '🙂'}</div><h2 style="text-align:center">${res.passed ? t('mission.woke', {name: m.n}) : t('mission.almost')}</h2><p style="text-align:center">${t('quiz.score', {correct: res.correct, total: res.total, xp: res.xp})}</p>${res.passed ? `<p style="text-align:center">${t('mission.quiz.wokeHelp')}</p>` : `<p style="text-align:center">${t('mission.quiz.tryHelp', {need})}</p>`}<p class="mono" style="text-align:center">🎓 ${t('mission.quiz.mastery', {mastered: mastery().mastered, total: pool.length})}</p>${missedNow.length ? `<div class="panel" style="margin:10px 0"><b>${t('mission.quiz.review')}</b><ul>${missedNow.map(Q => `<li>${Q.q} <b>✓ ${Q.o[0]}</b></li>`).join('')}</ul></div>` : ''}${allMastered(pool, robotQuiz.get()) ? `<p style="text-align:center"><b>${t('mission.quiz.knowAll', {name: m.n})}</b></p>` : ''}<div style="text-align:center"><button class="btn" id="rt">${t('common.tryAgain')}</button> <a class="btn alt" href="#/album">${t('mission.quiz.toAlbum')}</a></div>`;
             update(S => { S.stats.correct += res.correct; S.stats.answered += res.total; });
             if (res.xp) addXP(res.xp, t('xp.quiz'));
             if (res.passed && collect(m.n)) { sfx.win(); addXP(30, t('xp.waking', {name: m.n})); }
             tb.querySelector('#rt').onclick = () => show('quiz');
           }
         });
+        };
       }
     }
 
     el.querySelectorAll('.tabs .chip').forEach(c => c.onclick = () => show(c.dataset.t));
-    show('story');
+    // The Album's "Wake up" button opens this page straight on the quiz tab.
+    const firstTab = sessionStorage.getItem('fe2.openTab') || 'story'; sessionStorage.removeItem('fe2.openTab');
+    show(firstTab);
+    // Coming from the Album's Wake up button: bring the quiz into view instead of leaving it far below the photo.
+    if (firstTab === 'quiz') setTimeout(() => el.querySelector('.tabs')?.scrollIntoView({block: 'start'}), 50);
 
     // Video theater mode controller (centers at 60% width and height when played or expanded)
     const vbox = el.querySelector('#mvbox');

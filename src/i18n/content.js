@@ -2,6 +2,7 @@
 // a key in the language file (robot.EAGLE.tagline, quiz.3.q, badge.moon.name ...) overrides it.
 // Key names are documented in docs/I18N.md.
 import {tx,t} from './index.js';
+import {questionId} from '../games/SmartQuiz/ids.js';
 
 const QUIZ_PARTS=['q','right','wrong1','wrong2','wrong3'];
 
@@ -12,7 +13,8 @@ export const localRobot=m=>({...m,
   q:m.q.map((s,i)=>tx(`robot.${m.n}.quiz.${QUIZ_PARTS[i]||i}`,s))});
 
 /** Whole quiz bank, translated. Index in src/data/quiz.js is the key, so do not re-order that array without moving keys. */
-export const localQuiz=bank=>bank.map((q,i)=>({...q,q:tx(`quiz.${i}.q`,q.q),o:q.o.map((s,j)=>tx(`quiz.${i}.o${j}`,s)),e:q.e?tx(`quiz.${i}.e`,q.e):''}));
+// `id` comes from the English text (or the bank's own id), so saved quiz progress survives re-ordering and translation.
+export const localQuiz=bank=>bank.map((q,i)=>({...q,id:questionId(q),q:tx(`quiz.${i}.q`,q.q),o:q.o.map((s,j)=>tx(`quiz.${i}.o${j}`,s)),e:q.e?tx(`quiz.${i}.e`,q.e):''}));
 
 export const localBadge=b=>({...b,name:tx(`badge.${b.id}.name`,b.name),desc:tx(`badge.${b.id}.desc`,b.desc)});
 export const localBody=b=>({...b,name:tx(`body.${b.id}.name`,b.name),fact:tx(`body.${b.id}.fact`,b.fact),km:b.km?tx(`body.${b.id}.km`,b.km):b.km});

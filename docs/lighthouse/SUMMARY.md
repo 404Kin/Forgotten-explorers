@@ -17,5 +17,5 @@ Pages: `/#/...` (hash routes). HTML reports for 6 pages are in this folder; the 
 | Album | 98 | 100 | 96 | 100 | "Font sizes too small" audit; small labels were enlarged afterwards (not re-measured). |
 
 Fixed because of this run: low contrast on robot cards (white on grey, 3.3:1), unlabeled hidden button (the `[hidden]` attribute lost to `.btn`), heading order on robot pages, white text on the green quiz button (1.6:1), invalid `robots.txt`, render-blocking Google Fonts.
-Not tested here: the WebGL globes on a real device, screen readers (NVDA/VoiceOver), Bangla text rendering in a real browser.
+Not tested here: the WebGL globes on a real device, screen readers (NVDA/VoiceOver).
 Re-run: `npm run build && npx vite preview`, then `npx lighthouse "http://localhost:4173/#/hub" --view`.

@@ -8,6 +8,7 @@ export function createStartScreen({
   config,
   difficulty,
   best,
+  mastery,
   soundToggle,
   onPlay,
   onDifficulty,
@@ -16,7 +17,7 @@ export function createStartScreen({
   zip.setPose('swinging');
 
   const groupName = uniqueId('ws-diff');
-  const radios = config.difficulties.map((level) => {
+  const radios = config.choices.map((level) => {
     const input = h('input', {
       type: 'radio',
       name: groupName,
@@ -33,6 +34,7 @@ export function createStartScreen({
     );
   });
 
+  const masteryLine = h('p', { class: 'ws-start-best' }, `🎓 ${t('start.mastery', { mastered: mastery.mastered, total: mastery.total })}`);
   const bestLine = h('p', { class: 'ws-start-best' });
   const setBest = (score) => {
     bestLine.hidden = !(score > 0);
@@ -56,6 +58,7 @@ export function createStartScreen({
         h('legend', {}, t('start.difficulty')),
         h('div', { class: 'ws-pills' }, radios),
       ),
+      masteryLine,
       bestLine,
       h(
         'button',

@@ -1,0 +1,6 @@
+.namef{display:grid;gap:8px;text-align:start}
+.namef-l{font-weight:800}
+.namef-row{display:flex;flex-wrap:wrap;gap:8px}
+.namef .in{flex:1 1 160px;min-height:48px;border:3px solid var(--k);border-radius:14px;padding:0 14px;font:inherit;font-weight:800;color:var(--k);background:#fff}
+.namef .btn{min-height:48px}
+.namef-note{margin:0;opacity:.85}
