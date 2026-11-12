@@ -9,5 +9,9 @@
 .pl .bd{display:inline-grid;place-items:center;min-width:20px;height:20px;margin-inline-start:6px;border-radius:50%;background:var(--nasa-red);color:#fff;font-size:.7rem;border:2px solid var(--k)}
 @keyframes bob{50%{transform:translateY(-4px)}}
 .jump{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:8px;overflow-x:auto;padding:4px 12px;scrollbar-width:none}.jump .chip{flex:0 0 auto;box-shadow:0 3px 0 var(--k)}
-.sheet2{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);width:min(460px,94%);z-index:2000;max-height:60%;overflow:auto}.sheet2[hidden]{display:none}
-.sheet2 h2{font-size:1.5rem}.sheet2 p{margin:6px 0;line-height:1.4}.sheet2 .x{position:absolute;right:10px;top:10px;border:3px solid var(--k);border-radius:50%;width:34px;height:34px;background:var(--gold)}
+.sheet2{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);width:min(460px,94%);z-index:2000;max-height:42%;overflow:auto}
+/* On wide screens the sheet sits at the side so it never hides the planet in the middle. */
+@media(min-width:700px){.sheet2{left:auto;right:16px;transform:none;width:min(380px,38%);max-height:70%;bottom:70px}}.sheet2[hidden]{display:none}
+.sheet2 h2{font-size:1.5rem}.sheet2 p{margin:6px 0;line-height:1.4}.sheet2 .x{position:absolute;right:10px;top:10px;border:3px solid var(--k);border-radius:50%;width:34px;height:34px;background:var(--gold)}/* The fixed tab bar (about 62px) sits over the bottom of the map on phones, so controls must clear it. */
+@media(max-width:760px){.jump{bottom:calc(env(safe-area-inset-bottom,0px) + 70px)}.sheet2{bottom:calc(env(safe-area-inset-bottom,0px) + 128px);max-height:38%}}
+.pl{padding:9px 6px}
