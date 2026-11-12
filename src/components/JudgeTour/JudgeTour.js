@@ -6,6 +6,8 @@ import {go} from '../../router/router.js';
 import {TOUR_STEPS,TOUR_STORAGE_KEY} from './steps.js';
 import {readySteps,move,progress} from './tourLogic.js';
 
+import {playerName} from '../PlayerName/PlayerName.js';
+
 let card=null,steps=[],index=0,hl=null,offLang=null;
 
 const reduceMotion=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -27,6 +29,8 @@ function render(){
   card.innerHTML=`<div class="tour-bar" aria-hidden="true"><i style="width:${p.percent}%"></i></div>`+
     `<p class="mono tour-step">${t('tour.progress',{n:p.n,total:p.total})}</p>`+
     `<h2 id="tour-title" tabindex="-1">${t(`tour.step.${s.id}.title`)}</h2><p>${t(`tour.step.${s.id}.text`)}</p>`+
+    // Judges can look at the certificate any time without waking up all 11 robots. The file is stamped SAMPLE.
+    `<p class="tour-cert"><button type="button" class="btn sm alt" data-a="cert"><span aria-hidden="true">🏅</span> ${t('tour.previewCert')}</button></p>`+
     `<div class="tour-actions"><button type="button" class="btn sm alt" data-a="skip">${t('tour.skip')}</button>`+
     `${index>0?`<button type="button" class="btn sm alt" data-a="back">${t('tour.back')}</button>`:''}`+
     `<button type="button" class="btn sm" data-a="next">${last?t('tour.finish'):t('tour.next')}</button></div>`;
@@ -51,6 +55,12 @@ function onKey(e){
   e.preventDefault();
 }
 
+/** Download a sample certificate. Uses the player's name if they gave one; rank and XP are example values. */
+async function previewCertificate(){
+  const {certificate}=await import('../../utils/certificate.js');
+  certificate(playerName()||t('cert.sampleName'),t('rank.5'),1500,{sample:true});
+}
+
 function step(dir){const n=move(index,dir,steps.length);if(n===-1)return stopTour();show(n)}
 
 export function stopTour(){
@@ -66,7 +76,7 @@ export function startTour(opener){
   card=document.createElement('section');card.className='tour-card panel';card.setAttribute('role','dialog');
   card.setAttribute('aria-modal','false');card.setAttribute('aria-labelledby','tour-title');
   if(opener?.id)card.dataset.opener=opener.id;
-  card.addEventListener('click',e=>{const a=e.target.closest('[data-a]')?.dataset.a;if(a==='skip')stopTour();else if(a==='back')step(-1);else if(a==='next')step(1)});
+  card.addEventListener('click',e=>{const a=e.target.closest('[data-a]')?.dataset.a;if(a==='skip')stopTour();else if(a==='back')step(-1);else if(a==='next')step(1);else if(a==='cert')previewCertificate()});
   document.body.appendChild(card);document.addEventListener('keydown',onKey,true);
   // A language change re-draws the card text (the screen behind it is rebuilt by the app).
   offLang=onLangChange(()=>{if(card){render();setTimeout(()=>{const s=steps[index];if(s?.target){const el=document.querySelector(s.target);if(el){clearHighlight();hl=el;el.classList.add('tour-hl')}}},150)}});

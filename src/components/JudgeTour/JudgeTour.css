@@ -11,3 +11,4 @@
 .tour-hl{outline:5px dashed var(--gold)!important;outline-offset:4px;box-shadow:0 0 0 9px #ffd34e55}
 @media(max-width:760px){.tourbtn.compact .tour-label{display:none}}
 .landing-tour{position:absolute;inset-block-start:calc(env(safe-area-inset-top,0px) + 10px);inset-inline-start:10px;z-index:5}
+.tour-cert{margin:0}.tour-cert .btn{min-height:44px}

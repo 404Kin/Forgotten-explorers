@@ -1034,5 +1034,9 @@
  "robotStory.draft": "Draft",
  "robotStory.draftNote": "Draft text. It is being checked against NASA sources.",
  "robotStory.sources": "Sources",
- "robotStory.missing": "This text is coming soon."
+ "robotStory.missing": "This text is coming soon.",
+ "tour.previewCert": "Preview certificate",
+ "cert.sample": "SAMPLE",
+ "cert.sampleName": "Sample Explorer",
+ "cert.fileNamePreview": "space-explorer-certificate-preview.png"
 }
