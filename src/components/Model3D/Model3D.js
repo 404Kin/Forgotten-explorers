@@ -1,6 +1,6 @@
 // "3D view" panel for any robot. One generic viewer: it reads models.config.js, so adding a robot never needs new code.
 // Real NASA models load from public/models/ (lazy: three.js and the file are only fetched when the panel scrolls into view).
-// Robots without a NASA model get a labelled artist model. If WebGL is missing or a file fails, the flat drawing is shown instead.
+// Only REAL NASA models are shown. A robot NASA has no model for says so (no made-up stand-in). If WebGL is missing or a file fails, the flat drawing is shown instead.
 import './Model3D.css';
 import {t,tx} from '../../i18n/index.js';
 import {modelFor,PARTS,ROBOT_NOTE} from './models.config.js';
@@ -10,12 +10,11 @@ const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
 const base=()=>import.meta.env?.BASE_URL||'/';
 
-/** HTML for the credit line. Real model = credit + source link. Artist model = the clear label. Pure, easy to test. */
+/** HTML for the credit line: the real NASA model's credit + source link (and the file). Pure, easy to test. */
 export function creditHTML(model,note){
   if(!model)return '';
-  if(model.kind==='artist')return `<p class="m3d-credit"><span class="m3d-badge m3d-artist">🎨 ${t('model.artist')}</span></p>`;
   return `<p class="m3d-credit"><span class="m3d-badge m3d-nasa">🛰 ${t('model.nasa')}</span> ${t('model.credit',{credit:esc(model.credit),title:esc(model.title)})} · `+
-    `<a href="${esc(model.source)}" target="_blank" rel="noopener">${t('model.source')}</a>${note?`<span class="m3d-note">${t(note)}</span>`:''}</p>`;
+    `<a href="${esc(model.source)}" target="_blank" rel="noopener">${t('model.source')}</a>${model.repo?` · <a href="${esc(model.repo)}" target="_blank" rel="noopener">${t('model.file')}</a>`:''}${note?`<span class="m3d-note">${t(note)}</span>`:''}</p>`;
 }
 
 export function mountModel3D(el,robot){
@@ -35,7 +34,8 @@ export function mountModel3D(el,robot){
 
   // The flat drawing: used while nothing 3D is possible (no model, no WebGL, file error).
   const fallback=(msgKey)=>{bar.hidden=true;stage.innerHTML=`<div class="m3d-flat" style="background:${robot.c}"><svg viewBox="0 0 200 200" role="img" aria-label="${esc(robot.n)}">${robot.ch()}</svg></div><p class="m3d-err">${t(msgKey)}</p>`};
-  if(!model){fallback('model.none');return{destroy(){}}}
+  // No NASA model for this robot: say so, point to the real photo and to NASA's catalog. Nothing is drawn in its place.
+  if(!model){bar.hidden=true;el.querySelector('.m3d-help').hidden=true;stage.style.minHeight='0';stage.style.height='auto';stage.removeAttribute('tabindex');stage.innerHTML=`<p class="m3d-none">${t('model.none',{name:esc(robot.n)})} <a href="https://science.nasa.gov/3d-resources/" target="_blank" rel="noopener">${t('model.catalog')}</a></p>`;return{destroy(){}}}
 
   async function start(){
     renderState(stage,'loading',{compact:true,messageKey:'model.loading'});
@@ -43,10 +43,8 @@ export function mountModel3D(el,robot){
       const [THREE,{GLTFLoader},{OrbitControls},{MeshoptDecoder}]=await Promise.all([import('three'),import('three/addons/loaders/GLTFLoader.js'),import('three/addons/controls/OrbitControls.js'),import('three/addons/libs/meshopt_decoder.module.js')]);
       if(destroyed)return;
       let object;
-      if(model.kind==='nasa'){
-        const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);
-        const gltf=await loader.loadAsync(`${base()}models/${model.file}`);object=gltf.scene;
-      }else{const {makeArtistModel}=await import('./artist.js');object=makeArtistModel(THREE,model.builder)}
+      const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);
+      const gltf=await loader.loadAsync(`${base()}models/${model.file}`);object=gltf.scene;
       if(destroyed)return;
       stage.innerHTML='';
       const canvas=document.createElement('canvas');canvas.setAttribute('role','img');canvas.setAttribute('aria-label',t('model.canvas',{name:robot.n}));stage.appendChild(canvas);

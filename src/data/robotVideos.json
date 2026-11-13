@@ -1,0 +1,138 @@
+{
+ "_note": "Official NASA YouTube videos, one per robot. Each id was checked with YouTube oEmbed (exists, embeddable) and its channel is an official NASA channel. Titles come from YouTube. Chosen by title; the video content was not watched.",
+ "_checked": "2026-11-13",
+ "videos": {
+  "apollo-11-descent-stage": {
+   "id": "nOcDftgR5UQ",
+   "title": "Apollo 11: Landing on the Moon",
+   "channel": "NASA",
+   "url": "https://www.youtube.com/watch?v=nOcDftgR5UQ"
+  },
+  "apollo-12-descent-stage": {
+   "id": "l11sW5KOi_g",
+   "title": "Apollo 12: The Pinpoint Mission",
+   "channel": "NASA",
+   "url": "https://www.youtube.com/watch?v=l11sW5KOi_g"
+  },
+  "apollo-14-descent-stage": {
+   "id": "l7MMTm1-DAA",
+   "title": "Apollo 14: ‘A Wild Place Up Here’",
+   "channel": "NASA",
+   "url": "https://www.youtube.com/watch?v=l7MMTm1-DAA"
+  },
+  "apollo-15-descent-stage": {
+   "id": "XvKg68DcTZA",
+   "title": "Flying Down to Hadley Rille, Apollo 15 Moon Landing, 1971",
+   "channel": "NASA Jet Propulsion Laboratory",
+   "url": "https://www.youtube.com/watch?v=XvKg68DcTZA"
+  },
+  "apollo-16-descent-stage": {
+   "id": "qKOCdsYVV48",
+   "title": "Apollo 16 Lands in the Lunar Highlands",
+   "channel": "NASA Goddard",
+   "url": "https://www.youtube.com/watch?v=qKOCdsYVV48"
+  },
+  "apollo-17-descent-stage": {
+   "id": "MvVxtFyTE0M",
+   "title": "Honoring the 50th Anniversary of NASA's Apollo 17 Moon Mission",
+   "channel": "NASA",
+   "url": "https://www.youtube.com/watch?v=MvVxtFyTE0M"
+  },
+  "apollo-15-lunar-rover": {
+   "id": "S8VtL54iuWc",
+   "title": "Lunar Rover Vehicle Deployment Animation",
+   "channel": "NASA Video",
+   "url": "https://www.youtube.com/watch?v=S8VtL54iuWc"
+  },
+  "apollo-16-lunar-rover": {
+   "id": "S8VtL54iuWc",
+   "title": "Lunar Rover Vehicle Deployment Animation",
+   "channel": "NASA Video",
+   "url": "https://www.youtube.com/watch?v=S8VtL54iuWc"
+  },
+  "apollo-17-lunar-rover": {
+   "id": "S8VtL54iuWc",
+   "title": "Lunar Rover Vehicle Deployment Animation",
+   "channel": "NASA Video",
+   "url": "https://www.youtube.com/watch?v=S8VtL54iuWc"
+  },
+  "sojourner": {
+   "id": "9HGRReKUzfU",
+   "title": "NASA's Mars Pathfinder & Sojourner Rover (360 View)",
+   "channel": "NASA Jet Propulsion Laboratory",
+   "url": "https://www.youtube.com/watch?v=9HGRReKUzfU"
+  },
+  "viking-1-lander": {
+   "id": "oeT29StGVwM",
+   "title": "Viking, Mars Trailblazer",
+   "channel": "NASA Solar System",
+   "url": "https://www.youtube.com/watch?v=oeT29StGVwM"
+  },
+  "viking-2-lander": {
+   "id": "oeT29StGVwM",
+   "title": "Viking, Mars Trailblazer",
+   "channel": "NASA Solar System",
+   "url": "https://www.youtube.com/watch?v=oeT29StGVwM"
+  },
+  "spirit-mer-a": {
+   "id": "8u6gNH6xIfc",
+   "title": "A Tale of Two Rovers",
+   "channel": "NASA",
+   "url": "https://www.youtube.com/watch?v=8u6gNH6xIfc"
+  },
+  "opportunity-mer-b": {
+   "id": "1Ll-VHYxWXU",
+   "title": "Opportunity: NASA Rover Completes Mars Mission",
+   "channel": "NASA Jet Propulsion Laboratory",
+   "url": "https://www.youtube.com/watch?v=1Ll-VHYxWXU"
+  },
+  "phoenix-lander": {
+   "id": "hH5pNFROlYU",
+   "title": "Phoenix Mars Landing: Nerves and Joy",
+   "channel": "NASA Jet Propulsion Laboratory",
+   "url": "https://www.youtube.com/watch?v=hH5pNFROlYU"
+  },
+  "insight-lander": {
+   "id": "RVzzgwVyH4Y",
+   "title": "NASA Lands InSight on Mars",
+   "channel": "NASA Jet Propulsion Laboratory",
+   "url": "https://www.youtube.com/watch?v=RVzzgwVyH4Y"
+  },
+  "ingenuity": {
+   "id": "qMbHE_VXI-8",
+   "title": "Legacy of NASA’s Ingenuity Mars Helicopter",
+   "channel": "NASA Jet Propulsion Laboratory",
+   "url": "https://www.youtube.com/watch?v=qMbHE_VXI-8"
+  },
+  "curiosity-msl": {
+   "id": "Ki_Af_o9Q9s",
+   "title": "7 Minutes of Terror: The Challenges of Getting to Mars",
+   "channel": "NASA Jet Propulsion Laboratory",
+   "url": "https://www.youtube.com/watch?v=Ki_Af_o9Q9s"
+  },
+  "perseverance-mars-2020": {
+   "id": "4czjS9h4Fpg",
+   "title": "Perseverance Rover’s Descent and Touchdown on Mars (Official NASA Video)",
+   "channel": "NASA",
+   "url": "https://www.youtube.com/watch?v=4czjS9h4Fpg"
+  },
+  "jwst-telescope": {
+   "id": "7nT7JGZMbtM",
+   "title": "James Webb Space Telescope Launch — Official NASA Broadcast",
+   "channel": "NASA",
+   "url": "https://www.youtube.com/watch?v=7nT7JGZMbtM"
+  },
+  "parker-solar-probe": {
+   "id": "LkaLfbuB_6E",
+   "title": "NASA's Parker Solar Probe Touches The Sun For The First Time",
+   "channel": "NASA Goddard",
+   "url": "https://www.youtube.com/watch?v=LkaLfbuB_6E"
+  },
+  "voyager-1": {
+   "id": "LIAZWb9_si4",
+   "title": "Voyager Captures Sounds of Interstellar Space",
+   "channel": "NASA Jet Propulsion Laboratory",
+   "url": "https://www.youtube.com/watch?v=LIAZWb9_si4"
+  }
+ }
+}

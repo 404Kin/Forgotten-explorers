@@ -19,8 +19,19 @@
    "provider": "NASA",
    "url": "https://science.nasa.gov/3d-resources/",
    "apiUrl": "https://github.com/nasa/NASA-3D-Resources",
-   "usedFor": "16 real 3D models of robots. We shrank the files so they load fast. Robots without a NASA model show a labelled artist model.",
+   "usedFor": "Real 3D models of 17 robots. We shrank the files so they load fast. Robots NASA has no model for show no 3D model.",
    "where": "Robot pages, 3D view panel",
+   "lastChecked": "2026-11-13",
+   "state": "used"
+  },
+  {
+   "id": "nasa-eyes",
+   "name": "NASA Eyes on the Solar System",
+   "provider": "NASA/JPL-Caltech",
+   "url": "https://eyes.nasa.gov/apps/solar-system/",
+   "apiUrl": "https://eyes.nasa.gov/assets/static/models/sc_mars_science_laboratory/rover/curiosity_static.gltf",
+   "usedFor": "The real 3D model of the Curiosity rover (NASA 3D Resources only has a Blender file for it).",
+   "where": "Curiosity robot page, 3D view panel",
    "lastChecked": "2026-11-13",
    "state": "used"
   },
@@ -283,8 +294,7 @@
     "ok": true
    },
    "model": {
-    "kind": "artist",
-    "title": "Lunar Roving Vehicle"
+    "kind": "none"
    }
   },
   {
@@ -314,8 +324,7 @@
     "ok": true
    },
    "model": {
-    "kind": "artist",
-    "title": "Lunar Roving Vehicle"
+    "kind": "none"
    }
   },
   {
@@ -345,8 +354,7 @@
     "ok": true
    },
    "model": {
-    "kind": "artist",
-    "title": "Lunar Roving Vehicle"
+    "kind": "none"
    }
   },
   {
@@ -376,8 +384,7 @@
     "ok": true
    },
    "model": {
-    "kind": "artist",
-    "title": "Surveyor lander"
+    "kind": "none"
    }
   },
   {
@@ -407,8 +414,7 @@
     "ok": true
    },
    "model": {
-    "kind": "artist",
-    "title": "Sojourner rover"
+    "kind": "none"
    }
   },
   {
@@ -570,8 +576,7 @@
     "ok": true
    },
    "model": {
-    "kind": "artist",
-    "title": "Phoenix lander"
+    "kind": "none"
    }
   },
   {
@@ -667,8 +672,7 @@
     "ok": true
    },
    "model": {
-    "kind": "artist",
-    "title": "Vikram lander"
+    "kind": "none"
    }
   },
   {
@@ -694,8 +698,10 @@
     "ok": true
    },
    "model": {
-    "kind": "artist",
-    "title": "Curiosity rover"
+    "kind": "nasa",
+    "title": "Curiosity Rover (MSL)",
+    "credit": "NASA/JPL-Caltech, Eyes on the Solar System",
+    "source": "https://eyes.nasa.gov/apps/solar-system/"
    }
   },
   {

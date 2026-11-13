@@ -8,7 +8,8 @@
 .m3d-credit{margin:10px 0 0;font-size:.9rem}.m3d-credit a{text-decoration:underline;display:inline-flex;align-items:center;min-height:44px}
 /* Real vs artist: a word + a different border style, never colour alone. */
 .m3d-badge{display:inline-block;padding:2px 10px;border-radius:999px;border:2.5px solid var(--k);font-weight:800;font-size:.8rem;color:var(--k)}
-.m3d-nasa{background:var(--mint);border-style:solid}.m3d-artist{background:var(--gold);border-style:dashed}
+.m3d-nasa{background:var(--mint);border-style:solid}
+.m3d-none{margin:0;padding:18px 14px;text-align:center;font-weight:800;color:var(--cream)}.m3d-none a{text-decoration:underline;display:inline-flex;align-items:center;min-height:44px}
 .m3d-note{display:block;margin-top:4px;opacity:.9}
 .m3d-parts{margin:10px 0 0;padding-inline-start:1.2rem;display:grid;gap:4px}
 .m3d-flat{display:grid;place-items:center;height:100%}.m3d-flat svg{height:70%}

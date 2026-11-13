@@ -27,6 +27,7 @@ import {go} from '../router/router.js';
 import {MISSION_DETAILS} from '../data/missionDetails.js';
 import {mountModel3D} from '../components/Model3D/Model3D.js';
 import missionVideos from '../data/missionVideos.json';
+import robotVideos from '../data/robotVideos.json';
 
 let stop;
 let modelViewerInstance = null;
@@ -75,7 +76,10 @@ function getEmbedUrl(raw) {
 const DEAD_VIDEO_IDS = new Set(['gm0b_ijaREc', 'RMINERVAhUQ', 'aBlv8k_m928', 'qy7hH2iW_7M', 'x6jO2jP-a40', 'yQ-FfFk_4Z4']);
 const isDead = url => DEAD_VIDEO_IDS.has((url.match(/embed\/([\w-]{11})/) || [])[1]);
 
-function getMissionVideoUrl(missionId, missionName) {
+function getMissionVideoUrl(missionId, missionName, robotId) {
+  // Checked official NASA videos (src/data/robotVideos.json, one per robot) come first; the old list is the fallback.
+  const pick = robotVideos.videos[robotId];
+  if (pick) return getEmbedUrl(`https://www.youtube-nocookie.com/embed/${pick.id}`);
   const url = findVideoUrl(missionId, missionName);
   return url && !isDead(url) ? url : '';
 }
@@ -96,8 +100,9 @@ function findVideoUrl(missionId, missionName) {
   return '';
 }
 
-function videoHTML(missionId, missionName) {
-  const url = getMissionVideoUrl(missionId, missionName);
+function videoHTML(missionId, missionName, robotId) {
+  const url = getMissionVideoUrl(missionId, missionName, robotId);
+  const pick = robotVideos.videos[robotId];
   // No video yet: show nothing (a box saying "no video" and a file path looked unfinished). Videos come from src/data/missionVideos.json.
   if (!url) return '';
 
@@ -124,6 +129,7 @@ function videoHTML(missionId, missionName) {
           loading="lazy">
         </iframe>
       </div>
+      ${pick ? `<p class="mission-video-credit">${t('video.credit', {title: pick.title.replace(/[<>&"]/g, ''), channel: pick.channel})} · <a href="${pick.url}" target="_blank" rel="noopener">${t('video.watch')}</a></p>` : ''}
     </div>
   `;
 }
@@ -160,7 +166,7 @@ export default {
         <div class="mgrid" style="margin-top:18px">
           <div class="mcard-col">
             ${cardHTML(m, {tag: 'div', heading: 'h2', collected: get().collected.includes(m.n)})}
-            ${videoHTML(m.legacyId, m.n)}
+            ${videoHTML(m.legacyId, m.n, m.id)}
           </div>
           <div>
             <div class="tabs">

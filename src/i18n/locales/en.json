@@ -1047,9 +1047,8 @@
  "model.help": "Drag to turn · scroll or pinch to zoom · arrow keys also work",
  "model.loading": "Loading the 3D model…",
  "model.loadError": "The 3D model could not load. Here is the drawing instead.",
- "model.none": "No 3D model for this robot yet.",
+ "model.none": "NASA has not published a 3D model of {name}. The real NASA photo above shows it.",
  "model.nasa": "NASA model",
- "model.artist": "Artist model, not NASA data",
  "model.credit": "{title}. Credit: {credit}.",
  "model.source": "Source page",
  "model.parts": "Parts",
@@ -1111,5 +1110,10 @@
  "landing.skip": "Skip intro",
  "landing.rover": "A lonely rover on the horizon under the night sky, with a small light that blinks.",
  "live.focus": "These are still talking. The robots in the Left Behind and Went Silent groups are the ones this app is about.",
- "live.toAbandoned": "See the abandoned robots"
+ "live.toAbandoned": "See the abandoned robots",
+ "video.credit": "Video: {title} (channel: {channel}).",
+ "video.watch": "Watch on YouTube",
+ "model.catalog": "NASA 3D Resources",
+ "model.file": "Model file",
+ "sources.noModel": "No NASA 3D model exists for this robot."
 }

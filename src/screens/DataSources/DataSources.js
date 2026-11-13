@@ -25,7 +25,7 @@ function robotCard(r){
   return `<details class="panel ds-robot" data-id="${esc(r.id)}"><summary><span class="ds-rname">${esc(r.name)}</span> ${statusBadgeHTML(BADGE[r.status])}${r.needsReview?` <span class="ds-draft">${t('robotStory.draft')}</span>`:''}</summary>`+
     `<h4>${t('sources.robotSources')}</h4>${src}`+
     `<h4>${t('sources.robotPhoto')}</h4><p>${r.photo?`${esc(r.photo.credit)} · ${link(r.photo.pageUrl,'images.nasa.gov/details/'+r.photo.nasaId)}`:t('sources.none')}</p>`+
-    `<h4>${t('sources.robotModel')}</h4><p>${r.model.kind==='nasa'?`${t('model.nasa')}: ${esc(r.model.title)}. ${t('model.credit',{credit:esc(r.model.credit),title:esc(r.model.title)})} ${link(r.model.source,t('model.source'))}`:`🎨 ${t('model.artist')}`}</p></details>`;
+    `<h4>${t('sources.robotModel')}</h4><p>${r.model.kind==='nasa'?`${t('model.nasa')}: ${esc(r.model.title)}. ${t('model.credit',{credit:esc(r.model.credit),title:esc(r.model.title)})} ${link(r.model.source,t('model.source'))}`:t('sources.noModel')}</p></details>`;
 }
 
 function render(data,box){

@@ -246,3 +246,4 @@ img,canvas,svg{max-width:100%}
 /* Explore: the still-talking robots in their own strip below the abandoned ones */
 .active-sec{margin-top:26px}.active-sec p{margin:6px 0 10px}
 .active-strip .astrip{flex:0 0 min(220px,70%);scroll-snap-align:start}
+.mission-video-credit{margin:8px 4px 4px;font-size:.85rem;color:var(--cream)}.mission-video-credit a{text-decoration:underline;display:inline-flex;align-items:center;min-height:44px}
