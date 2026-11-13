@@ -2,3 +2,4 @@
 .live-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
 .live-item p{margin:6px 0 0}.live-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .live-top a{display:inline-flex;align-items:center;min-height:44px;font-family:var(--display);font-size:1.25rem;text-decoration:underline}
+.live-focus{margin:12px auto;max-width:560px;font-weight:800;text-align:start}

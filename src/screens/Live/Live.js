@@ -33,12 +33,13 @@ function render({dsn,dist},box){
         (row.dish?`<p class="mono">${t('live.dish',{dish:esc(row.dish)})}</p>`:'')+
         (d?.distanceKm!=null?`<p><b>${t('live.distance')}:</b> ${formatKm(d.distanceKm)}</p>`:'')+
         (d?.lightSeconds!=null?`<p><b>${t('live.lightTime')}:</b> ${formatTime(d.lightSeconds)}</p>`:'')+
-        (d?`<p>${liveLabelHTML({source:d.source,asOf:d.asOf})}</p>`:'')+`</li>`}).join('')}</ul>`;
+        // The snapshot label only appears next to numbers. A robot with no numbers shows no label (it would look unfinished).
+        (d&&(d.distanceKm!=null||d.lightSeconds!=null)?`<p>${liveLabelHTML({source:d.source,asOf:d.asOf})}</p>`:'')+`</li>`}).join('')}</ul>`;
 }
 
 export default{name:'live',
 mount(el){
-  el.innerHTML=`<div class="wrap"><a class="btn sm alt" href="#/hub"><span aria-hidden="true">←</span> ${t('common.explore')}</a><div class="hero"><span class="mono">${t('live.kicker')}</span><h1>${t('live.title')}</h1><p>${t('live.intro')}</p></div><div id="livebox" aria-live="polite"></div>${creditFooterHTML()}</div>`;
+  el.innerHTML=`<div class="wrap"><a class="btn sm alt" href="#/hub"><span aria-hidden="true">←</span> ${t('common.explore')}</a><div class="hero"><span class="mono">${t('live.kicker')}</span><h1>${t('live.title')}</h1><p>${t('live.intro')}</p><p class="panel live-focus">${t('live.focus')}</p><p><a class="btn" href="#/hub">${t('live.toAbandoned')}</a></p></div><div id="livebox" aria-live="polite"></div>${creditFooterHTML()}</div>`;
   const box=el.querySelector('#livebox');
   const opts={render,isEmpty:r=>!r.dsn.data.length,empty:{messageKey:'live.empty'}};
   loadInto(box,load,opts);
