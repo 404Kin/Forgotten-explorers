@@ -1106,5 +1106,9 @@
  "flow.quick": "Quick quiz",
  "flow.quickText": "Answer a few questions to wake up {name}.",
  "flow.quickBtn": "Start the quick quiz",
- "flow.next": "Next explorer: {name}"
+ "flow.next": "Next explorer: {name}",
+ "landing.eyebrow": "A story about the robots we left behind",
+ "landing.story": "Some robots never came home. They are still out there.",
+ "landing.skip": "Skip intro",
+ "landing.rover": "A lonely rover on the horizon under the night sky, with a small light that blinks."
 }
