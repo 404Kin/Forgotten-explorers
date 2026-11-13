@@ -1,5 +1,5 @@
 import {COVER_SVG} from '../art/cover.js';
-import {INTRO} from '../data/missions.js';
+import {INTRO} from '../robots/index.js';
 import {go} from '../router/router.js';
 import {speak,stopSpeak} from '../services/audio.js';
 import {t} from '../i18n/index.js';

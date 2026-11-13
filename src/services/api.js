@@ -1,7 +1,7 @@
 // API client for /api/v1 (contract: docs/openapi.yaml, owner P2).
 // Goals: one place for fetch rules (timeout, one retry, standard error shape) and an app that still works
 // when the API is off or broken, by answering from the bundled data in src/data.
-import {MISSIONS} from '../data/missions.js';
+import {MISSIONS} from '../robots/index.js';
 import {getLang} from '../i18n/index.js';
 
 const BASE=(import.meta.env?.VITE_API_BASE_URL||'').replace(/\/+$/,'');
@@ -87,9 +87,8 @@ export async function withFallback(path,params,local,opts){
 
 // ---- local fallback adapters: same shapes as docs/openapi.yaml, built from src/data ----
 
-// PLACEHOLDER until P1 gives status: relics.json has no status field yet. Until P1 adds one (left_behind | silent | talking),
-// "awake" robots count as still talking, the rest as went silent, and Eagle (a lander with no working radio) as left behind.
-// The ONE place the app asks "what is this robot's status?" is statusOf(); a real field wins as soon as it exists.
+// Status comes from P1's robotRecords.json through the robot registry (left_behind | silent | talking).
+// The ONE place the app asks "what is this robot's status?" is statusOf(). The old guess below only runs for a robot without a status.
 const PLACEHOLDER_STATUS_OVERRIDE={EAGLE:'left_behind'};
 export const statusOf=m=>m.status||m.real?.statusCode||PLACEHOLDER_STATUS_OVERRIDE[m.n]||(m.a?'talking':'silent');
 const localStatus=statusOf;

@@ -23,17 +23,20 @@ async function realStories(){
 export const isDraft=entry=>!entry||entry.needsFactCheck!==false||!(entry.sources&&entry.sources.length);
 
 /** PLACEHOLDER until P1 sends checked text: reuse the robot's existing hardware / science text, marked as draft. */
-export function placeholderFor(robotId,part){
-  const d=MISSION_DETAILS[robotId]?.storyLine;
+export function placeholderFor(robot,part){
+  const d=MISSION_DETAILS[robot.legacyId]?.storyLine;
   const src=part==='howIWorked'?d?.hardware:d?.science;
-  return src?.desc?{text:src.desc,title:src.title,sources:[],needsFactCheck:true,placeholder:true}:null;
+  if(src?.desc)return{text:src.desc,title:src.title,sources:[],needsFactCheck:true,placeholder:true};
+  // Robots without hand-written details: use the record (P1's draft). "How I worked" = the job page; "What I discovered" = the fun fact.
+  const rec=robot.record,text=part==='howIWorked'?rec?.story?.[1]?.text:rec?.kidFact;
+  return text?{text,sources:[],needsFactCheck:true,placeholder:true}:null;
 }
 
 /** The two cards' data for one robot id. Each part: {text,sources,draft,placeholder}. Pure given the loaded file. */
-export function storyFor(robotId,file){
-  const out={};
+export function storyFor(robot,file){
+  const robotId=robot.id,out={};
   for(const part of ['howIWorked','whatIDiscovered']){
-    const entry=file?.[robotId]?.[part]||null,use=entry||placeholderFor(robotId,part);
+    const entry=file?.[robotId]?.[part]||null,use=entry||placeholderFor(robot,part);
     out[part]=use?{...use,draft:isDraft(entry),placeholder:!entry}:{text:'',sources:[],draft:true,placeholder:true,empty:true};
   }
   return out;
@@ -49,6 +52,6 @@ function render(robotId,stories,box){
       `</article>`}).join('')+`</div>`;
 }
 
-export function mountRobotStoryCards(el,robotId){
-  loadInto(el,async()=>storyFor(robotId,await realStories()),{compact:true,isEmpty:()=>false,render:(stories,box)=>render(robotId,stories,box)});
+export function mountRobotStoryCards(el,robot){
+  loadInto(el,async()=>storyFor(robot,await realStories()),{compact:true,isEmpty:()=>false,render:(stories,box)=>render(robot.id,stories,box)});
 }

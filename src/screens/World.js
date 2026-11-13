@@ -1,4 +1,4 @@
-import {MISSIONS,WORLDS} from '../data/missions.js';
+import {MISSIONS,WORLDS} from '../robots/index.js';
 import {chapter} from '../art/chapters.js';
 import {cardHTML} from '../components/Card.js';
 import {get} from '../state/store.js';

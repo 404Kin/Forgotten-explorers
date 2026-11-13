@@ -1,5 +1,5 @@
 // Explorer Map: a real-looking, cute 3D solar system. Tap a label to learn, then jump to a robot or its 3D globe.
-import {MISSIONS} from '../data/missions.js';
+import {MISSIONS} from '../robots/index.js';
 import {BODIES as RAW_BODIES} from '../data/planets.js';
 import {renderState} from '../components/StateView/StateView.js';
 import {t} from '../i18n/index.js';

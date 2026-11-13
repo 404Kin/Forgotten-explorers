@@ -1,7 +1,7 @@
 // Memory Match: find each robot's picture and its name card. Shared GameShell gives Pause / Restart / Back / result.
 // Starts with a short peek so young players can see the cards first.
 import './MemoryMatch.css';
-import {MISSIONS} from '../../data/missions.js';
+import {MISSIONS} from '../../robots/index.js';
 import {shuffle} from '../../utils/dom.js';
 import {addXP,update} from '../../state/store.js';
 import {sfx} from '../../services/audio.js';

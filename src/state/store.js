@@ -1,6 +1,6 @@
 // Tiny global store with localStorage persistence: XP, collection, badges, stats, streak.
 import {XP_PER_LEVEL,RANKS} from '../config.js';
-import {MISSIONS} from '../data/missions.js';
+import {MISSIONS} from '../robots/index.js';
 import {badges} from '../data/badges.js';
 import {toast} from '../components/Toast.js';
 import {t} from '../i18n/index.js';

@@ -1,6 +1,6 @@
 // Explorer passport: who you are, how to wake up explorers, your collection, patches and certificate.
 // Waking up an explorer = pass its quiz. This screen explains that in plain steps and gives every sleeping explorer a Wake up button.
-import {MISSIONS} from '../data/missions.js';
+import {MISSIONS} from '../robots/index.js';
 import {badges} from '../data/badges.js';
 import {cardHTML} from '../components/Card.js';
 import {get,update,level,levelProgress,reset} from '../state/store.js';

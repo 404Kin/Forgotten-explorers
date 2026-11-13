@@ -2,7 +2,7 @@
 // Shape:  { sections:[ {id, icon, title, text, sources:[url], robotIds?:[id], robotStatus?:"silent|talking|left_behind", needsFactCheck?:bool} ] }
 import './WhyLeft.css';
 import {t,tx} from '../../i18n/index.js';
-import {MISSIONS} from '../../data/missions.js';
+import {MISSIONS} from '../../robots/index.js';
 import {statusOf} from '../../services/api.js';
 import {inkFor} from '../../components/contrast.js';
 import {loadInto} from '../../components/StateView/StateView.js';

@@ -1,5 +1,5 @@
 // Storybook-style chapter covers (one per world) - flat shapes + paper grain.
-import {MISSIONS as D} from '../data/missions.js';
+import {MISSIONS as D} from '../robots/index.js';
 const S='#3a1a14';
 const kid=(x,y,o)=>{const st=`stroke="${S}" stroke-width="3.5" stroke-linejoin="round"`,r=(a,b,w,h,rx,f)=>`<rect x="${a}" y="${b}" width="${w}" height="${h}" rx="${rx}" fill="${f}" ${st}/>`;
 return `<g transform="translate(${x} ${y}) scale(1.12)">${o.girl?`<path d="M-30 8 Q-34 -26 0 -28 Q34 -26 30 8 L35 62 Q22 68 22 40 L-22 40 Q-22 68 -35 62Z" fill="${o.hair}" ${st}/>`:''}`+

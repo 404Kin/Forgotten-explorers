@@ -1,4 +1,4 @@
-import {MISSIONS,WORLDS} from '../data/missions.js';
+import {MISSIONS,WORLDS} from '../robots/index.js';
 import {FEATURED_QUERIES} from '../data/nasaQueries.js';
 import {cardHTML} from '../components/Card.js';
 import {searchImages,imgTag} from '../services/nasaImages.js';

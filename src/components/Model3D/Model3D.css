@@ -1,0 +1,15 @@
+.m3d{margin-top:18px}.m3d h2{font-size:1.3rem}
+.m3d-stage{position:relative;margin-top:10px;height:min(60vw,340px);min-height:260px;border-radius:18px;border:3px solid var(--k);background:radial-gradient(circle at 50% 40%,#2b2f6e,#0b1030);overflow:hidden;touch-action:none}
+.m3d-stage:focus-visible{outline:4px solid var(--nasa-blue);outline-offset:3px}
+.m3d-stage canvas{display:block;width:100%;height:100%}
+.m3d-stage .stateview{color:var(--cream)}
+.m3d-bar{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px}.m3d-bar .btn{min-height:44px;min-width:44px}
+.m3d-help{margin:8px 0 0;text-align:center}
+.m3d-credit{margin:10px 0 0;font-size:.9rem}.m3d-credit a{text-decoration:underline;display:inline-flex;align-items:center;min-height:44px}
+/* Real vs artist: a word + a different border style, never colour alone. */
+.m3d-badge{display:inline-block;padding:2px 10px;border-radius:999px;border:2.5px solid var(--k);font-weight:800;font-size:.8rem;color:var(--k)}
+.m3d-nasa{background:var(--mint);border-style:solid}.m3d-artist{background:var(--gold);border-style:dashed}
+.m3d-note{display:block;margin-top:4px;opacity:.9}
+.m3d-parts{margin:10px 0 0;padding-inline-start:1.2rem;display:grid;gap:4px}
+.m3d-flat{display:grid;place-items:center;height:100%}.m3d-flat svg{height:70%}
+.m3d-err{position:absolute;inset-inline:10px;inset-block-end:8px;margin:0;padding:6px 10px;border-radius:12px;background:var(--cream);color:var(--k);font-weight:800;text-align:center}

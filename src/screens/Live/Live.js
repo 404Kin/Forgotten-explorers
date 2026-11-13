@@ -2,7 +2,7 @@
 // Data: getDsn() + getDistances() from services/api.js. Without the API both fall back to a saved snapshot, and the label says so.
 import './Live.css';
 import {t} from '../../i18n/index.js';
-import {MISSIONS} from '../../data/missions.js';
+import {MISSIONS} from '../../robots/index.js';
 import {getDsn,getDistances} from '../../services/api.js';
 import {localRobot} from '../../i18n/content.js';
 import {formatKm,formatTime} from '../../i18n/format.js';

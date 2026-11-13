@@ -1,4 +1,4 @@
-import {MISSIONS} from '../data/missions.js';
+import {MISSIONS} from '../robots/index.js';
 import {renderState} from '../components/StateView/StateView.js';
 import {t} from '../i18n/index.js';
 export default{name:'timeline',mount(el){const L=[...MISSIONS].sort((a,b)=>new Date(a.real.arrivalDate)-new Date(b.real.arrivalDate));

@@ -1,4 +1,4 @@
-import {MISSIONS} from '../data/missions.js';
+import {MISSIONS} from '../robots/index.js';
 import {QUIZ} from '../data/quiz.js';
 import {cardHTML} from '../components/Card.js';
 import {missionImages,imgTag} from '../services/nasaImages.js';
@@ -22,9 +22,7 @@ import {localRobot,localQuiz} from '../i18n/content.js';
 import {speak,stopSpeak,sfx} from '../services/audio.js';
 import {go} from '../router/router.js';
 import {MISSION_DETAILS} from '../data/missionDetails.js';
-import {modelViewerHTML,createModelViewer} from '../components/ModelViewer.js';
-// GLB files must be imported through Vite: a hard-coded /src/image/... path only works in the dev server, not in the built site.
-const GLB_URLS=import.meta.glob('../image/*.glb',{query:'?url',import:'default',eager:true});
+import {mountModel3D} from '../components/Model3D/Model3D.js';
 import missionVideos from '../data/missionVideos.json';
 
 let stop;
@@ -147,7 +145,8 @@ export default {
     const m0 = MISSIONS.find(x => x.id === id);
     if (!m0) return renderState(el, 'empty', {messageKey: 'state.notFound', actionHref: '#/hub'});
     const m = localRobot(m0), r = m.real;
-    const details = MISSION_DETAILS[m.id];
+    // The hand-written details are keyed by the robot's old id; new robots have none and use their record text instead.
+    const details = MISSION_DETAILS[m.legacyId];
     let imgs = [];
 
     el.innerHTML = `
@@ -156,7 +155,7 @@ export default {
         <div class="mtitle">
           <h1>${m.n}</h1>
           <div>
-            <div class="mono">${r.name} · ${r.status}</div>
+            <div class="mono">${r.name}${r.status ? ' · ' + r.status : ''}</div>
             <div>${m.t}</div>
             <div style="margin-top:6px">
               ${statusBadgeHTML(statusOf(m0))}
@@ -166,6 +165,7 @@ export default {
         </div>
         <div class="mhero" id="mh"></div>
         <div id="rscards"></div>
+        <div id="m3dpanel"></div>
         <div class="mgrid" style="margin-top:18px">
           <div class="mcard-col">
             ${cardHTML(m, {tag: 'div', heading: 'h2', collected: get().collected.includes(m.n)})}
@@ -185,7 +185,10 @@ export default {
     `;
 
     const hero = el.querySelector('#mh');
-    mountRobotStoryCards(el.querySelector('#rscards'), m0.id);
+    mountRobotStoryCards(el.querySelector('#rscards'), m0);
+    // The generic 3D panel (real NASA model or a labelled artist model). Destroyed in unmount().
+    destroyViewer();
+    modelViewerInstance = mountModel3D(el.querySelector('#m3dpanel'), m0);
     let loaded = false;
 
     const loadPhotos = () => loadInto(hero, () => missionImages(m), {
@@ -213,17 +216,10 @@ export default {
       tab = tabName;
       stopSpeak();
       stop?.();
-      destroyViewer();
       el.querySelectorAll('.tabs .chip').forEach(c => c.classList.toggle('on', c.dataset.t === tabName));
 
       if (tabName === 'story') {
         let storyHTML = '';
-        const glbFile = details?.glbFile || `${m.id}.glb`;
-        const svgMarkup = `<svg viewBox="0 0 200 200" role="img" aria-label="${m.n}" style="height:180px;display:block;margin:auto">${m.ch()}</svg>`;
-
-        storyHTML += modelViewerHTML(m.id);
-        storyHTML += `<p class="model-caption">${t('mission.story.modelCaption')}</p>`;
-
         if (details) {
           if (details.purpose) {
             storyHTML += `<div class="story-section"><h4>🎯 ${t('mission.story.purpose')}</h4><p>${details.purpose}</p></div>`;
@@ -259,18 +255,6 @@ export default {
         </div>`;
 
         tb.innerHTML = storyHTML;
-
-        // Mount model viewer
-        const mvContainer = tb.querySelector(`#mv-${m.id}`);
-        if (mvContainer) {
-          // No WebGL (old phone, blocked GPU) must not break the whole robot page: keep the story, show the drawing instead.
-          try {
-            modelViewerInstance = createModelViewer(mvContainer, GLB_URLS[`../image/${glbFile}`] || '', svgMarkup, m.c);
-          } catch {
-            modelViewerInstance = null;
-            mvContainer.innerHTML = `<div style="background:${m.c};padding:12px">${svgMarkup}</div>`;
-          }
-        }
 
         // Read aloud & mark read handlers
         const readText = details ? [
@@ -384,12 +368,12 @@ export default {
         // 5. Live Telemetry
         const L = [
           ['launched', r.launchDate],
-          ['arrived', `${r.arrivalDate}. ${r.arrivalEvent}`],
+          ['arrived', r.arrivalEvent ? `${r.arrivalDate}. ${r.arrivalEvent}` : r.arrivalDate],
           ['where', r.location],
           ['coordinates', r.coordinates],
-          ['distance', formatKm(r.distanceKm)],
-          ['message', formatTime(r.lightSeconds)],
-          ['speed', t('unit.kmPerSecond', {n: num(r.speedKmS, 1)})],
+          ['distance', r.distanceKm != null ? formatKm(r.distanceKm) : null],
+          ['message', r.lightSeconds != null ? formatTime(r.lightSeconds) : null],
+          ['speed', r.speedKmS != null ? t('unit.kmPerSecond', {n: num(r.speedKmS, 1)}) : null],
           ['status', r.status]
         ];
 
@@ -397,7 +381,7 @@ export default {
           <h3>📡 ${t('mission.data.telemetry')}</h3>
           <div class="telemetry-section">
             <ul class="dl">
-              ${L.map(([a, b]) => `<li data-k="${a}"><b>${t('mission.data.' + a)}</b><span class="val">${b}</span></li>`).join('')}
+              ${L.filter(([, v]) => v != null && v !== "").map(([a, b]) => `<li data-k="${a}"><b>${t('mission.data.' + a)}</b><span class="val">${b}</span></li>`).join('')}
             </ul>
             <p id="livelbl" style="margin-top:10px">${liveLabelHTML({source: 'snapshot'})}</p>
           </div>

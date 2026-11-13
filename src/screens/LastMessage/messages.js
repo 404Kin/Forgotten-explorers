@@ -2,7 +2,7 @@
 // 1) src/data/lastMessages.json (P1, real text)   2) PLACEHOLDER built from the robot's own story page.
 // Shape of the real file (ask P1):  { "<robotId>": { lines:[{id,text,poetic,startSec?,source?}], audio:{en:"audio/last-message/x.en.mp3",bn:null}, credit? } }
 // poetic:true = a line written to feel like the robot speaking, NOT a real quote. Real quotes must carry `source`.
-import {MISSIONS} from '../../data/missions.js';
+import {MISSIONS} from '../../robots/index.js';
 import {tx} from '../../i18n/index.js';
 
 // Lazy glob: no build error while P1's file does not exist yet.
