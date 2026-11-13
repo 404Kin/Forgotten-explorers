@@ -1,0 +1,880 @@
+{
+ "generated": "2026-11-13",
+ "lastChecked": "2026-11-13",
+ "datasets": [
+  {
+   "id": "nasa-image-library",
+   "name": "NASA Image and Video Library",
+   "provider": "NASA",
+   "url": "https://images.nasa.gov",
+   "apiUrl": "https://images-api.nasa.gov",
+   "usedFor": "One photo picked for each robot, plus more photos found by search. Every photo shows its credit and links back to its NASA page.",
+   "where": "Robot pages (photo and Photos tab), Explore photo strip",
+   "lastChecked": "2026-11-13",
+   "state": "used"
+  },
+  {
+   "id": "nasa-3d-resources",
+   "name": "NASA 3D Resources",
+   "provider": "NASA",
+   "url": "https://science.nasa.gov/3d-resources/",
+   "apiUrl": "https://github.com/nasa/NASA-3D-Resources",
+   "usedFor": "16 real 3D models of robots. We shrank the files so they load fast. Robots without a NASA model show a labelled artist model.",
+   "where": "Robot pages, 3D view panel",
+   "lastChecked": "2026-11-13",
+   "state": "used"
+  },
+  {
+   "id": "nasa-mission-pages",
+   "name": "NASA mission pages",
+   "provider": "NASA, JPL and NSSDCA; ISRO for Chandrayaan-3",
+   "url": "https://www.nasa.gov",
+   "usedFor": "Dates, places and the reason each robot was left or went silent. The per-robot list below links every page.",
+   "where": "Robot pages, Last Message, Why did we leave it there?, quiz questions",
+   "lastChecked": "2026-11-13",
+   "state": "used",
+   "note": "Text was drafted from these pages and is still being checked. Draft text shows a Draft label."
+  },
+  {
+   "id": "nasa-trek",
+   "name": "NASA Moon Trek and Mars Trek map pictures",
+   "provider": "NASA/JPL",
+   "url": "https://trek.nasa.gov",
+   "usedFor": "The pictures wrapped around the 3D Moon and Mars globes. Credits: Moon: NASA/GSFC/Arizona State University (LROC WAC via NASA Moon Trek). Mars: NASA/JPL/USGS (Viking VIS via NASA Mars Trek).",
+   "where": "World pages (3D globes)",
+   "lastChecked": "2026-11-13",
+   "state": "used"
+  },
+  {
+   "id": "team-snapshot",
+   "name": "Team mission snapshot (relics.json)",
+   "provider": "Forgotten Explorers team",
+   "url": null,
+   "usedFor": "Distance from Earth and message time on some robot pages. These numbers are a saved snapshot with no date, not live data.",
+   "where": "Robot pages (Real data), Still Talking",
+   "lastChecked": "2026-11-13",
+   "state": "snapshot"
+  }
+ ],
+ "notUsed": "The app does not call JPL Horizons, DSN Now, data.nasa.gov, api.nasa.gov or Earthdata. The Still Talking page shows a saved snapshot, not a live feed.",
+ "robots": [
+  {
+   "id": "apollo-11-descent-stage",
+   "name": "Apollo 11 Lunar Module Eagle descent stage",
+   "world": "moon",
+   "status": "left_behind",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    },
+    {
+     "url": "https://www.nasa.gov/history/apollo-11-mission-overview/",
+     "host": "nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "as11-40-5927",
+    "credit": "NASA/JSC",
+    "pageUrl": "https://images.nasa.gov/details/as11-40-5927",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Apollo Lunar Module",
+    "credit": "NASA",
+    "source": "https://science.nasa.gov/3d-resources/apollo-lunar-module/"
+   }
+  },
+  {
+   "id": "apollo-12-descent-stage",
+   "name": "Apollo 12 Lunar Module Intrepid descent stage",
+   "world": "moon",
+   "status": "left_behind",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/missions/apollo/apollo-12-the-pinpoint-mission/",
+     "host": "nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo12info.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA12922",
+    "credit": "NASA/GSFC/Arizona State University",
+    "pageUrl": "https://images.nasa.gov/details/PIA12922",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Apollo Lunar Module",
+    "credit": "NASA",
+    "source": "https://science.nasa.gov/3d-resources/apollo-lunar-module/"
+   }
+  },
+  {
+   "id": "apollo-14-descent-stage",
+   "name": "Apollo 14 Lunar Module Antares descent stage",
+   "world": "moon",
+   "status": "left_behind",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/missions/apollo/apollo-14-mission-details/",
+     "host": "nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo14info.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "as14-66-09277",
+    "credit": "NASA/JSC",
+    "pageUrl": "https://images.nasa.gov/details/as14-66-09277",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Apollo Lunar Module",
+    "credit": "NASA",
+    "source": "https://science.nasa.gov/3d-resources/apollo-lunar-module/"
+   }
+  },
+  {
+   "id": "apollo-15-descent-stage",
+   "name": "Apollo 15 Lunar Module Falcon descent stage",
+   "world": "moon",
+   "status": "left_behind",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/missions/apollo/apollo-15-mission-details/",
+     "host": "nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo15info.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "S71-43942",
+    "credit": "NASA/JSC",
+    "pageUrl": "https://images.nasa.gov/details/S71-43942",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Apollo Lunar Module",
+    "credit": "NASA",
+    "source": "https://science.nasa.gov/3d-resources/apollo-lunar-module/"
+   }
+  },
+  {
+   "id": "apollo-16-descent-stage",
+   "name": "Apollo 16 Lunar Module Orion descent stage",
+   "world": "moon",
+   "status": "left_behind",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/",
+     "host": "nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo16info.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "as16-113-18334",
+    "credit": "NASA/JSC",
+    "pageUrl": "https://images.nasa.gov/details/as16-113-18334",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Apollo Lunar Module",
+    "credit": "NASA",
+    "source": "https://science.nasa.gov/3d-resources/apollo-lunar-module/"
+   }
+  },
+  {
+   "id": "apollo-17-descent-stage",
+   "name": "Apollo 17 Lunar Module Challenger descent stage",
+   "world": "moon",
+   "status": "left_behind",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/",
+     "host": "nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo17info.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "jsc2004e52772",
+    "credit": "NASA/JSC",
+    "pageUrl": "https://images.nasa.gov/details/jsc2004e52772",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Apollo Lunar Module",
+    "credit": "NASA",
+    "source": "https://science.nasa.gov/3d-resources/apollo-lunar-module/"
+   }
+  },
+  {
+   "id": "apollo-15-lunar-rover",
+   "name": "Apollo 15 Lunar Roving Vehicle",
+   "world": "moon",
+   "status": "left_behind",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4029.pdf",
+     "host": "nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    },
+    {
+     "url": "https://www.nasa.gov/missions/apollo/apollo-15-mission-details/",
+     "host": "nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "as15-88-11901",
+    "credit": "NASA/JSC",
+    "pageUrl": "https://images.nasa.gov/details/as15-88-11901",
+    "ok": true
+   },
+   "model": {
+    "kind": "artist",
+    "title": "Lunar Roving Vehicle"
+   }
+  },
+  {
+   "id": "apollo-16-lunar-rover",
+   "name": "Apollo 16 Lunar Roving Vehicle",
+   "world": "moon",
+   "status": "left_behind",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/",
+     "host": "nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    },
+    {
+     "url": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4029.pdf",
+     "host": "nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "as16-115-18559",
+    "credit": "NASA/JSC",
+    "pageUrl": "https://images.nasa.gov/details/as16-115-18559",
+    "ok": true
+   },
+   "model": {
+    "kind": "artist",
+    "title": "Lunar Roving Vehicle"
+   }
+  },
+  {
+   "id": "apollo-17-lunar-rover",
+   "name": "Apollo 17 Lunar Roving Vehicle",
+   "world": "moon",
+   "status": "left_behind",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/missions/apollo/apollo-17-mission-details/",
+     "host": "nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    },
+    {
+     "url": "https://images.nasa.gov/details/as17-145-22162",
+     "host": "images.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "as17-145-22162",
+    "credit": "NASA/JSC",
+    "pageUrl": "https://images.nasa.gov/details/as17-145-22162",
+    "ok": true
+   },
+   "model": {
+    "kind": "artist",
+    "title": "Lunar Roving Vehicle"
+   }
+  },
+  {
+   "id": "surveyor-3",
+   "name": "Surveyor 3 lunar lander",
+   "world": "moon",
+   "status": "silent",
+   "needsReview": false,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/surveyor-3/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://science.nasa.gov/solar-system/moon/footpads-and-footprints-humans-and-machine-meet-on-the-moon/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "KSC-2011-7762",
+    "credit": "NASA/Kennedy Space Center",
+    "pageUrl": "https://images.nasa.gov/details/KSC-2011-7762",
+    "ok": true
+   },
+   "model": {
+    "kind": "artist",
+    "title": "Surveyor lander"
+   }
+  },
+  {
+   "id": "sojourner",
+   "name": "Sojourner Mars rover",
+   "world": "mars",
+   "status": "silent",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://www.nasa.gov/image-article/july-4-1997-sojourner-arrives-red-planet/",
+     "host": "nasa.gov"
+    },
+    {
+     "url": "https://science.nasa.gov/solar-system/mars-pathfinder-lands-on-mars/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4524.pdf",
+     "host": "nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA00626",
+    "credit": "NASA/JPL",
+    "pageUrl": "https://images.nasa.gov/details/PIA00626",
+    "ok": true
+   },
+   "model": {
+    "kind": "artist",
+    "title": "Sojourner rover"
+   }
+  },
+  {
+   "id": "viking-1-lander",
+   "name": "Viking 1 Mars lander",
+   "world": "mars",
+   "status": "silent",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/viking-1/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://science.nasa.gov/mission/viking/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/viking.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA00383",
+    "credit": "NASA/JPL",
+    "pageUrl": "https://images.nasa.gov/details/PIA00383",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Viking Lander",
+    "credit": "NASA",
+    "source": "https://science.nasa.gov/3d-resources/viking-lander/"
+   }
+  },
+  {
+   "id": "viking-2-lander",
+   "name": "Viking 2 Mars lander",
+   "world": "mars",
+   "status": "silent",
+   "needsReview": false,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/viking/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://nssdc.gsfc.nasa.gov/planetary/viking.html",
+     "host": "nssdc.gsfc.nasa.gov"
+    },
+    {
+     "url": "https://images.nasa.gov/details/PIA04023",
+     "host": "images.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA04023",
+    "credit": "NASA/JPL/University of Arizona",
+    "pageUrl": "https://images.nasa.gov/details/PIA04023",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Viking Lander",
+    "credit": "NASA",
+    "source": "https://science.nasa.gov/3d-resources/viking-lander/"
+   }
+  },
+  {
+   "id": "spirit-mer-a",
+   "name": "Spirit Mars Exploration Rover",
+   "world": "mars",
+   "status": "silent",
+   "needsReview": false,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/mer-spirit/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://www.jpl.nasa.gov/news/nasa-concludes-attempts-to-contact-mars-rover-spirit/",
+     "host": "jpl.nasa.gov"
+    },
+    {
+     "url": "https://ntrs.nasa.gov/citations/20160001767",
+     "host": "ntrs.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA12354",
+    "credit": "NASA/JPL-Caltech",
+    "pageUrl": "https://images.nasa.gov/details/PIA12354",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Mars Exploration Rover (Opportunity, MER-B)",
+    "credit": "NASA/JPL-Caltech",
+    "source": "https://science.nasa.gov/3d-resources/mars-exploration-rover-opportunity-mer-b/"
+   }
+  },
+  {
+   "id": "opportunity-mer-b",
+   "name": "Opportunity Mars Exploration Rover",
+   "world": "mars",
+   "status": "silent",
+   "needsReview": false,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/mer-opportunity/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://astrobiology.nasa.gov/news/opportunity-rover-mission-comes-to-an-end/",
+     "host": "astrobiology.nasa.gov"
+    },
+    {
+     "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html",
+     "host": "giss.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA17941",
+    "credit": "NASA/JPL-Caltech/University of Arizona",
+    "pageUrl": "https://images.nasa.gov/details/PIA17941",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Mars Exploration Rover (Opportunity, MER-B)",
+    "credit": "NASA/JPL-Caltech",
+    "source": "https://science.nasa.gov/3d-resources/mars-exploration-rover-opportunity-mer-b/"
+   }
+  },
+  {
+   "id": "phoenix-lander",
+   "name": "Phoenix Mars lander",
+   "world": "mars",
+   "status": "silent",
+   "needsReview": false,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/mars-phoenix/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://science.nasa.gov/photojournal/phoenix-opens-its-eyes/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://www.jpl.nasa.gov/missions/phoenix/",
+     "host": "jpl.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA22223",
+    "credit": "NASA/JPL-Caltech/University of Arizona",
+    "pageUrl": "https://images.nasa.gov/details/PIA22223",
+    "ok": true
+   },
+   "model": {
+    "kind": "artist",
+    "title": "Phoenix lander"
+   }
+  },
+  {
+   "id": "insight-lander",
+   "name": "InSight Mars lander",
+   "world": "mars",
+   "status": "silent",
+   "needsReview": false,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/insight/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://science.nasa.gov/mission/insight/?IM_ID=8302&Page=3",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://www.nasa.gov/missions/mars-insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+     "host": "nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA22571",
+    "credit": "NASA/JPL-Caltech",
+    "pageUrl": "https://images.nasa.gov/details/PIA22571",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "InSight Lander",
+    "credit": "NASA/JPL-Caltech",
+    "source": "https://science.nasa.gov/3d-resources/insight-cruise-lander/"
+   }
+  },
+  {
+   "id": "ingenuity",
+   "name": "Ingenuity Mars Helicopter",
+   "world": "mars",
+   "status": "still_talking",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://www.jpl.nasa.gov/videos/thanksingenuity-nasas-mars-helicopter-team-says-goodbye/",
+     "host": "jpl.nasa.gov"
+    },
+    {
+     "url": "https://www.jpl.nasa.gov/news/nasa-performs-first-aircraft-accident-investigation-on-another-world/",
+     "host": "jpl.nasa.gov"
+    },
+    {
+     "url": "https://science.nasa.gov/blog/ingenuity-reestablishes-communications/",
+     "host": "science.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA26236",
+    "credit": "NASA/JPL-Caltech/ASU/MSSS",
+    "pageUrl": "https://images.nasa.gov/details/PIA26236",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Ingenuity Mars Helicopter",
+    "credit": "NASA/JPL-Caltech",
+    "source": "https://science.nasa.gov/3d-resources/ingenuity-mars-helicopter/"
+   }
+  },
+  {
+   "id": "chandrayaan-3-vikram",
+   "name": "Chandrayaan-3 Vikram lunar lander",
+   "world": "moon",
+   "status": "silent",
+   "needsReview": true,
+   "sources": [
+    {
+     "url": "https://www.isro.gov.in/ISRO_EN/Chandrayaan3.html",
+     "host": "isro.gov.in"
+    },
+    {
+     "url": "https://www.isro.gov.in/media_isro/pdf/APXS_CH3.pdf",
+     "host": "isro.gov.in"
+    },
+    {
+     "url": "https://www.nasa.gov/image-article/nasas-lro-observes-chandrayaan-3-landing-site/",
+     "host": "nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "M1447750764LR",
+    "credit": "NASA’s Goddard Space Flight Center/Arizona State University",
+    "pageUrl": "https://www.nasa.gov/image-article/nasas-lro-observes-chandrayaan-3-landing-site/",
+    "ok": true
+   },
+   "model": {
+    "kind": "artist",
+    "title": "Vikram lander"
+   }
+  },
+  {
+   "id": "curiosity-msl",
+   "name": "Curiosity Mars Science Laboratory rover",
+   "world": "mars",
+   "status": "still_talking",
+   "needsReview": false,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/msl-curiosity/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://science.nasa.gov/mission/msl-curiosity/",
+     "host": "science.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA23041",
+    "credit": "NASA/JPL-Caltech/MSSS",
+    "pageUrl": "https://images.nasa.gov/details/PIA23041",
+    "ok": true
+   },
+   "model": {
+    "kind": "artist",
+    "title": "Curiosity rover"
+   }
+  },
+  {
+   "id": "perseverance-mars-2020",
+   "name": "Perseverance Mars 2020 rover",
+   "world": "mars",
+   "status": "still_talking",
+   "needsReview": false,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://images.nasa.gov/details/PIA24485",
+     "host": "images.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA24485",
+    "credit": "NASA/JPL-Caltech/ASU/MSSS",
+    "pageUrl": "https://images.nasa.gov/details/PIA24485",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Mars 2020 Perseverance Rover",
+    "credit": "NASA/JPL-Caltech",
+    "source": "https://science.nasa.gov/3d-resources/mars-2020-perseverance-rover/"
+   }
+  },
+  {
+   "id": "jwst-telescope",
+   "name": "James Webb Space Telescope",
+   "world": "deep_space",
+   "status": "still_talking",
+   "needsReview": false,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/webb/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://science.nasa.gov/mission/webb/orbit/",
+     "host": "science.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "GSFC_20171208_Archive_e000398",
+    "credit": "NASA/Chris Gunn",
+    "pageUrl": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000398",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "James Webb Space Telescope",
+    "credit": "NASA/Goddard",
+    "source": "https://science.nasa.gov/3d-resources/james-webb-space-telescope-b/"
+   }
+  },
+  {
+   "id": "parker-solar-probe",
+   "name": "Parker Solar Probe",
+   "world": "deep_space",
+   "status": "still_talking",
+   "needsReview": false,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/parker-solar-probe/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://science.nasa.gov/blogs/parker-solar-probe/2026/09/10/after-latest-swing-past-sun-nasas-parker-solar-probe-checks-in/",
+     "host": "science.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "KSC-20180419-PH_KLS01_0009",
+    "credit": "NASA/Kennedy Space Center",
+    "pageUrl": "https://images.nasa.gov/details/KSC-20180419-PH_KLS01_0009",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Parker Solar Probe",
+    "credit": "NASA/Johns Hopkins APL",
+    "source": "https://science.nasa.gov/3d-resources/parker-solar-probe/"
+   }
+  },
+  {
+   "id": "voyager-1",
+   "name": "Voyager 1",
+   "world": "deep_space",
+   "status": "still_talking",
+   "needsReview": false,
+   "sources": [
+    {
+     "url": "https://science.nasa.gov/mission/voyager/voyager-1/",
+     "host": "science.nasa.gov"
+    },
+    {
+     "url": "https://www.jpl.nasa.gov/missions/voyager-1/",
+     "host": "jpl.nasa.gov"
+    }
+   ],
+   "photo": {
+    "nasaId": "PIA14111",
+    "credit": "NASA/JPL-Caltech",
+    "pageUrl": "https://images.nasa.gov/details/PIA14111",
+    "ok": true
+   },
+   "model": {
+    "kind": "nasa",
+    "title": "Voyager Probe",
+    "credit": "NASA/JPL-Caltech",
+    "source": "https://science.nasa.gov/3d-resources/voyager-probe-a/"
+   }
+  }
+ ],
+ "hostCounts": {
+  "nssdc.gsfc.nasa.gov": 18,
+  "nasa.gov": 15,
+  "images.nasa.gov": 3,
+  "science.nasa.gov": 21,
+  "jpl.nasa.gov": 5,
+  "ntrs.nasa.gov": 1,
+  "astrobiology.nasa.gov": 1,
+  "giss.nasa.gov": 1,
+  "isro.gov.in": 2
+ },
+ "urlFixes": [
+  {
+   "robot": "insight-lander",
+   "was": "https://www.nasa.gov/news-release/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+   "now": "https://www.nasa.gov/missions/mars-insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/"
+  },
+  {
+   "robot": "jwst-telescope",
+   "was": "https://science.nasa.gov/mission/webb/webbs-orbit-at-l2/",
+   "now": "https://science.nasa.gov/mission/webb/orbit/"
+  }
+ ],
+ "unverified": [],
+ "libraries": [
+  {
+   "name": "three.js (with its meshopt decoder)",
+   "license": "MIT",
+   "url": "https://threejs.org",
+   "usedFor": "3D views and globes"
+  },
+  {
+   "name": "Vite",
+   "license": "MIT",
+   "url": "https://vitejs.dev",
+   "usedFor": "Build tool"
+  },
+  {
+   "name": "glTF-Transform",
+   "license": "MIT",
+   "url": "https://gltf-transform.dev",
+   "usedFor": "Shrinking the NASA model files (build step only)"
+  }
+ ],
+ "fonts": [
+  {
+   "name": "Archivo Black, Nunito, Space Mono, Caveat Brush, Lilita One",
+   "license": "SIL Open Font License",
+   "url": "https://fonts.google.com",
+   "usedFor": "All text"
+  }
+ ],
+ "sound": {
+  "text": "There are no music or sound files. Sound effects are made live in your browser with the Web Audio API, and the guide voice is your device's own speech voice."
+ },
+ "facts": {
+  "records": 24,
+  "needsReview": 13,
+  "sourcesListed": 67,
+  "fixed": 2,
+  "unverified": 0
+ }
+}

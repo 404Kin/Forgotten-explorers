@@ -41,3 +41,13 @@ One generic viewer (`src/components/Model3D/`) reads `models.config.js`. Real mo
 - `src/state/store.js`, `src/art/chapters.js`, `src/services/api.js` (import path only, plus a comment)
 - `public/models/*.glb` (new, NASA models), `docs/FRONTEND_NOTES.md` (this file)
 - Unused now: `src/components/ModelViewer.js` and `src/image/*.glb` (Mayesha's first viewer; not deleted)
+
+## Data Sources page (step 2)
+- Content: `src/data/sources.json`, built by `node src/screens/DataSources/build-sources.mjs <url results>` from `robotRecords.json`, the 3D model config and a check of every link. P1 can replace the file later; the screen only reads it.
+- Every URL in the data was fetched on 2026-11-13: 85 checked. 2 returned 404 and were repaired (checked by hand, same topic):
+  - InSight record: `https://www.nasa.gov/news-release/nasa-retires-insight-mars-lander-mission-after-years-of-science/` -> `https://www.nasa.gov/missions/mars-insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/`
+  - Webb record: `https://science.nasa.gov/mission/webb/webbs-orbit-at-l2/` -> `https://science.nasa.gov/mission/webb/orbit/`
+  The records themselves (P1's file) still hold the old links. Ask P1 to update them.
+- Could not verify: nothing failed after the repairs. Limits of the check: a 200 answer proves the page exists, not that the text matches our sentence.
+- One photo id is not in the NASA Image Library API: `M1447750764LR` (Chandrayaan-3 Vikram). The robot page uses search results for that robot, and the sources page links its nasa.gov article. Ask P1 for a library id.
+- Not used by the app (and not listed as sources): JPL Horizons, DSN Now, data.nasa.gov, api.nasa.gov, Earthdata. Still Talking shows a saved snapshot.

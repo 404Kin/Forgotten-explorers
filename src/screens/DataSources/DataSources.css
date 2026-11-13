@@ -5,3 +5,13 @@
 #dsbox{display:grid;gap:24px;margin-top:20px}
 .ds-note{font-weight:800}
 .ds-disclaimer h2{font-size:1.2rem}.ds-disclaimer p{margin:8px 0 0}
+.ds-where{margin:0}
+.ds-check ul{margin:10px 0 0;padding-inline-start:1.2rem;display:grid;gap:6px}.ds-check h2{font-size:1.3rem}
+.ds-tools{display:grid;gap:10px;margin:12px 0}.ds-tools .in{max-width:none;min-height:48px;color:var(--k)}
+.ds-robots{display:grid;gap:10px}
+.ds-robot summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:8px;align-items:center;min-height:44px;font-weight:800}
+.ds-robot h4{margin:12px 0 4px;font-family:var(--mono);font-size:.78rem;text-transform:uppercase}
+.ds-robot summary:focus-visible{outline:3px solid var(--nasa-blue);outline-offset:3px;border-radius:8px}
+.ds-draft{display:inline-block;padding:2px 10px;border:2.5px dashed var(--k);border-radius:999px;background:var(--lav);font-size:.75rem}
+.ds-plain li{overflow-wrap:anywhere}
+.ds-note2{font-style:italic}
