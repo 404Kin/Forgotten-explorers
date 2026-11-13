@@ -4,7 +4,8 @@ import {t} from '../../i18n/index.js';
 
 /** Pure: keep items where every active filter matches. getters[groupId](item) returns that item's value. */
 export function applyFilters(items,values,getters){
-  return items.filter(it=>Object.entries(values).every(([g,v])=>v==='all'||getters[g](it)===v));
+  // A getter may return one value or a list of tags (e.g. a left-behind robot is both "left_behind" and "abandoned").
+  return items.filter(it=>Object.entries(values).every(([g,v])=>{if(v==='all')return true;const x=getters[g](it);return Array.isArray(x)?x.includes(v):x===v}));
 }
 
 /**

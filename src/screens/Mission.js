@@ -5,6 +5,7 @@ import {missionImages,imgTag} from '../services/nasaImages.js';
 import {lightbox} from '../components/Modal.js';
 import {runQuiz} from '../games/QuizEngine.js';
 import {createGuideSoundPanel} from '../components/GuideSound/GuideSound.js';
+import {mountFlowTop,mountFlowBottom,mountNextExplorer} from '../components/RobotFlow/RobotFlow.js';
 import {mountRobotStoryCards} from '../components/RobotStoryCards/RobotStoryCards.js';
 import {createProgressStore,counts,allMastered} from '../games/SmartQuiz/progress.js';
 import {recordQuestions} from '../games/SmartQuiz/fromRecords.js';
@@ -166,12 +167,14 @@ export default {
           </div>
         </div>
         <div class="mhero" id="mh"></div>
-        <div id="rscards"></div>
         <div id="m3dpanel"></div>
+        <div id="flowA"></div>
+        <div id="rscards"></div>
+        <div id="flowB"></div>
         <div class="mgrid" style="margin-top:18px">
           <div class="mcard-col">
             ${cardHTML(m, {tag: 'div', heading: 'h2', collected: get().collected.includes(m.n)})}
-            ${videoHTML(m.id, m.n)}
+            ${videoHTML(m.legacyId, m.n)}
           </div>
           <div>
             <div class="tabs">
@@ -183,11 +186,16 @@ export default {
             <div class="panel" id="tb"></div>
           </div>
         </div>
+        <div id="nextexp"></div>
       </div>
     `;
 
     const hero = el.querySelector('#mh');
+    // Story order: photo + 3D, built to do, how I worked, what I discovered, why left, last message, quick quiz, next explorer.
+    mountFlowTop(el.querySelector('#flowA'), m0);
     mountRobotStoryCards(el.querySelector('#rscards'), m0);
+    mountFlowBottom(el.querySelector('#flowB'), m0, {onQuiz: () => { show('quiz'); el.querySelector('.tabs')?.scrollIntoView({block: 'start'}); }});
+    mountNextExplorer(el.querySelector('#nextexp'), m0);
     // The generic 3D panel (real NASA model or a labelled artist model). Destroyed in unmount().
     destroyViewer();
     modelViewerInstance = mountModel3D(el.querySelector('#m3dpanel'), m0);

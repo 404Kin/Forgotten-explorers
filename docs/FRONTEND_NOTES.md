@@ -51,3 +51,35 @@ One generic viewer (`src/components/Model3D/`) reads `models.config.js`. Real mo
 - Could not verify: nothing failed after the repairs. Limits of the check: a 200 answer proves the page exists, not that the text matches our sentence.
 - One photo id is not in the NASA Image Library API: `M1447750764LR` (Chandrayaan-3 Vikram). The robot page uses search results for that robot, and the sources page links its nasa.gov article. Ask P1 for a library id.
 - Not used by the app (and not listed as sources): JPL Horizons, DSN Now, data.nasa.gov, api.nasa.gov, Earthdata. Still Talking shows a saved snapshot.
+
+## Draft or missing robot text (for P1)
+Only 11 robots have hand-written details (`missionDetails.js`). For the other 13, three parts show "coming soon" with a **Draft** label until P1 sends checked text in `src/data/robotStories.json` (shape in `src/components/RobotStoryCards/RobotStoryCards.js`):
+
+| Robot | What I was built to do | How I worked | What I discovered | Record needs review |
+|---|---|---|---|---|
+| Apollo 11 Lunar Module Eagle descent stage | hand-written (draft) | hand-written (draft) | hand-written (draft) | yes |
+| Apollo 12 Lunar Module Intrepid descent stage | **missing** | draft from record | draft from record | yes |
+| Apollo 14 Lunar Module Antares descent stage | **missing** | draft from record | draft from record | yes |
+| Apollo 15 Lunar Module Falcon descent stage | **missing** | draft from record | draft from record | yes |
+| Apollo 16 Lunar Module Orion descent stage | **missing** | draft from record | draft from record | yes |
+| Apollo 17 Lunar Module Challenger descent stage | **missing** | draft from record | draft from record | yes |
+| Apollo 15 Lunar Roving Vehicle | **missing** | draft from record | draft from record | yes |
+| Apollo 16 Lunar Roving Vehicle | **missing** | draft from record | draft from record | yes |
+| Apollo 17 Lunar Roving Vehicle | **missing** | draft from record | draft from record | yes |
+| Surveyor 3 lunar lander | **missing** | draft from record | draft from record | no |
+| Sojourner Mars rover | **missing** | draft from record | draft from record | yes |
+| Viking 1 Mars lander | **missing** | draft from record | draft from record | yes |
+| Viking 2 Mars lander | **missing** | draft from record | draft from record | no |
+| Spirit Mars Exploration Rover | hand-written (draft) | hand-written (draft) | hand-written (draft) | no |
+| Opportunity Mars Exploration Rover | hand-written (draft) | hand-written (draft) | hand-written (draft) | no |
+| Phoenix Mars lander | hand-written (draft) | hand-written (draft) | hand-written (draft) | no |
+| InSight Mars lander | hand-written (draft) | hand-written (draft) | hand-written (draft) | no |
+| Ingenuity Mars Helicopter | **missing** | draft from record | draft from record | yes |
+| Chandrayaan-3 Vikram lunar lander | hand-written (draft) | hand-written (draft) | hand-written (draft) | yes |
+| Curiosity Mars Science Laboratory rover | hand-written (draft) | hand-written (draft) | hand-written (draft) | no |
+| Perseverance Mars 2020 rover | hand-written (draft) | hand-written (draft) | hand-written (draft) | no |
+| James Webb Space Telescope | hand-written (draft) | hand-written (draft) | hand-written (draft) | no |
+| Parker Solar Probe | hand-written (draft) | hand-written (draft) | hand-written (draft) | no |
+| Voyager 1 | hand-written (draft) | hand-written (draft) | hand-written (draft) | no |
+
+13 of 24 robots have no "built to do" text. Also needed from P1: a NASA Image Library id for Chandrayaan-3 Vikram (`M1447750764LR` is not in the library), `src/data/robotStories.json`, `src/data/lastMessages.json` review (every line is flagged poetic), and a fact-check of the quiz questions made from the records (`rec-*` ids, all `needsFactCheck:true`).

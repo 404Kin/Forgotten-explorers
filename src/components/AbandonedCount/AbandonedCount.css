@@ -1,0 +1,5 @@
+.ac{margin:14px auto;max-width:760px}.ac h2{font-size:1.3rem}.ac-sum{margin:6px 0 10px;font-weight:800}
+.ac-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.ac-cell{display:grid;gap:2px;padding:10px;border:3px solid var(--k);border-radius:16px;background:#fff;text-align:center}
+.ac-n{font-family:var(--display);font-size:2rem;line-height:1}.ac-l{font-weight:800;font-size:.9rem}
+.ac-note{margin:10px 0 0}

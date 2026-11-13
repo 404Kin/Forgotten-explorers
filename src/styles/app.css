@@ -242,3 +242,7 @@ img,canvas,svg{max-width:100%}
 .pl{padding:9px 6px}
 .video-btn{min-height:44px;min-width:44px}
 #chb .gsound{margin:12px auto 0;text-align:start}
+
+/* Explore: the still-talking robots in their own strip below the abandoned ones */
+.active-sec{margin-top:26px}.active-sec p{margin:6px 0 10px}
+.active-strip .astrip{flex:0 0 min(220px,70%);scroll-snap-align:start}

@@ -28,7 +28,8 @@ export function placeholderFor(robot,part){
   const src=part==='howIWorked'?d?.hardware:d?.science;
   if(src?.desc)return{text:src.desc,title:src.title,sources:[],needsFactCheck:true,placeholder:true};
   // Robots without hand-written details: use the record (P1's draft). "How I worked" = the job page; "What I discovered" = the fun fact.
-  const rec=robot.record,text=part==='howIWorked'?rec?.story?.[1]?.text:rec?.kidFact;
+  // Never show the same sentence twice on one page: if the fun fact is the same as the job page, this part waits for real text.
+  const rec=robot.record,job=rec?.story?.[1]?.text,text=part==='howIWorked'?job:(rec?.kidFact&&rec.kidFact!==job?rec.kidFact:null);
   return text?{text,sources:[],needsFactCheck:true,placeholder:true}:null;
 }
 
