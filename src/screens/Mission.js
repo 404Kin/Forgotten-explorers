@@ -70,27 +70,28 @@ function getEmbedUrl(raw) {
   return base;
 }
 
+// YouTube video ids in src/data/missionVideos.json that YouTube no longer serves (oEmbed answered 404 on 2026-11-13).
+// Showing them gives the grey "Video unavailable" player, so those robots show no video until P1 sends a working id.
+const DEAD_VIDEO_IDS = new Set(['gm0b_ijaREc', 'RMINERVAhUQ', 'aBlv8k_m928', 'qy7hH2iW_7M', 'x6jO2jP-a40', 'yQ-FfFk_4Z4']);
+const isDead = url => DEAD_VIDEO_IDS.has((url.match(/embed\/([\w-]{11})/) || [])[1]);
+
 function getMissionVideoUrl(missionId, missionName) {
+  const url = findVideoUrl(missionId, missionName);
+  return url && !isDead(url) ? url : '';
+}
+
+function findVideoUrl(missionId, missionName) {
   if (!missionVideos) return '';
   if (missionVideos[missionId]) return getEmbedUrl(missionVideos[missionId]);
 
   const underKey = missionId.replace(/-/g, '_') + '_video';
   if (missionVideos[underKey]) return getEmbedUrl(missionVideos[underKey]);
 
-  const shortKey = missionId.split('-')[0] + '_video';
-  if (missionVideos[shortKey]) return getEmbedUrl(missionVideos[shortKey]);
-
   if (missionName) {
     const nameKey = missionName.toLowerCase().replace(/\s+/g, '_') + '_video';
     if (missionVideos[nameKey]) return getEmbedUrl(missionVideos[nameKey]);
   }
-
-  const firstWord = missionId.split('-')[0].toLowerCase();
-  for (const [k, v] of Object.entries(missionVideos)) {
-    if (k.toLowerCase().includes(firstWord) && v) {
-      return getEmbedUrl(v);
-    }
-  }
+  // No guessing by the first word of the id any more: it showed the Apollo 11 video on every Apollo robot and rover.
 
   return '';
 }
