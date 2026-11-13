@@ -1,0 +1,9 @@
+.gsound{border:3px solid var(--k);border-radius:18px;background:var(--cream);color:var(--k);max-width:340px;font-weight:800}
+.gsound summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:8px;padding:0 14px}
+.gsound summary:focus-visible{outline:3px solid var(--nasa-blue);outline-offset:2px;border-radius:14px}
+.gsound-body{display:grid;gap:8px;padding:4px 14px 14px}
+.gsound-body label{display:flex;justify-content:space-between;gap:8px;font-size:.9rem}
+.gsound-body input[type=range]{width:100%;min-height:44px;accent-color:var(--nasa-blue)}
+.gsound-body select{min-height:44px;border:3px solid var(--k);border-radius:12px;padding:0 10px;font:inherit;background:#fff;color:var(--k)}
+.gsound-row{display:flex;gap:8px;flex-wrap:wrap}.gsound .btn{min-height:44px}
+.landing-sound{position:absolute;inset-block-end:calc(env(safe-area-inset-bottom,0px) + 10px);inset-inline-start:10px;z-index:5}

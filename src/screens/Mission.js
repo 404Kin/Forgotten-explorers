@@ -4,6 +4,7 @@ import {cardHTML} from '../components/Card.js';
 import {missionImages,imgTag} from '../services/nasaImages.js';
 import {lightbox} from '../components/Modal.js';
 import {runQuiz} from '../games/QuizEngine.js';
+import {createGuideSoundPanel} from '../components/GuideSound/GuideSound.js';
 import {mountRobotStoryCards} from '../components/RobotStoryCards/RobotStoryCards.js';
 import {createProgressStore,counts,allMastered} from '../games/SmartQuiz/progress.js';
 import {recordQuestions} from '../games/SmartQuiz/fromRecords.js';
@@ -256,6 +257,8 @@ export default {
         </div>`;
 
         tb.innerHTML = storyHTML;
+        // Sound controls for the read-aloud voice (volume, speed, voice, stop).
+        tb.appendChild(createGuideSoundPanel());
 
         // Read aloud & mark read handlers
         const readText = details ? [

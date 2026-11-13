@@ -3,6 +3,7 @@ import { resolveConfig } from './config/env.js';
 import { createI18n } from './i18n/i18n.js';
 import { createStorage, createProgressStore } from './services/storage.js';
 import { createErrorHandler } from './services/errors.js';
+import { getSoundSettings } from '../../components/GuideSound/settings.js';
 import { createSoundManager } from './components/SoundManager/SoundManager.js';
 import { createGame } from './app/Game.js';
 
@@ -29,9 +30,11 @@ export function mountGame(target, options = {}) {
   const settings = progress.getSettings();
   const errors = createErrorHandler();
 
+  // One master volume and mute for the whole app (Guide sound panel). The game's own mute button still works too.
+  const master = getSoundSettings();
   const sound = createSoundManager({
-    volume: config.sound.volume,
-    muted: settings.muted ?? !config.sound.enabledByDefault,
+    volume: config.sound.volume * master.volume,
+    muted: master.muted || (settings.muted ?? !config.sound.enabledByDefault),
     onMutedChange: (muted) => progress.saveSettings({ muted }),
   });
 

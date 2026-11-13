@@ -1074,5 +1074,17 @@
  "sources.robotPhoto": "Photo credit",
  "sources.robotModel": "3D model",
  "sources.none": "None listed.",
- "sources.noSources": "No source pages listed yet."
+ "sources.noSources": "No source pages listed yet.",
+ "guide.title": "Guide sound",
+ "guide.mute": "Mute",
+ "guide.unmute": "Unmute",
+ "guide.volume": "Volume",
+ "guide.speed": "Speed",
+ "guide.voice": "Voice",
+ "guide.voiceDefault": "Automatic English voice",
+ "guide.test": "Test",
+ "guide.stop": "Stop",
+ "guide.testText": "Hello! I am Pip. This is how I sound.",
+ "guide.isMuted": "Sound is muted. Press Unmute first.",
+ "guide.hear": "Hear this"
 }

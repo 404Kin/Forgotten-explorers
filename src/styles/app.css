@@ -241,3 +241,4 @@ img,canvas,svg{max-width:100%}
 /* Tap targets: map name buttons and the video size button were under 44px. Padding on the (transparent) button grows the hit area only. */
 .pl{padding:9px 6px}
 .video-btn{min-height:44px;min-width:44px}
+#chb .gsound{margin:12px auto 0;text-align:start}
