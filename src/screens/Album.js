@@ -5,6 +5,7 @@ import {badges} from '../data/badges.js';
 import {cardHTML} from '../components/Card.js';
 import {get,update,level,levelProgress,reset} from '../state/store.js';
 import {certificate} from '../utils/certificate.js';
+import {certificateProgress} from '../components/Certificate/rules.js';
 import {t} from '../i18n/index.js';
 import {rankLabel} from '../i18n/format.js';
 import {localBadge} from '../i18n/content.js';
@@ -15,7 +16,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 
 export default{name:'album',
 mount(el){
-  const s=get(),B=badges(MISSIONS).map(localBadge),total=MISSIONS.length,woken=s.collected.length,left=total-woken,all=left<=0;
+  const s=get(),B=badges(MISSIONS).map(localBadge),{woken,total,left,unlocked:all}=certificateProgress(s.collected,MISSIONS);
   const name=playerName(),next=MISSIONS.find(m=>!s.collected.includes(m.n));
   el.innerHTML=
     `<div class="wrap">`+
@@ -38,6 +39,7 @@ mount(el){
     // ---- certificate
     `<div class="sec"><h2>${t('album.certificate')}</h2></div><div class="panel al-cert" style="color:var(--k)">`+
       `<p><b>${all?t('album.certDone'):t('album.certLocked',{n:total,left})}</b></p>`+
+      `<p class="mono">${t('album.progress',{n:woken,total})}</p><span class="bar" role="progressbar" aria-label="${t('album.certificate')}" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${woken}"><i style="width:${woken/total*100}%"></i></span>`+
       `<div id="nameform"></div>`+
       `<p style="margin:12px 0 0"><button class="btn" id="cert" ${all?'':'disabled aria-disabled="true"'}>${t('album.download')}</button>${all?'':` <span class="al-why">${t('album.certWhy')}</span>`}</p></div>`+
     `${creditFooterHTML()}<p style="text-align:center"><button class="btn sm alt" id="rs">${t('album.reset')}</button></p></div>`;
@@ -47,6 +49,6 @@ mount(el){
     el.innerHTML='';this.mount(el)}}));
   // "Wake up" buttons open the robot's page straight on its quiz tab.
   el.querySelectorAll('[data-wake]').forEach(a=>a.addEventListener('click',()=>{try{sessionStorage.setItem('fe2.openTab','quiz')}catch{}}));
-  el.querySelector('#cert').onclick=()=>certificate(playerName(),rankLabel(get()),get().xp);
+  el.querySelector('#cert').onclick=()=>{if(all)certificate(playerName(),rankLabel(get()),get().xp)};
   el.querySelector('#rs').onclick=()=>{if(confirm(t('album.resetConfirm'))){reset();location.reload()}};
 },unmount(){}};

@@ -29,7 +29,7 @@ function render(){
   card.innerHTML=`<div class="tour-bar" aria-hidden="true"><i style="width:${p.percent}%"></i></div>`+
     `<p class="mono tour-step">${t('tour.progress',{n:p.n,total:p.total})}</p>`+
     `<h2 id="tour-title" tabindex="-1">${t(`tour.step.${s.id}.title`)}</h2><p>${t(`tour.step.${s.id}.text`)}</p>`+
-    // Judges can look at the certificate any time without waking up all 11 robots. The file is stamped SAMPLE.
+    // Judges can look at the certificate any time without waking up the robots. The file is stamped SAMPLE.
     `<p class="tour-cert"><button type="button" class="btn sm alt" data-a="cert"><span aria-hidden="true">🏅</span> ${t('tour.previewCert')}</button></p>`+
     `<div class="tour-actions"><button type="button" class="btn sm alt" data-a="skip">${t('tour.skip')}</button>`+
     `${index>0?`<button type="button" class="btn sm alt" data-a="back">${t('tour.back')}</button>`:''}`+
