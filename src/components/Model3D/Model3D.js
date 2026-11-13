@@ -86,7 +86,7 @@ export function mountModel3D(el,robot){
     }
   }
   // Lazy: nothing heavy is fetched until the panel is near the screen.
-  const io=typeof IntersectionObserver!=='undefined'?new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){io.disconnect();start()}},{rootMargin:'200px'}):null;
+  const io=typeof IntersectionObserver!=='undefined'?new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){io.disconnect();start()}},{rootMargin:'0px'}):null;
   if(io)io.observe(stage);else start();
   return{destroy(){destroyed=true;io?.disconnect();api?.destroy()}};
 }

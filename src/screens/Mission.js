@@ -97,23 +97,8 @@ function getMissionVideoUrl(missionId, missionName) {
 
 function videoHTML(missionId, missionName) {
   const url = getMissionVideoUrl(missionId, missionName);
-  if (!url) {
-    return `
-      <div class="mission-video-box" id="mvbox">
-        <div class="mission-video-header">
-          <div class="mission-video-title-wrap">
-            <span>🎬</span>
-            <b>${t('mission.video.title')}</b>
-          </div>
-        </div>
-        <div class="mission-video-placeholder">
-          <span>📹</span>
-          <p>${t('mission.video.placeholder')}</p>
-          <small>Add embed link in src/data/missionVideos.json</small>
-        </div>
-      </div>
-    `;
-  }
+  // No video yet: show nothing (a box saying "no video" and a file path looked unfinished). Videos come from src/data/missionVideos.json.
+  if (!url) return '';
 
   return `
     <div class="mission-video-box" id="mvbox">

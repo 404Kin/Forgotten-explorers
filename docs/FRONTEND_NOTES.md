@@ -83,3 +83,29 @@ Only 11 robots have hand-written details (`missionDetails.js`). For the other 13
 | Voyager 1 | hand-written (draft) | hand-written (draft) | hand-written (draft) | no |
 
 13 of 24 robots have no "built to do" text. Also needed from P1: a NASA Image Library id for Chandrayaan-3 Vikram (`M1447750764LR` is not in the library), `src/data/robotStories.json`, `src/data/lastMessages.json` review (every line is flagged poetic), and a fact-check of the quiz questions made from the records (`rec-*` ids, all `needsFactCheck:true`).
+
+## What changed on 2026-11-13 (steps 1 to 8)
+1. 3D: generic viewer `src/components/Model3D/` (16 real NASA models, 8 labelled artist models, table above).
+2. Data Sources: `src/data/sources.json` + new screen (85 links checked, 2 repaired).
+3. Quiz: bank is 132 questions (35 hand-written + 97 made from the robot records, each with a source and `needsFactCheck:true`). Logic checks: `node src/games/SmartQuiz/SmartQuiz.check.mjs` (18 pass).
+4. Guide sound panel (`src/components/GuideSound/`), no autoplay, one volume for voice and effects.
+5. Certificate: real one only when every robot is woken (`src/components/Certificate/rules.js`); preview is stamped SAMPLE, file `sample-certificate.png`.
+6. Still Talking is now "Compare: Still Talking", a secondary strip under Explore.
+7. Explore opens on the abandoned robots, Abandoned count panel (computed), one story order on robot pages, Next explorer button.
+8. New cover (`src/screens/Landing/`), same flow.
+
+## Checks you can run
+`node src/robots/stats.check.mjs`, `src/games/SmartQuiz/SmartQuiz.check.mjs`, `src/components/Certificate/rules.check.mjs`, `src/components/GuideSound/settings.check.mjs`, `src/games/LunarLander/LunarLander.check.mjs`, `src/games/MoonBuggy/MoonBuggy.check.mjs`, `src/games/GameProgress/GameProgress.check.mjs`.
+
+## Lighthouse (mobile, headless Chrome without a GPU, 2026-11-13)
+Accessibility 100 on cover, Explore, robot page and Album. Performance: cover 99, Album 97, robot page 71 (the NASA hero photo takes about 5 s to arrive), Explore 64 (3D planets drawn by software WebGL in this test machine; not measured on a real GPU).
+
+## Questions for P1 (data)
+- `ingenuity` is marked `still_talking`, but its mission ended in January 2024. Please check the status.
+- The three `still_talking` Mars/space robots and the quiz texts made from records are drafts (`needsReview`).
+- Distance and message time exist only for the 11 hand-written robots (`relics.json`); the other 13 show none.
+
+## Not done / limits
+- The 3D viewer fallback (no WebGL) and the loading state were reviewed in code and in a WebGL-enabled browser only; a no-WebGL browser was not tested.
+- `src/components/ModelViewer.js` and `src/image/*.glb` (Mayesha's first viewer) are no longer used; not deleted.
+- No real phone or screen reader tests.
