@@ -1,6 +1,8 @@
 import { AppError } from './errors.js';
 import { normalizeBank } from '../core/questions.js';
 import { tx } from '../../../i18n/index.js';
+import records from '../../../data/robotRecords.json';
+import { recordBank } from '../../SmartQuiz/fromRecords.js';
 
 // Lazy: each language bank is its own chunk and is only fetched when needed.
 const banks = import.meta.glob('../data/questions.*.json', { import: 'default' });
@@ -20,7 +22,8 @@ export async function loadQuestions({
   const loader = sources[pathFor(locale)] ?? sources[pathFor(fallbackLocale)];
   if (!loader) throw new AppError('NO_BANK', 'app.errorLoad', { retryable: true });
   try {
-    return normalizeBank(await loader(), difficulties).map(localize);
+    // The hand-written bank + extra questions made only from the robot records (each with a source and needsFactCheck:true).
+    return normalizeBank([...(await loader()), ...recordBank(records)], difficulties).map(localize);
   } catch (cause) {
     throw new AppError('LOAD_FAILED', 'app.errorLoad', { retryable: true, cause });
   }

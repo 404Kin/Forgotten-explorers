@@ -6,6 +6,7 @@ import {lightbox} from '../components/Modal.js';
 import {runQuiz} from '../games/QuizEngine.js';
 import {mountRobotStoryCards} from '../components/RobotStoryCards/RobotStoryCards.js';
 import {createProgressStore,counts,allMastered} from '../games/SmartQuiz/progress.js';
+import {recordQuestions} from '../games/SmartQuiz/fromRecords.js';
 import {pickRound} from '../games/SmartQuiz/round.js';
 import {questionId} from '../games/SmartQuiz/ids.js';
 // Same smart-quiz rules as the Web Walker quiz: missed first, then unseen, mastered only when nothing else is left.
@@ -423,7 +424,10 @@ export default {
 
       if (tabName === 'quiz') {
         // The robot's own question has no id in the data, so it gets one from its (English) text.
-        const pool = [...localQuiz(QUIZ).filter(q => q.m === m.n), {id: questionId({q: m0.q[0]}), q: m.q[0], o: m.q.slice(1), e: ''}];
+        // Questions: the hand-written ones, the robot's own question, and questions made only from its record (each has a source; draft until checked).
+        const own = {id: questionId({q: m0.q[0]}), q: m.q[0], o: m.q.slice(1), e: ''};
+        const fromRecord = (m0.record ? recordQuestions(m0.record) : []).map(r => ({id: r.id, q: r.question, o: r.options, e: r.fact}));
+        const seen = new Set(), pool = [...localQuiz(QUIZ).filter(q => q.m === m.n), own, ...fromRecord].filter(q => !seen.has(q.q) && seen.add(q.q));
         const poolIds = pool.map(q => q.id), mastery = () => counts(pool, robotQuiz.get());
         const qs = pickRound(pool, robotQuiz.get(), {difficulty: 'mixed', count: 4});
         const awake = get().collected.includes(m.n), need = Math.ceil(qs.length / 2), everything = allMastered(pool, robotQuiz.get());

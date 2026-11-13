@@ -6,6 +6,7 @@ import {pickRound,bankReport,shuffle} from './round.js';
 import {questionId,hashText} from './ids.js';
 import {prepareQuestion} from '../WebWalkerQuiz/core/questions.js';
 import {createRng} from '../WebWalkerQuiz/core/random.js';
+import {recordBank} from './fromRecords.js';
 
 const raw=JSON.parse(fs.readFileSync(new URL('../WebWalkerQuiz/data/questions.en.json',import.meta.url),'utf8'));
 const bank=raw.map(q=>({...q}));let passed=0;
@@ -90,6 +91,28 @@ t('ids: stable when the bank is re-ordered, derived from text when missing',()=>
 });
 t('forgetIds puts only the chosen questions back to unseen',()=>{
   const s={a:'mastered',b:'missed',c:'mastered'};assert.deepEqual(forgetIds(s,['a','b']),{c:'mastered'});assert.equal(s.a,'mastered','no mutation');
+});
+const records=JSON.parse(fs.readFileSync(new URL('../../data/robotRecords.json',import.meta.url),'utf8'));
+const full=[...bank,...recordBank(records)];
+t('questions from robot data: unique ids, 4 distinct options, a source URL, needsFactCheck:true, valid difficulty',()=>{
+  const extra=recordBank(records);assert.ok(extra.length>=25,'extra '+extra.length);assert.equal(new Set(full.map(q=>q.id)).size,full.length,'ids unique across both banks');
+  for(const q of extra){assert.equal(q.options.length,4);assert.equal(new Set(q.options).size,4);assert.ok(/^https:\/\//.test(q.source),q.id+' source');assert.equal(q.needsFactCheck,true);assert.ok(['easy','medium','hard'].includes(q.difficulty));assert.equal(q.correct,0,'right answer first in the data')}
+  console.log('        -> bank now',full.length,'questions (',bank.length,'hand-written +',extra.length,'from records ); 60 needed:',Math.max(0,60-full.length),'more');
+});
+t('THREE ROUNDS: correct answers never come back, wrong answers come back next round until right',()=>{
+  const rng=createRng(2026);let s={};const log=[];
+  // round 1: first 6 right, last 4 wrong
+  const r1=pickRound(full,s,{difficulty:'mixed',count:10,rng});assert.equal(r1.length,10);
+  r1.forEach((q,i)=>{s=applyAnswer(s,q.id,i<6)});const right1=ids(r1).slice(0,6),wrong1=ids(r1).slice(6);log.push(`round 1: ${right1.length} right, ${wrong1.length} wrong`);
+  // round 2: all 4 wrong ones must be back; none of the 6 right ones; answer: wrong ones now right, 2 new ones wrong
+  const r2=pickRound(full,s,{difficulty:'mixed',count:10,rng});wrong1.forEach(w=>assert.ok(ids(r2).includes(w),'wrong comes back'));right1.forEach(x=>assert.ok(!ids(r2).includes(x),'right does not return'));
+  const fresh2=r2.filter(q=>!wrong1.includes(q.id));r2.forEach(q=>{s=applyAnswer(s,q.id,wrong1.includes(q.id)||fresh2.indexOf(q)>=2)});
+  const wrong2=fresh2.slice(0,2).map(q=>q.id);log.push(`round 2: the ${wrong1.length} old misses are back and now right; ${wrong2.length} new misses`);
+  // round 3: only the 2 new misses come back; nothing answered right so far (rounds 1-2) returns
+  const r3=pickRound(full,s,{difficulty:'mixed',count:10,rng});wrong2.forEach(w=>assert.ok(ids(r3).includes(w)));
+  const mastered=Object.entries(s).filter(([,v])=>v==='mastered').map(([k])=>k);assert.ok(!r3.some(q=>mastered.includes(q.id)),'no mastered question in round 3');
+  assert.ok(!ids(r3).some(i=>wrong1.includes(i)),'misses that were fixed in round 2 stay away');
+  log.push(`round 3: the ${wrong2.length} new misses are back; ${mastered.length} mastered questions stayed out`);console.log('        '+log.join('\n        '));
 });
 console.log('\nbank report (10 questions per round):');console.table(bankReport(bank));
 console.log(`\n${passed} checks passed`);
